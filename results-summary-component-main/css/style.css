@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hanken", sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+    background-color: hsl(221, 100%, 96%);
+}
+
+main {
+    display: flex;
+    align-items: center;    
+    min-width: 750px;
+    min-height: 500px;
+    margin-top: 20vh; 
+}
+
+div {
+    background-color: papayawhip;
+    width: 170px;
+    height: 170px;
+    border-radius: 90%;
+
+}
+
+p {
+    position: relative;
+    text-align: center;
+}
+
+.result {
+    margin: auto 0 auto auto;
+    background-color: hsl(241, 81%, 54%);
+    width: 375px;
+    height: 500px;
+    border-radius: 30px;
+}
+
+.summary {
+    margin: auto auto auto 0;
+    background-color: hsl(0, 0%, 100%);
+    width: 375px;
+    height: 500px;
+    border-radius: 30px;
+}

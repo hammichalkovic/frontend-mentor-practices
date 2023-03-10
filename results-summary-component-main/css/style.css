@@ -13,37 +13,81 @@ body {
 
 main {
     display: flex;
-    align-items: center;    
+    align-items: center; 
+    padding: 1rem; 
     min-width: 750px;
     min-height: 500px;
     margin-top: 20vh; 
 }
 
-div {
-    background-color: papayawhip;
-    width: 170px;
-    height: 170px;
-    border-radius: 90%;
-
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-left: 33%;
 }
 
-p {
-    position: relative;
-    text-align: center;
+div {
+    background-color: papayawhip;
+    width: 200px;
+    height: 200px;
+    border-radius: 90%;
+    margin-left: 55px;
+    margin-top: 33px;
+}
+
+h2 {
+    padding-top: 15px;
+}
+
+h3 {
+    padding-top: 5px;
 }
 
 .result {
     margin: auto 0 auto auto;
     background-color: hsl(241, 81%, 54%);
-    width: 375px;
+    width: 350px;
     height: 500px;
     border-radius: 30px;
+}
+
+.result:first-child {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.total {
+    font-size: 70px;
+    font-weight: 800;
+    padding: 50px 50px 0 50px;
+    margin: 0;
+}            
+
+.possible {
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.estim {
+    width: 250px;
+    text-align: center;
+    margin-left: 30px;
+
 }
 
 .summary {
     margin: auto auto auto 0;
     background-color: hsl(0, 0%, 100%);
-    width: 375px;
+    width: 350px;
     height: 500px;
     border-radius: 30px;
+    border: 2px solid red;
 }
+
+
+.nowrap {
+    white-space: nowrap;
+}
+

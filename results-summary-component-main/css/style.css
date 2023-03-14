@@ -41,6 +41,7 @@ h2 {
     padding-top: 5px;
     color: hsl(0, 0%, 100%);
     letter-spacing: 0.05em;
+    font-weight: 800;
 }
 
 h3 {
@@ -49,30 +50,53 @@ h3 {
 }
 
 table {
+    border-collapse: collapse;
     width: 270px;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 90px;
     letter-spacing: 0.025em;
 }
+
+
 
 table tr {
     width: 270px;
     height: 50px;
+    margin: 20px;
+}
+
+table th {
+    border-radius: 10px 0 0 10px;
+}
+
+table td {
+    text-align: right;
+    border-radius: 0 10px 10px 0;
 }
 
 
 button {
     width: 270px;
-    height: 50px;
+    height: 55px;
     background-color: hsl(224, 30%, 27%);
-    margin-left: 45px;
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 90px;
     text-align: center;
-    margin-top: 195px;
+    margin-top: 90px;
     border-radius: 30px;
+    border: 0 solid hsl(224, 30%, 27%);
+    cursor: pointer;
 }
 
 a {
     text-decoration: none;
+}
+
+mark {
+    background-color: transparent;
+    color: hsl(224, 30%, 27%);
 }
 
 caption h3 {
@@ -81,12 +105,19 @@ caption h3 {
     color: hsl(224, 30%, 27%);
 }
 
+button:hover,
+button:active {
+    background-color: hsl(241, 81%, 54%);
+}
+
 .result {
     margin: auto 0 auto auto;
     background-color: hsl(241, 81%, 54%);
     width: 350px;
     height: 500px;
     border-radius: 30px;
+    z-index: 1;
+    left: 50px;
 }
 
 .result:first-child {
@@ -107,13 +138,14 @@ caption h3 {
     color: hsl(252, 100%, 67%);
     font-weight: 500;
     padding: 0;
-    margin: 0;
+    margin: -5px;
 }
 
 .estim {
     width: 250px;
     text-align: center;
-    margin-left: 30px;
+    margin: 0 0 30px 30px;
+    
     color: hsl(241, 100%, 89%);
     font-weight: 500;
 }
@@ -121,10 +153,11 @@ caption h3 {
 .summary {
     margin: auto auto auto 0;
     background-color: hsl(0, 0%, 100%);
-    width: 350px;
+    width: 400px;
     height: 500px;
     border-radius: 30px;
     border: 2px solid red;
+    z-index: 0;
 }
 
 .nowrap {
@@ -132,5 +165,33 @@ caption h3 {
 }
 
 .table__reaction {
-    background-color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 5%);
+}
+
+.table__memory {
+    background-color: hsl(39, 100%, 56%, 5%);
+}
+
+.table__verbal {
+    background-color: hsl(166, 100%, 37%, 5%);
+}
+
+.table__visual {
+    background-color: hsl(234, 85%, 45%, 5%);
+}
+
+.table__reaction th {
+    color: hsl(0, 100%, 67%);
+}
+
+.table__memory th {
+    color: hsl(39, 100%, 56%);
+}
+
+.table__verbal th {
+    color: hsl(166, 100%, 37%);
+}
+
+.table__visual th {
+    color: hsl(234, 85%, 45%);
 }

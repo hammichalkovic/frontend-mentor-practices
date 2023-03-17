@@ -8,12 +8,7 @@ body {
     font-family: "Hanken Grotesk", sans-serif;
     font-size: 18px;
     min-height: 100vh;
-    background-color: hsl(221, 100%, 96%);
-}
-
-svg {
-    vertical-align: -14%;
-    margin:0 0.3rem 0 0.9rem;
+    background-color: hsl(230, 100%, 99%);
 }
 
 main {
@@ -24,22 +19,16 @@ main {
     min-height: 500px;
     margin-top: 20vh; 
 }
- 
+
+svg {
+    vertical-align: -7%;
+    margin:0 0.3rem 0 0.9rem;
+}
 
 footer {
     position: fixed;
     bottom: 0;
     margin-left: 33%;
-}
-
-div {
-    background-color: papayawhip;
-    width: 200px;
-    height: 200px;
-    border-radius: 90%;
-    margin-left: 55px;
-    margin-top: 33px;
-    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 }
 
 h2 {
@@ -54,30 +43,11 @@ h3 {
     letter-spacing: 0.05em;
 }
 
-table {
-    min-width: 300px;
-    text-align: left;
-    margin-left: 90px;
-    letter-spacing: 0.025em; 
-    line-height: 50px;
-    border-spacing: 17px;
-}
-
-tr {
-    border-spacing: 10px;
-}
-
-th {
-    border-radius: 10px 0 0 10px;
-}
-
-td {
-    border-radius: 0 10px 10px 0;
+em {
     color: hsla(204, 3%, 31%, 0.466);
     letter-spacing: 0,025em;
     font-weight: 700;
-    padding: 3px;
-    text-align: right;
+    font-style: normal;
 }
 
 
@@ -90,10 +60,15 @@ button {
     font-weight: 700;
     margin-left: 90px;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 42px;
     border-radius: 30px;
     border: 0 solid hsl(224, 30%, 27%);
     cursor: pointer;
+}
+
+button:hover,
+button:active {
+    background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
 }
 
 a {
@@ -108,15 +83,46 @@ mark {
     margin-left: 50px;
 }
 
-caption h3 {
-    margin-top: 37px;
-    text-align: left;
-    color: hsl(224, 30%, 27%);
+.item {
+    padding-top: 3px;
+    letter-spacing: 0,015em
 }
 
-button:hover,
-button:active {
-    background-color: hsl(241, 81%, 54%);
+.result_div {
+    background-color: papayawhip;
+    width: 200px;
+    height: 200px;
+    border-radius: 90%;
+    margin-left: 55px;
+    margin-top: 33px;
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.container {
+    min-width: 270px;
+    text-align: left;
+    margin: 30px 0 0 90px;
+    letter-spacing: 0.025em; 
+    line-height: 50px;
+    border-spacing: 17px;
+    display: grid;
+    grid-template-columns: 135px 135px;
+    grid-template-rows: 54px 54px 54px 54px;
+    row-gap: 17px;
+}            
+
+.odd {
+    border-radius: 10px 0 0 10px;
+}
+
+.even {
+    border-radius: 0 10px 10px 0;
+}
+
+.summary_caption {
+    margin: 37px 0 0 90px;
+    text-align: left;
+    color: hsl(224, 30%, 27%);
 }
 
 .result {
@@ -154,7 +160,6 @@ button:active {
     width: 250px;
     text-align: center;
     margin: 0 0 30px 30px;
-    
     color: hsl(241, 100%, 89%);
     font-weight: 500;
 }
@@ -165,52 +170,61 @@ button:active {
     width: 400px;
     height: 500px;
     border-radius: 30px;
-    border: 2px solid red;
     z-index: 0;
-}
-
-.summary__table {
-    display: grid;
-    gird-template-columns: 20px 100px 20px 20px;
-    grid-template-areas: 
-    "tr1 tr1 tr1 tr1"
-    "tr2 tr2 tr2 tr2"
-    "tr3 tr3 tr3 tr3"
-    "tr4 tr4 tr4 tr4";
+    box-shadow: 5px 20px 30px 0 hsl(221, 100%, 96%);
 }
 
 .nowrap {
     white-space: nowrap;
 }
 
-.table__reaction {
+div .table__reaction {
     background-color: hsla(0, 100%, 67%, 5%);
 }
 
-.table__memory {
+div .table__memory {
     background-color: hsl(39, 100%, 56%, 5%);
 }
 
-.table__verbal {
+div .table__verbal {
     background-color: hsl(166, 100%, 37%, 5%);
   }
 
-.table__visual {
+div .table__visual {
     background-color: hsl(234, 85%, 45%, 5%);
 }
 
-.table__reaction th {
+div .table__reaction {
     color: hsl(0, 100%, 67%);
 }
 
-.table__memory th {
+div .table__memory {
     color: hsl(39, 100%, 56%);
 }
 
-.table__verbal th {
+div .table__verbal {
     color: hsl(166, 100%, 37%);
 }
 
-.table__visual th {
+div .table__visual {
     color: hsl(234, 85%, 45%);
+}
+
+/* || MOBILE DEVICE LANDSCAPE */
+
+@media screen and (max-width: 425px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .result {
+        width: 100%;
+        margin: 0;
+    }
 }

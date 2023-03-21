@@ -1,0 +1,21 @@
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+main {
+    width: 576px;
+    height: 384px;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 288px;
+    height: 432px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}

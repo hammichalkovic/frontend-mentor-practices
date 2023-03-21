@@ -212,13 +212,13 @@ div .table__visual {
 
 /* || MOBILE DEVICE LANDSCAPE */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
     main {
         display: flex;
         flex-direction: column;
         padding: 0; 
         min-width: 100%;
-        min-height: 100%;
+        min-height: 150vh;
         margin-top: -3vh; 
         margin-bottom: -3vh;
     }
@@ -253,7 +253,7 @@ div .table__visual {
     .result_div {
         width: 150px;
         height: 150px;
-        margin-left: 93px;
+        margin-left: 27%;
         margin-top: 40px;
     }
 
@@ -265,7 +265,7 @@ div .table__visual {
     .estim {
         font-size: 16px;
         width: 280px;
-        margin: -5px 0 0 27px;
+        margin: -5px -10% 0 8%;
     }
 
     .summary {

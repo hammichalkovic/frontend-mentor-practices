@@ -1,21 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
 body {
+    min-height: 100vh;
     background-color: hsl(30, 38%, 92%);
 }
 
 main {
+    margin: 35vh auto auto auto;
     width: 576px;
-    height: 384px;
-    border: 3px solid red;
+    height: 432px;
     display: flex;
     flex-direction: row-reverse;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 100%);
 }
 
-img {
+img.desktop {
     width: 288px;
     height: 432px;
+    border-radius: 15px 0 0 15px;
+}
+
+img.mobile {
+    display: none;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    line-height: 33px;
+    margin-top: 0;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    line-height: 22px;
+    margin: -5% 0 -5% 0;
+}
+
+button {
+    width: 98%;
+    height: 12%;
+    background-color: hsl(158, 36%, 37%);
+    border-color: transparent;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    line-height: 40px;
+    vertical-align: 150%;
+    margin: 14% 0 0 1%;
+}
+
+svg {
+    padding: 0 10px 0 0;
+    vertical-align: -7%;
 }
 
 footer {
     position: fixed;
     bottom: 0;
+    left: 36vw;
+
+}
+
+span {
+    white-space: nowrap;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+section.info {
+    padding: 4%;
+    box-shadow: 1px 2px 2px 0 10%;
+}
+
+div.container {
+    display: grid;
+    grid-template-columns: 128px 100px;
+    margin: 10% 0 -1% 1%;
+}
+
+.subset {
+    font-size: 12px;
+    letter-spacing: 0.5em;
+    margin: 0 96% 10% 0;
+    
+}
+
+.pricenow {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+}
+
+.pricebefore {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.container:last-child {
+    padding: 15% 83% 10% 17%;
+}
+
+@media screen and (max-width: 415px) {
+    img.mobile {
+        display: block;
+        width: 370px;
+        height: 259px;
+    }
+    
+    img.desktop {
+        display: none;
+    }
 }

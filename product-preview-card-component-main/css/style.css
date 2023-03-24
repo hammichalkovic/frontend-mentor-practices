@@ -113,13 +113,48 @@ div.container {
 }
 
 @media screen and (max-width: 415px) {
+ 
+    main {
+    width: 95%;
+    height: 580px;
+    display: flex;
+    flex-direction: column-reverse;
+    }   
+
     img.mobile {
         display: block;
-        width: 370px;
-        height: 259px;
+        width: 100%;
+        height: 240px;
+        border-radius: 15px 15px 0 0;
     }
     
     img.desktop {
         display: none;
     }
+
+    button {
+        width: 100%;
+        height: 15%;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .subset {
+        margin: 0 96% 9% 0;
+        
+    }
+
+    section.info {
+        padding: 7% 7% 0% 7%;
+        height: 361px;
+    }
+
+    div.container {
+        margin: 9% 0 5% 1%;
+    }
+    
 }

@@ -16,7 +16,7 @@ body {
 main {
     margin: 5% 10% 20% 10%; 
     width: 80%;
-    min-width: 375px;
+    min-width: 397px;
     height: 100%;
     border: 2px solid hsl(216, 50%, 16%);
     border-radius: 13px;
@@ -32,6 +32,7 @@ img {
 
 h1 {
     color: hsl(0, 0%, 100%);
+    width: 58%;
 }
 
 p {
@@ -62,10 +63,31 @@ aside a:hover {
     cursor: pointer;
 }
 
-.info img:hover {
-    background-color: hsla(178, 100%, 50%, 50%);
-    
+div.media {
+    box-sizing: border-box;
+    height: 349px;
+    width: 349px;
 }
+
+div.picture {
+    height: 349px;
+    height: 349px;
+}
+
+div.overlay {
+    position: relative;
+    top: -349px;
+    padding: 148px;
+    background-color:hsla(178, 100%, 50%, 40%);
+    border-radius: 10px;
+    opacity: 0%;
+}
+
+div.overlay:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
 
 aside {
     color: hsl(215, 51%, 70%);
@@ -122,4 +144,13 @@ footer {
 
 footer a {
     text-decoration: none;
+}
+
+@media screen and (min-width:415px) {
+    body {
+        box-sizing: border-box;
+        max-width: 415px;
+        
+    }
+    
 }

@@ -5,16 +5,12 @@
 }
 
 body {
-    max-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    width: 33%;
-    padding: 0;
+    max-height: 420px;
+    margin: 20vh 33vw 20vh 36vw;
     background-color: hsl(217, 54%, 11%)
 }
 
 main {
-    margin: 5% 10% 20% 10%; 
     width: 397px;
     flex-shrink: 0;
     height: 100%;
@@ -135,9 +131,9 @@ aside a {
 }
 
 footer {
-    bottom: 0;
+    width: 33%;
+    margin-top: 20vh;
     text-align: center;
-    margin-left: 5%;
     white-space: nowrap;
     color: hsl(215, 51%, 70%);
 }
@@ -151,6 +147,7 @@ footer a {
     body {
         min-height: 600px;
         min-width: 375px;
+        margin: 8% 0 0 4%;
     }
 
     main {

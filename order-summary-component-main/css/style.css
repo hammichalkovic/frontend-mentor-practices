@@ -29,6 +29,7 @@ main {
 h1 {
     font-weight: 900;
     margin-top: 0;
+    font-size: 26px;
 }
 
 p {
@@ -36,6 +37,7 @@ p {
     font-size: 16px;
     line-height: 25px;
     width: 85%;
+    margin-bottom: 13px;
 }
 
 /* span {
@@ -76,12 +78,12 @@ div.leadgirl {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10% 10% 10% 10%;
+    padding: 10% 10% 8% 10%;
 }
 
 .paybox {
     width: 100%;
-    height: 92px;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -90,10 +92,24 @@ div.leadgirl {
     box-sizing: border-box;
     padding: 7%;
     gap: 6%;
+    margin-bottom: 30px;
 }
 
 .choice {
     margin-left: auto;
+    color: hsl(245, 75%, 52%);
+    opacity: 100%;
+}
+
+.choice a:visited {
+    color: hsl(245, 75%, 52%);
+}
+
+.choice a:hover,
+.choice a:active {
+    text-decoration: none;
+    opacity: 70%;
+    cursor: pointer;
 }
 
 .proceed {
@@ -103,6 +119,12 @@ div.leadgirl {
     color: hsl(225, 100%, 98%);
     font-weight: 900;
     font-size: 16px;
+    box-shadow: 0 20px 33px rgba(0, 0, 0, 0.22);
+}
+
+.proceed:hover,
+.proceed:active {
+    background-color: linear-gradient(to top, hsl(245, 75%, 52%), hsl(224, 23%, 55%));
 }
 
 .cancel {
@@ -111,12 +133,19 @@ div.leadgirl {
     color: hsl(224, 23%, 55%);
     background-color: transparent;
     border: transparent;
+    margin-top: 33px;
+}
 
+.cancel:hover,
+.cancel:active {
+    color: hsl(223, 47%, 23%);
+    cursor: pointer;
 }
 
 .palecolor {
     color: hsl(224, 23%, 55%);
     font-weight: 500;
+    margin-top: -10px;
 }
 
 .darkcolor {
@@ -125,6 +154,13 @@ div.leadgirl {
 
 .time {
     font-weight: 900;
+}
+
+.current {
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 1300px) {

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    font-family: 'Inter', san-serif;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+}
+
+img {
+    border-radius: 0 15px 15px 0;
+    
+}
+
+div.desktopimg {
+    width: 520px;
+    height: 430px;
+    border-radius: 0 15px 15px 0;
+    background: url(../images/image-header-desktop.jpg);
+}
+
+div.overlay {
+    width: 520px;
+    height: 430px;
+    background: hsl(277, 64%, 30%, 60%);
+    border-radius: 0 15px 15px 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+.stats,
+div.attribution p {
+    color: hsl(0, 0%, 100%);
+}
+
+p {
+    font-family: 'Inter', san-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+mark {
+    background-color: transparent;
+    color: hsl(277, 64%, 61%);
+}
+
+div.stats {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    margin-top: auto;
+}
+
+div.stats em {
+    font-style: normal;
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 10px;
+}
+
+.centerpart {
+    width: 1080px;
+    height: 430px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 15px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    height: 24px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.info {
+    width: 530px;
+    border: 1px solid salmon;
+    margin: 3% 6% 6% 6%;
+    display: flex;
+    flex-direction: column;
+}
+

@@ -141,8 +141,7 @@ div.stats em {
 
     h1 {
         font-size: 30px;
-        margin: -0px 16px 30px 0;
-        border: 1px solid salmon;
+        margin: -20px 16px 20px 0;
     }
 
     h1, p {
@@ -151,7 +150,6 @@ div.stats em {
     }
 
     p {
-        border: 1px solid salmon;
         margin: 0 15px 20px 0; 
         width: 270px;
     }
@@ -165,7 +163,6 @@ div.stats em {
         align-items: center;
         background-color: hsl(244, 38%, 16%);
         border-radius: 10px;
-        border: 1px solid salmon;
     }
 
     .info {
@@ -176,7 +173,6 @@ div.stats em {
         flex-direction: column;
         align-items: center;
         margin: auto 0 20px 1px;
-        border: 1px solid salmon;
     }
 
     .attribution {
@@ -185,7 +181,7 @@ div.stats em {
 
     div.desktopimg {
         width: 360px;
-        height: 300px;
+        height: 293px;
         border-radius: 8px 8px 0 0;
         background: url(../images/image-header-desktop.jpg);
         background-size: 100%;
@@ -195,7 +191,7 @@ div.stats em {
 
     div.overlay {
         width: 360px;
-        height: 297px;
+        height: 293px;
         border-radius: 8px 8px 0 0;
     }
 
@@ -203,10 +199,12 @@ div.stats em {
         font-size: 24px;
         font-weight: 700;
         width: 350px;
+        height: 225px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        margin: 30px 15px -35px 0;
     }
 
     div.stats div {
@@ -214,4 +212,10 @@ div.stats em {
         flex-direction: column;
         align-items: center;
     }
+
+    div.em {
+        margin-top: 10px;
+    }
+    
+    
 }

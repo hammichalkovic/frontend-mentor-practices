@@ -1,0 +1,36 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    border: 1px solid salmon;
+}
+
+img {
+    height: 30px;
+    width: 50px;
+}
+
+.attribution {
+    position: absolute; 
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.suvs,
+.luxury,
+.sedans {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

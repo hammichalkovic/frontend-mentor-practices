@@ -11,8 +11,8 @@ body {
 }
 
 main {
-    height: 60vh;
-    width: 55vw;
+    min-height: 60vh;
+    width: 65vw;
     display: flex;
     justify-content: center;
     border-radius: 7px;
@@ -26,27 +26,29 @@ img {
 button {
     margin-top: auto;
     background-color: hsl(0, 0%, 95%);
-    height: 40px;
-    width: 130px;
+    height: 50px;
+    width: 140px;
     border-radius: 30px;
     border: transparent;
+    font-size: 15px;
 }
 
 h2 {
     color: hsl(0, 0%, 95%);
     font-family: 'Big Shoulders Display', cursive;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 42px;
     padding: 0 0 -20px 0;
 }
 
 p {
     color: hsla(0, 0%, 100%, 0.75);
     font-weight: 400;
-    font-size: 13px;
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 26px;
     padding: 0 0 10px 0;
-    margin-top: -10px;
+    width: 210px;
+    margin-bottom: 40px;
 }
 
 p, button {
@@ -83,7 +85,7 @@ p, button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 35px;
+    padding: 40px;
 }
 
 .sedans button {
@@ -119,4 +121,76 @@ button:hover, button:active {
 
 .luxury button:hover, .luxury button:active {
     background-color: hsl(179, 100%, 13%);
+}
+
+@media screen and (max-width: 500px) {
+
+    body {
+        height: 220vh;
+    }
+
+    main {
+        width: 330px;
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    img {
+        height: 40px;
+        width: 60px;
+    }
+
+    h2 {
+        margin-top: 35px;
+        font-size: 36px;
+    }
+
+    p {
+        margin: 0px 0 15px 0;
+        width: 230px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        word-spacing: 0.15em;
+        font-size: 14px;
+    }
+
+    button {
+        margin-top: auto;
+        background-color: hsl(0, 0%, 95%);
+        height: 50px;
+        width: 140px;
+        border-radius: 30px;
+        border: transparent;
+    }
+
+    .sedans {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 8px 8px;
+    }
+
+    .attribution {
+        display: none;
+    }
+
+    .suvs,
+    .luxury,
+    .sedans {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 50px;
+        height: 50vh;
+    }
+
+    button.press {
+        height: 40px;
+    }
+
 }

@@ -102,3 +102,21 @@ p, button {
     text-decoration: none;
     
 }
+
+button:hover, button:active {
+    border: 2px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+.sedans button:hover, .sedans button:active {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suvs button:hover, .suvs button:active {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury button:hover, .luxury button:active {
+    background-color: hsl(179, 100%, 13%);
+}

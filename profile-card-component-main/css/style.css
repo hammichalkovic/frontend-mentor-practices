@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 55vh;
+    width: 25vw;
+    border: 2px solid salmon;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+.pattern__top {
+    background-image: url("../images/bg-pattern-card.svg ");
+    width: 25vw;
+    height: 20vh;
+    border-radius: 15px 15px 0 0;
+}
+
+.profile__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__top {
+    display: flex;
+    width: 130px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.age {
+    margin-top: 17px;
+}
+
+.location {
+    margin-top: -7px;
+    font-size: 15px;
+    color:hsl(0, 0%, 90%);
+}
+
+.age,
+.location,
+.name,
+.foll__number,
+.likes__number,
+.photos__number {
+    color: hsl(229, 23%, 23%)
+}
+
+.foll__number,
+.likes__number,
+.photos__number {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.foll__name,
+.likes__name,
+.photos__name {
+    color: hsl(0, 0%, 59%);
+    font-size: 12px;
+    margin-top: 5px;
+    letter-spacing: 0.1em;
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid salmon; */
+    height: 90px;
+    border-top: 1px solid hsla(0, 0%, 59%, 50%);
+    margin-top: 10px;
+    
+}
+
+div.likes,
+div.followers,
+div.photos {
+    height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid salmon; */
+}
+
+.profile__header img {
+    height: 96px;
+    width: 96px;
+    border-radius: 90px;
+}
+
+div.profilepic {
+    height: 96px;
+    width: 96px;
+    border: 6px solid white;
+    border-radius: 90px;
+    margin-top: -55px;
+}

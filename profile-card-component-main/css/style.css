@@ -138,3 +138,23 @@ div.profilepic {
     border-radius: 90px;
     margin-top: -55px;
 }
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 320px;
+    }
+
+    .attribution {
+        display: none;
+    }
+
+    body {
+        background-image:
+            url("../images/bg-pattern-top.svg"),
+            url("../images/bg-pattern-bottom.svg");
+        background-size: 170vw, 170vw;
+        background-repeat: no-repeat;
+        background-position-x: -115vw, 40vw;
+        background-position-y: -52vh, 55vh;
+}
+    }

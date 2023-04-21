@@ -10,13 +10,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: hsl(185, 75%, 39%);
+    background-image:
+        url("../images/bg-pattern-top.svg"),
+        url("../images/bg-pattern-bottom.svg");
+    background-size: 1000px, 1000px;
+    background-repeat: no-repeat;
+    background-position-x: -300px, 670px;
+    background-position-y: -500px, 450px;
 }
+
 
 main {
     height: 55vh;
     width: 25vw;
     border: 2px solid salmon;
     border-radius: 15px;
+    background-color: white;
 }
 
 h1 {
@@ -69,6 +79,7 @@ h1 {
 .photos__number {
     font-weight: 700;
     margin-bottom: 0;
+    font-size: 18px;
 }
 
 .foll__name,
@@ -76,7 +87,7 @@ h1 {
 .photos__name {
     color: hsl(0, 0%, 59%);
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 2px;
     letter-spacing: 0.1em;
 }
 
@@ -89,6 +100,15 @@ h1 {
     border-top: 1px solid hsla(0, 0%, 59%, 50%);
     margin-top: 10px;
     
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    text-decoration: none;
 }
 
 div.likes,

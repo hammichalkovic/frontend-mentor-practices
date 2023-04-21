@@ -23,10 +23,9 @@ body {
 
 main {
     height: 385px;
-    width: 25vw;
+    width: 360px;
     border-radius: 15px;
     background-color: white;
-    shadow-box: 0 10px 10px 10px 10;
 }
 
 h1 {
@@ -122,7 +121,6 @@ div.photos {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid salmon; */
 }
 
 .profile__header img {

@@ -14,19 +14,19 @@ body {
     background-image:
         url("../images/bg-pattern-top.svg"),
         url("../images/bg-pattern-bottom.svg");
-    background-size: 1000px, 1000px;
+    background-size: 100vw, 100vw;
     background-repeat: no-repeat;
-    background-position-x: -300px, 670px;
-    background-position-y: -500px, 450px;
+    background-position-x: -50vw, 40vw;
+    background-position-y: -98vh, 50vh;
 }
 
 
 main {
-    height: 55vh;
+    height: 385px;
     width: 25vw;
-    border: 2px solid salmon;
     border-radius: 15px;
     background-color: white;
+    shadow-box: 0 10px 10px 10px 10;
 }
 
 h1 {
@@ -35,8 +35,9 @@ h1 {
 
 .pattern__top {
     background-image: url("../images/bg-pattern-card.svg ");
-    width: 25vw;
-    height: 20vh;
+    background-size: contain;
+    width: 100%;
+    height: 145px;
     border-radius: 15px 15px 0 0;
 }
 
@@ -105,6 +106,7 @@ h1 {
 .attribution {
     position: absolute;
     bottom: 0;
+    color: whitesmoke;
 }
 
 .attribution a {

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+section {
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 90px;
+    height: 30px;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+p {
+    color: hsl(0, 0%, 81%);
+}
+
+div.head1,
+div.head2,
+div.head3,
+div.head4,
+div.head5 {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+div.bio {
+    height: 50px;
+    border: 2px solid coral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback1 {
+    /* border: 2px solid salmon; */
+    background-color: hsl(263, 55%, 52%);
+}
+
+.feedback2 {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.feedback3 {
+    background-color: white;
+} 
+
+.feedback4 {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.feedback5 {
+    background-color: white;
+} 
+
+.feedback1 h1,
+.feedback2 h1,
+.feedback4 h1 {
+    color: white;
+}
+
+.feedback1 h2,
+.feedback2 h2,
+.feedback4 h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+.feedback1.status,
+.feedback2.status,
+.feedback4.status {
+    color: hsla(0, 0%, 81%, 50%);
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+.feedback1.text1,
+.feedback2.text2,
+.feedback4.text4 {
+    color: hsla(0, 0%, 81%, 70%);
+}
+

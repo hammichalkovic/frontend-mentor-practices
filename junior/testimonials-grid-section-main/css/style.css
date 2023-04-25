@@ -4,6 +4,26 @@ body {
     background-color: hsl(210, 46%, 95%);
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 13px;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 600px;
+    width: 1100px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 277px);
+    grid-template-rows: repeat(2, 305px);
+    grid-template-areas:
+    "dc dc jw kw"
+    "jh pa pa kw";
+    gap: 10px;
+
 }
 
 section {
@@ -25,45 +45,70 @@ p {
     color: hsl(0, 0%, 81%);
 }
 
+.feedback1 {
+    /* border: 2px solid salmon; */
+    background-color: hsl(263, 55%, 52%);
+    grid-area: dc;
+    height: 290px;
+    width: 542px;
+}   
+
+.feedback2 {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: jw;
+    width: 250px;
+    height: 290px;
+}
+
+.feedback3 {
+    background-color: white;
+    grid-area: jh;
+    width: 250px;
+    height: 290px;
+} 
+
+.feedback4 {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: pa;
+    width: 542px;
+    height: 290px;
+}
+
+.feedback5 {
+    background-color: white;
+    grid-area: kw;
+    width: 250px;
+    height: 600px;
+} 
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+
 div.head1,
 div.head2,
 div.head3,
 div.head4,
 div.head5 {
-    height: 80px;
+    height: 50px;
     display: flex;
     align-items: center;
+    /* border: 1px solid salmon; */
+}
+
+p.status {
+    margin: 0;
 }
 
 div.bio {
     height: 50px;
-    border: 2px solid coral;
+    width: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
-
-.feedback1 {
-    /* border: 2px solid salmon; */
-    background-color: hsl(263, 55%, 52%);
-}
-
-.feedback2 {
-    background-color: hsl(217, 19%, 35%);
-}
-
-.feedback3 {
-    background-color: white;
-} 
-
-.feedback4 {
-    background-color: hsl(219, 29%, 14%);
-}
-
-.feedback5 {
-    background-color: white;
-} 
 
 .feedback1 h1,
 .feedback2 h1,

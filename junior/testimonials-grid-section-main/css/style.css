@@ -45,6 +45,7 @@ h2 {
 
 p {
     color: hsl(0, 0%, 81%);
+    line-height: 18px;
 }
 
 .name3,
@@ -92,6 +93,21 @@ p {
     height: 600px;
 } 
 
+.text1,
+.text2 {
+    margin-top: 15px;
+}
+
+.text3,
+.text5 {
+    color: hsla(217, 19%, 35%, 70%);
+    margin-top: 33px;
+}
+
+.text4 {
+    margin-top: 33px;
+}
+
 .attribution {
     position: absolute;
     bottom: 0;
@@ -105,7 +121,7 @@ div.head5 {
     height: 50px;
     display: flex;
     align-items: center;
-    margin: -10px 0 0 0;
+    margin: -10px 0 -7px 0;
 }
 
 img:hover, img:active {

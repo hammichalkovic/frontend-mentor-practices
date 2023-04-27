@@ -63,6 +63,10 @@ p {
     grid-area: dc;
     height: 290px;
     width: 542px;
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position-x: 78%;
+    background-size: 20%;
 }   
 
 .feedback2 {

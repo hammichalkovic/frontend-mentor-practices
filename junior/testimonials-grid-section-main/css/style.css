@@ -185,6 +185,12 @@ section.feedback5 h1 {
     color: hsla(0, 0%, 81%, 70%);
 }
 
+@media screen and (max-width: 1300px) {
+    .attribution {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 450px) {
     body {
         min-height: 300vh;
@@ -202,10 +208,6 @@ section.feedback5 h1 {
         background-position-x: 90%;
         background-size: 34%;
     }  
-
-    .attribution {
-        display: none;
-    }
 
     section.feedback1,
     section.feedback2,

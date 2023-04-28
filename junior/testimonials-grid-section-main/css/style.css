@@ -185,5 +185,75 @@ section.feedback5 h1 {
     color: hsla(0, 0%, 81%, 70%);
 }
 
+@media screen and (max-width: 450px) {
+    body {
+        min-height: 300vh;
+    }
+    
+    main {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .feedback1 {
+        background-position-x: 90%;
+        background-size: 34%;
+    }  
+
+    .attribution {
+        display: none;
+    }
+
+    section.feedback1,
+    section.feedback2,
+    section.feedback3,
+    section.feedback4,
+    section.feedback5 {
+        box-sizing: border-box;
+        width: 320px;
+    }
+
+    section.feedback1 {
+        height: 450px;
+        padding-right: 35px;
+    }
+
+    section.feedback2 {
+        height: 250px;
+    }
+
+    section.feedback3 {
+        height: 230px;
+    }
+
+    section.feedback4 {
+        height: 395px;
+    }
+
+    section.feedback5 {
+        height: 445px;
+    }
+
+    p.text1 {
+        width: 247px;
+    }
+
+    p.text2 {
+        width: 265px;
+    }
+
+    p.text3 {
+        margin-top: 0;
+    }
+
+    p.text4,
+    p.text5 {
+        width: 262px;
+        margin-top: 0;
+    }
+
+}
 

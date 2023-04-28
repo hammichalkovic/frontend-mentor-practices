@@ -32,6 +32,7 @@ section {
     padding: 30px;
 }
 
+
 img {
     border-radius: 90px;
     height: 33px;
@@ -115,6 +116,12 @@ p {
 .attribution {
     position: absolute;
     bottom: 0;
+}
+
+section.feedback3,
+section.feedback4,
+section.feedback5 {
+    box-shadow: 30px 40px 30px hsla(0, 0%, 63%, 20%);
 }
 
 div.head1,

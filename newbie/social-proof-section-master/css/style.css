@@ -15,26 +15,64 @@ body {
 
 main {
     border: 2px solid salmon;
-    height: 70vh;
-    width: 80vw;
+    height: 80vh;
+    width: 70vw;
 }
 
 h1 {
     color: hsl(300, 43%, 22%);
-    font-size: 36px;
-    border: 1px solid blue;
-    margin-top: 0;
-    width: 50%;
+    font-size: 48px;
+    margin: 0;
+    width: 65%;
+    letter-spacing: -0.03em;
+    line-height: 40px;
 }
 
 .top {
     height: 50%;
     display: flex;
+    align-items: center;
+    border: 2px solid black;
 }
 
 .lead {
     border: 2px solid green;
     width: 50%;
+    height: 90%;
+    margin-top: -23px;
+}
+
+.stars {
+    margin-left: auto;
+    border: 1px solid blue;
+    width: 45%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div.mark1,
+div.mark2,
+div.mark3 {
+    border: 1px solid red;
+}
+
+div.stars1,
+div.stars2,
+div.stars3 {
+    height: 14px;
+    width: 100px;
+    border: 1px dotted black;
+    background: url('../images/icon-star.svg'); 
+    background-size: 15px;
+    
+}
+
+div.stars1::after,
+div.stars2::after,
+div.stars3::after {
+    white-space: 10px;
 }
 
 .bottom {
@@ -43,4 +81,33 @@ h1 {
 
 .lead p {
     color: hsl(303, 10%, 53%);
+    width: 80%;
+    margin-top: 20px;
+    font-weight: 500;
+    line-height: 19px;
+    font-size: 15px;
+}
+
+.stars div.mark1,
+.stars div.mark2,
+.stars div.mark3 {
+    background-color: hsl(300, 24%, 96%);
+    height: 45px;
+    width: 85%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars div.mark1 {
+    align-self: flex-start;
+}
+
+.stars div.mark2 {
+    align-self: center;
+}
+
+.stars div.mark3 {
+    align-self: flex-end;
 }

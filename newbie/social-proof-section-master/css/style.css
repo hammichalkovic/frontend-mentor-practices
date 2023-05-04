@@ -14,7 +14,7 @@ body {
 }
 
 main {
-    height: 75vh;
+    height: 70vh;
     width: 73vw;
     min-width: 940px;
 }
@@ -33,8 +33,9 @@ h2 {
 }
 
 .top {
-    height: 50%;
+    height: 40%;
     display: flex;
+    min-height: 240px;
 }
 
 .lead {
@@ -50,11 +51,12 @@ h2 {
     flex-direction: column;
     justify-content: center;
     gap: 13px;
-    margin: 20px 0 0 auto;
+    margin: 30px 0 0 auto;  
 }
 
 .bottom {
-    height: 40%;
+    min-height: 260px;
+    height: 45%;
     display: flex;
     justify-content: space-between;
 }
@@ -70,6 +72,11 @@ h2 {
     height: 30px;
     margin: 2px 0 0 20px;
     width: 100px;
+}
+
+div.attribution {
+    position: absolute;
+    bottom: 0;
 }
 
 .attribution a {
@@ -110,6 +117,7 @@ div.card3 {
     height: 27vh;
     width: 32%;
     min-width: 270px;
+    min-height: 200px;
     background-color: hsl(300, 43%, 22%);
     border-radius: 7px;
     display: flex;

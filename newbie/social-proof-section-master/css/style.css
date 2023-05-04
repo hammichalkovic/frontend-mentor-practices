@@ -11,6 +11,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: 
+    url('../images/bg-pattern-top-desktop.svg'),
+    url('../images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right; 
 }
 
 main {

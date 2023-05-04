@@ -257,3 +257,31 @@ div.stars3 {
 .stars div.mark3 {
     align-self: flex-end;
 }
+
+@media screen and (max-width: 430px) {
+
+    section.top {
+        min-height: 100vh;
+        min-width: 360px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .lead,
+    .stars {
+        min-width: 320px;
+        width: 360px;
+    }
+
+    section.bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.card3 {
+        align-self: center;
+    }
+    
+}

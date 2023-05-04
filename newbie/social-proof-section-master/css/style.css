@@ -76,6 +76,16 @@ h2 {
     width: 150px;
 }
 
+.attribution a {
+    text-decoration: none;
+    color: hsl(300, 43%, 22%);
+}
+
+.attribution a:hover,
+.attribution a:active {
+    font-weight: 700;
+}
+
 p.feedback1 {
     width: 270px;
 }

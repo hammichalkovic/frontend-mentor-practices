@@ -14,9 +14,9 @@ body {
 }
 
 main {
-    border: 2px solid salmon;
-    height: 80vh;
-    width: 70vw;
+    height: 75vh;
+    width: 73vw;
+    min-width: 940px;
 }
 
 h1 {
@@ -35,24 +35,21 @@ h2 {
 .top {
     height: 50%;
     display: flex;
-    border: 2px solid black;
 }
 
 .lead {
-    border: 2px solid green;
     width: 50%;
     height: 90%;
 }
 
 .stars {
     margin-left: auto;
-    border: 1px solid blue;
     width: 45%;
-    height: 60%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 13px;
     margin: 20px 0 0 auto;
 }
 
@@ -69,11 +66,10 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid pink;
     box-sizing: border-box;
-    height: 50px;
-    margin-left: 20px;
-    width: 150px;
+    height: 30px;
+    margin: 2px 0 0 20px;
+    width: 100px;
 }
 
 .attribution a {
@@ -94,31 +90,32 @@ p.feedback2 {
     width: 250px;
 }
 
+p.feedback3 {
+    width: 260px;
+}
+
 p.feedback1,
 p.feedback2,
 p.feedback3 {
     line-height: 20px;
     font-weight: 500;
-}
+    margin-top: 60px;
 
-/* .bio1 div,
-.bio2 div,
-.bio3 div {
-    border: 1px solid pink;
-    height: 20px;
-    padding: 0;
-} */
+}
 
 div.card1,
 div.card2,
 div.card3 {
     box-sizing: border-box;
-    height: 29vh;
+    height: 27vh;
     width: 32%;
-    border: 2px solid saddlebrown;
+    min-width: 270px;
     background-color: hsl(300, 43%, 22%);
-    padding: 21px;
     border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 div.card2 {
@@ -129,24 +126,42 @@ div.card3 {
     align-self: flex-end;
 }
 
+.cardhead1 {
+    width: 270px;
+}
+
+.cardhead2 {
+    width: 250px;
+} 
+
+.cardhead3 {
+    width: 260px;
+}
+
 .cardhead1,
 .cardhead2,
 .cardhead3 {
+    height: 40px;
     display: flex;
-    border: 1px solid white;
+    margin:0 0 3% 0; 
+    /* border: 1px solid white; */
 }
 
 .bottom p, h2 {
     color: hsl(0, 0%, 100%);
     margin: 0;
-    padding: 1px;
+    padding: 2px 0;
+}
+
+.bottom p {
+    color: hsla(300, 24%, 96%, 90%);
 }
 
 .bio1 p,
 .bio2 p,
 .bio3 p {
-    color: hsl(333, 80%, 67%);
-    font-weight: 700;
+    color: hsla(333, 80%, 67%, 70%);
+    font-weight: 500;
 }
 
 .cardhead1 img,
@@ -161,6 +176,7 @@ div.mark1,
 div.mark2,
 div.mark3 {
     box-sizing: border-box;
+    min-width: 375px;
 }
 
 div.stars1,
@@ -171,7 +187,7 @@ div.stars3 {
     /* border: 1px dotted black; */
     display: flex;
     justify-content: space-between;
-    margin: 0 25px 0 0;
+    margin: 0 0 0 -40px;
 }
 
 .star {
@@ -185,7 +201,7 @@ div.stars3 {
 .stars__p {
     color: hsl(300, 43%, 22%);
     font-weight: 700;
-    margin: 0 15px 0 0;
+    margin: 0 10px 0 20px;
 
 }
 
@@ -206,7 +222,7 @@ div.stars3 {
 .stars div.mark2,
 .stars div.mark3 {
     background-color: hsl(300, 24%, 96%);
-    height: 25%;
+    height: 53px;
     width: 85%;
     /* border: 1px solid red; */
     display: flex;

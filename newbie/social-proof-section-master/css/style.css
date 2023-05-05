@@ -21,7 +21,7 @@ body {
 main {
     height: 70vh;
     width: 73vw;
-    min-width: 940px;
+    /* min-width: 940px; */
 }
 
 h1 {
@@ -189,7 +189,7 @@ div.mark1,
 div.mark2,
 div.mark3 {
     box-sizing: border-box;
-    min-width: 375px;
+    /* min-width: 375px; */
 }
 
 div.stars1,
@@ -259,19 +259,75 @@ div.stars3 {
 }
 
 @media screen and (max-width: 430px) {
-
-    section.top {
-        min-height: 100vh;
-        min-width: 360px;
+    body {
+        min-height: 200vh;
         display: flex;
+        align-items: center;
         justify-content: center;
+    }
+
+    body main {
+        width: 360px;
+        height: 1000px;
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .lead,
     .stars {
         min-width: 320px;
-        width: 360px;
+        width: 350px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .mark1,
+    .mark2,
+    .mark3 {
+        box-sizing: border-box;
+        min-width: 320px;
+        margin: 0;
+        align-self: center;
+    }
+
+    .attribution {
+        display: none;
+    }
+
+    section.top {
+        height: 550px;
+        min-width: 360px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    div.stars {
+        height: 300px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    div.stars1,
+    div.stars2,
+    div.stars3 {
+        width: 100px;
+        height: 20px;
+        align-self: center;
+    }
+
+    div.star1 {
+        margin: 0 0 0 350px;
     }
 
     section.bottom {
@@ -280,8 +336,48 @@ div.stars3 {
         align-items: center;
     }
 
+    div.lead {
+        padding: 0;
+        height: 200px;
+    }
+
+    div.stars__p {
+        height: 20px;
+        width: 191px;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .stars__p {
+        margin-bottom: -10px;
+    }
+
+    .stars p {
+        height: 20px;
+        margin: 0;
+    }
+
+    .mark2 div.stars__p {
+        margin-right: 30px;
+    }
+
     div.card3 {
         align-self: center;
     }
+
+    .stars div.mark1,
+    .stars div.mark2,
+    .stars div.mark3 {
+        width: 320px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    
     
 }

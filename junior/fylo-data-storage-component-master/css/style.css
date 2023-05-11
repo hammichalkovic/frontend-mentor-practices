@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 body {
     min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +17,22 @@ main {
     border-radius: 10px;   
     display: flex;
     justify-content: space-between;
+}
+
+em {
+    font-style: normal;
+}
+
+mark {
+    background-color: white;
+    color: hsl(229, 7%, 55%);
+    font-weight: 700;
+}
+
+em,
+.min,
+.max {
+    font-weight: 700;
 }
 
 .fylo {
@@ -31,7 +51,13 @@ main {
     display: flex;
     flex-direction: column;
     z-index: 0;
-    background-color: hsl(228, 56%, 26%);
+    background-color: hsl(228, 45%, 32%);
+}
+
+div.storage__used p,
+div.min ,
+div.max  {
+    color: hsl(243, 100%, 93%);
 }
 
 .storage__left {
@@ -61,4 +87,48 @@ div.storage__left::after {
 
 .storage__left p {
     text-transform: uppercase;
+    border: 2px solid green;
+}
+
+.storage__left p em {
+    font-size: 36px;
+}
+
+div.storage__used {
+    border: 1px solid salmon;
+    height: 20px;
+    align-self: flex-start;
+}
+
+div.storage__used p {
+    margin: 0;
+    padding: 0;
+}
+
+div.storage {
+    border: 2px solid salmon;
+    width: 480px;
+    height: 80px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;    
+    align-self: center;
+    margin-top: 12px;
+}
+
+div.diogram {
+    border: 1px solid salmon;
+    height: 18px;
+    width: 475px;
+    align-self: flex-end;
+    border-radius: 9px;
+    background-color: hsl(228, 56%, 23%);
+}
+
+div.storage__scale {
+    width: 480px;
+    border: 1px solid salmon;
+    display: flex;
+    justify-content: space-between;
 }

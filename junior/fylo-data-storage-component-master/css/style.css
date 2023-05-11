@@ -36,17 +36,29 @@ main {
 
 .storage__left {
     width: 180px;
-    height: 85px;
+    height: 80px;
     border: 1px solid red;
     align-self: flex-end;
     border-radius: 10px;
     margin: -55px 35px 0 0;
     z-index: 1;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.storage__left::before {
-    border: 1px solid black;
-    width: 10px;
-    height: 10px;
+div.storage__left::after {
+    content: '';
+    width: 0;
+    height: 0;
+    margin: 95px 0 0 80px;
+    border-top: 30px solid white;
+    border-right: 0 solid transparent;
+    border-left: 30px solid transparent;
+
+}
+
+.storage__left p {
+    text-transform: uppercase;
 }

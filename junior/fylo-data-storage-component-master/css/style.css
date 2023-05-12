@@ -36,7 +36,7 @@ em,
 }
 
 .fylo {
-    width: 350px;
+    width: 310px;
     height: 215px;
     background-color: hsl(228, 56%, 26%);
     border-radius: 10px 100px 10px 10px;
@@ -53,6 +53,61 @@ em,
     z-index: 0;
     background-color: hsl(228, 45%, 32%);
 }
+
+div.fylo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 45px;
+}
+
+div.fylologo {
+    background-image: url('../images/logo.svg');
+    width: 130px;
+    height: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* border: 1px solid salmon; */
+    margin-bottom: -5px;
+}
+
+div.icons {
+    /* border: 1px solid salmon; */
+    width: 165px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -5px;
+}
+
+div.document,
+div.folder,
+div.upload {
+    height: 45px;
+    width: 45px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;   
+}
+
+div.document {
+    content: url(../images/icon-document.svg);
+    padding: 11px 13px;
+}
+
+div.folder {
+    content: url(../images/icon-folder.svg);
+    padding: 13px 12px;
+}
+
+div.upload {
+    content: url(../images/icon-upload.svg);
+    padding: 15px 12px;
+}
+
 
 div.storage__used p,
 div.min ,

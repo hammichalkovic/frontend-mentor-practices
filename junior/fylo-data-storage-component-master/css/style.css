@@ -61,12 +61,12 @@ div.max  {
 }
 
 .storage__left {
-    width: 180px;
-    height: 80px;
+    width: 170px;
+    height: 70px;
     border: 1px solid red;
     align-self: flex-end;
     border-radius: 10px;
-    margin: -55px 35px 0 0;
+    margin: -50px 40px 0 0;
     z-index: 1;
     background-color: white;
     display: flex;
@@ -74,11 +74,28 @@ div.max  {
     align-items: center;
 }
 
+div.items {
+    width: 200px;
+    height: 30px;
+    margin: 0 -30px 12px 8px;
+}
+
+div.number {
+    margin:0 0 3px 88px;
+}
+
+div.items p {
+    width: 70px;
+    height: 50px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
 div.storage__left::after {
     content: '';
     width: 0;
     height: 0;
-    margin: 95px 0 0 80px;
+    margin: 85px 65px 0 0;
     border-top: 30px solid white;
     border-right: 0 solid transparent;
     border-left: 30px solid transparent;
@@ -87,7 +104,6 @@ div.storage__left::after {
 
 .storage__left p {
     text-transform: uppercase;
-    border: 2px solid green;
 }
 
 .storage__left p em {
@@ -107,7 +123,7 @@ div.storage__used p {
 
 div.storage {
     border: 2px solid salmon;
-    width: 480px;
+    width: 478px;
     height: 80px;
     display: flex;
     justify-content:space-between;

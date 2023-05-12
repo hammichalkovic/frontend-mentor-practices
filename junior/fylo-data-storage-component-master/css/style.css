@@ -13,7 +13,7 @@ body {
 main {
     height: 215px;
     width: 950px;
-    border: 2px solid salmon;
+    /* border: 2px solid salmon; */
     border-radius: 10px;   
     display: flex;
     justify-content: space-between;
@@ -111,7 +111,7 @@ div.storage__left::after {
 }
 
 div.storage__used {
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     height: 20px;
     align-self: flex-start;
 }
@@ -122,7 +122,7 @@ div.storage__used p {
 }
 
 div.storage {
-    border: 2px solid salmon;
+    /* border: 2px solid salmon; */
     width: 478px;
     height: 80px;
     display: flex;
@@ -130,21 +130,41 @@ div.storage {
     align-items: center;
     flex-direction: column;    
     align-self: center;
-    margin-top: 12px;
+    margin-top: 18px;
 }
 
 div.diogram {
-    border: 1px solid salmon;
-    height: 18px;
+    height: 22px;
     width: 475px;
     align-self: flex-end;
-    border-radius: 9px;
+    border-radius: 11px;
     background-color: hsl(228, 56%, 23%);
+    display: flex;
+    align-items: center;
+}
+
+div.loading {
+    height: 16px;
+    width: 350px;
+    border-radius: 8px;
+    background: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 4px;
+}
+
+div.pointer {
+    height: 12px;
+    width: 12px;
+    border-radius: 7px;
+    background-color: white;
+    margin-right: 3 px;
 }
 
 div.storage__scale {
     width: 480px;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     display: flex;
     justify-content: space-between;
 }

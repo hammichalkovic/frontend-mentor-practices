@@ -211,7 +211,7 @@ div.diogram {
     width: 475px;
     align-self: flex-end;
     border-radius: 11px;
-    background-color: hsl(229, 57%, 1%);
+    background-color: hsl(229, 57%, 18%);
     display: flex;
     align-items: center;
 }
@@ -240,4 +240,91 @@ div.storage__scale {
     /* border: 1px solid salmon; */
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 450px) {
+    
+    body {
+        background-image: url('../images/bg-mobile.png');
+        background-size: 60vh;
+        background-position-y: -10px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 330px;
+    }
+    
+    div.fylo {
+        box-sizing: border-box;
+        min-height: 195px;
+        min-width: 330px;
+    }
+
+
+    div.info {
+        min-height: 170px;
+        max-width: 330px;
+        margin: 15px 0 0 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    div.storage__left {
+        margin: 0 0 -35px 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    div.number {
+        width: 50px;
+        padding: 0 10px 0 0;
+    }
+
+    div.items {
+        margin-right: 65px;
+    }
+
+    div.storage__left::after {
+        display: none;
+    }
+
+    div.storage__used {
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    div.storage {
+        width: 280px;
+        align-self: center;
+    }
+
+    div.storage p {
+        width: 228px;
+        text-align: center;
+        margin: -17px 0 15px 25px;
+    }
+
+    div.diogram {
+        width: 260px;
+        align-self: center;
+    }
+
+    div.storage__scale {
+        width: 260px;
+        margin: 10px 0 15px 0;
+    }
+
+    div.loading {
+        width: 170px;
+    }
+
+    footer {
+        display: none;
+    }
 }

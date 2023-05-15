@@ -8,6 +8,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url('../images/bg-desktop.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 100%;
+    background-color: hsl(229, 57%, 11%);
 }
 
 main {
@@ -17,6 +22,7 @@ main {
     border-radius: 10px;   
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 em {
@@ -45,14 +51,26 @@ em,
 .info {
     height: 160px;
     width: 565px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     align-self: flex-end;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     z-index: 0;
-    background-color: hsl(228, 45%, 32%);
+    background-color: hsl(228, 56%, 26%);
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: hsl(243, 100%, 93%);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(229, 7%, 55%);
+    font-weight: 700;
+} 
 
 div.fylo {
     display: flex;
@@ -118,7 +136,7 @@ div.max  {
 .storage__left {
     width: 170px;
     height: 70px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-self: flex-end;
     border-radius: 10px;
     margin: -50px 40px 0 0;
@@ -193,7 +211,7 @@ div.diogram {
     width: 475px;
     align-self: flex-end;
     border-radius: 11px;
-    background-color: hsl(228, 56%, 23%);
+    background-color: hsl(229, 57%, 1%);
     display: flex;
     align-items: center;
 }
@@ -214,7 +232,7 @@ div.pointer {
     width: 12px;
     border-radius: 7px;
     background-color: white;
-    margin-right: 3 px;
+    margin-right: 3px;
 }
 
 div.storage__scale {

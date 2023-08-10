@@ -40,6 +40,9 @@ summary, h1 {
 summary {
     list-style: none;
     display: flex;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 400;
 }
 
 summary::after {
@@ -52,7 +55,7 @@ details summary::after {
     margin-left: auto;
     height: 10px;
     width: 10px;
-    margin-top: 18px;
+    margin-top: 8px;
     
 }
 
@@ -63,16 +66,15 @@ details[open] summary::after {
     height: 10px;
     width: 10px;
     position: relative;
-    margin-top: 15px;
-}
-
-h3 {
-    margin-top: 10px;
-    font-weight: 400;
+    margin-top: 2px;
 }
 
 .weighted {
     font-weight: 700;
+}
+
+.collapse {
+    display: none;
 }
 
 p {

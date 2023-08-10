@@ -1,10 +1,28 @@
-let summaryTitles = document.querySelectorAll('h3'),
-    arrows = document.querySelectorAll('details');
+let summaries = document.querySelectorAll('summary'),
+    detailsList = document.querySelectorAll('details'),
+    paragraphs = document.querySelectorAll('details').querySelectorAll('p');
 
-let toChangeSummaryWeight = (e) => {
-        summaryTitles.forEach((title) => {
-            title.classList.toggle('weighted');
-        });
-    };
 
-arrows.forEach(arrow => arrow.addEventListener('click', toChangeSummaryWeight));
+
+summaries.forEach((summary) => {
+    summary.addEventListener('click', () => {
+        summary.classList.toggle('weighted');
+    })
+
+    summary.addEventListener('blur', () => {
+        summary.classList.remove('weighted');
+    })
+});
+
+
+detailsList.forEach((details) => {
+    details.addEventListener('click', () => {
+        console.log(details.attributes);
+    })
+});
+
+paragraphs.forEach((paragraph) => {
+    paragraph.addEventListener('blur', () => {
+        paragraph.classList.add('collapse');
+    })
+})

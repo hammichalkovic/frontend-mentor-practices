@@ -1,28 +1,24 @@
-let summaries = document.querySelectorAll('summary'),
-    detailsList = document.querySelectorAll('details'),
-    paragraphs = document.querySelectorAll('details').querySelectorAll('p');
+let questionTitles = document.querySelectorAll('button'),
+    paragraphsList = document.querySelectorAll('p'),
+    qAndAList = document.querySelectorAll('.question');
 
 
 
-summaries.forEach((summary) => {
-    summary.addEventListener('click', () => {
-        summary.classList.toggle('weighted');
+questionTitles.forEach((question) => {
+    question.addEventListener('click', () => {
+        question.classList.toggle('weighted');
     })
 
-    summary.addEventListener('blur', () => {
-        summary.classList.remove('weighted');
+    question.addEventListener('blur', () => {
+        question.classList.remove('weighted');
+    })
+});
+
+
+qAndAList.forEach((qAndA) => {
+    qAndA.addEventListener('click', () => {
+        qAndA.querySelector('p').remove('collapse');
     })
 });
 
 
-detailsList.forEach((details) => {
-    details.addEventListener('click', () => {
-        console.log(details.attributes);
-    })
-});
-
-paragraphs.forEach((paragraph) => {
-    paragraph.addEventListener('blur', () => {
-        paragraph.classList.add('collapse');
-    })
-})

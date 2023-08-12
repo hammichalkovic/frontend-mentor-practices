@@ -1,6 +1,6 @@
 let summaries = document.querySelectorAll('summary'),
     detailsList = document.querySelectorAll('details'),
-    paragraphs = document.querySelectorAll('details').querySelectorAll('p');
+    paragraphs = document.querySelectorAll('details');
 
 
 
@@ -9,20 +9,27 @@ summaries.forEach((summary) => {
         summary.classList.toggle('weighted');
     })
 
-    summary.addEventListener('blur', () => {
+    summary.addEventListener('collapse', () => {
         summary.classList.remove('weighted');
     })
 });
 
-
-detailsList.forEach((details) => {
-    details.addEventListener('click', () => {
-        console.log(details.attributes);
+summaries.forEach((summary) => {
+    summary.addEventListener('focusout', () => {
+        summary.classList.remove('weighted');
     })
 });
 
-paragraphs.forEach((paragraph) => {
-    paragraph.addEventListener('blur', () => {
-        paragraph.classList.add('collapse');
-    })
-})
+// detailsList.forEach((detail) => detail.addEventListener('focus', () => {
+//     detail.setAttribute('open');
+// }));
+
+detailsList.forEach((detail) => detail.addEventListener('focusout', () => {
+        detail.removeAttribute('open');
+}));
+
+
+detailsList.forEach((detail) => detail.addEventListener('focuson', () => {
+    detail.setAttribute('open');
+}));
+

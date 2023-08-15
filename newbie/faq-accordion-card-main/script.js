@@ -1,8 +1,8 @@
 let questionTitles = document.querySelectorAll('button'),
     paragraphsList = document.querySelectorAll('p'),
     qAndAList = document.querySelectorAll('.question'),
-    accordion = document.querySelector('.faqacordion');
-
+    accordion = document.querySelector('.faqacordion'),
+    arrows = document.querySelectorAll('.pic');
 
 
 questionTitles.forEach((question) => { 
@@ -17,7 +17,7 @@ questionTitles.forEach((question) => {
 });
 
 
-//    //calling function and return number of clicked item
+ 
 
 
 
@@ -32,7 +32,7 @@ qAndAList.forEach((question, index) => {
         paragraph.classList.toggle('collapse');
         picture.classList.toggle('pic_transform');
     
-    removeOpen(index);
+    removeOpen(index);  //calling function and return number of clicked item
     
     });
 
@@ -49,5 +49,14 @@ function removeOpen(index1) {
 };
 
 
+function toCloseAll() {
+    paragraphsList.forEach((paragraph) => {
+        paragraph.classList.add('collapse');
+    });
 
+    arrows.forEach((arrow) => {
+        arrow.classList.remove('pic_transform');
+    });
+};
 
+accordion.addEventListener('focusout', toCloseAll);

@@ -21,61 +21,75 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 }
 
 h1 {
     text-transform: uppercase;
+    text-align: center;
+    padding-right: 5px;
+    font-size: 27px;
 }
 
-details summary > *,
-details summary::after > * {
-    display: inline;
+.mainheader {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 40px;
+    margin: 0 0 15px 5px;
+    /* border: 1px solid red; */
 }
 
-summary, h1 {
+
+.items {
+    /* border: 1px solid salmon; */
+    width: 340px;
+}
+
+
+.sum, h1 {
     color: hsl(237, 12%, 33%);
     margin-left: 12px;
 }
 
-summary {
-    list-style: none;
+.sum {
     display: flex;
-    font-size: 14px;
-    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
     font-weight: 400;
+    width: 340px;
+    height: 47px;
+    background-color: white;
+    border-color: transparent;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 13px;
 }
 
-summary:hover {
+.sum:hover {
     cursor: pointer;
 }
 
-summary:active {
-    cursor: pointer;
+.sum:active {
     color: hsl(14, 88%, 65%);
 }
 
-summary::after {
+.pic {
     /* transition: 0.3s ease-in-out; */
-}
-
-details summary::after {
-    content: '';
     background: url('../images/icon-arrow-down.svg') no-repeat;
-    margin-left: auto;
     height: 10px;
     width: 10px;
-    margin-top: 8px;
+    margin-right: -9px;
     
 }
 
-details[open] summary::after {
-    content: '';
-    background: url('../images/icon-arrow-down.svg') no-repeat;
+.pic_transform {
     transform: rotate(180deg);
     height: 10px;
     width: 10px;
-    position: relative;
-    margin-top: 2px;
+    margin-bottom: 3px;
 }
 
 .weighted {
@@ -83,14 +97,15 @@ details[open] summary::after {
 }
 
 p {
-    color: hsl(240, 6%, 50%);
-    margin: 0 0 17px 12px;
+    color: hsl(240, 6%, 50%);   
+    transition: 0.5s ease;
+    margin: -6px 0 17px 7px;
 }
 
 hr {
-    border: 0.1cqi solid hsl(240, 5%, 91%, 50%);
-    width: 340px;
-    margin-left: 12px;
+    border: 1px solid hsl(240, 5%, 91%, 50%);
+    width: 346px;
+    margin: 0 0 0 7px;
 }
 
 footer {
@@ -110,8 +125,40 @@ footer {
 }
 .faqimage {
     width: 50%;
+    /* border: 2px solid blue; */
+    background: no-repeat url('../images/bg-pattern-desktop.svg');
+    background-size: 200%;
+    background-position: -37vw -39vh;
+}
+
+.girl {
+    /* border: 1px dotted salmon; */
+    height: 100%;
+    width: 100%;
+    background: no-repeat url('../images/illustration-woman-online-desktop.svg');
+    background-size: 96%;
+    background-position: -5vw;
+}
+
+.box {
+    position: relative;
+    top: 28vh;
+    right: 5.9vw;
+
+
 }
 
 .faqacordion {
+    box-sizing: border-box;
     width: 330px;
+    margin-top: 50px;
+}
+
+.attribution a {
+    color: white;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration:underline
 }

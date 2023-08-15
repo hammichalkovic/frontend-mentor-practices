@@ -85,6 +85,10 @@ h1 {
     
 }
 
+.collapse {
+    display: none;
+}
+
 .pic_transform {
     transform: rotate(180deg);
     height: 10px;

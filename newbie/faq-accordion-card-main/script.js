@@ -17,10 +17,6 @@ questionTitles.forEach((question) => {
 });
 
 
- 
-
-
-
 qAndAList.forEach((question, index) => {
     let button = question.querySelector('button'),
         paragraph = question.querySelector('p'),

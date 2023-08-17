@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     width: 100%;
     height: 93vh;
     display: flex;
@@ -126,13 +126,16 @@ footer {
     border-radius: 20px;
     background-color: white;
     display: flex;
+    z-index: 0;
 }
+
 .faqimage {
     width: 50%;
     /* border: 2px solid blue; */
     background: no-repeat url('../images/bg-pattern-desktop.svg');
     background-size: 200%;
     background-position: -37vw -39vh;
+    z-index: 0;
 }
 
 .girl {
@@ -165,4 +168,78 @@ footer {
 
 .attribution a:hover {
     text-decoration:underline
+}
+
+.girlmobile {
+    position: absolute;
+    right: 10000px;
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        min-height: 750px;
+    }
+    
+    .faq {
+        margin-top: 100px;
+        width: 325px;
+        height: 510px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sum {
+        width: 275px;
+        margin-left: 20px;
+    }
+
+    p {
+        width: 255px;
+        margin-left: 27px;
+    }
+
+    hr {
+        border: 1px solid hsl(240, 5%, 91%, 50%);
+        width: 275px;
+        margin: 0 0 0 25px;
+    }
+
+    .mainheader {
+        margin: 0 0 15px 130px;   
+    }
+
+    .faqacordion {
+        margin-top: -110px;
+        margin-bottom: 0;
+        /* border: 1px solid salmon; */
+        height: 500px;
+    }
+
+    .mobilebg {
+        width: 100%;
+        /* border: 2px solid blue; */
+        background: no-repeat url('../images/bg-pattern-mobile.svg');
+        background-size: 74%;
+        background-position: 38px 0px;
+        height: 300px;
+        width: 300px;
+    }
+
+    .faqimage {
+        display: none;
+    }
+
+
+    .girlmobile {
+        position: relative;
+        left: 35px;
+        bottom: 130px;
+    }
+
+
+    .pic {
+        margin-right: -17px;
+    }
+
 }

@@ -17,6 +17,13 @@ body {
 
 h1 {
     color: hsl(0, 0%, 100%);
+    font-size: 28px;
+    margin-top: -1px;
+}
+
+p {
+    line-height: 23px;
+    margin-top: -39px;
 }
 
 
@@ -27,24 +34,25 @@ p, .mark {
 .main,
 .thanks {
     box-sizing: border-box;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     width: 410px;
     height: 410px;
     border-radius: 30px;
-    padding: 30px;
+    padding: 5px 30px; 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: hsl(213, 25%, 13.5%);
 
 }
 
 .thanks {
-    display: none;   
+
+    text-align: center;
 }
 
-.main {
-    /* display: none; */
-    background-color: hsl(213, 19%, 18%);
+.nodisplay {
+    display: none;
 }
 
 .star,
@@ -59,26 +67,104 @@ p, .mark {
     background-color: rgba(152, 124, 124, 0.158);
 }
 
-.star {
-    
+.mark {
+    box-sizing: border-box;
+    padding-top: 3px;
 }
+
+.onmouseover {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl( 0, 0%, 100%);
+    cursor: pointer;
+}
+
+.mark:active {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl( 0, 0%, 100%);
+}
+
+.markclicked {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl( 0, 0%, 100%);
+} 
+
 
 .marks {
     display: flex;
     width: 336px;
     height: 50px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     justify-content: space-between;
+    margin-top: -22px;
 }
 
 .submit {
     width: 340px;
-    height: 50px;
+    height: 40px;
     border-radius: 25px;
     text-transform: uppercase;
+    background-color: hsl(25, 97%, 53%);
+    color: hsl( 0, 0%, 100%);
+    letter-spacing: 2px;
+    border-color: transparent;
+    margin-bottom: -5px;
+    font-weight: 700;
+    font-size: 15px;
 }
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.submit:active {
+    color: #fb7413;
+    background-color: hsl( 0, 0%, 100%);
+}
+
+
+.icon {
+    background: no-repeat url('../images/illustration-thank-you.svg') center;
+    height: 150px;
+    width: 180px;
+    align-self: center;
+    margin-top: -10px;
+}
+
+.selection {
+    height: 30px;
+    width: 190px;
+    color: hsl(25, 97%, 53%);
+    background-color: rgba(152, 124, 124, 0.158);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    padding-top: 3px;
+    align-self: center;
+    margin-top: -20px;
+}
+
+.thanks p {
+    width: 340px;
+    font-size: 15px;
+}
+
 
 .attribution {
     position: absolute;
     bottom: 0;
+    color: hsl(217, 12%, 63%);
+}
+
+.attribution a {
+    color:hsl( 0, 0%, 100%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+.attribution a:active {
+    color: hsl(25, 97%, 53%);
 }

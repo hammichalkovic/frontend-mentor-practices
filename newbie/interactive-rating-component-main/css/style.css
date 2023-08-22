@@ -46,8 +46,8 @@ p, .mark {
 
 }
 
-.thanks {
-
+.thanks,
+.clicked {
     text-align: center;
 }
 

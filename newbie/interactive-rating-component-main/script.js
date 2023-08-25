@@ -3,8 +3,17 @@ let marks = document.querySelectorAll('.mark'),
     main = document.querySelector('.main'),
     thanks = document.querySelector('.thanks'),
     selection = document.querySelector('.selection'),
-    result = '';
+    result = '',
+    siblings = [];
 
+
+    siblings = Array.from(marks);
+    
+    function toRemoveClickMarks(e) { 
+
+    e.classList.remove('markclicked');
+
+    };
 
 
 marks.forEach((mark, index) => {
@@ -17,24 +26,19 @@ marks.forEach((mark, index) => {
         mark.classList.remove('onmouseover');
     });
 
-    mark.addEventListener('click', () => {
-        document.querySelector('.markclicked')?.classList.remove('mark');
-        mark.classList.add('markclicked');
-        
+    mark.addEventListener('click', (e) => {
+        // mark.classList.add('markclicked');
         result = e.target.textContent;
+
+        if (mark.textContent === result) {
+            mark.classList.add('markclicked');
+        } 
+            mark.classList.remove('markclicked');
+        
 
     });
 
 });
-
-// marks.forEach((mark) => {
-//     mark.addEventListener('clickout', () => {
-//         mark.classList.remove('markclicked');
-//     })
-// });
-
-
-// https://www.youtube.com/watch?v=RBB2N341tr0  ПАСПРАБАВАЦЬ ЗРАБІЦЬ ПРАЗ МАСІЎ ПА ГЭТАЙ СПАСЫЛЦЫ
 
 
 submit.addEventListener('click', (e) => {

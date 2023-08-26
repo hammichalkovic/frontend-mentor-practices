@@ -38,7 +38,7 @@ p, .mark {
     width: 410px;
     height: 410px;
     border-radius: 30px;
-    padding: 5px 30px; 
+    padding: 5px 35px; 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -64,25 +64,47 @@ p, .mark {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* flex-direction: column; */
     background-color: rgba(152, 124, 124, 0.158);
     border-color: transparent;
 }
 
-.mark {
-    box-sizing: border-box;
-    padding-top: 3px;
+.star {
+    justify-content: center;
 }
 
+input {
+    margin: -70px -10px 0 0; 
+}
+
+.mark {
+    box-sizing: border-box;
+    padding: 3px 3px 0 0;
+}
+
+.mark1:active > #1:checked,
+.mark2:active > #2:checked,
+.mark3:active > #3:checked,
+.mark4:active > #4:checked,
+.mark5:active > #5:checked {
+    cursor: pointer;
+}
+
+/* input {
+    display: none;
+} */
 .onmouseover {
     background-color: hsl(217, 12%, 63%);
     color: hsl( 0, 0%, 100%);
     cursor: pointer;
 }
 
-.mark:active {
+
+
+/* .mark:active {
     background-color: hsl(25, 97%, 53%);
     color: hsl( 0, 0%, 100%);
-}
+} */
 
 .markclicked {
     background-color: hsl(25, 97%, 53%);

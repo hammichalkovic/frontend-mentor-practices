@@ -4,16 +4,32 @@ let marks = document.querySelectorAll('.mark'),
     thanks = document.querySelector('.thanks'),
     selection = document.querySelector('.selection'),
     result = '',
-    siblings = [];
+    id = 0,
+    inputs = document.querySelectorAll('input'),
+    input = document.querySelector('input');
 
 
-    siblings = Array.from(marks);
-    
-    function toRemoveClickMarks(e) { 
+let marksArr = Array.from(marks);
 
-    e.classList.remove('markclicked');
 
-    };
+
+
+inputs.forEach((input) => {
+    input.addEventListener('click', (e) => {
+        for (let i = 1; i <= 5; i++) {
+
+
+            if (i.toString() === e.target.id && document.getElementById(i.toString()).checked === true) {
+                document.getElementById(i.toString()).checked = true;
+                marksArr[i-1].classList.add('markclicked');
+            } else {
+                document.getElementById(i.toString()).checked = false;
+            };
+        };
+    });
+});
+
+
 
 
 marks.forEach((mark, index) => {

@@ -51,9 +51,7 @@ p, .mark {
     text-align: center;
 }
 
-.nodisplay {
-    display: none;
-}
+v
 
 .star,
 .mark {
@@ -100,6 +98,9 @@ input {
     cursor: pointer;
 }
 
+.nodisplay {
+    display: none;
+}
 
 
 /* .mark:active {
@@ -226,7 +227,7 @@ input {
         font-size: 14px;
     }
 
-    .thanks {
+    .main {
         display: none;
     }
 
@@ -263,5 +264,24 @@ input {
         position: absolute;
         bottom: 0;
         text-align: center;
+        display: none;
+    }
+
+    .nodisplay {
+        display: none;
+    }
+
+    .thanks p {
+        width: 290px;
+        font-size: 14px;
+        margin-left: -5px;
+    }
+
+    .thanks h1 {
+        margin: 0 0 15px 0;
+    }
+
+    .icon {
+        margin: -15px 0 -5px 0;
     }
 }

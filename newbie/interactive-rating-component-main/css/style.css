@@ -79,7 +79,7 @@ input {
 
 .mark {
     box-sizing: border-box;
-    padding: 3px 3px 0 0;
+    padding: 5px 0px 0 0;
 }
 
 .mark1:active > #1:checked,
@@ -90,9 +90,10 @@ input {
     cursor: pointer;
 }
 
-/* input {
+input {
     display: none;
-} */
+}
+
 .onmouseover {
     background-color: hsl(217, 12%, 63%);
     color: hsl( 0, 0%, 100%);
@@ -110,6 +111,11 @@ input {
     background-color: hsl(25, 97%, 53%);
     color: hsl( 0, 0%, 100%);
 } 
+
+.orange {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl( 0, 0%, 100%); 
+}
 
 
 .marks {

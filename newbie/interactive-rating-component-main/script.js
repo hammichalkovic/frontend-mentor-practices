@@ -15,16 +15,20 @@ let marksArr = Array.from(marks);
 
 
 inputs.forEach((input) => {
-    input.addEventListener('click', (e) => {
-        for (let i = 1; i <= 5; i++) {
 
+    input.addEventListener('click', (e) => {
+        console.log(e.target);
+
+        for (let i = 1; i <= 5; i++) {
 
             if (i.toString() === e.target.id && document.getElementById(i.toString()).checked === true) {
                 document.getElementById(i.toString()).checked = true;
-                marksArr[i-1].classList.add('markclicked');
+                document.getElementById(i.toString() + i.toString()).classList.add('orange');
             } else {
                 document.getElementById(i.toString()).checked = false;
+                document.getElementById(i.toString() + i.toString()).classList.remove('orange');
             };
+
         };
     });
 });
@@ -44,7 +48,7 @@ marks.forEach((mark, index) => {
 
     mark.addEventListener('click', (e) => {
         // mark.classList.add('markclicked');
-        result = e.target.textContent;
+        result = e.target.id;
 
         if (mark.textContent === result) {
             mark.classList.add('markclicked');

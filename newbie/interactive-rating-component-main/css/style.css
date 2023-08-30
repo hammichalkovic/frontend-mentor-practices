@@ -227,9 +227,9 @@ input {
         font-size: 14px;
     }
 
-    .main {
+    /* .main {
         display: none;
-    }
+    } */
 
     .submit {
         width: 280px;

@@ -197,3 +197,71 @@ input {
 .attribution a:active {
     color: hsl(25, 97%, 53%);
 }
+
+@media screen and (max-width: 420px) {
+
+    h1 {
+        color: hsl(0, 0%, 100%);
+        font-size: 24px;
+        padding-bottom: 10px;
+        margin: -3px 0 18px 0;
+    }
+
+    p {
+        line-height: 20px;
+    }
+
+    .main,
+    .thanks {
+        box-sizing: border-box;
+        /* border: 1px solid salmon; */
+        width: 330px;
+        height: 360px;
+        border-radius: 15px;
+        padding: 5px 15px 5px 25px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: hsl(213, 25%, 13.5%);
+        font-size: 14px;
+    }
+
+    .thanks {
+        display: none;
+    }
+
+    .submit {
+        width: 280px;
+        height: 45px;
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+
+    .marks {
+        display: flex;
+        width: 280px;
+        height: 45px;
+        /* border: 1px solid white; */
+        justify-content: space-between;
+        margin-top: -5px;
+    }
+
+    .star,
+    .mark {
+        box-sizing: border-box;
+        width: 42px;
+        height: 42px;
+        padding: -5px 0 3px 0;
+    }
+
+    .star {
+        padding: 0 0 2px 2px;
+        margin-top: -5px;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+    }
+}

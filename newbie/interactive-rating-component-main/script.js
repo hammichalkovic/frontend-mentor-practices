@@ -87,3 +87,16 @@ submit.addEventListener('click', (e) => {
 
 // });
 
+
+// let mediaQuery = window.matchMedia('(max-width: 420px)')
+
+// if (mediaQuery.matches) {
+
+//     submit.addEventListener('click', (e) => {
+//         main.classList.add('nodisplay');
+//         thanks.classList.remove('nodisplay');  
+//         selection.textContent = `You selected ${result} out of 5`;
+        
+//     });
+
+// }

@@ -120,13 +120,24 @@ p.name {
 }
 
 .shareoptions {
+    box-sizing: border-box;
     position: relative;
-    top: -70px;
-    right: -240px;
-    height: 50px;
-    width: 225px;
-    border: 1px solid black;
-    display: none;
+    top: -125px;
+    right: -220px;
+    height: 57px;
+    width: 255px;
+    /* border: 1px solid black; */
+    border-radius: 12px;
+    background-color: hsl(217, 19%, 35%);
+    text-transform: uppercase;
+    font-size: 13px;
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 25px;
+    /* display: none; */
 }
 
 .attribution {

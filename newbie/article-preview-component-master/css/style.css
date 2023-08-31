@@ -67,8 +67,7 @@ p.name {
 }
 
 
-.para,
-.date {
+.para {
     color: hsl(214, 17%, 51%);
 }
 
@@ -133,4 +132,15 @@ p.name {
 .attribution {
     position: absolute;
     bottom: 0;
+    color: hsl(214, 17%, 51%);
+}
+
+.attribution a {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
 }

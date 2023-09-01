@@ -38,6 +38,7 @@ p.name {
     /* border: 1px solid black; */
     display: flex;
     border-radius: 12px;
+    box-shadow: 10px 30px 30px hsla(212, 23%, 69%, 15%);
 }
 
 .pic {
@@ -116,7 +117,11 @@ p.name {
     margin-left: auto;
     border-color: transparent;
     background-color: hsl(210, 46%, 95%);
-    
+    padding: 2px 0 0 2px;
+}
+
+.share:hover {
+    cursor: pointer;
 }
 
 .shareoptions {
@@ -136,8 +141,52 @@ p.name {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 25px;
+    padding: 0 50px 0 30px;
     /* display: none; */
+    box-shadow: 0px 15px 10px hsla(212, 23%, 69%, 20%);
+    transition: 0.3s linear;
+}
+
+.fblink,
+.tlink,
+.plink {
+    padding: 8px;
+}
+
+.fblink {
+    padding-left: 25px;
+}
+
+
+.fblink:hover,
+.tlink:hover,
+.plink:hover {
+    cursor: pointer;
+}
+
+.shareoptions::before {
+    content: '';
+    height: 0px;
+    width: 0px;
+    border-top: 30px solid hsl(217, 19%, 35%);
+    border-right: 0 solid transparent;
+    border-left: 30px solid transparent;    
+    transform: rotate(135deg);
+    position: relative;
+    top: 20px;
+    left: 103px;
+    box-shadow: 10px -10px 5px hsla(212, 23%, 69%, 18%);
+    
+}
+
+.buttonactive {
+    background-color: hsl(214, 17%, 51%);
+    color: hsl(0, 0%, 100%);
+}
+
+.nodisplay {
+    display: none;
+    transition: 0.3s linear;
 }
 
 .attribution {
@@ -154,4 +203,43 @@ p.name {
 
 .attribution a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 420px) {
+
+
+    h1 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 13px;
+        width: 256px;
+    }
+
+    .main {
+        flex-direction: column;
+        width: 330px;
+        height: 500px;
+    }
+
+    .info {
+        box-sizing: border-box;
+        padding: 35px 35px;
+        margin: 0;
+        height: 295px;
+        width: 330px;   
+        border-radius: 0 0 12px 12px;
+    }
+
+    .pic {
+        height: 205px;
+        width: 330px;
+        /* border: 1px solid salmon; */
+        background: no-repeat url('../images/drawers.jpg') center;
+        background-size: 100%;
+        background-position: 0 -15px;
+        border-radius: 12px 12px 0 0;
+    
+    }
 }

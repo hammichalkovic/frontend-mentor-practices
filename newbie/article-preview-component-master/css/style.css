@@ -118,6 +118,7 @@ p.name {
     border-color: transparent;
     background-color: hsl(210, 46%, 95%);
     padding: 2px 0 0 2px;
+    z-index: 1;
 }
 
 .share:hover {
@@ -137,7 +138,7 @@ p.name {
     text-transform: uppercase;
     font-size: 13px;
     color: hsl(212, 23%, 69%);
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -150,7 +151,7 @@ p.name {
 .fblink,
 .tlink,
 .plink {
-    padding: 8px;
+    padding: 8px 8px 5px 8px;
 }
 
 .fblink {
@@ -186,7 +187,7 @@ p.name {
 
 .nodisplay {
     display: none;
-    transition: 0.3s linear;
+    transition: 3s linear;
 }
 
 .attribution {
@@ -205,6 +206,25 @@ p.name {
     text-decoration: underline;
 }
 
+.animate {
+    animation-name: scale;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes scale {
+    0% {
+        transform: scaleY(0%);
+    }
+
+    100% {
+        transform: scaleY(100%);
+    }
+}
+
 @media screen and (max-width: 420px) {
 
 
@@ -220,14 +240,14 @@ p.name {
     .main {
         flex-direction: column;
         width: 329px;
-        height: 512px;
+        height: 522px;
     }
 
     .info {
         box-sizing: border-box;
         padding: 35px 35px;
         margin: 0;
-        height: 307px;
+        height: 317px;
         width: 329px;   
         border-radius: 0 0 12px 12px;
     }
@@ -246,7 +266,7 @@ p.name {
         /* border: 1px solid salmon; */
         height: 40px;
         width: 260px;
-        margin-top: 30px;
+        margin-top: 40px;
 
     }
 
@@ -257,32 +277,26 @@ p.name {
     }
 
     .share {
-        min-width: 32px;
-        min-height: 32px;
         border-radius: 20px;
         margin-left: -85px;
         border-color: transparent;
         background-color: hsl(210, 46%, 95%);
         padding: 2px 0 0 2px;
+        z-index: 0;
     }
 
     .shareoptions {
         box-sizing: border-box;
         position: relative;
-        top: 0;
+        top: -60px;
         right: 35px;
-        height: 57px;
+        height: 80px;
         width: 329px;
         /* border: 1px solid black; */
         border-radius: 0 0 12px 12px;
-        background-color: hsl(217, 19%, 35%);
-        text-transform: uppercase;
-        font-size: 13px;
-        color: hsl(212, 23%, 69%);
-        padding: 0 50px 0 30px;
+        padding: 0 25px;
         /* display: none; */
-        box-shadow: 0px 15px 10px hsla(212, 23%, 69%, 20%);
-        /* transition: 0.3s linear; */
+        
     }
 
     .shareoptions::before,
@@ -290,5 +304,51 @@ p.name {
         display: none;
     }
 
+    .fblink,
+    .tlink,
+    .plink {
+        padding-left: 0;
+        padding-right: 0;
+        /* border: 1px solid red; */
+        
+    }
+
+    .share_mobile_active {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 30px;
+        min-height: 30px;
+        background-color: hsl(214, 17%, 51%);
+        padding: 0 0 1px 1px;
+        margin-left: 25px;
+        z-index: 1;
+    }
+
+    .personal {
+        justify-content: space-between;
+        margin-top: 3px;
+    }
+
+    /* .animate2 {
+        animation-name: scale2;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-delay: 0;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    } */
+    
+
+    /* @keyframes scale2 {
+        0% {
+            transform: scaleY(100%);
+        }
+
+        100% {
+            transform: scaleY(0%);
+        }
+    } */
     
 }

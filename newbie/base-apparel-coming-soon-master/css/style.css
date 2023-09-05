@@ -43,8 +43,43 @@ span {
 
 
 .lead {
-    color: hsl(0, 36%, 70%);
+    color: hsla(0, 36%, 70%, 85%);
     line-height: 28px;
+}
+
+.emailbox {
+    display: flex;
+}
+
+input {
+    height: 50px;
+    min-width: 395px;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    z-index: 0;
+    padding-left: 30px;
+    border-radius: 28px;
+    border: 1px solid hsla(0, 36%, 70%, 50%);
+    background-color: transparent;
+    
+}
+
+button {
+    position: relative;
+    top: 0;
+    right: 90px;
+    box-sizing: border-box;
+    min-width: 100px;
+    min-height: 50px;
+    border-radius: 28px;
+    border-color: transparent;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    z-index: 1;
+} 
+
+input::placeholder {
+    color: hsla(0, 36%, 70%, 50%);
 }
 
 .nodisplay {

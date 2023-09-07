@@ -18,6 +18,8 @@ h1 {
     font-size: 62px;
     letter-spacing: 15px;
     font-weight: 600;
+    margin-top: 130px;
+    line-height: 70px;
 }
 
 span {
@@ -29,13 +31,14 @@ span {
     width: 815px;
     height: 800px;
     background: url('../images/bg-pattern-desktop.svg'), linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .info {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 430px;
     height: 680px;
     margin-left: -50px;
@@ -45,10 +48,70 @@ span {
 .lead {
     color: hsla(0, 36%, 70%, 85%);
     line-height: 28px;
+    margin: -25px 0 40px 0;
 }
 
 .emailbox {
     display: flex;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.errornotification {
+    color: hsl(0, 93%, 68%);
+    font-size: 13px;
+    margin-left: 33px;
+}
+
+.bounce {
+    animation-name: bounce;
+    border: 2px solid hsl(0, 93%, 68%);
+    animation-duration: 0.5s;
+    animation-delay: 0.25s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
+
+    37% {
+        transform: translateX(5px);
+        timing-function: ease-out;
+    }
+
+    55% {
+        transform: translateX(-5px);
+        timing-function: ease-in;
+    }
+
+    73% {
+        transform: translateX(4px);
+        timing-function: ease-out;
+    }
+
+    82% {
+        transform: translateX(-4px);
+        timing-function: ease-in;
+    }
+
+    91% {
+        transform: translateX(2px);
+        timing-function: ease-in;
+    }
+
+    96% {
+        transform: translateX(-2px);
+        timing-function: ease-out;
+    }
+
+    100% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
 }
 
 input {
@@ -76,7 +139,20 @@ button {
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     z-index: 2;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
+
+button:hover,
+button:active {
+    cursor: pointer;
+}
+
+button:active {
+    background: hsla(0, 80%, 86%);
+}
+
 
 input::placeholder {
     color: hsla(0, 36%, 70%, 50%);

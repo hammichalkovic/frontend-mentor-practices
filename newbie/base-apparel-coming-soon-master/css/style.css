@@ -57,12 +57,14 @@ span {
 
 .nodisplay {
     display: none;
+    /* transition: 0.5s ease-in-out; */
 }
 
 .errornotification {
     color: hsl(0, 93%, 68%);
     font-size: 13px;
     margin-left: 33px;
+    
 }
 
 .bounce {
@@ -125,7 +127,7 @@ input {
     border-radius: 28px;
     border: 1px solid hsla(0, 36%, 70%, 50%);
     background-color: transparent;
-    
+    outline: none;
 }
 
 button {

@@ -9,4 +9,10 @@ let button = document.querySelector('button'),
 button.addEventListener('click', () => {
     input.classList.add('bounce');
     error.classList.remove('nodisplay');
+    setTimeout(refresh, 1000);
 });
+
+function refresh() {
+    input.classList.remove('bounce');
+    error.classList.add('nodisplay');
+};

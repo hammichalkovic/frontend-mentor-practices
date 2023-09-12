@@ -24,6 +24,4 @@ function refresh() {
     error.classList.add('nodisplay');
 };
 
-window.addEventListener('click', (e) => {
-    console.log(e.target.attributes);
-})
+

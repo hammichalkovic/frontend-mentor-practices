@@ -8,6 +8,11 @@ body {
     font-size: 16px;
 }
 
+.girl {
+    margin-left: auto;
+    padding-right: 0;
+}
+
 main {
     display: flex;
 }
@@ -58,6 +63,10 @@ span {
 .nodisplay {
     display: none;
     /* transition: 0.5s ease-in-out; */
+}
+
+.girlmobile {
+    display: none;
 }
 
 .errornotification {
@@ -164,3 +173,54 @@ input::placeholder {
     display: none;
 }
 
+footer {
+    width: 100%;
+    height: 0;
+}
+
+.attribution {
+    width: 100%;
+    position: relative;
+    bottom: 30px; 
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    /* border: 1px solid black; */
+    /* margin-top: auto; */
+    font-weight: 600;
+    text-shadow: 
+				  1px 2px 0px #fff;
+				
+}
+
+.attribution a {
+    color: hsl(0, 36%, 70%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: hsl(0, 93%, 68%);
+}
+
+@media screen and (max-width: 420px) {
+
+    .header, 
+    .lead {
+        text-align: center;
+    }
+
+.girl {
+    display: none;
+}
+
+.girlmobile {
+    display: block;
+    width: 100%;
+
+}
+
+.attribution {
+    display: none;
+}
+
+}

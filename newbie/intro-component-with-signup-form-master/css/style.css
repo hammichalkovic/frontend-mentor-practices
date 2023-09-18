@@ -9,8 +9,8 @@ body {
     flex-direction: column;
     background: no-repeat url('../images/bg-intro-desktop.png'), hsl(0, 100%, 74%);
     font-size: 16px;
-    background-size: 99%;
-    background-position: 14px -14px;
+    background-size: 98%;
+    background-position: 14px 0px;
 }
 
 main {
@@ -26,27 +26,38 @@ fieldset {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
-    width: 500px;
-    height: 300px;
-    border: 1px solid blueviolet;
+    width: 540px;
+    height: 350px;
+    border: 1px solid transparent;
+    padding-top: 40px;
 }
 
 input {
-    height: 40px;
-    width: 90%;
+    box-sizing: border-box;
+    height: 55px;
+    width: 458px;
     align-self: center;
     border-radius: 5px;
     border: 1px solid hsla(246, 25%, 77%, 0.5);
+    /* color: hsl(246, 25%, 77%); */
+    font-weight: 600;
+    font-size: 16px;
+    padding-left: 25px;
+    margin: 0 0 20px 0;
 }
 
 .title-and-lead {
     width: 500px;
-    height: 280px;
-    border: 1px solid white;
+    height: 250px;
+    /* border: 1px solid white; */
     color: white;
-    margin-right: 108px;
-    margin-bottom: 5px;
+    margin-right: 69px;
+    margin-left: 39px;
+    margin-bottom: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
@@ -58,37 +69,55 @@ input {
     margin-top: -11px;
 }
 
+
 .trial {
     height: 60px;
     background-color: hsl(248, 32%, 49%);
-    color: white;
+    color: hsl(246, 25%, 92%);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    width: 540px;
+    box-shadow: 0 8px 0 hsla(249, 10%, 26%, 0.226);
+}
+
+mark {
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .form {
-    height: 400px;
-    margin: 20px 0 0 0;
+    height: 470px;
+    margin: 26px 40px 5px 0;
+    width: 540px;
     /* border: 1px dotted red; */
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0 9px 0 hsla(249, 10%, 26%, 0.226);
 }
 
 .submit {
     height: 50px;
-    width: 91%;
+    width: 458px;
     background-color: hsl(154, 59%, 51%);
     align-self: center;
     border-radius: 5px;
     border-color: transparent;
-    color: white;
+    color: hsl(246, 25%, 96%);
     text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 3px 0 hsl(154, 59%, 45%); 
+    padding-top: 7px;
 }
 
 .terms-and-services {
-    font-size: 12px;
+    margin-top: 15px;
+    font-size: 11px;
     text-align: center;
     color: hsl(246, 25%, 77%);
 }
@@ -98,3 +127,25 @@ input {
     color: hsl(0, 100%, 74%);
     font-weight: 700;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: hsl(154, 59%, 45%);
+    text-decoration: none;
+}
+
+footer a:hover {
+    cursor: pointer;
+} 
+
+footer a:active {
+    color: hsl(248, 32%, 49%);
+} 

@@ -44,11 +44,14 @@ input {
     font-size: 16px;
     padding-left: 25px;
     margin: 0 0 20px 0;
+    color: hsl(249, 10%, 26%);
 }
 
-    input:focus {
-        outline: 1px solid hsl(249, 10%, 26%);
-    }
+input:focus {
+    outline: 1px solid hsl(249, 10%, 26%);
+    transform: 1s ease-in-out;
+    color: hsl(249, 10%, 26%);
+}
 
 .title-and-lead {
     width: 500px;
@@ -103,6 +106,14 @@ mark {
     box-shadow: 0 9px 0 hsla(249, 10%, 26%, 0.226);
 }
 
+.erroricon {
+    width: 30px;
+    height: 50px;
+    border: 1px solid black;
+    position: relative;
+    top: 0;
+}
+
 .submit {
     height: 50px;
     width: 458px;
@@ -117,6 +128,59 @@ mark {
     font-size: 16px;
     box-shadow: 0 3px 0 hsl(154, 59%, 45%); 
     padding-top: 7px;
+}
+
+.error {
+    background: no-repeat url(./images/icon-error.svg);
+    background-position: 95% 50%; 
+}
+
+.bounce {
+    animation-name: bounce;
+    border: 1px solid hsl(0, 100%, 74%);
+    animation-duration: 0.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
+
+    37% {
+        transform: translateX(5px);
+        timing-function: ease-out;
+    }
+
+    55% {
+        transform: translateX(-5px);
+        timing-function: ease-in;
+    }
+
+    73% {
+        transform: translateX(4px);
+        timing-function: ease-out;
+    }
+
+    82% {
+        transform: translateX(-4px);
+        timing-function: ease-in;
+    }
+
+    91% {
+        transform: translateX(2px);
+        timing-function: ease-in;
+    }
+
+    96% {
+        transform: translateX(-2px);
+        timing-function: ease-out;
+    }
+
+    100% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
 }
 
 .terms-and-services {

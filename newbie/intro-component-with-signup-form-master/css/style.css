@@ -115,7 +115,7 @@ mark {
 }
 
 .submit {
-    height: 50px;
+    height: 54px;
     width: 458px;
     background-color: hsl(154, 59%, 51%);
     align-self: center;
@@ -130,6 +130,10 @@ mark {
     padding-top: 7px;
 }
 
+.submit:active {
+    background-color: hsl(154, 59%, 65%);
+}
+
 .error {
     background: no-repeat url(./images/icon-error.svg);
     background-position: 95% 50%; 
@@ -139,6 +143,30 @@ mark {
     animation-name: bounce;
     border: 1px solid hsl(0, 100%, 74%);
     animation-duration: 0.5s;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.grow-tall-form {
+    height: 560px;
+}
+
+.grow-tall-fieldset {
+    height: 450px;
+}
+
+#errorNotification1,
+#errorNotification2,
+#errorNotification3,
+#errorNotification4 {
+    color:hsl(0, 100%, 74%);
+    align-self: flex-end;
+    font-style: italic;
+    font-size: 11px;
+    margin: -13px 41px 20px 0;
+    font-weight: 500;
 }
 
 @keyframes bounce {

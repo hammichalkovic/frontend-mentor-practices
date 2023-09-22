@@ -157,10 +157,7 @@ mark {
     height: 450px;
 }
 
-#errorNotification1,
-#errorNotification2,
-#errorNotification3,
-#errorNotification4 {
+.errorstyle {
     color:hsl(0, 100%, 74%);
     align-self: flex-end;
     font-style: italic;

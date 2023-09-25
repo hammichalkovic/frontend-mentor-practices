@@ -30,6 +30,12 @@ fieldset {
     height: 350px;
     border: 1px solid transparent;
     padding-top: 40px;
+    justify-content: baseline;
+    /* transition: 0.5s linear; */
+}
+
+.fieldset-even {
+    justify-content: space-evenly;
 }
 
 input {
@@ -104,6 +110,7 @@ mark {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 9px 0 hsla(249, 10%, 26%, 0.226);
+    transition: 0.5s linear;
 }
 
 .erroricon {
@@ -143,6 +150,7 @@ mark {
     animation-name: bounce;
     border: 1px solid hsl(0, 100%, 74%);
     animation-duration: 0.5s;
+    /* outline: none; */
 }
 
 .nodisplay {

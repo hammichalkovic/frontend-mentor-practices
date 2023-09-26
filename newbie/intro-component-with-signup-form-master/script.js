@@ -17,10 +17,15 @@ window.addEventListener('click', e => {
 submit.addEventListener('click', toValidate1);
 submit.addEventListener('click', toValidate2);
 submit.addEventListener('click', toValidate3);
+submit.addEventListener('click', toSetEmailPlaceholder);
 submit.addEventListener('click', toValidate4);
 
 
 function toValidate1(e) {
+
+    function toSetPhFirstName() {
+        firstName.setAttribute('placeholder', 'First Name');
+    }
     
     let valid = true;
 
@@ -34,12 +39,17 @@ function toValidate1(e) {
          errorNotification1.setAttribute('aria-hidden', false);
          errorNotification1.setAttribute('aria-invalid', true);
          setTimeout(refreshHeight, 2000);   
+         setTimeout(toSetPhFirstName, 2000);
     } 
     
     return valid;
 };    
     
 function toValidate2(e) {
+
+    function toSetPhLastName() {
+        lastName.setAttribute('placeholder', 'Last Name');
+    }
 
     let valid = true;
 
@@ -53,6 +63,7 @@ function toValidate2(e) {
         errorNotification2.setAttribute('aria-hidden', false);
         errorNotification2.setAttribute('aria-invalid', true);
         setTimeout(refreshHeight, 2000);  
+        setTimeout(toSetPhLastName, 2000);
     };
 };
 
@@ -74,7 +85,22 @@ function toValidate3(e) {
     };
 };
 
+function toSetEmailPlaceholder() {
+
+    function toSetPhEmail() {
+        email.setAttribute('placeholder', 'Email Address');
+    }
+
+    if (!email.value) {
+        setTimeout(toSetPhEmail, 2000);
+    }
+};
+
 function toValidate4(e) {
+
+    function toSetPhPassword() {
+        password.setAttribute('placeholder', 'Password');
+    }
 
     let valid = true;
 
@@ -88,6 +114,7 @@ function toValidate4(e) {
         errorNotification4.setAttribute('aria-hidden', false);
         errorNotification4.setAttribute('aria-invalid', true);
         setTimeout(refreshHeight, 2000);    
+        setTimeout(toSetPhPassword, 2000);
     }
 
     return valid;
@@ -107,10 +134,6 @@ spans.forEach(span => {
 });
 
 inputs.forEach(input => {
-
-    function toSetPhFirstName() {
-        input.setAttribute('placeholder', 'First Name');
-    }
 
     submit.addEventListener('click', () => {
         if (!input.value) {
@@ -135,7 +158,6 @@ inputs.forEach(input => {
     function refresh() {
         input.classList.remove('bounce');
         input.style.cssText = 'background: none;';
-        spans.classList.add('nodisplay');
     };
 
     function refreshEmailColors() {

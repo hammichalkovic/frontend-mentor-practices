@@ -110,7 +110,7 @@ mark {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 9px 0 hsla(249, 10%, 26%, 0.226);
-    transition: 0.5s linear;
+    transition: 0.3s linear;
 }
 
 .erroricon {
@@ -250,3 +250,119 @@ footer a:hover {
 footer a:active {
     color: hsl(248, 32%, 49%);
 } 
+
+@media screen and (max-width: 420px) {
+
+    body {
+        background: no-repeat url('../images/bg-intro-mobile.png'), hsl(0, 100%, 74%);
+    }
+    
+    main {
+        flex-direction: column;
+    }
+
+    fieldset {
+        width: 330px;
+        /* border: 1px solid blue; */
+        padding-top: 25px;
+    }
+
+    input {
+        width: 285px;
+
+    }
+
+
+    .title-and-lead {
+        width: 320px;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        /* border: 1px solid white; */
+    }
+
+    .title,
+    .lead {
+        /* border: 1px solid white; */
+        text-align: center;
+    }
+
+    .lead {
+        font-size: 16px;
+        line-height: 26px;
+        margin: 0 0 15px 0;
+    }
+
+    .title {
+        font-size: 27px;
+        line-height: 36px;
+        align-self: center;
+    }
+
+    .user-inteface {
+        width: 330px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .trial {
+        box-sizing: border-box;
+        height: 90px;
+        width: 330px;
+        margin: 0;
+        line-height: 27px;
+        margin: 32px 0 25px 0;
+    }
+
+    .trial p {
+        width: 200px;
+        text-align: center;
+    }
+
+    .form {
+        width: 330px;
+        height: 460px;
+        margin: 0 0 -10px 0;
+        padding: 0;
+    }
+
+    .submit {
+        width: 285px;
+        letter-spacing: 0.07em;
+        font-size: 15px;
+    }
+
+    .terms-and-services {
+        width: 250px;
+        text-align: center;
+        /* border: 1px solid blue; */
+        align-self: center;
+        margin-left: 40px;
+        line-height: 20px;
+    }
+
+    .grow-tall-form {
+        height: 560px;
+    }
+    
+    .grow-tall-fieldset {
+        height: 450px;
+    }
+
+    footer {
+        display: none;
+    }
+    
+/* 
+    .trial {
+    height: 60px;
+    background-color: hsl(248, 32%, 49%);
+    color: hsl(246, 25%, 92%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 540px;
+    box-shadow: 0 8px 0 hsla(249, 10%, 26%, 0.226);
+} */
+}

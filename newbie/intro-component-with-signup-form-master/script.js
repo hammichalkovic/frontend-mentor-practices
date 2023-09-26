@@ -113,23 +113,35 @@ inputs.forEach(input => {
     }
 
     submit.addEventListener('click', () => {
-        if (!input.value || !email.value.match(validRegexEmail)) {
+        if (!input.value) {
             input.style.cssText = 'background: no-repeat url(./images/icon-error.svg); background-position: 95% 50%;';
             // input.setAttribute('placeholder', '');
             input.classList.add('bounce');
             input.classList.add('error');
             input.removeAttribute('placeholder');
-            email.style.color = 'hsl(0, 100%, 74%)';
             setTimeout(refresh, 2000);    
             setTimeout(toSetPhFirstName, 2000);
-        };
+        }; 
     });
+
+    submit.addEventListener('click', () => {
+        if (!email.value.match(validRegexEmail)) {
+            email.style.borderColor = 'hsl(0, 100%, 74%)';
+            email.style.color = 'hsl(0, 100%, 74%)';
+            setTimeout(refreshEmailColors, 2000);
+        }
+    })
 
     function refresh() {
         input.classList.remove('bounce');
         input.style.cssText = 'background: none;';
         spans.classList.add('nodisplay');
     };
+
+    function refreshEmailColors() {
+        email.style.borderColor = 'hsla(246, 25%, 77%, 0.5)';
+        email.style.color = 'hsl(249, 10%, 26%)';
+    }
 });
 
 function refreshSpans() {

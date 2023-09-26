@@ -254,7 +254,8 @@ footer a:active {
 @media screen and (max-width: 420px) {
 
     body {
-        background: no-repeat url('../images/bg-intro-mobile.png'), hsl(0, 100%, 74%);
+        height: 120vh;
+        background: repeat-y url('../images/bg-intro-mobile.png'), hsl(0, 100%, 74%);
     }
     
     main {
@@ -297,6 +298,7 @@ footer a:active {
         font-size: 27px;
         line-height: 36px;
         align-self: center;
+        margin-top: 30px;
     }
 
     .user-inteface {
@@ -322,7 +324,7 @@ footer a:active {
     .form {
         width: 330px;
         height: 460px;
-        margin: 0 0 -10px 0;
+        margin: 10px 0 0 0;
         padding: 0;
     }
 

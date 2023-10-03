@@ -9,25 +9,25 @@
   <!-- <script src="./script.js" defer></script> -->
 </head>
 <body>
-  <main>
+  <main class="flex flex-col items-center"> 
     <div class="logo"><img src="./images/logo.svg" alt="Main logo">
     </div>
-    <h1>We are launching soon!</h1>
+    <h1>We are launching <mark>soon!</mark></h1>
 
     <p>Subscribe and get notified</p>
-    <form action="get">
-      <input type="email" name="email" id="email">
-      <button type="submit">Notify Me</button>
+    <form action="get" class="flex flex-col items-center">
+      <input class=" border border-[hsl(223,100%,88%)] rounded-full w-3/4 h-10 mx-10" type="email" name="email" id="email">
+      <button class="w-3/4 h-10 mx-10 mt-2 rounded-full bg-[#4f7df3] border-transparent text-[12px] font-bold text-white " type="submit">Notify Me</button>
     </form>
-    <div class="socmedia_links">
-      <div class="facebook"><a href=""><img src="./images/facebook.svg" alt="Facebook link logo"></a></div>
-      <div class="twitter"><a href=""><img src="./images/twitter.svg" alt="Twitter link logo"></a></div>
-      <div class="instagram"><a href=""><img src="./images/instagram.svg" alt="Instagram link logo"></a></div>
+    <div class="socmedia_links flex">
+      <div class="h-5 w-5"><a href=""><img  src="./images/facebook.svg" alt="Facebook link logo"></a></div>
+      <div class="h-5 w-5"><a href=""><img src="./images/twitter.svg" alt="Twitter link logo"></a></div>
+      <div class="h-5 w-5"><a href=""><img src="./images/instagram.svg" alt="Instagram link logo"></a></div>
     </div>
 
     &copy; Copyright Ping. All rights reserved.
   </main>
-  <footer>
+  <footer class="text-center">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.

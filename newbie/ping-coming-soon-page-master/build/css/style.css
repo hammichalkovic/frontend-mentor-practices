@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -539,32 +539,68 @@ video {
   margin-right: 2.5rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
 .mt-\[10px\] {
   margin-top: 10px;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .flex {
   display: flex;
 }
 
-.h-11 {
-  height: 2.75rem;
+.hidden {
+  display: none;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-5 {
   height: 1.25rem;
 }
 
-.h-10 {
-  height: 2.5rem;
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-2\/6 {
+  height: 33.333333%;
+}
+
+.h-4\/6 {
+  height: 66.666667%;
+}
+
+.h-2\/5 {
+  height: 40%;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-3\/4 {
@@ -587,6 +623,14 @@ video {
   align-items: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -595,13 +639,24 @@ video {
   border-width: 1px;
 }
 
+.border-solid {
+  border-style: solid;
+}
+
 .border-\[hsl\(223\2c 100\%\2c 88\%\)\] {
   --tw-border-opacity: 1;
   border-color: hsl(223 100% 88% / var(--tw-border-opacity));
 }
 
-.border-transparent {
-  border-color: transparent;
+.border-light-red {
+  --tw-border-opacity: 1;
+  border-color: hsl(354 100% 66% / var(--tw-border-opacity));
+}
+
+.border-x-light-red {
+  --tw-border-opacity: 1;
+  border-left-color: hsl(354 100% 66% / var(--tw-border-opacity));
+  border-right-color: hsl(354 100% 66% / var(--tw-border-opacity));
 }
 
 .bg-\[\#4f7df3\] {
@@ -621,11 +676,67 @@ video {
   font-size: 13px;
 }
 
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-\[21px\] {
+  font-size: 21px;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
-.text-white {
+.font-light {
+  font-weight: 300;
+}
+
+.text-gray {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: hsl(0 0% 59% / var(--tw-text-opacity));
+}
+
+.text-very-dark-blue {
+  --tw-text-opacity: 1;
+  color: hsl(209 33% 12% / var(--tw-text-opacity));
 }

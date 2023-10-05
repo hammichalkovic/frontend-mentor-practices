@@ -9,25 +9,28 @@
   <!-- <script src="./script.js" defer></script> -->
 </head>
 <body class="font-body">
-  <main class="flex flex-col items-center"> 
-    <div class="logo"><img src="./images/logo.svg" alt="Main logo">
-    </div>
-    <h1>We are launching <mark>soon!</mark></h1>
+  <main class="h-screen flex flex-col items-center space-y-"> 
+    <div class="top h-2/6 border-solid border border-light-red flex flex-col items-center justify-between">
+      <div class="logo w-13 h-8"><img src="./images/logo.svg" alt="Main logo">
+      </div>
+      <h1 class="text-[21px] font-light text-gray"
+      >We are launching <span class="text-very-dark-blue font-bold">soon!</span></h1>
 
-    <p>Subscribe and get notified</p>
-    <form action="get" class="w-screen flex flex-col items-center">
-      <input class=" border border-[hsl(223,100%,88%)] rounded-full w-3/4 h-10 mx-10" type="email" name="email" id="email">
-      <button class="w-3/4 h-10 mx-10 mt-[10px] rounded-full bg-[#4f7df3] border-transparent text-[13px] font-bold text-white " type="submit">Notify Me</button>
-    </form>
-    <div class="socmedia_links flex">
+      <p class="text-[13px] font-light text-very-dark-blue">Subscribe and get notified</p>
+      <form action="get" class="w-screen flex flex-col items-center">
+        <input class=" border border-[hsl(223,100%,88%)] rounded-full w-3/4 h-10 mx-10" type="email" name="email" id="email">
+        <button class="w-3/4 h-10 mx-10 mt-[10px] rounded-full bg-[#4f7df3] border-transparent text-[13px] font-bold text-white " type="submit">Notify Me</button>
+      </form>
+    </div>
+    <div class="flex mt-auto">
       <div class="h-5 w-5"><a href=""><img  src="./images/facebook.svg" alt="Facebook link logo"></a></div>
       <div class="h-5 w-5"><a href=""><img src="./images/twitter.svg" alt="Twitter link logo"></a></div>
       <div class="h-5 w-5"><a href=""><img src="./images/instagram.svg" alt="Instagram link logo"></a></div>
     </div>
 
-    &copy; Copyright Ping. All rights reserved.
+    <p class="text-gray text-[13px]">&copy; Copyright Ping. All rights reserved.</p>
   </main>
-  <footer class="text-center">
+  <footer class="hidden text-center">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.

@@ -861,3 +861,13 @@ video {
   --tw-text-opacity: 1;
   color: hsl(223 100% 88% / var(--tw-text-opacity));
 }
+
+@media (min-width: 640px) {
+  .sm\:w-28 {
+    width: 7rem;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+}

@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./build/*.html'],
   theme: {
     fontFamily: {
-      'body': ['"Libre Franklin"', 'sans-serif']
+      'body': ['"Libre Franklin"', ...defaultTheme.fontFamily.sans]
     },
     colors: {
       'gray-transparent': 'hsla(0, 0%, 59%, 80%)',

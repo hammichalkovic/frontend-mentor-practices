@@ -18,12 +18,15 @@
        <h1 class="text-[22px] sm:text-5xl font-light text-gray mt-8"
         >We are launching <span class="text-very-dark-blue font-bold">soon!</span></h1>
 
-       <p class="text-[12px] sm:text-xl font-light text-very-dark-blue">Subscribe and get notified</p>
+       <p id="subscribe" class="text-[12px] sm:text-xl font-light text-very-dark-blue mt-[10px]">Subscribe and get notified</p>
       </div>
-      <form action="get" class="w-screen flex sm:flex-row flex-col items-center  sm:w-[632px] sm:-mt-20">
+      <div>
+      <span role="alert" id="alert" aria-hidden="true" class="italic sm:h-3 sm:relative sm:top-[84px] sm:left-7 text-light-red hidden text-[13px]">Please provide a valid email address</span>
+      <form action="get" class="w-screen flex sm:flex-row flex-col items-center  sm:w-[632px]  sm:mt-0 mt-[30px]">
         <input class="box-border border border-[hsl(223,100%,88%)] rounded-full w-[72%] h-10 mx-auto pl-7 placeholder:text-xs placeholder:text-pale-blue sm:w-[67%] sm:ml-0 sm:h-14 sm:placeholder:text-[16px]" type="email" name="email" id="email" placeholder="Your email address...">
-        <button class="text-white w-[72%] h-10 mx-auto mt-[10px] rounded-full bg-[#4f7df3] border-transparent text-[12px] font-semibold shadow-lg sm:mt-0 sm:w-48 sm:my-0 sm:ml-auto sm:mr-0 sm:h-14 sm:text-[16px] sm:shadow-pale-blue sm:drop-shadow-xs" type="submit">Notify Me</button>
+        <button class="text-white w-[72%] h-10 mx-auto mt-[10px] mt-[40px] rounded-full bg-[#4f7df3] border-transparent text-[12px] font-semibold shadow-lg sm:mt-0 sm:w-48 sm:my-0 sm:ml-auto sm:mr-0 sm:h-14 sm:text-[16px] sm:shadow-pale-blue sm:drop-shadow-xs" type="submit">Notify Me</button>
       </form>
+      </div>
     </div>
     <div class="illustation flex justify-center s:mb-16"><img class=" w-[88%] mt-[8vh] ml-[2%] sm:w-[50%] sm:ml-0 sm:mb-20 " src="./images/illustration-dashboard.png" alt="Illustation dashboard"></div>
     <div class="flex items-center justify-between mt-auto h-8 w-[113px] mb-[22px]">

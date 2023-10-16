@@ -9,6 +9,7 @@
     /* animation-delay: 0.25s; */
 }
 
+
 @keyframes bounce {
     0% {
         transform: translateX(0px);

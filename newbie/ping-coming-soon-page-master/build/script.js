@@ -5,7 +5,8 @@ let input = document.querySelector('input'),
     form = document.querySelector('form'),
     subscribe = document.getElementById('subscribe'),
     signBox = document.querySelector('.signbox'),
-    illustration = document.querySelector('.illustration');
+    illustration = document.querySelector('.illustration'),
+    title = document.querySelector('h1');
 
 submit.addEventListener('click', (e) => {
     if (!input.value.match(validRegex)) {
@@ -14,13 +15,11 @@ submit.addEventListener('click', (e) => {
         input.classList.add('animate-bounce');
         input.classList.add('bounce');
         alert.classList.remove('hidden');
-        submit.classList.add('mt-[50px]');
-        submit.classList.add('mb-[10px]');
-        form.classList.add('mt-[20px]');
-        input.classList.add('mt-[10px]');
-        subscribe.classList.add('mt-[10px]');
-        subscribe.classList.add('mb-[30px]');
-        signBox.classList.add('mt-[40px]');
+        submit.classList.add('relative');
+        submit.classList.add('top-[30px]');
+       
+       
+       
     }
 });
 

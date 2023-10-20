@@ -20,25 +20,36 @@ submit.addEventListener('click', (e) => {
 
 submit.addEventListener('click', (e) => {
     if (windowBreakpoint <= 640 && !input.value.match(validRegex)) {
-        form.classList.remove('h-[90px]');
-        form.classList.add('h-[120px]');
-        form.classList.add('bottom-[25px]');
+        submit.classList.add('btnerrscript');
+        form.classList.remove('top-[26px]');
         alert.classList.remove('hidden'); 
         setTimeout(toRefresh, 3000);
+        setTimeout(toRefreshBtn, 4000);
+
+        function toRefreshBtn() {
+            submit.classList.remove('btnerrscript');
+        }
+
     } else if (windowBreakpoint > 640 && !input.value.match(validRegex)) {
-        form.classList.add('sm:h-[120px]');
+    
         alertForDT.classList.remove('hidden');  
         setTimeout(toRefresh, 3000);
+        
     };
 });
 
 function toRefresh() {
     input.classList.remove('animate-bounce');
     input.classList.remove('bounce');
-    alert.classList.add('hidden');
+    // alert.classList.add('hidden');
     alertForDT.classList.add('hidden');
-    form.classList.add('h-[90px]');
-    form.classList.remove('h-[120px]');
-    form.classList.remove('bottom-[25px]');
-
+    alert.classList.add('hidden');
+    form.classList.add('top-[26px]');
+    submit.classList.add('mt-[10px]');
+    submit.classList.remove('mt-auto');
+    
 };
+
+
+
+// default height of <form> = 90px

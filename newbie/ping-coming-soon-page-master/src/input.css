@@ -52,6 +52,30 @@
     }
 }
 
-/* form {
-    transition: 0.3s ease;
-} */
+
+.btnerrscript {
+    animation-name: btnmove;
+    animation-duration: 3.5s;
+}
+
+@keyframes btnmove {
+    0% {
+        transform: translateY(0%);
+        timing-function: ease-in;
+    }
+
+    15% {
+        transform: translateY(70%);
+        animation-timing-function: ease-out;
+    }
+
+    85% {
+        transform: translateY(70%);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translateY(0%);
+        timing-function: ease-in;
+    }
+}

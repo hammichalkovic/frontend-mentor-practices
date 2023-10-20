@@ -23,8 +23,8 @@ submit.addEventListener('click', (e) => {
         submit.classList.add('btnerrscript');
         form.classList.remove('top-[26px]');
         alert.classList.remove('hidden'); 
-        setTimeout(toRefresh, 3000);
-        setTimeout(toRefreshBtn, 3600);
+        setTimeout(toRefresh, 2000);
+        setTimeout(toRefreshBtn, 2600);
 
         function toRefreshBtn() {
             submit.classList.remove('btnerrscript');

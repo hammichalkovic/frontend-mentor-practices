@@ -741,16 +741,12 @@ video {
   font-size: 12px;
 }
 
-.text-\[22px\] {
-  font-size: 22px;
-}
-
 .text-\[13px\] {
   font-size: 13px;
 }
 
-.text-\[14px\] {
-  font-size: 14px;
+.text-\[22px\] {
+  font-size: 22px;
 }
 
 .font-bold {
@@ -846,7 +842,7 @@ video {
 
 .btnerrscript {
   animation-name: btnmove;
-  animation-duration: 3.5s;
+  animation-duration: 2.5s;
 }
 
 @keyframes btnmove {
@@ -855,12 +851,12 @@ video {
     timing-function: ease-in;
   }
 
-  15% {
+  25% {
     transform: translateY(70%);
     animation-timing-function: ease-out;
   }
 
-  85% {
+  75% {
     transform: translateY(70%);
     animation-timing-function: ease-out;
   }
@@ -921,42 +917,6 @@ video {
     left: 1.75rem;
   }
 
-  .sm\:top-\[35px\] {
-    top: 35px;
-  }
-
-  .sm\:-bottom-\[170px\] {
-    bottom: -170px;
-  }
-
-  .sm\:top-\[5px\] {
-    top: 5px;
-  }
-
-  .sm\:top-\[0px\] {
-    top: 0px;
-  }
-
-  .sm\:top-\[3px\] {
-    top: 3px;
-  }
-
-  .sm\:top-\[2px\] {
-    top: 2px;
-  }
-
-  .sm\:top-\[4px\] {
-    top: 4px;
-  }
-
-  .sm\:top-\[6px\] {
-    top: 6px;
-  }
-
-  .sm\:top-\[8px\] {
-    top: 8px;
-  }
-
   .sm\:top-\[10px\] {
     top: 10px;
   }
@@ -968,10 +928,6 @@ video {
 
   .sm\:-mb-20 {
     margin-bottom: -5rem;
-  }
-
-  .sm\:-mt-5 {
-    margin-top: -1.25rem;
   }
 
   .sm\:mb-12 {
@@ -1010,14 +966,6 @@ video {
     margin-top: 30px;
   }
 
-  .sm\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
-  .sm\:mt-1 {
-    margin-top: 0.25rem;
-  }
-
   .sm\:h-14 {
     height: 3.5rem;
   }
@@ -1030,44 +978,8 @@ video {
     height: 175px;
   }
 
-  .sm\:h-\[90px\] {
-    height: 90px;
-  }
-
-  .sm\:h-\[80px\] {
-    height: 80px;
-  }
-
-  .sm\:h-\[70px\] {
-    height: 70px;
-  }
-
-  .sm\:h-\[60px\] {
-    height: 60px;
-  }
-
-  .sm\:h-\[20px\] {
-    height: 20px;
-  }
-
-  .sm\:h-\[120px\] {
-    height: 120px;
-  }
-
-  .sm\:h-\[122px\] {
-    height: 122px;
-  }
-
-  .sm\:h-\[125px\] {
-    height: 125px;
-  }
-
   .sm\:h-\[58px\] {
     height: 58px;
-  }
-
-  .sm\:h-\[59px\] {
-    height: 59px;
   }
 
   .sm\:min-h-\[1024px\] {

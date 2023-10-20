@@ -55,7 +55,7 @@
 
 .btnerrscript {
     animation-name: btnmove;
-    animation-duration: 3.5s;
+    animation-duration: 2.5s;
 }
 
 @keyframes btnmove {
@@ -64,12 +64,12 @@
         timing-function: ease-in;
     }
 
-    15% {
+    25% {
         transform: translateY(70%);
         animation-timing-function: ease-out;
     }
 
-    85% {
+    75% {
         transform: translateY(70%);
         animation-timing-function: ease-out;
     }

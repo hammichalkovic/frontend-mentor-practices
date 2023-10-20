@@ -24,7 +24,7 @@ submit.addEventListener('click', (e) => {
         form.classList.remove('top-[26px]');
         alert.classList.remove('hidden'); 
         setTimeout(toRefresh, 3000);
-        setTimeout(toRefreshBtn, 4000);
+        setTimeout(toRefreshBtn, 3600);
 
         function toRefreshBtn() {
             submit.classList.remove('btnerrscript');

@@ -13,19 +13,19 @@
   <main class="h-[99%] w-screen"> 
     <!-- Sign-up form start -->
     <section class="sign-up flex flex-col-reverse items-center">
-      <div class="sign-up-main">
-        <h1 class="text-charcoal-grey font-bold text-[45px]">Stay updated!</h1>
+      <div class="sign-up-main w-[300px] mr-[26px]">
+        <h1 class="text-charcoal-grey font-bold text-[40px]">Stay updated!</h1>
 
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="list-disc">
-          <li class="">Product discovery and building what matters</li>
-          <li class="">Measuring to ensure updates are a success</li>
-          <li class="">And much more!</li>
+        <p class="text-dark-slate-grey">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="text-dark-slate-grey list-inside ml-[20px]">
+          <li class=" before:content-checkmark before:pr-4 before:-pt-6">Product discovery and building what matters</li>
+          <li class=" before:content-checkmark before:pr-4 before:-pt-6 ">Measuring to ensure updates are a success</li>
+          <li class=" before:content-checkmark before:pr-4 before:-pt-6">And much more!</li>
         </ul>  
-        <hr>
-        <form method="get">
+      
+        <form method="get" class="flex flex-col">
           <label for="email">Email address</label>
-          <input type="email" name="email" id="email" placeholder="email@company.com">
+          <input class="w-[325px] h-14 rounded-lg p-0 mr-[20px]  border border-grey placeholder:pl-6" type="email" name="email" id="email" placeholder="email@company.com">
           <button type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>

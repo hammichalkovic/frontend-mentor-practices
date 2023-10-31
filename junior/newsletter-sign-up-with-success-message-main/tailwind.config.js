@@ -5,7 +5,7 @@ module.exports = {
   content: ['./build/*.html'],
   theme: {
     fontFamily: {
-      'body': ['"Roboto"', ...defaultTheme.fontFamily.sans]
+      'body': ['"Roboto"', 'sans-serif']
     },
     colors: {
       'tomato': 'hsl(4, 100%, 67%)',

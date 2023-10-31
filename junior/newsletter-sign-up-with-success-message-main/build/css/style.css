@@ -582,6 +582,23 @@ video {
   padding: 0px;
 }
 
+.font-body {
+  font-family: "Roboto", sans-serif;
+}
+
 .text-\[16px\] {
   font-size: 16px;
+}
+
+.text-\[45px\] {
+  font-size: 45px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-charcoal-grey {
+  --tw-text-opacity: 1;
+  color: hsl(235 18% 26% / var(--tw-text-opacity));
 }

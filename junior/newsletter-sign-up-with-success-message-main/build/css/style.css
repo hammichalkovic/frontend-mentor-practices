@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -534,8 +534,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.ml-20 {
-  margin-left: 5rem;
+.m-0 {
+  margin: 0px;
 }
 
 .flex {
@@ -546,12 +546,16 @@ video {
   display: none;
 }
 
+.h-\[99\%\] {
+  height: 99%;
+}
+
 .h-screen {
   height: 100vh;
 }
 
-.h-\[99\%\] {
-  height: 99%;
+.w-full {
+  width: 100%;
 }
 
 .w-screen {
@@ -574,8 +578,8 @@ video {
   align-items: center;
 }
 
-.justify-center {
-  justify-content: center;
+.p-0 {
+  padding: 0px;
 }
 
 .text-\[16px\] {

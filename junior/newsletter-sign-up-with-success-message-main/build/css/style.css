@@ -966,6 +966,44 @@ video {
   content: var(--tw-content);
 }
 
+.hover\:bg-tomato:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(4 100% 67% / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gradient-to-r:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.hover\:from-\[\#FF527B\]:hover {
+  --tw-gradient-from: #FF527B var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 82 123 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:to-\[\#FF6A3A\]:hover {
+  --tw-gradient-to: #FF6A3A var(--tw-gradient-to-position);
+}
+
+.active\:bg-tomato:active {
+  --tw-bg-opacity: 1;
+  background-color: hsl(4 100% 67% / var(--tw-bg-opacity));
+}
+
+.active\:bg-gradient-to-r:active {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.active\:from-\[\#FF527B\]:active {
+  --tw-gradient-from: #FF527B var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 82 123 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.active\:to-\[\#FF6A3A\]:active {
+  --tw-gradient-to: #FF6A3A var(--tw-gradient-to-position);
+}
+
 .active\:text-tomato:active {
   --tw-text-opacity: 1;
   color: hsl(4 100% 67% / var(--tw-text-opacity));

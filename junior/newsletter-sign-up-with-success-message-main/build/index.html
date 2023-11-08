@@ -9,28 +9,28 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <script src="./js/main.js" defer></script>
 </head>
-<body class=" font-body flex flex-col items-center h-screen w-screen text-[16px] m-0 p-0">
+<body class=" font-body flex flex-col items-center h-[120vh] w-screen text-[16px] m-0 p-0">
   <main class="h-[99%] w-screen"> 
     <!-- Sign-up form start -->
-    <section class="sign-up flex flex-col-reverse items-center">
-      <div class="sign-up-main w-[300px] mr-[26px]">
+    <section class="sign-up h-min-screen w-screen flex flex-col-reverse items-center">
+      <div class="sign-up-main box-border w-[300px] mr-[26px] h-[485px] flex flex-col justify-between mt-[32px]">
         <h1 class="text-charcoal-grey font-bold text-[40px]">Stay updated!</h1>
 
-        <p class="text-dark-slate-grey">Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="text-dark-slate-grey list-outside">
-          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px]">Product discovery and building what <span class="ml-[38px]">matters</span></li>
-          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px]">Measuring to ensure updates are a <span class="ml-[38px]">success</span></li>
-          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px]">And much more!</li>
+        <p class="text-dark-slate-grey mb-5 relative bottom-0">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="text-dark-slate-grey list-outside relative bottom-[24px] leading-[23px]">
+          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px] py-[5px] ">Product discovery and building what <span class="ml-[38px]">matters</span></li>
+          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px] py-[5px] ">Measuring to ensure updates are a <span class="ml-[38px]">success</span></li>
+          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px] py-[5px] ">And much more!</li>
         </ul>  
       
         <form method="get" class="flex flex-col">
-          <label for="email" class="font-bold text-dark-slate-grey text-[13px]">Email address</label>
+          <label for="email" class="font-bold text-dark-slate-grey text-[12px] mb-[7px]">Email address</label>
           <input class="w-[325px] h-14 rounded-lg p-0 mr-[20px]  border border-grey placeholder:pl-6" type="email" name="email" id="email" placeholder="email@company.com">
           <button class="w-[325px] h-14  rounded-lg font-bold bg-dark-slate-grey text-white mt-[23px]" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
-      <div class="sign-up-pic w-full">
-        <img src="../assets/images/illustration-sign-up-mobile.svg" alt="Sign-up Illustration For Desktop">
+      <div class="sign-up-pic w-screen">
+        <img class="w-screen" src="../assets/images/illustration-sign-up-mobile.svg" alt="Sign-up Illustration For Desktop">
       </div>
     </section>
     <!-- Sign-up form end -->
@@ -47,8 +47,8 @@
     <!-- Success message end -->
   </main>  
   <div class="w-[90%] h-[20px] text-center attribution font-normal text-charcoal-grey text-[16px]">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/hammichalkovic">hammichalkovic</a>.
+    Challenge by <a class="active:text-tomato" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="active:tomato" href="https://github.com/hammichalkovic">hammichalkovic</a>.
   </div>
 </body>
 </html>

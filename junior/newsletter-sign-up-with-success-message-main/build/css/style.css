@@ -570,6 +570,16 @@ video {
   margin-right: 1px;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -666,6 +676,10 @@ video {
   justify-content: space-between;
 }
 
+.self-center {
+  align-self: center;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -715,6 +729,10 @@ video {
   text-align: center;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-body {
   font-family: "Roboto", sans-serif;
 }
@@ -741,6 +759,18 @@ video {
 
 .leading-\[23px\] {
   line-height: 23px;
+}
+
+.leading-3 {
+  line-height: .75rem;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
 }
 
 .text-charcoal-grey {
@@ -945,6 +975,25 @@ video {
   .sm\:text-white {
     --tw-text-opacity: 1;
     color: hsl(0 0% 100% / var(--tw-text-opacity));
+  }
+
+  .sm\:hover\:bg-dark-slate-grey:hover {
+    --tw-bg-opacity: 1;
+    background-color: hsl(234 29% 20% / var(--tw-bg-opacity));
+  }
+
+  .sm\:active\:bg-gradient-to-r:active {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+
+  .sm\:active\:from-\[\#FF527B\]:active {
+    --tw-gradient-from: #FF527B var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(255 82 123 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .sm\:active\:to-\[\#FF6A3A\]:active {
+    --tw-gradient-to: #FF6A3A var(--tw-gradient-to-position);
   }
 }
 

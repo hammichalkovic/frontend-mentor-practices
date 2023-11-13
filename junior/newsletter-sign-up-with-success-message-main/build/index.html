@@ -12,7 +12,8 @@
 <body class=" font-body flex flex-col items-center h-[120vh] w-screen text-[16px] m-0 p-0 sm:h-[100vh] sm:bg-charcoal-grey">
   <main class="h-[99%] w-screen sm:flex sm:justify-center sm:items-center"> 
     <!-- Sign-up form start -->
-    <section class="sign-up h-min-screen w-screen flex flex-col-reverse items-center sm:flex-row sm:h-[640px] sm:w-[930px] sm:bg-white sm:rounded-[35px]">
+    <!--if want to remove .hidden insert .flex-->
+    <section class="sign-up hidden h-min-screen w-screen  flex-col-reverse items-center sm:flex-row sm:h-[640px] sm:w-[930px] sm:bg-white sm:rounded-[35px]">
       <div class="sign-up-main box-border w-[300px] mr-[26px] h-[485px] flex flex-col justify-between mt-[32px]  sm:w-[385px] sm:h-[450px] sm:mb-[35px] sm:ml-[60px]">
         <h1 class="text-charcoal-grey font-bold text-[40px] sm:text-[55px] sm:ml-1 sm:relative sm:bottom-[6px]">Stay updated!</h1>
 
@@ -26,7 +27,7 @@
         <form method="get" class="flex flex-col">
           <label for="email" class="font-bold text-dark-slate-grey text-[12px] mb-[7px]">Email address</label>
           <input class="w-[325px] h-14 rounded-lg p-0 mr-[20px]  border border-grey placeholder:pl-6 sm:w-full" type="email" name="email" id="email" placeholder="email@company.com">
-          <button class="w-[325px] h-14  rounded-lg font-bold bg-dark-slate-grey text-white mt-[23px] hover:bg-gradient-to-r  hover:from-[#FF527B] hover:to-[#FF6A3A] sm:w-full sm:text-[16px] sm:font-body sm:font-medium" type="submit">Subscribe to monthly newsletter</button>
+          <button class="w-[325px] h-14  rounded-lg font-bold bg-dark-slate-grey text-white mt-[23px] hover:bg-gradient-to-r  hover:from-[#FF527B] hover:to-[#FF6A3A] sm:hover:bg-dark-slate-grey sm:active:bg-gradient-to-r sm:active:from-[#FF527B] sm:active:to-[#FF6A3A] sm:w-full sm:text-[16px] sm:font-body sm:font-medium" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
       <div class="sign-up-pic w-screen sm:hidden">
@@ -37,15 +38,13 @@
       </div>
     </section>
     <!-- Sign-up form end -->
-
     <!-- Success message start -->
-    <section class="hidden">
-    Thanks for subscribing!
+    <section class="success-message flex flex-col">
 
-    A confirmation email has been sent to ash@loremcompany.com. 
-    Please open it and click the button inside to confirm your subscription.
-
-    Dismiss message
+      <h1 class="text-charcoal-grey font-bold text-[40px] leading-10 sm:text-[55px] sm:ml-1 sm:relative sm:bottom-[6px]">Thanks for subscribing!</h1>
+      <p class="text-dark-slate-grey mb-5 relative bottom-0 sm:bottom-2">A confirmation email has been sent to <span class="font-bold">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+      <button class="self-center w-[325px] h-14 rounded-lg font-bold bg-dark-slate-grey text-white mt-[23px] hover:bg-gradient-to-r  hover:from-[#FF527B] hover:to-[#FF6A3A] sm:hover:bg-dark-slate-grey sm:active:bg-gradient-to-r sm:active:from-[#FF527B] sm:active:to-[#FF6A3A] sm:w-full sm:text-[16px] sm:font-body sm:font-medium" type="submit">Dismiss message</button>
+    
     </section>  
     <!-- Success message end -->
   </main>  

@@ -13,6 +13,7 @@ module.exports = {
       'charcoal-grey': 'hsl(235, 18%, 26%)',
       'grey': 'hsla(231, 7%, 60%, 0.5)',
       'white': 'hsl(0, 0%, 100%)',
+      'custom-gradient': 'linear-gradient(to right, #FF527B, #FF6A3A)',
       'transparent': 'hsla(0, 0%, 100%, 0)'
     },
     extend: {

@@ -6,31 +6,34 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <script src="./js/main.js" defer></script>
 </head>
-<body class=" font-body flex flex-col items-center h-[120vh] w-screen text-[16px] m-0 p-0">
-  <main class="h-[99%] w-screen"> 
+<body class=" font-body flex flex-col items-center h-[120vh] w-screen text-[16px] m-0 p-0 sm:h-[100vh] sm:bg-charcoal-grey">
+  <main class="h-[99%] w-screen sm:flex sm:justify-center sm:items-center"> 
     <!-- Sign-up form start -->
-    <section class="sign-up h-min-screen w-screen flex flex-col-reverse items-center">
-      <div class="sign-up-main box-border w-[300px] mr-[26px] h-[485px] flex flex-col justify-between mt-[32px]">
-        <h1 class="text-charcoal-grey font-bold text-[40px]">Stay updated!</h1>
+    <section class="sign-up h-min-screen w-screen flex flex-col-reverse items-center sm:flex-row sm:h-[640px] sm:w-[930px] sm:bg-white sm:rounded-[35px]">
+      <div class="sign-up-main box-border w-[300px] mr-[26px] h-[485px] flex flex-col justify-between mt-[32px]  sm:w-[385px] sm:h-[450px] sm:mb-[35px] sm:ml-[60px]">
+        <h1 class="text-charcoal-grey font-bold text-[40px] sm:text-[55px] sm:ml-1 sm:relative sm:bottom-[6px]">Stay updated!</h1>
 
-        <p class="text-dark-slate-grey mb-5 relative bottom-0">Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="text-dark-slate-grey list-outside relative bottom-[24px] leading-[23px]">
-          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px] py-[5px] ">Product discovery and building what <span class="ml-[38px]">matters</span></li>
-          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px] py-[5px] ">Measuring to ensure updates are a <span class="ml-[38px]">success</span></li>
+        <p class="text-dark-slate-grey mb-5 relative bottom-0 sm:bottom-2">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="text-dark-slate-grey list-outside relative bottom-[24px] leading-[23px] sm:leading-[20px]">
+          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px] py-[5px] ">Product discovery and building what <span class="ml-[38px] sm:ml-0">matters</span></li>
+          <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px] py-[5px] ">Measuring to ensure updates are a <span class="ml-[38px] sm:ml-0">success</span></li>
           <li class=" before:content-checkmark before:relative before:top-[6px] before:h-[40px] before:w-[40px] before:pr-[17px] py-[5px] ">And much more!</li>
         </ul>  
       
         <form method="get" class="flex flex-col">
           <label for="email" class="font-bold text-dark-slate-grey text-[12px] mb-[7px]">Email address</label>
-          <input class="w-[325px] h-14 rounded-lg p-0 mr-[20px]  border border-grey placeholder:pl-6" type="email" name="email" id="email" placeholder="email@company.com">
-          <button class="w-[325px] h-14  rounded-lg font-bold bg-dark-slate-grey text-white mt-[23px] hover:bg-gradient-to-r  hover:from-[#FF527B] hover:to-[#FF6A3A]" type="submit">Subscribe to monthly newsletter</button>
+          <input class="w-[325px] h-14 rounded-lg p-0 mr-[20px]  border border-grey placeholder:pl-6 sm:w-full" type="email" name="email" id="email" placeholder="email@company.com">
+          <button class="w-[325px] h-14  rounded-lg font-bold bg-dark-slate-grey text-white mt-[23px] hover:bg-gradient-to-r  hover:from-[#FF527B] hover:to-[#FF6A3A] sm:w-full sm:text-[16px] sm:font-body sm:font-medium" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
-      <div class="sign-up-pic w-screen">
-        <img class="w-screen" src="../assets/images/illustration-sign-up-mobile.svg" alt="Sign-up Illustration For Desktop">
+      <div class="sign-up-pic w-screen sm:hidden">
+        <img class="w-screen sm:hidden" src="../assets/images/illustration-sign-up-mobile.svg" alt="Sign-up Illustration For Mobile Devices">
+      </div>
+      <div class="sign-up-pic-dt hidden sm:block sm:ml-auto sm:mr-6">
+        <img src="../assets/images/illustration-sign-up-desktop.svg" alt="Sign-up Illustration For Desktop">
       </div>
     </section>
     <!-- Sign-up form end -->
@@ -46,8 +49,8 @@
     </section>  
     <!-- Success message end -->
   </main>  
-  <div class="w-[90%] h-[20px] text-center attribution font-normal text-charcoal-grey text-[16px]">
-    Challenge by <a class="hover:text-gradient-to-r hover:from-[#FF527B] hover:to-[#FF6A3A]" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <div class="w-[90%] h-[20px] text-center attribution font-normal text-charcoal-grey text-[16px] sm:text-white">
+    Challenge by <a class="text-transparent bg-clip-text bg-text-gradient-to-r from-[#FF527B] to-[#FF6A3A]" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a class="hover:text-gradient-to-r hover:from-[#FF527B] hover:to-[#FF6A3A]" href="https://github.com/hammichalkovic">hammichalkovic</a>.
   </div>
 </body>

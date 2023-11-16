@@ -8,7 +8,19 @@ let signUpSection = document.querySelector('.sign-up'),
     emailRegex = '[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$'; 
 
 
+emailInput.addEventListener('focus', () => {
+    emailInput.classList.add('input-focused');
+});
+
 confirmBtn.addEventListener('click', () => {
+
+    let valid = true;
+
+    if (!emailInput.value || !emailInput.value.match(emailRegex)) {
+        e.preventDefault();
+    } 
+
+    return valid;
     successMessage.classList.remove('hidden');  
     signUpSection.classList.add('hidden');
     

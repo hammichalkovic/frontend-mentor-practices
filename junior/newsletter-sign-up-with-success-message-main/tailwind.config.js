@@ -2,7 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: ['./build/*.html'],
+  content: ['./build/*.html', './build/js/*.js'],
   theme: {
     fontFamily: {
       'body': ['"Roboto"', 'sans-serif']

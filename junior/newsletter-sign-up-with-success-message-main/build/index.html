@@ -25,11 +25,15 @@
         </ul>  
       
         <form id="form" method="get" class="flex flex-col">
-          <span id="error" class="form-child font-bold text-tomato relative top-[9px] left-[286px] h-0 text-[11px] mb-[7px] hidden">Valid email required</span>
-          <label for="email" class="form-child font-bold text-dark-slate-grey text-[12px] mb-[7px]">Email address</label>
-          <input class="form-child w-[325px] h-14 rounded-lg p-0 mr-[20px]  border border-grey placeholder:pl-6 sm:w-full focus-within:outline-1" type="email" name="email" id="email" placeholder="email@company.com" >
+          <!-- <span id="error" class="form-child font-bold text-tomato relative top-[9px] left-[226px] h-0 text-[11px] mb-[7px] mt-0 hidden">Valid email required</span> -->
+          <label for="email" class="flex form-child font-bold  mb-[7px] w-[325px]">
+            <p  class="text-dark-slate-grey text-[12px]">Email address</p>
+            <span id="error" class=" ml-auto form-child font-bold text-tomato relative text-[12px]  hidden">Valid email required</span>
+          </label>
+          <input class="form-child w-[325px] h-14 rounded-lg p-0 mr-[20px]  border border-grey placeholder:pl-6 sm:w-full focus-within:outline-1 " type="email" name="email" id="email" placeholder="email@company.com" >
           <button id="sign-up-confirm" class="form-child w-[325px] h-14  rounded-lg font-bold bg-dark-slate-grey text-white mt-[23px] hover:bg-gradient-to-r  hover:from-[#FF527B] hover:to-[#FF6A3A] sm:hover:bg-dark-slate-grey sm:active:bg-gradient-to-r sm:active:from-[#FF527B] sm:active:to-[#FF6A3A] sm:w-full sm:text-[16px] sm:font-body sm:font-medium" type="submit">Subscribe to monthly newsletter</button>
         </form>
+        
       </div>
       <div class="sign-up-pic w-screen sm:hidden">
         <img class="w-screen sm:hidden" src="../assets/images/illustration-sign-up-mobile.svg" alt="Sign-up Illustration For Mobile Devices">

@@ -8,19 +8,28 @@ let signUpSection = document.querySelector('.sign-up'),
     emailRegex = '[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$',
     errorNtf = document.getElementById('error');
 
+function toUndoErrorNotification() {
+    emailInput.classList.remove();
+    errorNtf.classList.add('hidden');
+    emailInput.classList.remove('border-tomato','animate-bounce', 'bg-tomato-ht', 'text-tomato', 'placeholder:text-tomato');
+}
 
-
+confirmBtn.addEventListener('click', (e) => {
+    if( !emailInput.value.match(emailRegex) || emailInput.value == '') {
+        errorNtf.classList.remove('hidden');
+        emailInput.classList.add('border-tomato', 'animate-bounce', 'bg-tomato-ht', 'text-tomato', 'placeholder:text-tomato');
+        setTimeout(toUndoErrorNotification, 1500);
+    };
+}); 
+    
 
 
 confirmBtn.addEventListener('click', (e) => {
 // to edit error notification event style next time
+    
     e.preventDefault();
-    errorNtf.classList.remove('hidden');
-    emailInput.classList.add('border-tomato');
-    setTimeout(emailInput.classList.remove('border-tomato'), 2000);
-    setTimeout(errorNtf.classList.add('hidden'), 2000);
-
-
+    
+    
     if (emailInput.value.match(emailRegex)) {
          
          signUpSection.classList.add('hidden');

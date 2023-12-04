@@ -860,6 +860,10 @@ video {
   padding-bottom: 5px;
 }
 
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -979,6 +983,18 @@ video {
 
 .focus-within\:outline-1:focus-within {
   outline-width: 1px;
+}
+
+.focus-within\:outline-grey:focus-within {
+  outline-color: hsla(231, 7%, 60%, 0.5);
+}
+
+.focus-within\:outline-charcoal-grey:focus-within {
+  outline-color: hsl(235, 18%, 26%);
+}
+
+.focus-within\:outline-tomato:focus-within {
+  outline-color: hsl(4, 100%, 67%);
 }
 
 .hover\:mx-0:hover {

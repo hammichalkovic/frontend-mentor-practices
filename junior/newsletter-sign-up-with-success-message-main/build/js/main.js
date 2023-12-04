@@ -11,13 +11,15 @@ let signUpSection = document.querySelector('.sign-up'),
 function toUndoErrorNotification() {
     emailInput.classList.remove();
     errorNtf.classList.add('hidden');
-    emailInput.classList.remove('border-tomato','animate-bounce', 'bg-tomato-ht', 'text-tomato', 'placeholder:text-tomato');
+    emailInput.classList.remove('border-tomato','animate-bounce', 'bg-tomato-ht', 'text-tomato', 'placeholder:text-tomato', 'focus-within:outline-tomato');
+    emailInput.classList.add('focus-within:outline-charcoal-grey')
 }
 
 confirmBtn.addEventListener('click', (e) => {
     if( !emailInput.value.match(emailRegex) || emailInput.value == '') {
         errorNtf.classList.remove('hidden');
-        emailInput.classList.add('border-tomato', 'animate-bounce', 'bg-tomato-ht', 'text-tomato', 'placeholder:text-tomato');
+        emailInput.classList.add('border-tomato', 'animate-bounce', 'bg-tomato-ht', 'text-tomato', 'placeholder:text-tomato', 'focus-within:outline-tomato');
+        emailInput.classList.remove('focus-within:outline-charcoal-grey')
         setTimeout(toUndoErrorNotification, 1500);
     };
 }); 

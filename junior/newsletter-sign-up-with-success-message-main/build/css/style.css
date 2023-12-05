@@ -692,6 +692,10 @@ video {
   width: 100vw;
 }
 
+.w-\[330px\] {
+  width: 330px;
+}
+
 @keyframes bounce {
   0% {
     transform: translateX(0px);

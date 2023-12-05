@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       content: {
-        'checkmark': 'url("/assets/images/icon-list.svg")',
+        'checkmark': 'url("/newsletter-sign-up-with-success-message-main/assets/images/icon-list.svg")',
       },
     },
     keyframes: {

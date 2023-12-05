@@ -21,6 +21,7 @@ confirmBtn.addEventListener('click', (e) => {
         emailInput.classList.add('border-tomato', 'animate-bounce', 'bg-tomato-ht', 'text-tomato', 'placeholder:text-tomato', 'focus-within:outline-tomato');
         emailInput.classList.remove('focus-within:outline-charcoal-grey')
         setTimeout(toUndoErrorNotification, 1500);
+        // confirmBtn.classList.add('shadow-2xl');
     };
 }); 
     

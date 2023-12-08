@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       content: {
-        'checkmark': 'url("/hammichalkovic/frontend-mentor-practices/main/junior/newsletter-sign-up-with-success-message-main/assets/images/icon-success.svg")',
+        'checkmark': 'url("/assets/images/icon-success.svg")',
       },
     },
     keyframes: {

@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       content: {
-        'checkmark': 'url("/assets/images/icon-success.svg")',
+        'checkmark': 'url("../assets/images/icon-success.svg")',
       },
     },
     keyframes: {

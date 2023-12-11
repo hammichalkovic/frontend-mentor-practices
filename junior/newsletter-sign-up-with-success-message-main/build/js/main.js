@@ -6,7 +6,8 @@ let signUpSection = document.querySelector('.sign-up'),
     form = document.getElementById('form'),
     formChildren = form.querySelectorAll('.form-child'),
     emailRegex = '[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$',
-    errorNtf = document.getElementById('error');
+    errorNtf = document.getElementById('error'),
+    footer = document.getElementById('footer');
 
 function toUndoErrorNotification() {
     emailInput.classList.remove();
@@ -59,3 +60,8 @@ returnBtn.addEventListener('click', () => {
     emailInput.value = ''; 
 });
 
+if (window.matchMedia('(max-height: 700px)').matches) {
+    footer.classList.add('hidden');
+} else {
+    footer.classList.remove('hidden');
+}

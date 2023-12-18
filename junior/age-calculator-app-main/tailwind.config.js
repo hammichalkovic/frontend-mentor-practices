@@ -4,7 +4,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'san-serif'],  
+        'poppins-bold': ['poppinsBold', 'sans-serif'],
+        'poppins-bold-italic': ['poppinsBoldItalic', 'sans-serif'],
+        'poppins-extra-bold': ['poppinsExtraBold', 'sans-serif'],
+        'poppins-extra-bold-italic': ['poppinsExtraBoldItalic', 'sans-serif'],
+        'poppins-italic': ['poppinsItalic', 'sans-serif'],
+        'poppins-regular': ['poppinsRegular', 'sans-serif']
       },
       colors: {
         'offwhite': 'hsl(0, 0%, 94%)',

@@ -1,5 +1,44 @@
-@font-face {
+/* @font-face {
     font-family: 'Poppins';
 
     src: url('./Poppins-Bold.ttf'), url('./Poppins-BoldItalic.ttf'), url('./Poppins-ExtraBold.ttf'), url('./Poppins-ExtraBoldItalic.ttf'), url('./Poppins-Italic.ttf'), url('./Poppins-Regular.ttf');
+} */
+
+@font-face {
+    font-family: 'poppinsBold';
+    src: url('./Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'poppinsBoldItalic';
+    src: url('./Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'poppinsExtraBold';
+    src: url('./Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 900;
+}   
+
+@font-face {
+    font-family: 'poppinsExtraBoldItalic';
+    src: url('./Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'poppinsItalic';
+    src: url('./Poppins-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'poppinsRegular';
+    src: url('./Poppins-Regular.ttfs') format('truetype');
+    font-weight: 400;
 }

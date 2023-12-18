@@ -544,36 +544,76 @@ video {
   margin-top: 1.75rem;
 }
 
+.mt-\[4px\] {
+  margin-top: 4px;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.ml-\[20px\] {
+  margin-left: 20px;
+}
+
+.ml-\[26px\] {
+  margin-left: 26px;
+}
+
+.ml-\[28px\] {
+  margin-left: 28px;
+}
+
+.ml-\[30px\] {
+  margin-left: 30px;
+}
+
+.ml-\[24px\] {
+  margin-left: 24px;
+}
+
+.ml-\[32px\] {
+  margin-left: 32px;
+}
+
 .flex {
   display: flex;
 }
 
-.h-\[300px\] {
-  height: 300px;
+.h-\[200px\] {
+  height: 200px;
 }
 
-.h-\[400px\] {
-  height: 400px;
+.h-\[484px\] {
+  height: 484px;
 }
 
 .h-\[54px\] {
   height: 54px;
 }
 
+.h-\[61px\] {
+  height: 61px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
 
-.w-\[300px\] {
-  width: 300px;
+.w-\[292px\] {
+  width: 292px;
 }
 
-.w-\[345px\] {
-  width: 345px;
+.w-\[295px\] {
+  width: 295px;
 }
 
-.w-\[90px\] {
-  width: 90px;
+.w-\[343px\] {
+  width: 343px;
+}
+
+.w-\[86px\] {
+  width: 86px;
 }
 
 .w-full {
@@ -600,8 +640,16 @@ video {
   align-self: center;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-\[7px\] {
+  border-radius: 7px;
+}
+
+.rounded-br-\[100px\] {
+  border-bottom-right-radius: 100px;
 }
 
 .border {
@@ -611,11 +659,6 @@ video {
 .border-lightgrey {
   --tw-border-opacity: 1;
   border-color: hsl(0 0% 86% / var(--tw-border-opacity));
-}
-
-.border-lightred {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
 }
 
 .bg-offwhite {
@@ -628,36 +671,58 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.pl-\[14px\] {
+  padding-left: 14px;
+}
+
+.font-poppins-bold {
+  font-family: poppinsBold, sans-serif;
+}
+
 .font-poppins-extra-bold-italic {
   font-family: poppinsExtraBoldItalic, sans-serif;
 }
 
-.text-\[50px\] {
-  font-size: 50px;
+.text-\[12px\] {
+  font-size: 12px;
 }
 
-.text-\[52px\] {
-  font-size: 52px;
+.text-\[20px\] {
+  font-size: 20px;
 }
 
-.text-\[54px\] {
-  font-size: 54px;
+.text-\[55px\] {
+  font-size: 55px;
 }
 
-.text-\[53px\] {
-  font-size: 53px;
+.uppercase {
+  text-transform: uppercase;
 }
 
-.tracking-tighter {
-  letter-spacing: -0.05em;
+.tracking-\[0\.22em\] {
+  letter-spacing: 0.22em;
+}
+
+.tracking-\[0\.2em\] {
+  letter-spacing: 0.2em;
 }
 
 .tracking-tight {
   letter-spacing: -0.025em;
 }
 
+.text-offblack {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
+}
+
 .text-purple {
   --tw-text-opacity: 1;
   color: hsl(259 100% 65% / var(--tw-text-opacity));
+}
+
+.text-smokeygrey {
+  --tw-text-opacity: 1;
+  color: hsl(0 1% 50% / var(--tw-text-opacity));
 }
 

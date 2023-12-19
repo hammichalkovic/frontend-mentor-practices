@@ -540,6 +540,162 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.top-\[83px\] {
+  top: 83px;
+}
+
+.top-\[90px\] {
+  top: 90px;
+}
+
+.top-\[100px\] {
+  top: 100px;
+}
+
+.top-\[105px\] {
+  top: 105px;
+}
+
+.top-\[110px\] {
+  top: 110px;
+}
+
+.top-\[50px\] {
+  top: 50px;
+}
+
+.top-\[48px\] {
+  top: 48px;
+}
+
+.top-\[190px\] {
+  top: 190px;
+}
+
+.top-\[10px\] {
+  top: 10px;
+}
+
+.top-\[200px\] {
+  top: 200px;
+}
+
+.top-\[170px\] {
+  top: 170px;
+}
+
+.top-\[150px\] {
+  top: 150px;
+}
+
+.right-\[170px\] {
+  right: 170px;
+}
+
+.right-\[150px\] {
+  right: 150px;
+}
+
+.right-\[130px\] {
+  right: 130px;
+}
+
+.right-\[140px\] {
+  right: 140px;
+}
+
+.top-\[153px\] {
+  top: 153px;
+}
+
+.top-\[154px\] {
+  top: 154px;
+}
+
+.left-\[25px\] {
+  left: 25px;
+}
+
+.left-\[22px\] {
+  left: 22px;
+}
+
+.left-\[23px\] {
+  left: 23px;
+}
+
+.top-\[53px\] {
+  top: 53px;
+}
+
+.top-\[33px\] {
+  top: 33px;
+}
+
+.top-\[25px\] {
+  top: 25px;
+}
+
+.top-\[22px\] {
+  top: 22px;
+}
+
+.top-\[21px\] {
+  top: 21px;
+}
+
+.top-\[20px\] {
+  top: 20px;
+}
+
+.top-\[120px\] {
+  top: 120px;
+}
+
+.top-\[80px\] {
+  top: 80px;
+}
+
+.top-\[81px\] {
+  top: 81px;
+}
+
+.top-\[600px\] {
+  top: 600px;
+}
+
+.top-\[60px\] {
+  top: 60px;
+}
+
+.top-\[46px\] {
+  top: 46px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.ml-\[32px\] {
+  margin-left: 32px;
+}
+
 .mt-7 {
   margin-top: 1.75rem;
 }
@@ -548,32 +704,32 @@ video {
   margin-top: 4px;
 }
 
-.ml-6 {
-  margin-left: 1.5rem;
+.ml-\[5px\] {
+  margin-left: 5px;
 }
 
-.ml-\[20px\] {
-  margin-left: 20px;
+.ml-\[25px\] {
+  margin-left: 25px;
 }
 
-.ml-\[26px\] {
-  margin-left: 26px;
+.ml-\[15px\] {
+  margin-left: 15px;
+}
+
+.ml-\[17px\] {
+  margin-left: 17px;
+}
+
+.ml-\[16px\] {
+  margin-left: 16px;
 }
 
 .ml-\[28px\] {
   margin-left: 28px;
 }
 
-.ml-\[30px\] {
-  margin-left: 30px;
-}
-
-.ml-\[24px\] {
-  margin-left: 24px;
-}
-
-.ml-\[32px\] {
-  margin-left: 32px;
+.ml-\[26px\] {
+  margin-left: 26px;
 }
 
 .flex {
@@ -596,6 +752,62 @@ video {
   height: 61px;
 }
 
+.h-\[70px\] {
+  height: 70px;
+}
+
+.h-\[53px\] {
+  height: 53px;
+}
+
+.h-\[15px\] {
+  height: 15px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-\[30px\] {
+  height: 30px;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[65px\] {
+  height: 65px;
+}
+
+.h-\[66px\] {
+  height: 66px;
+}
+
+.h-\[28px\] {
+  height: 28px;
+}
+
+.h-\[26px\] {
+  height: 26px;
+}
+
+.h-\[25px\] {
+  height: 25px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
+.h-\[486px\] {
+  height: 486px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -612,6 +824,10 @@ video {
   width: 343px;
 }
 
+.w-\[70px\] {
+  width: 70px;
+}
+
 .w-\[86px\] {
   width: 86px;
 }
@@ -620,8 +836,60 @@ video {
   width: 100%;
 }
 
+.w-\[15px\] {
+  width: 15px;
+}
+
+.w-\[40px\] {
+  width: 40px;
+}
+
+.w-\[30px\] {
+  width: 30px;
+}
+
+.w-\[68px\] {
+  width: 68px;
+}
+
+.w-\[28px\] {
+  width: 28px;
+}
+
+.w-\[26px\] {
+  width: 26px;
+}
+
+.w-\[25px\] {
+  width: 25px;
+}
+
+.w-\[90px\] {
+  width: 90px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[320px\] {
+  width: 320px;
+}
+
+.w-\[88px\] {
+  width: 88px;
+}
+
+.w-\[65px\] {
+  width: 65px;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -648,6 +916,10 @@ video {
   border-radius: 7px;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-br-\[100px\] {
   border-bottom-right-radius: 100px;
 }
@@ -664,6 +936,11 @@ video {
 .bg-offwhite {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 94% / var(--tw-bg-opacity));
+}
+
+.bg-purple {
+  --tw-bg-opacity: 1;
+  background-color: hsl(259 100% 65% / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -695,6 +972,10 @@ video {
   font-size: 55px;
 }
 
+.text-\[56px\] {
+  font-size: 56px;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -724,5 +1005,22 @@ video {
 .text-smokeygrey {
   --tw-text-opacity: 1;
   color: hsl(0 1% 50% / var(--tw-text-opacity));
+}
+
+.focus-within\:outline-1:focus-within {
+  outline-width: 1px;
+}
+
+.focus-within\:outline-\[1px\]:focus-within {
+  outline-width: 1px;
+}
+
+.focus-within\:outline-smokeygrey:focus-within {
+  outline-color: hsl(0, 1%, 50%);
+}
+
+.hover\:bg-offblack:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
 }
 

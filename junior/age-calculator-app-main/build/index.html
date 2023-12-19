@@ -13,32 +13,28 @@
 </head>
 <body class="min-h-screen bg-offwhite">
 <main class="min-h-screen flex items-center justify-center">
-  <div id="interactive-section" class="h-[484px] w-[343px] bg-white flex flex-col rounded-3xl rounded-br-[100px]">
-    <form action="get" class="flex justify-center w-full">
-      <fieldset class="flex w-[292px] justify-between">
+  <div id="interactive-section" class="h-[486px] w-[343px] bg-white flex flex-col rounded-3xl rounded-br-[100px]">
+    <form action="get" class="flex justify-center w-full flex-wrap">
+      <fieldset class="flex w-[295px] justify-between relative top-[48px] ">
         <div id="daysdiv" class="flex flex-col">
           <label class="uppercase font-poppins-bold text-[12px] text-smokeygrey tracking-[0.2em]" for="day">Day</label>
-          <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[86px] h-[54px] rounded-[7px] mt-[4px]" name="day" id="day" placeholder="DD">
+          <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[88px] h-[54px] rounded-[7px] mt-[4px] focus-within:outline-[1px] focus-within:outline-smokeygrey" name="day" id="day" placeholder="DD">
         </div>
         <div id="monthdiv" class="flex flex-col">
           <label class="uppercase font-poppins-bold text-[12px] text-smokeygrey tracking-[0.22em]" for="month">Month</label>
-          <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[86px] h-[54px] rounded-[7px] mt-[4px] " name="month" id="month" placeholder="MM">
+          <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[88px] h-[54px] rounded-[7px] mt-[4px]  " name="month" id="month" placeholder="MM">
         </div>
         <div id="yeardiv" class="flex flex-col">
           <label class="uppercase font-poppins-bold text-[12px] text-smokeygrey tracking-[0.22em]" for="year">Year</label>
-          <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[86px] h-[54px] rounded-[7px] mt-[4px]" name="year" id="year" placeholder="YYYY">
+          <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[88px] h-[54px] rounded-[7px] mt-[4px] " name="year" id="year" placeholder="YYYY">
         </div>
       </fieldset>
+      <button id="submit" class=" hover:bg-offblack flex items-center justify-center w-[65px] h-[65px] rounded-full bg-purple relative top-[81px] self-center z-10" type="submit"><img class="h-[25px] w-[25px]" src="../assets/images/icon-arrow.svg" alt="Arrow for submit button"></button>
     </form>
-   
-   
+    
+    <hr class="mt-7 lightgrey w-[295px] self-center relative top-[20px]">
 
-    
-
-    
-    
-    <hr class="mt-7 lightgrey w-[295px] self-center">
-    <div class="font-poppins-extra-bold-italic text-[55px] tracking-tight h-[200px] mt-7  ml-[32px]">
+    <div class="font-poppins-extra-bold-italic text-[56px] tracking-tight h-[200px] mt-7  ml-[25px] relative top-[46px]">
       <div class=" h-[61px] text-offblack "><span class="text-purple" id="years-value">--</span> years</div>
       <div class=" h-[61px] text-offblack "><span class="text-purple" id="months-value">--</span> months</div>
       <div class=" h-[61px] text-offblack "><span class="text-purple" id="days-value">--</span> days</div>

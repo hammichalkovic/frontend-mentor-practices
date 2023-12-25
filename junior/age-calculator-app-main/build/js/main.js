@@ -12,7 +12,8 @@ let desktopArrow = document.getElementById('arrow1'),
     fullCurrentDate = new Date(),
     currentDate = fullCurrentDate.getDate(),
     currentMonth = fullCurrentDate.getMonth() + 1,
-    currentYear = fullCurrentDate.getFullYear();
+    currentYear = fullCurrentDate.getFullYear(),
+    submitBtn = document.getElementById('submit');
     
 
 
@@ -20,14 +21,138 @@ if (window.matchMedia('(max-width: 450px)').matches) {
     desktopArrow.classList.remove('hidden');
 } else {
     mobileArrow.classList.remove('hidden');
-}
+};
 
-function toGetBirthFullDate() {
-    let localFullCurrentDate = new Date();
-    localFullCurrentDate.setDate(dayVar.value * 1);
-    localFullCurrentDate.setMonth(monthVar.value * 1 - 1);
-    localFullCurrentDate.setFullYear(yearVar.value * 1);
+
+
+
+
+let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
+       
+   
+    
+    localFullCurrentDate = new Date(),
+    typedDateOfBirth = new Date();
+ 
+    typedDateOfBirth.setDate(dayVar.value * 1);
+    typedDateOfBirth.setMonth(monthVar.value * 1 - 1);
+    typedDateOfBirth.setFullYear(yearVar.value * 1);
+    typedDateOfBirth = typedDateOfBirth.toDateString();
     localFullCurrentDate = localFullCurrentDate.toDateString();
-    console.log(localFullCurrentDate);
-    //to rewrite the function in promise-style
-}
+
+    let currDateArr = localFullCurrentDate.split(' '),
+    typedDateArr = typedDateOfBirth.split(' ');
+
+
+        switch (currDateArr[1]) {
+            case 'Jan':
+            currDateArr[1] = 1;
+            break;
+            
+            case 'Feb':
+            currDateArr[1] = 2;
+            break;
+
+            case 'Mar':
+            currDateArr[1] = 3;
+            break;
+
+            case 'Apr':
+            currDateArr[1] = 4;
+            break;
+
+            case 'May':
+            currDateArr[1] = 5;
+            break;
+
+            case 'Jun':
+            currDateArr[1] = 6;
+            break;
+
+            case 'Jul':
+            currDateArr[1] = 7;
+            break;
+
+            case 'Aug':
+            currDateArr[1] = 8;
+            break;
+
+            case 'Sep':
+            currDateArr[1] = 9;
+            break;
+
+            case 'Oct':
+            currDateArr[1] = 10;
+            break;
+
+            case 'Nov':
+            currDateArr[1] = 11;
+            break;
+
+            case 'Dec':
+            currDateArr[1] = 12;
+            break;
+        };
+
+        switch (typedDateArr[1]) {
+            case 'Jan':
+            typedDateArr[1] = 1;
+            break;
+            
+            case 'Feb':
+            typedDateArr[1] = 2;
+            break;
+
+            case 'Mar':
+            typedDateArr[1] = 3;
+            break;
+
+            case 'Apr':
+            typedDateArr[1] = 4;
+            break;
+
+            case 'May':
+            typedDateArr[1] = 5;
+            break;
+
+            case 'Jun':
+            typedDateArr[1] = 6;
+            break;
+
+            case 'Jul':
+            typedDateArr[1] = 7;
+            break;
+
+            case 'Aug':
+            typedDateArr[1] = 8;
+            break;
+
+            case 'Sep':
+            typedDateArr[1] = 9;
+            break;
+
+            case 'Oct':
+            typedDateArr[1] = 10;
+            break;
+
+            case 'Nov':
+            typedDateArr[1] = 11;
+            break;
+
+            case 'Dec':
+            typedDateArr[1] = 12;
+            break;
+        }
+
+
+    resultYears.textContent = currDateArr[3] - typedDateArr[3];
+    resultMonths.textContent = currDateArr[1] - typedDateArr[1];
+    resultDays.textContent = currDateArr[2] - typedDateArr[2];
+
+    console.log(typedDateArr, currDateArr);
+
+};
+
+submitBtn.addEventListener('click', toGetDates);
+
+

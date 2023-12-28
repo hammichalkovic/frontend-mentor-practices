@@ -16,6 +16,8 @@ let desktopArrow = document.getElementById('arrow1'),
     submitBtn = document.getElementById('submit'),
     spans = document.querySelectorAll('span');
     
+   
+    
 
 
 if (window.matchMedia('(max-width: 450px)').matches) {
@@ -25,31 +27,17 @@ if (window.matchMedia('(max-width: 450px)').matches) {
 };
 
 submitBtn.addEventListener('click', () => {
-    if (dayVar.value == '') {
-        resultDays.classList.add('sm:tracking-[0.15em]');
-    } else if (!dayVar.value == '') {
-        resultDays.classList.remove('sm:tracking-[0.15em]');
-    }
-
-    if (monthVar.value == '') {
-        resultMonths.classList.add('sm:tracking-[0.15em]');
-    } else if (!monthVar.value == '') {
-        resultMonths.classList.remove('sm:tracking-[0.15em]');
-    }
-
-    if (yearVar.value == '') {
-        resultYears
-        .classList.add('sm:tracking-[0.15em]');
-    } else if (!yearVar.value == '') {
-        resultYears
-        .classList.remove('sm:tracking-[0.15em]');
-    }
+   
 
     function toIndicateError() {
         if (yearVar.value == '' || monthVar.value == '' || dayVar.value == '') {
             spans.forEach(span => {
                 span.textContent == '--';
             })
+        } else if (!yearVar.value == '' && !monthVar.value == '' && !dayVar.value == '') {
+            resultDays.classList.remove('sm:tracking-[0.15em]');
+            resultMonths.classList.remove('sm:tracking-[0.15em]');
+            resultYears.classList.remove('sm:tracking-[0.15em]');
         }
     }
 
@@ -60,7 +48,6 @@ submitBtn.addEventListener('click', () => {
 
 
 let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
-       
    
     
     localFullCurrentDate = new Date(),
@@ -180,6 +167,13 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
     resultYears.textContent = currDateArr[3] - typedDateArr[3];
     resultMonths.textContent = currDateArr[1] - typedDateArr[1];
     resultDays.textContent = currDateArr[2] - typedDateArr[2];
+
+
+    if (yearVar.value == '' || monthVar.value == '' || yearVar.value == '') {
+        resultDays.textContent = '--';
+        resultMonths.textContent = '--';
+        resultYears.textContent = '--';
+    }
 
     console.log(typedDateArr, currDateArr);
 

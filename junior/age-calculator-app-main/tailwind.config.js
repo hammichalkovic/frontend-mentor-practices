@@ -17,7 +17,7 @@ module.exports = {
         'smokeygrey': 'hsl(0, 1%, 50%)',
         'offblack': 'hsl(0, 0%, 8%)',
         'purple': 'hsl(259, 100%, 65%)',
-        'lightred': 'hsl(0, 100%, 67%)',
+        'lightred': 'hsl(342, 85%, 61%)',
         'borderpurple': 'hsl(266, 15%, 68%)'
       }
     },

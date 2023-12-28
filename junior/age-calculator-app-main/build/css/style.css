@@ -685,6 +685,11 @@ video {
   border-color: hsl(0 0% 86% / var(--tw-border-opacity));
 }
 
+.border-lightred {
+  --tw-border-opacity: 1;
+  border-color: hsl(342 85% 61% / var(--tw-border-opacity));
+}
+
 .bg-offwhite {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 94% / var(--tw-bg-opacity));
@@ -712,8 +717,16 @@ video {
   font-family: poppinsExtraBoldItalic, sans-serif;
 }
 
+.font-poppins-italic {
+  font-family: poppinsItalic, sans-serif;
+}
+
 .text-\[12px\] {
   font-size: 12px;
+}
+
+.text-\[13px\] {
+  font-size: 13px;
 }
 
 .text-\[20px\] {
@@ -738,6 +751,11 @@ video {
 
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.text-lightred {
+  --tw-text-opacity: 1;
+  color: hsl(342 85% 61% / var(--tw-text-opacity));
 }
 
 .text-offblack {

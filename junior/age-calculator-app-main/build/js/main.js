@@ -6,6 +6,12 @@ let desktopArrow = document.getElementById('arrow1'),
     dayVar = document.getElementById('day'),
     monthVar = document.getElementById('month'),
     yearVar = document.getElementById('year'),
+    // daysDiv = document.getElementById('daysdiv'),
+    // monthsDiv = document.getElementById('monthsdiv'),
+    // yearsDiv = document.getElementById('yearsdiv'),
+    daysLabel = document.getElementById('dayslabel'),
+    monthsLabel = document.getElementById('monthslabel'),
+    yearsLabel = document.getElementById('yearslabel'),
     resultYears = document.getElementById('result-years'),
     resultMonths = document.getElementById('result-months'),
     resultDays = document.getElementById('result-days'),
@@ -14,9 +20,8 @@ let desktopArrow = document.getElementById('arrow1'),
     currentMonth = fullCurrentDate.getMonth() + 1,
     currentYear = fullCurrentDate.getFullYear(),
     submitBtn = document.getElementById('submit'),
-    spans = document.querySelectorAll('span');
-    
-   
+    spans = document.querySelectorAll('span'),
+    errorNotificationArr = [[daysLabel, dayVar], [monthsLabel, monthVar], [yearsLabel, yearVar]];
     
 
 
@@ -26,22 +31,32 @@ if (window.matchMedia('(max-width: 450px)').matches) {
     mobileArrow.classList.remove('hidden');
 };
 
-submitBtn.addEventListener('click', () => {
-   
+function toDisplayWhileInputsEmpty() {
+    if (yearVar.value == '' || monthVar.value == '' || dayVar.value == '') {
+        spans.forEach(span => {
+            span.textContent == '--';
+        })
+    } else if (!yearVar.value == '' && !monthVar.value == '' && !dayVar.value == '') {
+        resultDays.classList.remove('sm:tracking-[0.15em]');
+        resultMonths.classList.remove('sm:tracking-[0.15em]');
+        resultYears.classList.remove('sm:tracking-[0.15em]');
+    }
+}
 
-    function toIndicateError() {
-        if (yearVar.value == '' || monthVar.value == '' || dayVar.value == '') {
-            spans.forEach(span => {
-                span.textContent == '--';
-            })
-        } else if (!yearVar.value == '' && !monthVar.value == '' && !dayVar.value == '') {
-            resultDays.classList.remove('sm:tracking-[0.15em]');
-            resultMonths.classList.remove('sm:tracking-[0.15em]');
-            resultYears.classList.remove('sm:tracking-[0.15em]');
+function toCheckErrNotfArr() {
+    for (i = 0; i < errorNotificationArr.length; i++) {
+        if (errorNotificationArr[i][1].value == '') {
+            errorNotificationArr[i][0].classList.remove('text-smokeygrey');
+            errorNotificationArr[i][0].classList.add('text-lightred');
+            errorNotificationArr[i][1].classList.remove('border-lightgrey');
+            errorNotificationArr[i][1].classList.add('border-lightred');
         }
     }
+}
 
-    toIndicateError();
+submitBtn.addEventListener('click', () => {
+    toDisplayWhileInputsEmpty();
+    toCheckErrNotfArr();
 })
 
 

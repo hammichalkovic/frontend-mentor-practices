@@ -21,7 +21,10 @@ let desktopArrow = document.getElementById('arrow1'),
     currentYear = fullCurrentDate.getFullYear(),
     submitBtn = document.getElementById('submit'),
     spans = document.querySelectorAll('span'),
-    errorNotificationArr = [[daysLabel, dayVar], [monthsLabel, monthVar], [yearsLabel, yearVar]];
+    spanDaysErr = document.getElementById('dayserror'),
+    spanMonthsErr = document.getElementById('monthserror'),
+    spanYearsErr = document.getElementById('yearserror'),
+    errorNotificationArr = [[daysLabel, dayVar, spanDaysErr], [monthsLabel, monthVar, spanMonthsErr], [yearsLabel, yearVar, spanYearsErr]];
     
 
 
@@ -50,13 +53,26 @@ function toCheckErrNotfArr() {
             errorNotificationArr[i][0].classList.add('text-lightred');
             errorNotificationArr[i][1].classList.remove('border-lightgrey');
             errorNotificationArr[i][1].classList.add('border-lightred');
+            errorNotificationArr[i][2].textContent = 'This field is required';
+            errorNotificationArr[i][2].classList.remove('hidden');
         }
+    }
+}
+
+function toCheckMonthsNumber() {
+    if (errorNotificationArr[1][1].value > 12 || typeof !errorNotificationArr[1][1]*1 === 'number' ) {
+        errorNotificationArr[1][0].classList.remove('text-smokeygrey');
+        errorNotificationArr[1][0].classList.add('text-lightred');
+        errorNotificationArr[1][1].classList.remove('border-lightgrey');
+        errorNotificationArr[1][1].classList.add('border-lightred');
+        errorNotificationArr[1][2].textContent = 'Must be a valid month';
     }
 }
 
 submitBtn.addEventListener('click', () => {
     toDisplayWhileInputsEmpty();
     toCheckErrNotfArr();
+    toCheckMonthsNumber();
 })
 
 

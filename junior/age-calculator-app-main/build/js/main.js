@@ -60,23 +60,83 @@ function toCheckErrNotfArr() {
 }
 
 function toCheckMonthsNumber() {
-    let monthVal = errorNotificationArr[1][1].value * 1;
+    let checkMonthPromise = new Promise((resolve, reject) => {
+        let monthVal = errorNotificationArr[1][1].value * 1;
+    
+        if (monthVal < 13 || typeof monthVal === typeof Number) {
+            resolve('resolve!');
+        } else {
+            reject('reject!');
+        }
+    });
+    
+    checkMonthPromise.then(() => {
+        toGetDates();
+    })
 
-    if (monthVal * 1 > 12 || typeof monthVal !== 'number' ) {
+    .catch(() => {
         errorNotificationArr[1][0].classList.remove('text-smokeygrey');
         errorNotificationArr[1][0].classList.add('text-lightred');
         errorNotificationArr[1][1].classList.remove('border-lightgrey');
         errorNotificationArr[1][1].classList.add('border-lightred');
         errorNotificationArr[1][2].textContent = 'Must be a valid month';
-    }
+    })
+
+    .finally(() => {
+        setTimeout(() => {
+            errorNotificationArr[1][0].classList.remove('text-lightred');
+            errorNotificationArr[1][0].classList.add('text-smokeygrey');
+            errorNotificationArr[1][1].classList.remove('border-lightred');
+            errorNotificationArr[1][1].classList.add('border-lightgrey');
+            errorNotificationArr[1][2].textContent = '';
+        }, 3000)
+    })
 }
+
+function toCheckYearsNumber() {
+    let checkYearPromise = new Promise((resolve,reject) => {
+        let yearVal = errorNotificationArr[2][1].value * 1;
+
+        if (vearVal < currentYear || typeof yearVal === typeof Number) {
+            resolve('resolve!');
+        } else {
+            reject('reject!');
+        }   
+    });
+
+    checkYearPromise.then(() => {
+        toGetDates();
+    })
+
+    .catch(() => {
+        errorNotificationArr[2][0].classList.remove('text-smokeygrey');
+        errorNotificationArr[2][0].classList.add('text-lightred');
+        errorNotificationArr[2][1].classList.remove('border-lightgrey');
+        errorNotificationArr[2][1].classList.add('border-lightred');
+        errorNotificationArr[2][2].textContent = 'Must be in the past';
+    })
+
+    .finally(() => {
+        setTimeout(() => {
+            errorNotificationArr[2][0].classList.remove('text-lightred');
+            errorNotificationArr[2][0].classList.add('text-smokeygrey');
+            errorNotificationArr[2][1].classList.remove('border-lightred');
+            errorNotificationArr[2][1].classList.add('border-lightgrey');
+            errorNotificationArr[2][2].textContent = '';
+        }, 3000)
+    })
+}
+
+
+
+
 
 submitBtn.addEventListener('click', () => {
     toDisplayWhileInputsEmpty();
     toCheckErrNotfArr();
     toCheckMonthsNumber();
+    toCheckYearsNumber();
 })
-
 
 
 
@@ -212,6 +272,6 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
 
 };
 
-submitBtn.addEventListener('click', toGetDates);
+// submitBtn.addEventListener('click', toGetDates);
 
 

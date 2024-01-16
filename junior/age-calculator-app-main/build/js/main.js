@@ -60,7 +60,9 @@ function toCheckErrNotfArr() {
 }
 
 function toCheckMonthsNumber() {
-    if (errorNotificationArr[1][1].value > 12 || typeof !errorNotificationArr[1][1]*1 === 'number' ) {
+    let monthVal = errorNotificationArr[1][1].value * 1;
+
+    if (monthVal * 1 > 12 || typeof monthVal !== 'number' ) {
         errorNotificationArr[1][0].classList.remove('text-smokeygrey');
         errorNotificationArr[1][0].classList.add('text-lightred');
         errorNotificationArr[1][1].classList.remove('border-lightgrey');

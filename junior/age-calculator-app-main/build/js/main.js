@@ -54,16 +54,9 @@ function toCheckErrNotfArr() {
             errorNotificationArr[i][1].classList.remove('border-lightgrey');
             errorNotificationArr[i][1].classList.add('border-lightred');
             errorNotificationArr[i][2].textContent = 'This field is required';
-
-            setTimeout(() => {
-                errorNotificationArr[i][0].classList.remove('text-lightred');
-                errorNotificationArr[i][0].classList.add('text-smokeygrey');
-                errorNotificationArr[i][1].classList.remove('border-lightred');
-                errorNotificationArr[i][1].classList.add('border-lightgrey');
-                errorNotificationArr[i][2].textContent = '';
-            }, 3000)
         }
     }
+    
 }
 
 function toCheckMonthsNumber() {
@@ -135,8 +128,26 @@ function toCheckYearsNumber() {
     })
 }
 
+function getLastDayOfMonth(year, month) {
+    year = yearVar.value * 1;
+    month = monthVar.value * 1;
+    return new Date(year, month, 0);
+    
+}
+
+function toCheckDaysNumber() {
+    let checkDayPromise = new Promise((resolve, reject) => {
+        let dayVal = errorNotificationArr[0][1].value * 1;
+
+        let lastDayTheMonth = getLastDayOfMonth();
+        lastDayTheMonth = lastDayTheMonth.toDateString();
+        let lastDayTheMonthArr = lastDayTheMonth.split(' ');
+        lastDayTheMonth = lastDayTheMonthArr[2] * 1;
 
 
+        if (dayVal < )
+    }) 
+}
 
 
 submitBtn.addEventListener('click', () => {

@@ -54,7 +54,14 @@ function toCheckErrNotfArr() {
             errorNotificationArr[i][1].classList.remove('border-lightgrey');
             errorNotificationArr[i][1].classList.add('border-lightred');
             errorNotificationArr[i][2].textContent = 'This field is required';
-            errorNotificationArr[i][2].classList.remove('hidden');
+
+            setTimeout(() => {
+                errorNotificationArr[i][0].classList.remove('text-lightred');
+                errorNotificationArr[i][0].classList.add('text-smokeygrey');
+                errorNotificationArr[i][1].classList.remove('border-lightred');
+                errorNotificationArr[i][1].classList.add('border-lightgrey');
+                errorNotificationArr[i][2].textContent = '';
+            }, 3000)
         }
     }
 }
@@ -97,7 +104,7 @@ function toCheckYearsNumber() {
     let checkYearPromise = new Promise((resolve,reject) => {
         let yearVal = errorNotificationArr[2][1].value * 1;
 
-        if (vearVal < currentYear || typeof yearVal === typeof Number) {
+        if (yearVal < currentYear + 1 || typeof yearVal === typeof Number) {
             resolve('resolve!');
         } else {
             reject('reject!');
@@ -114,6 +121,7 @@ function toCheckYearsNumber() {
         errorNotificationArr[2][1].classList.remove('border-lightgrey');
         errorNotificationArr[2][1].classList.add('border-lightred');
         errorNotificationArr[2][2].textContent = 'Must be in the past';
+        errorNotificationArr[2][2].classList.remove('hidden');
     })
 
     .finally(() => {

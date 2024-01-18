@@ -6,9 +6,9 @@ let desktopArrow = document.getElementById('arrow1'),
     dayVar = document.getElementById('day'),
     monthVar = document.getElementById('month'),
     yearVar = document.getElementById('year'),
-    // daysDiv = document.getElementById('daysdiv'),
-    // monthsDiv = document.getElementById('monthsdiv'),
-    // yearsDiv = document.getElementById('yearsdiv'),
+    daysDiv = document.getElementById('daysdiv'),
+    monthsDiv = document.getElementById('monthsdiv'),
+    yearsDiv = document.getElementById('yearsdiv'),
     daysLabel = document.getElementById('dayslabel'),
     monthsLabel = document.getElementById('monthslabel'),
     yearsLabel = document.getElementById('yearslabel'),
@@ -303,10 +303,27 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
             break;
         }
 
+        let calcPromise = new Promise((resolve, reject) => {
+            let daysToAdd = 0,
+                daysToSubtractFrom = 0,
+                resultDaysCalc = 0;
 
-    resultYears.textContent = currDateArr[3] - typedDateArr[3];
-    resultMonths.textContent = currDateArr[1] - typedDateArr[1];
-    resultDays.textContent = currDateArr[2] - typedDateArr[2];
+
+            if (typedDateArr[2] > currDateArr[2]) {
+                daysToAdd = getLastDayOfMonth(currDateArr[3], currDateArr[1]);
+                daysToSubtractFrom = daysToAdd + currDateArr[2];
+              let resultDaysCalc = daysToSubtractFrom - typedDateArr[2];
+            } else {
+                resultDaysCalc = currDateArr[2] - typedDateArr[2];
+            }
+        })
+
+    // resultDays.textContent
+    
+    // resultMonths.textContent
+    let resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+    // resultYears.textContent
+    let resultYearsCalc = currDateArr[3] - typedDateArr[3];
 
 
     if (yearVar.value == '' || monthVar.value == '' || yearVar.value == '') {
@@ -316,6 +333,7 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
     }
 
     console.log(typedDateArr, currDateArr);
+    console.log(resultDaysCalc);
 
 };
 

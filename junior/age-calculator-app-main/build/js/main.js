@@ -46,14 +46,30 @@ function toDisplayWhileInputsEmpty() {
     }
 }
 
+function toNotifyError(inputPlace, errorText) {
+    errorNotificationArr[inputPlace][0].classList.remove('text-smokeygrey');
+    errorNotificationArr[inputPlace][0].classList.add('text-lightred');
+    errorNotificationArr[inputPlace][1].classList.remove('border-lightgrey');
+    errorNotificationArr[inputPlace][1].classList.add('border-lightred');
+    errorNotificationArr[inputPlace][2].textContent = errorText;
+}
+
+function toHideErrorNotify(inputPlace, textToWrite) {
+    errorNotificationArr[inputPlace][0].classList.remove('text-lightred');
+    errorNotificationArr[inputPlace][0].classList.add('text-smokeygrey');
+    errorNotificationArr[inputPlace][1].classList.remove('border-lightred');
+    errorNotificationArr[inputPlace][1].classList.add('border-lightgrey');
+    errorNotificationArr[inputPlace][2].textContent = textToWrite;
+}
+
 function toCheckErrNotfArr() {
     for (i = 0; i < errorNotificationArr.length; i++) {
         if (errorNotificationArr[i][1].value == '') {
-            errorNotificationArr[i][0].classList.remove('text-smokeygrey');
-            errorNotificationArr[i][0].classList.add('text-lightred');
-            errorNotificationArr[i][1].classList.remove('border-lightgrey');
-            errorNotificationArr[i][1].classList.add('border-lightred');
-            errorNotificationArr[i][2].textContent = 'This field is required';
+        
+            toNotifyError(i, 'This field is required');
+            setTimeout(() => {
+                toHideErrorNotify(0, '');
+            }, 3000)
         }
     }
     
@@ -75,20 +91,14 @@ function toCheckMonthsNumber() {
     })
 
     .catch(() => {
-        errorNotificationArr[1][0].classList.remove('text-smokeygrey');
-        errorNotificationArr[1][0].classList.add('text-lightred');
-        errorNotificationArr[1][1].classList.remove('border-lightgrey');
-        errorNotificationArr[1][1].classList.add('border-lightred');
-        errorNotificationArr[1][2].textContent = 'Must be a valid month';
+        toNotifyError(1, 'Must be a valid month');
     })
 
     .finally(() => {
         setTimeout(() => {
-            errorNotificationArr[1][0].classList.remove('text-lightred');
-            errorNotificationArr[1][0].classList.add('text-smokeygrey');
-            errorNotificationArr[1][1].classList.remove('border-lightred');
-            errorNotificationArr[1][1].classList.add('border-lightgrey');
-            errorNotificationArr[1][2].textContent = '';
+
+            toHideErrorNotify(1, '');
+
         }, 3000)
     })
 }
@@ -109,21 +119,14 @@ function toCheckYearsNumber() {
     })
 
     .catch(() => {
-        errorNotificationArr[2][0].classList.remove('text-smokeygrey');
-        errorNotificationArr[2][0].classList.add('text-lightred');
-        errorNotificationArr[2][1].classList.remove('border-lightgrey');
-        errorNotificationArr[2][1].classList.add('border-lightred');
-        errorNotificationArr[2][2].textContent = 'Must be in the past';
-        errorNotificationArr[2][2].classList.remove('hidden');
+        toNotifyError(2, 'Must be in the past')
     })
 
     .finally(() => {
         setTimeout(() => {
-            errorNotificationArr[2][0].classList.remove('text-lightred');
-            errorNotificationArr[2][0].classList.add('text-smokeygrey');
-            errorNotificationArr[2][1].classList.remove('border-lightred');
-            errorNotificationArr[2][1].classList.add('border-lightgrey');
-            errorNotificationArr[2][2].textContent = '';
+
+            toHideErrorNotify(2, '');
+
         }, 3000)
     })
 }
@@ -140,13 +143,37 @@ function toCheckDaysNumber() {
         let dayVal = errorNotificationArr[0][1].value * 1;
 
         let lastDayTheMonth = getLastDayOfMonth();
-        lastDayTheMonth = lastDayTheMonth.toDateString();
+            lastDayTheMonth = lastDayTheMonth.toDateString();
         let lastDayTheMonthArr = lastDayTheMonth.split(' ');
-        lastDayTheMonth = lastDayTheMonthArr[2] * 1;
+            lastDayTheMonth = lastDayTheMonthArr[2] * 1;
 
 
-        if (dayVal < )
-    }) 
+        if (dayVal > 31) {
+            reject('rejected!');
+
+        } else if (dayVal > lastDayTheMonth) {
+            resolve('resolved!');
+
+        }
+    }); 
+
+    checkDayPromise.then(() => {
+        toNotifyError(1, '');
+        toNotifyError(2, '');
+        toNotifyError(0, 'Must be a valid date');
+    })
+
+    .catch(() => {
+        toNotifyError(0, 'Must be a valid day');
+    })
+
+    .finally(() => {
+        setTimeout(() => {
+            toHideErrorNotify(0, '');
+            toHideErrorNotify(1, '');
+            toHideErrorNotify(2, '');
+        }, 3000)
+    })
 }
 
 
@@ -155,6 +182,7 @@ submitBtn.addEventListener('click', () => {
     toCheckErrNotfArr();
     toCheckMonthsNumber();
     toCheckYearsNumber();
+    toCheckDaysNumber()
 })
 
 

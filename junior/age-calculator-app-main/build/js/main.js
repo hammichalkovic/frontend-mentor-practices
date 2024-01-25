@@ -197,9 +197,17 @@ submitBtn.addEventListener('click', () => {
     toCheckMonthsNumber();
     toCheckYearsNumber();
     toCheckDaysNumber()
+    
+    for (let i = 0; i < 3; i++) {
+        if (errorNotificationArr[i][2] != '') {
+            toGetDates();
+        }
+    }
 })
 
-
+// let localFullCurrentDate = new Date();
+//     localFullCurrentDate = localFullCurrentDate.toDateString();
+// let currDateArr = localFullCurrentDate.split(' ');
 
 let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
    
@@ -215,6 +223,10 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
 
     let currDateArr = localFullCurrentDate.split(' '),
     typedDateArr = typedDateOfBirth.split(' ');
+
+    let resultDaysCalc = 0,
+        resultMonthsCalc = 0,
+        resultYearsCalc = 0; 
 
 
         switch (currDateArr[1]) {
@@ -317,27 +329,48 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
             break;
         }
 
-        let calcPromise = new Promise((resolve, reject) => {
-            let daysToAdd = 0,
-                daysToSubtractFrom = 0,
-                resultDaysCalc = 0;
-
-
+        let calcDaysPromise = new Promise((resolve, reject) => {
+            
             if (typedDateArr[2] > currDateArr[2]) {
+                resolve('resolved!');
+                
+            } else {
+                reject('rejected!');
+                
+            }
+        });
+
+        calcDaysPromise.then(() => {
+            let daysToAdd = 0,
+                daysToSubtractFrom = 0;
+
                 daysToAdd = getLastDayOfMonth(currDateArr[3], currDateArr[1]);
                 daysToSubtractFrom = daysToAdd + currDateArr[2];
-              let resultDaysCalc = daysToSubtractFrom - typedDateArr[2];
-            } else {
-                resultDaysCalc = currDateArr[2] - typedDateArr[2];
-            }
+                resultDaysCalc = daysToSubtractFrom - typedDateArr[2];
+                currDateArr[1] = currDateArr[1] - 1;
+        })
+        
+        .then(() => {
+            let calcMonthsPromise = new Promise((resolve, reject) => {
+                if (typedDateArr[1] > currDateArr[1]) {
+                    resolve('resolved!');
+                } else {
+                    reject('rejected!');
+                }
+            });
+
+            calcMonthsPromise.then(() => {
+                currDateArr[1] = currDateArr[1] + 12;
+                currDateArr[3] = currDateArr[3] - 1;
+                resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+                resultYearsCalc = currDateArr[3] - typedDateArr[3];
+            })
+        }) 
+
+        .catch(() => {
+            resultDaysCalc = currDateArr[2] - typedDateArr[2];
         })
 
-    // resultDays.textContent
-    
-    // resultMonths.textContent
-    let resultMonthsCalc = currDateArr[1] - typedDateArr[1];
-    // resultYears.textContent
-    let resultYearsCalc = currDateArr[3] - typedDateArr[3];
 
 
     if (yearVar.value == '' || monthVar.value == '' || yearVar.value == '') {
@@ -348,6 +381,9 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
 
     console.log(typedDateArr, currDateArr);
     console.log(resultDaysCalc);
+    console.log(resultDaysCalc);
+    console.log(resultMonthsCalc);
+    console.log(resultYearsCalc);
 
 };
 

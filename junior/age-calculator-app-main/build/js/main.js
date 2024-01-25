@@ -79,7 +79,7 @@ function toCheckMonthsNumber() {
     let checkMonthPromise = new Promise((resolve, reject) => {
         let monthVal = errorNotificationArr[1][1].value * 1;
     
-        if (monthVal < 13 || typeof monthVal === typeof Number) {
+        if ( 0 < monthVal && monthVal < 13 || typeof monthVal === typeof Number ) {
             resolve('resolve!');
         } else {
             reject('reject!');
@@ -87,11 +87,17 @@ function toCheckMonthsNumber() {
     });
     
     checkMonthPromise.then(() => {
-        toGetDates();
+        // toGetDates();
     })
 
     .catch(() => {
-        toNotifyError(1, 'Must be a valid month');
+        let monthVal = errorNotificationArr[1][1].value * 1;
+
+        if (monthVal == 0 ) {
+                toNotifyError(1, 'This field is required');
+            } else  {
+                toNotifyError(1, 'Must be a valid month');  
+            }
     })
 
     .finally(() => {
@@ -115,11 +121,19 @@ function toCheckYearsNumber() {
     });
 
     checkYearPromise.then(() => {
-        toGetDates();
+        // toGetDates();
     })
 
     .catch(() => {
-        toNotifyError(2, 'Must be in the past')
+        let yearVal = errorNotificationArr[2][1].value * 1;
+
+        if (yearVal != 0 ) {
+                toNotifyError(2, 'Must be in the past');
+            } else if (yearVal == 0) {
+                toNotifyError(2, 'This field is required');  
+            }
+
+        // toNotifyError(2, 'Must be in the past')
     })
 
     .finally(() => {
@@ -148,7 +162,7 @@ function toCheckDaysNumber() {
             lastDayTheMonth = lastDayTheMonthArr[2] * 1;
 
 
-        if (dayVal > 31) {
+        if (dayVal > 31 || dayVal < 1) {
             reject('rejected!');
 
         } else if (dayVal > lastDayTheMonth) {

@@ -148,7 +148,12 @@ function toCheckYearsNumber() {
 function getLastDayOfMonth(year, month) {
     year = yearVar.value * 1;
     month = monthVar.value * 1;
-    return new Date(year, month, 0);
+    let lastDay = new Date(year, month, 0);
+    
+    lastDay = lastDay.toDateString();
+    lastDay = lastDay.split(' ');
+    lastDay = lastDay[2] * 1;
+    return lastDay;
     
 }
 
@@ -157,16 +162,13 @@ function toCheckDaysNumber() {
         let dayVal = errorNotificationArr[0][1].value * 1;
 
         let lastDayTheMonth = getLastDayOfMonth();
-            lastDayTheMonth = lastDayTheMonth.toDateString();
-        let lastDayTheMonthArr = lastDayTheMonth.split(' ');
-            lastDayTheMonth = lastDayTheMonthArr[2] * 1;
-
 
         if (dayVal > 31 || dayVal < 1) {
             reject('rejected!');
 
         } else if (dayVal > lastDayTheMonth) {
             resolve('resolved!');
+            console.log(dayVal);
 
         }
     }); 
@@ -222,7 +224,7 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
     localFullCurrentDate = localFullCurrentDate.toDateString();
 
     let currDateArr = localFullCurrentDate.split(' '),
-    typedDateArr = typedDateOfBirth.split(' ');
+        typedDateArr = typedDateOfBirth.split(' ');
 
     let resultDaysCalc = 0,
         resultMonthsCalc = 0,
@@ -329,6 +331,12 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
             break;
         }
 
+        currDateArr = currDateArr.map(item => item * 1);
+        typedDateArr = typedDateArr.map(item => item * 1);
+
+        // console.log(currDateArr);
+        // console.log(typedDateArr);
+
         let calcDaysPromise = new Promise((resolve, reject) => {
             
             if (typedDateArr[2] > currDateArr[2]) {
@@ -344,10 +352,13 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
             let daysToAdd = 0,
                 daysToSubtractFrom = 0;
 
-                daysToAdd = getLastDayOfMonth(currDateArr[3], currDateArr[1]);
+                daysToAdd = getLastDayOfMonth() * 1;
                 daysToSubtractFrom = daysToAdd + currDateArr[2];
                 resultDaysCalc = daysToSubtractFrom - typedDateArr[2];
-                currDateArr[1] = currDateArr[1] - 1;
+                currDateArr[1] -= 1;
+                // console.log(daysToAdd);
+                // console.log(daysToSubtractFrom);
+                // console.log(resultDaysCalc);
         })
         
         .then(() => {
@@ -360,15 +371,51 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
             });
 
             calcMonthsPromise.then(() => {
-                currDateArr[1] = currDateArr[1] + 12;
-                currDateArr[3] = currDateArr[3] - 1;
+                currDateArr[1] += 12;
+                currDateArr[3] -= 1;
                 resultMonthsCalc = currDateArr[1] - typedDateArr[1];
                 resultYearsCalc = currDateArr[3] - typedDateArr[3];
+                console.log(resultMonthsCalc);
+                console.log(resultYearsCalc);
+
+                resultDays.textContent = resultDaysCalc;
+                resultMonths.textContent = resultMonthsCalc;
+                resultYears.textContent = resultYearsCalc;
             })
         }) 
 
         .catch(() => {
             resultDaysCalc = currDateArr[2] - typedDateArr[2];
+
+            let altCalcMonthsPromise = new Promise((resolve, reject) => {
+                 if (typedDateArr[1] > currDateArr[1]) {
+                    resolve('resolved!');
+                } else {
+                    reject('rejected!');
+                }
+            })
+
+            altCalcMonthsPromise.then(() => {
+                currDateArr[1] += 12;
+                currDateArr[3] -= 1;
+                resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+                resultYearsCalc = currDateArr[3] - typedDateArr[3];
+                console.log(resultMonthsCalc);
+                console.log(resultYearsCalc);
+
+                resultDays.textContent = resultDaysCalc;
+                resultMonths.textContent = resultMonthsCalc;
+                resultYears.textContent = resultYearsCalc;
+            })
+
+            .catch(() => {
+                resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+                resultYearsCalc = currDateArr[3] - typedDateArr[3];
+
+                resultDays.textContent = resultDaysCalc;
+                resultMonths.textContent = resultMonthsCalc;
+                resultYears.textContent = resultYearsCalc;
+            })
         })
 
 

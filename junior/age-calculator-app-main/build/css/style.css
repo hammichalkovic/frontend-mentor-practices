@@ -782,6 +782,11 @@ video {
   border-color: hsl(274 100% 40% / var(--tw-border-opacity));
 }
 
+.focus-within\:border-lightred:focus-within {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 69% 64% / var(--tw-border-opacity));
+}
+
 .focus-within\:outline-\[0px\]:focus-within {
   outline-width: 0px;
 }

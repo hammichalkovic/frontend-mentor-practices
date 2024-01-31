@@ -34,10 +34,17 @@ if (window.matchMedia('(max-width: 450px)').matches) {
     mobileArrow.classList.remove('hidden');
 };
 
+function toAddTracking() {
+    resultDays.classList.add('sm:tracking-[0.15em]');
+    resultMonths.classList.add('sm:tracking-[0.15em]');
+    resultYears.classList.add('sm:tracking-[0.15em]');
+}
+
 function toDisplayWhileInputsEmpty() {
     if (yearVar.value == '' || monthVar.value == '' || dayVar.value == '') {
         spans.forEach(span => {
             span.textContent == '--';
+            
         })
     } else if (!yearVar.value == '' && !monthVar.value == '' && !dayVar.value == '') {
         resultDays.classList.remove('sm:tracking-[0.15em]');
@@ -49,16 +56,16 @@ function toDisplayWhileInputsEmpty() {
 function toNotifyError(inputPlace, errorText) {
     errorNotificationArr[inputPlace][0].classList.remove('text-smokeygrey');
     errorNotificationArr[inputPlace][0].classList.add('text-lightred');
-    errorNotificationArr[inputPlace][1].classList.remove('border-lightgrey');
-    errorNotificationArr[inputPlace][1].classList.add('border-lightred');
+    errorNotificationArr[inputPlace][1].classList.remove('border-lightgrey', 'focus-within:border-borderpurple');
+    errorNotificationArr[inputPlace][1].classList.add('border-lightred', 'focus-within:border-lightred');
     errorNotificationArr[inputPlace][2].textContent = errorText;
 }
 
 function toHideErrorNotify(inputPlace, textToWrite) {
     errorNotificationArr[inputPlace][0].classList.remove('text-lightred');
     errorNotificationArr[inputPlace][0].classList.add('text-smokeygrey');
-    errorNotificationArr[inputPlace][1].classList.remove('border-lightred');
-    errorNotificationArr[inputPlace][1].classList.add('border-lightgrey');
+    errorNotificationArr[inputPlace][1].classList.remove('border-lightred', 'focus-within:border-lightred');
+    errorNotificationArr[inputPlace][1].classList.add('border-lightgrey', 'focus-within:border-borderpurple');
     errorNotificationArr[inputPlace][2].textContent = textToWrite;
 }
 
@@ -163,7 +170,10 @@ function toCheckDaysNumber() {
 
         let lastDayTheMonth = getLastDayOfMonth();
 
-        if (dayVal > 31 || dayVal < 1) {
+        // to rewrite the condition
+        if (dayVal > 31 || dayVal < 1 ||
+             typeof dayVar.value == 'string' &&
+              parseInt(dayVar.value) == NaN) {
             reject('rejected!');
 
         } else if (dayVal > lastDayTheMonth) {
@@ -192,8 +202,15 @@ function toCheckDaysNumber() {
     })
 }
 
+function toClearVars() {
+    resultDays.textContent = '--';
+    resultMonths.textContent = '--';
+    resultYears.textContent = '--';
+}
+
 
 submitBtn.addEventListener('click', () => {
+    // toClearVars();
     toDisplayWhileInputsEmpty();
     toCheckErrNotfArr();
     toCheckMonthsNumber();
@@ -203,6 +220,8 @@ submitBtn.addEventListener('click', () => {
     for (let i = 0; i < 3; i++) {
         if (errorNotificationArr[i][2] != '') {
             toGetDates();
+        } else {
+            toClearVars();
         }
     }
 })
@@ -212,7 +231,6 @@ submitBtn.addEventListener('click', () => {
 // let currDateArr = localFullCurrentDate.split(' ');
 
 let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
-   
     
     localFullCurrentDate = new Date(),
     typedDateOfBirth = new Date();
@@ -230,6 +248,7 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
         resultMonthsCalc = 0,
         resultYearsCalc = 0; 
 
+        // console.log(typedDateArr);
 
         switch (currDateArr[1]) {
             case 'Jan':
@@ -335,102 +354,202 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
         typedDateArr = typedDateArr.map(item => item * 1);
 
         // console.log(currDateArr);
-        // console.log(typedDateArr);
+        console.log(typedDateArr);
+        if (dayVar.value == '' || monthVar.value == '' || yearVar.value == '' || typeof dayVar == 'string' || typeof monthVar.value == 'string' || typeof yearVar.value == 'string') {
+            toClearVars();
+            toAddTracking();
 
-        let calcDaysPromise = new Promise((resolve, reject) => {
+        } else {
+            let calcDaysPromise = new Promise((resolve, reject) => {
             
-            if (typedDateArr[2] > currDateArr[2]) {
-                resolve('resolved!');
-                
-            } else {
-                reject('rejected!');
-                
-            }
-        });
-
-        calcDaysPromise.then(() => {
-            let daysToAdd = 0,
-                daysToSubtractFrom = 0;
-
-                daysToAdd = getLastDayOfMonth() * 1;
-                daysToSubtractFrom = daysToAdd + currDateArr[2];
-                resultDaysCalc = daysToSubtractFrom - typedDateArr[2];
-                currDateArr[1] -= 1;
-                // console.log(daysToAdd);
-                // console.log(daysToSubtractFrom);
-                // console.log(resultDaysCalc);
-        })
-        
-        .then(() => {
-            let calcMonthsPromise = new Promise((resolve, reject) => {
-                if (typedDateArr[1] > currDateArr[1]) {
+                if (typedDateArr[2] > currDateArr[2]) {
                     resolve('resolved!');
+                    
                 } else {
                     reject('rejected!');
+                    
                 }
             });
-
-            calcMonthsPromise.then(() => {
-                currDateArr[1] += 12;
-                currDateArr[3] -= 1;
-                resultMonthsCalc = currDateArr[1] - typedDateArr[1];
-                resultYearsCalc = currDateArr[3] - typedDateArr[3];
-                console.log(resultMonthsCalc);
-                console.log(resultYearsCalc);
-
-                resultDays.textContent = resultDaysCalc;
-                resultMonths.textContent = resultMonthsCalc;
-                resultYears.textContent = resultYearsCalc;
+    
+            calcDaysPromise.then(() => {
+                let daysToAdd = 0,
+                    daysToSubtractFrom = 0;
+    
+                    daysToAdd = getLastDayOfMonth() * 1;
+                    daysToSubtractFrom = daysToAdd + currDateArr[2];
+                    resultDaysCalc = daysToSubtractFrom - typedDateArr[2];
+                    currDateArr[1] -= 1;
+                    // console.log(daysToAdd);
+                    // console.log(daysToSubtractFrom);
+                    // console.log(resultDaysCalc);
             })
-        }) 
-
-        .catch(() => {
-            resultDaysCalc = currDateArr[2] - typedDateArr[2];
-
-            let altCalcMonthsPromise = new Promise((resolve, reject) => {
-                 if (typedDateArr[1] > currDateArr[1]) {
-                    resolve('resolved!');
-                } else {
-                    reject('rejected!');
-                }
-            })
-
-            altCalcMonthsPromise.then(() => {
-                currDateArr[1] += 12;
-                currDateArr[3] -= 1;
-                resultMonthsCalc = currDateArr[1] - typedDateArr[1];
-                resultYearsCalc = currDateArr[3] - typedDateArr[3];
-                console.log(resultMonthsCalc);
-                console.log(resultYearsCalc);
-
-                resultDays.textContent = resultDaysCalc;
-                resultMonths.textContent = resultMonthsCalc;
-                resultYears.textContent = resultYearsCalc;
-            })
-
+            
+            .then(() => {
+                let calcMonthsPromise = new Promise((resolve, reject) => {
+                    if (typedDateArr[1] > currDateArr[1]) {
+                        resolve('resolved!');
+                    } else {
+                        reject('rejected!');
+                    }
+                });
+    
+                calcMonthsPromise.then(() => {
+                    currDateArr[1] += 12;
+                    currDateArr[3] -= 1;
+                    resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+                    resultYearsCalc = currDateArr[3] - typedDateArr[3];
+                    console.log(resultMonthsCalc);
+                    console.log(resultYearsCalc);
+    
+                    resultDays.textContent = resultDaysCalc;
+                    resultMonths.textContent = resultMonthsCalc;
+                    resultYears.textContent = resultYearsCalc;
+                })
+            }) 
+    
             .catch(() => {
-                resultMonthsCalc = currDateArr[1] - typedDateArr[1];
-                resultYearsCalc = currDateArr[3] - typedDateArr[3];
-
-                resultDays.textContent = resultDaysCalc;
-                resultMonths.textContent = resultMonthsCalc;
-                resultYears.textContent = resultYearsCalc;
+                resultDaysCalc = currDateArr[2] - typedDateArr[2];
+    
+                let altCalcMonthsPromise = new Promise((resolve, reject) => {
+                     if (typedDateArr[1] > currDateArr[1]) {
+                        resolve('resolved!');
+                    } else {
+                        reject('rejected!');
+                    }
+                })
+    
+                altCalcMonthsPromise.then(() => {
+                    currDateArr[1] += 12;
+                    currDateArr[3] -= 1;
+                    resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+                    resultYearsCalc = currDateArr[3] - typedDateArr[3];
+                    console.log(resultMonthsCalc);
+                    console.log(resultYearsCalc);
+    
+                    resultDays.textContent = resultDaysCalc;
+                    resultMonths.textContent = resultMonthsCalc;
+                    resultYears.textContent = resultYearsCalc;
+                })
+    
+                .catch(() => {
+                    resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+                    resultYearsCalc = currDateArr[3] - typedDateArr[3];
+    
+                    resultDays.textContent = resultDaysCalc;
+                    resultMonths.textContent = resultMonthsCalc;
+                    resultYears.textContent = resultYearsCalc;
+                })
             })
-        })
+    
+    
+    
+        // if (yearVar.value == '' || monthVar.value == '' || yearVar.value == '') {
+        //     resultDays.textContent = '--';
+        //     resultMonths.textContent = '--';
+        //     resultYears.textContent = '--';
+        // }
+    
+        console.log(typedDateArr, currDateArr);
+        console.log(resultDaysCalc);
+        console.log(resultDaysCalc);
+        console.log(resultMonthsCalc);
+        console.log(resultYearsCalc);
+        }
+
+    //     let calcDaysPromise = new Promise((resolve, reject) => {
+            
+    //         if (typedDateArr[2] > currDateArr[2]) {
+    //             resolve('resolved!');
+                
+    //         } else {
+    //             reject('rejected!');
+                
+    //         }
+    //     });
+
+    //     calcDaysPromise.then(() => {
+    //         let daysToAdd = 0,
+    //             daysToSubtractFrom = 0;
+
+    //             daysToAdd = getLastDayOfMonth() * 1;
+    //             daysToSubtractFrom = daysToAdd + currDateArr[2];
+    //             resultDaysCalc = daysToSubtractFrom - typedDateArr[2];
+    //             currDateArr[1] -= 1;
+    //             // console.log(daysToAdd);
+    //             // console.log(daysToSubtractFrom);
+    //             // console.log(resultDaysCalc);
+    //     })
+        
+    //     .then(() => {
+    //         let calcMonthsPromise = new Promise((resolve, reject) => {
+    //             if (typedDateArr[1] > currDateArr[1]) {
+    //                 resolve('resolved!');
+    //             } else {
+    //                 reject('rejected!');
+    //             }
+    //         });
+
+    //         calcMonthsPromise.then(() => {
+    //             currDateArr[1] += 12;
+    //             currDateArr[3] -= 1;
+    //             resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+    //             resultYearsCalc = currDateArr[3] - typedDateArr[3];
+    //             console.log(resultMonthsCalc);
+    //             console.log(resultYearsCalc);
+
+    //             resultDays.textContent = resultDaysCalc;
+    //             resultMonths.textContent = resultMonthsCalc;
+    //             resultYears.textContent = resultYearsCalc;
+    //         })
+    //     }) 
+
+    //     .catch(() => {
+    //         resultDaysCalc = currDateArr[2] - typedDateArr[2];
+
+    //         let altCalcMonthsPromise = new Promise((resolve, reject) => {
+    //              if (typedDateArr[1] > currDateArr[1]) {
+    //                 resolve('resolved!');
+    //             } else {
+    //                 reject('rejected!');
+    //             }
+    //         })
+
+    //         altCalcMonthsPromise.then(() => {
+    //             currDateArr[1] += 12;
+    //             currDateArr[3] -= 1;
+    //             resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+    //             resultYearsCalc = currDateArr[3] - typedDateArr[3];
+    //             console.log(resultMonthsCalc);
+    //             console.log(resultYearsCalc);
+
+    //             resultDays.textContent = resultDaysCalc;
+    //             resultMonths.textContent = resultMonthsCalc;
+    //             resultYears.textContent = resultYearsCalc;
+    //         })
+
+    //         .catch(() => {
+    //             resultMonthsCalc = currDateArr[1] - typedDateArr[1];
+    //             resultYearsCalc = currDateArr[3] - typedDateArr[3];
+
+    //             resultDays.textContent = resultDaysCalc;
+    //             resultMonths.textContent = resultMonthsCalc;
+    //             resultYears.textContent = resultYearsCalc;
+    //         })
+    //     })
 
 
 
-    if (yearVar.value == '' || monthVar.value == '' || yearVar.value == '') {
-        resultDays.textContent = '--';
-        resultMonths.textContent = '--';
-        resultYears.textContent = '--';
-    }
+    // if (yearVar.value == '' || monthVar.value == '' || yearVar.value == '') {
+    //     resultDays.textContent = '--';
+    //     resultMonths.textContent = '--';
+    //     resultYears.textContent = '--';
+    // }
 
-    console.log(typedDateArr, currDateArr);
-    console.log(resultDaysCalc);
-    console.log(resultDaysCalc);
-    console.log(resultMonthsCalc);
-    console.log(resultYearsCalc);
+    // console.log(typedDateArr, currDateArr);
+    // console.log(resultDaysCalc);
+    // console.log(resultDaysCalc);
+    // console.log(resultMonthsCalc);
+    // console.log(resultYearsCalc);
 
 };
 

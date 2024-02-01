@@ -24,7 +24,8 @@ let desktopArrow = document.getElementById('arrow1'),
     spanDaysErr = document.getElementById('dayserror'),
     spanMonthsErr = document.getElementById('monthserror'),
     spanYearsErr = document.getElementById('yearserror'),
-    errorNotificationArr = [[daysLabel, dayVar, spanDaysErr], [monthsLabel, monthVar, spanMonthsErr], [yearsLabel, yearVar, spanYearsErr]];
+    errorNotificationArr = [[daysLabel, dayVar, spanDaysErr], [monthsLabel, monthVar, spanMonthsErr], [yearsLabel, yearVar, spanYearsErr]],
+    lettersBanRegex = '[0-9]';
     
 
 
@@ -165,41 +166,50 @@ function getLastDayOfMonth(year, month) {
 }
 
 function toCheckDaysNumber() {
-    let checkDayPromise = new Promise((resolve, reject) => {
-        let dayVal = errorNotificationArr[0][1].value * 1;
 
-        let lastDayTheMonth = getLastDayOfMonth();
-
-        // to rewrite the condition
-        if (dayVal > 31 || dayVal < 1 ||
-             typeof dayVar.value == 'string' &&
-              parseInt(dayVar.value) == NaN) {
-            reject('rejected!');
-
-        } else if (dayVal > lastDayTheMonth) {
-            resolve('resolved!');
-            console.log(dayVal);
-
-        }
-    }); 
-
-    checkDayPromise.then(() => {
-        toNotifyError(1, '');
-        toNotifyError(2, '');
-        toNotifyError(0, 'Must be a valid date');
-    })
-
-    .catch(() => {
-        toNotifyError(0, 'Must be a valid day');
-    })
-
-    .finally(() => {
+    if (dayVar.value == '') {
+        toNotifyError(0, 'This field is required');
         setTimeout(() => {
             toHideErrorNotify(0, '');
-            toHideErrorNotify(1, '');
-            toHideErrorNotify(2, '');
-        }, 3000)
-    })
+        },3000)
+    } else {
+        let checkDayPromise = new Promise((resolve, reject) => {
+            let dayVal = errorNotificationArr[0][1].value * 1,
+                parsed = dayVar.value;
+    
+            let lastDayTheMonth = getLastDayOfMonth();
+    
+            // to rewrite the condition
+            if (dayVal > 31 || dayVal < 1 || !parsed.match(lettersBanRegex)) {
+                reject('rejected!');
+    
+            } else if (dayVal > lastDayTheMonth) {
+                resolve('resolved!');
+                console.log(dayVal);
+    
+            }
+        }); 
+    
+        checkDayPromise.then(() => {
+            toNotifyError(1, '');
+            toNotifyError(2, '');
+            toNotifyError(0, 'Must be a valid date');
+        })
+    
+        .catch(() => {
+            toNotifyError(0, 'Must be a valid day');
+        })
+    
+        .finally(() => {
+            setTimeout(() => {
+                toHideErrorNotify(0, '');
+                toHideErrorNotify(1, '');
+                toHideErrorNotify(2, '');
+            }, 3000)
+        })
+    }
+
+  
 }
 
 function toClearVars() {
@@ -235,7 +245,7 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
     localFullCurrentDate = new Date(),
     typedDateOfBirth = new Date();
  
-    typedDateOfBirth.setDate(dayVar.value * 1);
+    typedDateOfBirth.setDate(dayVar.value * 1 - 1);
     typedDateOfBirth.setMonth(monthVar.value * 1 - 1);
     typedDateOfBirth.setFullYear(yearVar.value * 1);
     typedDateOfBirth = typedDateOfBirth.toDateString();
@@ -353,9 +363,12 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
         currDateArr = currDateArr.map(item => item * 1);
         typedDateArr = typedDateArr.map(item => item * 1);
 
-        // console.log(currDateArr);
+        console.log(currDateArr);
         console.log(typedDateArr);
-        if (dayVar.value == '' || monthVar.value == '' || yearVar.value == '' || typeof dayVar == 'string' || typeof monthVar.value == 'string' || typeof yearVar.value == 'string') {
+
+        if (dayVar.value == '' || monthVar.value == '' || yearVar.value == ''
+         || !dayVar.value.match(lettersBanRegex) || !monthVar.value.match(lettersBanRegex) || !yearVar.value.match(lettersBanRegex)
+         ) {
             toClearVars();
             toAddTracking();
 

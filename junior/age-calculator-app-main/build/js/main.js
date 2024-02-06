@@ -1,7 +1,8 @@
 // sm:tracking-[0.15em]   - for digits in result field in default state
 // sm:-mr-6 - for digits in result field in default state
 
-let desktopArrow = document.getElementById('arrow1'),
+let mainSection = document.getElementById('interactive-section'),
+    desktopArrow = document.getElementById('arrow1'),
     mobileArrow = document.getElementById('arrow2'),
     dayVar = document.getElementById('day'),
     monthVar = document.getElementById('month'),
@@ -40,6 +41,17 @@ function toAddTracking() {
     resultMonths.classList.add('sm:tracking-[0.15em]');
     resultYears.classList.add('sm:tracking-[0.15em]');
 }
+
+function toExtendShrinkMainSection() {
+    mainSection.classList.remove('sm:h-[650px]');
+    mainSection.classList.add('sm:h-[681px]');
+    setTimeout(() => {
+        mainSection.classList.remove('sm:h-[681px]');
+        mainSection.classList.add('sm:h-[650px]');
+    }, 3000);
+}
+
+
 
 function toDisplayWhileInputsEmpty() {
     if (yearVar.value == '' || monthVar.value == '' || dayVar.value == '') {
@@ -231,6 +243,7 @@ submitBtn.addEventListener('click', () => {
     if (dayVar.value == 29 && monthVar.value == 2 && yearVar.value > 1900 && yearVar.value % 4 != 0) {
         toClearVars();
         toAddTracking();
+        toExtendShrinkMainSection();
     } else {
         for (let i = 0; i < 3; i++) {
             if (errorNotificationArr[i][2] != '') {

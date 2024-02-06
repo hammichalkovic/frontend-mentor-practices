@@ -236,6 +236,17 @@ submitBtn.addEventListener('click', () => {
     }
 })
 
+ function getLastDayOfPrevMonth(year, month) {
+                
+    let lastDay = new Date(year, month, 0);
+    
+    lastDay = lastDay.toDateString();
+    lastDay = lastDay.split(' ');
+    lastDay = lastDay[2] * 1;
+    return lastDay;
+                
+}
+
 // let localFullCurrentDate = new Date();
 //     localFullCurrentDate = localFullCurrentDate.toDateString();
 // let currDateArr = localFullCurrentDate.split(' ');
@@ -245,7 +256,7 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
     localFullCurrentDate = new Date(),
     typedDateOfBirth = new Date();
  
-    typedDateOfBirth.setDate(dayVar.value * 1 - 1);
+    typedDateOfBirth.setDate(dayVar.value * 1);
     typedDateOfBirth.setMonth(monthVar.value * 1 - 1);
     typedDateOfBirth.setFullYear(yearVar.value * 1);
     typedDateOfBirth = typedDateOfBirth.toDateString();
@@ -388,14 +399,16 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
                 let daysToAdd = 0,
                     daysToSubtractFrom = 0;
     
-                    daysToAdd = getLastDayOfMonth() * 1;
+                    daysToAdd = getLastDayOfPrevMonth(currDateArr[3], currDateArr[1] - 1) * 1;
                     daysToSubtractFrom = daysToAdd + currDateArr[2];
                     resultDaysCalc = daysToSubtractFrom - typedDateArr[2];
                     currDateArr[1] -= 1;
-                    // console.log(daysToAdd);
-                    // console.log(daysToSubtractFrom);
-                    // console.log(resultDaysCalc);
+                    console.log(daysToAdd);
+                    console.log(daysToSubtractFrom);
+                    console.log(resultDaysCalc);
             })
+
+
             
             .then(() => {
                 let calcMonthsPromise = new Promise((resolve, reject) => {

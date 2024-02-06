@@ -165,6 +165,12 @@ function getLastDayOfMonth(year, month) {
     
 }
 
+function toClearVars() {
+    resultDays.textContent = '--';
+    resultMonths.textContent = '--';
+    resultYears.textContent = '--';
+}
+
 function toCheckDaysNumber() {
 
     if (dayVar.value == '') {
@@ -194,6 +200,7 @@ function toCheckDaysNumber() {
             toNotifyError(1, '');
             toNotifyError(2, '');
             toNotifyError(0, 'Must be a valid date');
+            // toClearVars();
         })
     
         .catch(() => {
@@ -212,12 +219,6 @@ function toCheckDaysNumber() {
   
 }
 
-function toClearVars() {
-    resultDays.textContent = '--';
-    resultMonths.textContent = '--';
-    resultYears.textContent = '--';
-}
-
 
 submitBtn.addEventListener('click', () => {
     // toClearVars();
@@ -225,15 +226,28 @@ submitBtn.addEventListener('click', () => {
     toCheckErrNotfArr();
     toCheckMonthsNumber();
     toCheckYearsNumber();
-    toCheckDaysNumber()
-    
-    for (let i = 0; i < 3; i++) {
-        if (errorNotificationArr[i][2] != '') {
-            toGetDates();
-        } else {
-            toClearVars();
+    toCheckDaysNumber();
+
+    if (dayVar.value == 29 && monthVar.value == 2 && yearVar.value > 1900 && yearVar.value % 4 != 0) {
+        toClearVars();
+        toAddTracking();
+    } else {
+        for (let i = 0; i < 3; i++) {
+            if (errorNotificationArr[i][2] != '') {
+                toGetDates();
+            } else {
+                toClearVars();
+            }
         }
     }
+    
+    // for (let i = 0; i < 3; i++) {
+    //     if (errorNotificationArr[i][2] != '') {
+    //         toGetDates();
+    //     } else {
+    //         toClearVars();
+    //     }
+    // }
 })
 
  function getLastDayOfPrevMonth(year, month) {
@@ -378,8 +392,7 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
         console.log(typedDateArr);
 
         if (dayVar.value == '' || monthVar.value == '' || yearVar.value == ''
-         || !dayVar.value.match(lettersBanRegex) || !monthVar.value.match(lettersBanRegex) || !yearVar.value.match(lettersBanRegex)
-         ) {
+         || !dayVar.value.match(lettersBanRegex) || !monthVar.value.match(lettersBanRegex) || !yearVar.value.match(lettersBanRegex) ) {
             toClearVars();
             toAddTracking();
 

@@ -1,5 +1,5 @@
 // sm:tracking-[0.15em]   - for digits in result field in default state
-// sm:-mr-6 - for digits in result field in default state
+// sm:-mr-2 - for digits in result field in default state
 
 let mainSection = document.getElementById('interactive-section'),
     desktopArrow = document.getElementById('arrow1'),
@@ -198,6 +198,10 @@ function toClearVars() {
     resultDays.textContent = '--';
     resultMonths.textContent = '--';
     resultYears.textContent = '--';
+    spans.forEach(span => {
+        span.classList.remove('sm:-mr-2');
+        span.classList.add('sm:-mr-[22px]');
+    });
 }
 
 function toCheckDaysNumber() {
@@ -256,17 +260,30 @@ submitBtn.addEventListener('click', () => {
     toCheckMonthsNumber();
     toCheckYearsNumber();
     toCheckDaysNumber();
+    submitBtn.classList.add('bg-offblack');
+    submitBtn.classList.remove('bg-purple');
 
     if (dayVar.value == 29 && monthVar.value == 2 && yearVar.value > 1900 && yearVar.value % 4 != 0) {
         toClearVars();
         toAddTracking();
-        // toExtendShrinkMainSection();
+        setTimeout(() => {
+            submitBtn.classList.add('bg-purple');
+            submitBtn.classList.remove('bg-offblack');
+        }, 3000)
     } else {
         for (let i = 0; i < 3; i++) {
             if (errorNotificationArr[i][2] != '') {
                 toGetDates();
+                setTimeout(() => {
+                    submitBtn.classList.add('bg-purple');
+                    submitBtn.classList.remove('bg-offblack');
+                }, 3000)
             } else {
                 toClearVars();
+                setTimeout(() => {
+                    submitBtn.classList.add('bg-purple');
+                    submitBtn.classList.remove('bg-offblack');
+                }, 3000)  
             }
         }
     }
@@ -296,6 +313,10 @@ submitBtn.addEventListener('click', () => {
 // let currDateArr = localFullCurrentDate.split(' ');
 
 let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
+    spans.forEach(span => {
+        span.classList.remove('sm:-mr-[22px]');
+        span.classList.add('sm:-mr-2');
+    })
     
     localFullCurrentDate = new Date(),
     typedDateOfBirth = new Date();

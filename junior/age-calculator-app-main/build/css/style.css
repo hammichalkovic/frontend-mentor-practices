@@ -620,6 +620,18 @@ video {
   height: 65px;
 }
 
+.h-\[496px\] {
+  height: 496px;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-\[498px\] {
+  height: 498px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -772,6 +784,18 @@ video {
 
 .text-\[56px\] {
   font-size: 56px;
+}
+
+.text-\[9px\] {
+  font-size: 9px;
+}
+
+.text-\[8px\] {
+  font-size: 8px;
+}
+
+.text-\[7px\] {
+  font-size: 7px;
 }
 
 .uppercase {
@@ -1088,6 +1112,10 @@ video {
 
   .sm\:text-\[33px\] {
     font-size: 33px;
+  }
+
+  .sm\:text-\[13px\] {
+    font-size: 13px;
   }
 
   .sm\:tracking-\[0\.15em\] {

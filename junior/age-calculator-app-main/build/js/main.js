@@ -45,6 +45,8 @@ function toAddTracking() {
 }
 
 function toExtendMainSection() {
+    mainSection.classList.add('h-[498px]');
+    mainSection.classList.remove('h-[486px]');
     mainSection.classList.remove('sm:h-[650px]');
     mainSection.classList.add('sm:h-[681px]');
     submitBtn.classList.add('sm:top-[168px]');
@@ -53,9 +55,12 @@ function toExtendMainSection() {
     horizontalRule.classList.remove('sm:top-[66px]');
     resultSection.classList.add('sm:top-[75px]');
     resultSection.classList.remove('sm:top-[65px]');
+    
 }
 
 function toShrinkMainSection() {
+    mainSection.classList.add('h-[486px]');
+    mainSection.classList.remove('h-[498px]');
     mainSection.classList.remove('sm:h-[681px]');
     mainSection.classList.add('sm:h-[650px]');
     submitBtn.classList.add('sm:top-[150px]');
@@ -65,8 +70,6 @@ function toShrinkMainSection() {
     resultSection.classList.add('sm:top-[65px]');
     resultSection.classList.remove('sm:top-[75px]');
 }
-
-
 
 function toDisplayWhileInputsEmpty() {
     if (yearVar.value == '' || monthVar.value == '' || dayVar.value == '') {
@@ -78,6 +81,25 @@ function toDisplayWhileInputsEmpty() {
         resultDays.classList.remove('sm:tracking-[0.15em]');
         resultMonths.classList.remove('sm:tracking-[0.15em]');
         resultYears.classList.remove('sm:tracking-[0.15em]');
+    }
+}
+
+function toClearVars() {
+    resultDays.textContent = '--';
+    resultMonths.textContent = '--';
+    resultYears.textContent = '--';
+    spans.forEach(span => {
+        span.classList.remove('sm:-mr-2');
+        span.classList.add('sm:-mr-[22px]');
+        resultDays.classList.add('sm:tracking-[0.15em]');
+        resultMonths.classList.add('sm:tracking-[0.15em]');
+        resultYears.classList.add('sm:tracking-[0.15em]');
+    });
+}
+
+function toSetDefaultTracking() {
+    if (resultDays.value == '--' || resultMonths.value == '--' || resultYears.value == '--') {
+       toClearVars(); 
     }
 }
 
@@ -132,8 +154,10 @@ function toCheckMonthsNumber() {
 
         if (monthVal == 0 ) {
                 toNotifyError(1, 'This field is required');
+                toClearVars();
             } else  {
-                toNotifyError(1, 'Must be a valid month');  
+                toNotifyError(1, 'Must be a valid month');
+                toClearVars();
             }
     })
 
@@ -166,8 +190,10 @@ function toCheckYearsNumber() {
 
         if (yearVal != 0 ) {
                 toNotifyError(2, 'Must be in the past');
+                toClearVars();
             } else if (yearVal == 0) {
                 toNotifyError(2, 'This field is required');  
+                toClearVars();
             }
 
         // toNotifyError(2, 'Must be in the past')
@@ -192,16 +218,6 @@ function getLastDayOfMonth(year, month) {
     lastDay = lastDay[2] * 1;
     return lastDay;
     
-}
-
-function toClearVars() {
-    resultDays.textContent = '--';
-    resultMonths.textContent = '--';
-    resultYears.textContent = '--';
-    spans.forEach(span => {
-        span.classList.remove('sm:-mr-2');
-        span.classList.add('sm:-mr-[22px]');
-    });
 }
 
 function toCheckDaysNumber() {
@@ -233,11 +249,12 @@ function toCheckDaysNumber() {
             toNotifyError(1, '');
             toNotifyError(2, '');
             toNotifyError(0, 'Must be a valid date');
-            // toClearVars();
+            toClearVars();
         })
     
         .catch(() => {
             toNotifyError(0, 'Must be a valid day');
+            toClearVars();
         })
     
         .finally(() => {
@@ -272,7 +289,8 @@ submitBtn.addEventListener('click', () => {
         }, 3000)
     } else {
         for (let i = 0; i < 3; i++) {
-            if (errorNotificationArr[i][2] != '') {
+            
+            if (errorNotificationArr[i][2] != '' && yearVar.value * 1 < currentYear + 1) {
                 toGetDates();
                 setTimeout(() => {
                     submitBtn.classList.add('bg-purple');
@@ -544,6 +562,8 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
         console.log(resultDaysCalc);
         console.log(resultMonthsCalc);
         console.log(resultYearsCalc);
+
+        toSetDefaultTracking();
         }
 
     //     let calcDaysPromise = new Promise((resolve, reject) => {
@@ -629,11 +649,11 @@ let toGetDates = (localFullCurrentDate, typedDateOfBirth) => {
 
 
 
-    // if (yearVar.value == '' || monthVar.value == '' || yearVar.value == '') {
-    //     resultDays.textContent = '--';
-    //     resultMonths.textContent = '--';
-    //     resultYears.textContent = '--';
-    // }
+    if (yearVar.value == '' || monthVar.value == '' || yearVar.value == '') {
+        resultDays.textContent = '--';
+        resultMonths.textContent = '--';
+        resultYears.textContent = '--';
+    }
 
     // console.log(typedDateArr, currDateArr);
     // console.log(resultDaysCalc);

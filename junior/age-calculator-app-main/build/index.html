@@ -18,28 +18,28 @@
         <div id="daysdiv" class="flex flex-col">
           <label id="dayslabel" class="uppercase font-poppins-bold text-[12px] text-smokeygrey tracking-[0.2em] sm:text-[14px]" for="day">Day</label>
           <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[88px] h-[54px] rounded-[7px] mt-[4px] sm:w-[158px] sm:h-[72px] sm:mt-[8px] sm:text-[33px] sm:pl-[24px] focus-within:outline-[0px] focus-within:border-borderpurple" name="day" id="day" placeholder="DD">
-          <span id="dayserror" class=" font-poppins-italic text-lightred text-[13px]"></span>
+          <span id="dayserror" class=" font-poppins-italic text-lightred text-[13px] pt-[9px]"></span>
         </div>
         <div id="monthsdiv" class="flex flex-col">
           <label id="monthslabel" class="uppercase font-poppins-bold text-[12px] text-smokeygrey tracking-[0.22em] sm:text-[14px]" for="month">Month</label>
           <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[88px] h-[54px] rounded-[7px] mt-[4px] sm:w-[158px] sm:h-[72px] sm:mt-[8px] sm:text-[33px] sm:pl-[24px] focus-within:outline-[0px] focus-within:border-borderpurple" name="month" id="month" placeholder="MM">
-          <span id="monthserror" class=" font-poppins-italic text-lightred text-[13px]"></span>
+          <span id="monthserror" class=" font-poppins-italic text-lightred text-[13px] pt-[9px]"></span>
         </div>
         <div id="yearsdiv" class="flex flex-col">
           <label id="yearslabel" class="uppercase font-poppins-bold text-[12px] text-smokeygrey tracking-[0.22em] sm:text-[14px]" for="year">Year</label>
           <input class="border border-lightgrey pl-[14px] font-poppins-bold text-offblack text-[20px] w-[88px] h-[54px] rounded-[7px] mt-[4px] sm:w-[158px] sm:h-[72px] sm:mt-[8px] sm:text-[33px] sm:pl-[24px] focus-within:outline-[0px] focus-within:border-borderpurple" name="year" id="year" placeholder="YYYY">
-          <span id="yearserror" class=" font-poppins-italic text-lightred text-[13px]"></span>
+          <span id="yearserror" class=" font-poppins-italic text-lightred text-[13px] pt-[9px]"></span>
         </div>
       </fieldset>
-      <button type="button" id="submit" class=" hover:bg-offblack flex items-center justify-center w-[65px] h-[65px] rounded-full bg-purple relative top-[81px] self-center z-10 sm:w-[95px] sm:h-[95px] sm:top-[154px] sm:left-[45px]" ><img id="arrow1" class="h-[25px] w-[25px] hidden" src="../assets/images/icon-arrow.svg" alt="Arrow for submit button"><img id="arrow2" class="sm:h-[47px] sm:w-[47px] hidden" src="../assets/images/icon-arrow2.svg" alt="Arrow for submit button"></button>
+      <button type="button" id="submit" class=" hover:bg-offblack flex items-center justify-center w-[65px] h-[65px] rounded-full bg-purple relative top-[81px] self-center z-10 sm:w-[95px] sm:h-[95px] sm:top-[150px] sm:left-[45px] ease-in-out duration-300" ><img id="arrow1" class="h-[25px] w-[25px] hidden" src="../assets/images/icon-arrow.svg" alt="Arrow for submit button"><img id="arrow2" class="sm:h-[47px] sm:w-[47px] hidden" src="../assets/images/icon-arrow2.svg" alt="Arrow for submit button"></button>
     </form>
     
-    <hr class="mt-7 lightgrey w-[295px] self-center relative top-[20px] sm:top-[76px] sm:w-[700px] sm:right-[13px]">
+    <hr id="horizontal_rule" class="mt-7 lightgrey w-[295px] self-center relative top-[20px] sm:top-[66px] sm:w-[700px] sm:right-[13px] ease-in-out duration-300">
 
-    <div class="font-poppins-extra-bold-italic text-[56px] tracking-tight h-[200px] mt-7  ml-[25px] relative top-[46px] sm:text-[105px] sm:h-[400px] sm:top-[76px] sm:left-[30px]">
+    <div id="result_sect" class="font-poppins-extra-bold-italic text-[56px] tracking-tight h-[200px] mt-7  ml-[25px] relative top-[46px] sm:text-[105px] sm:h-[400px] sm:top-[65px] sm:left-[30px]">
       <div  class=" h-[61px] text-offblack sm:h-[110px] "><span id="result-years" class="text-purple  sm:-mr-2 sm:tracking-[0.15em]" id="years-value">--</span> years</div>
-      <div class=" h-[61px] text-offblack sm:h-[110px]"><span id="result-months" class="text-purple sm:-mr-2 sm:tracking-[0.15em]" id="months-value">--</span> months</div>
-      <div class=" h-[61px] text-offblack sm:h-[110px]"><span id="result-days" class="text-purple sm:-mr-2 sm:tracking-[0.15em]" id="days-value">--</span> days</div>
+      <div class=" h-[61px] text-offblack sm:h-[110px] sm:mt-[4px]"><span id="result-months" class="text-purple sm:-mr-2 sm:tracking-[0.15em]" id="months-value">--</span> months</div>
+      <div class=" h-[61px] text-offblack sm:h-[110px] sm:mt-[4px]"><span id="result-days" class="text-purple sm:-mr-2 sm:tracking-[0.15em]" id="days-value">--</span> days</div>
     </div>
   </div>
 </main>

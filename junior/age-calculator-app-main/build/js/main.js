@@ -26,7 +26,9 @@ let mainSection = document.getElementById('interactive-section'),
     spanMonthsErr = document.getElementById('monthserror'),
     spanYearsErr = document.getElementById('yearserror'),
     errorNotificationArr = [[daysLabel, dayVar, spanDaysErr], [monthsLabel, monthVar, spanMonthsErr], [yearsLabel, yearVar, spanYearsErr]],
-    lettersBanRegex = '[0-9]';
+    lettersBanRegex = '[0-9]',
+    horizontalRule = document.getElementById('horizontal_rule'),
+    resultSection = document.getElementById('result_sect');
     
 
 
@@ -42,13 +44,26 @@ function toAddTracking() {
     resultYears.classList.add('sm:tracking-[0.15em]');
 }
 
-function toExtendShrinkMainSection() {
+function toExtendMainSection() {
     mainSection.classList.remove('sm:h-[650px]');
     mainSection.classList.add('sm:h-[681px]');
-    setTimeout(() => {
-        mainSection.classList.remove('sm:h-[681px]');
-        mainSection.classList.add('sm:h-[650px]');
-    }, 3000);
+    submitBtn.classList.add('sm:top-[168px]');
+    submitBtn.classList.remove('sm:top-[150px]');
+    horizontalRule.classList.add('sm:top-[77px]');
+    horizontalRule.classList.remove('sm:top-[66px]');
+    resultSection.classList.add('sm:top-[75px]');
+    resultSection.classList.remove('sm:top-[65px]');
+}
+
+function toShrinkMainSection() {
+    mainSection.classList.remove('sm:h-[681px]');
+    mainSection.classList.add('sm:h-[650px]');
+    submitBtn.classList.add('sm:top-[150px]');
+    submitBtn.classList.remove('sm:top-[168px]');
+    horizontalRule.classList.add('sm:top-[66px]');
+    horizontalRule.classList.remove('sm:top-[77px]');
+    resultSection.classList.add('sm:top-[65px]');
+    resultSection.classList.remove('sm:top-[75px]');
 }
 
 
@@ -72,6 +87,7 @@ function toNotifyError(inputPlace, errorText) {
     errorNotificationArr[inputPlace][1].classList.remove('border-lightgrey', 'focus-within:border-borderpurple');
     errorNotificationArr[inputPlace][1].classList.add('border-lightred', 'focus-within:border-lightred');
     errorNotificationArr[inputPlace][2].textContent = errorText;
+    toExtendMainSection();
 }
 
 function toHideErrorNotify(inputPlace, textToWrite) {
@@ -80,6 +96,7 @@ function toHideErrorNotify(inputPlace, textToWrite) {
     errorNotificationArr[inputPlace][1].classList.remove('border-lightred', 'focus-within:border-lightred');
     errorNotificationArr[inputPlace][1].classList.add('border-lightgrey', 'focus-within:border-borderpurple');
     errorNotificationArr[inputPlace][2].textContent = textToWrite;
+    toShrinkMainSection();
 }
 
 function toCheckErrNotfArr() {
@@ -243,7 +260,7 @@ submitBtn.addEventListener('click', () => {
     if (dayVar.value == 29 && monthVar.value == 2 && yearVar.value > 1900 && yearVar.value % 4 != 0) {
         toClearVars();
         toAddTracking();
-        toExtendShrinkMainSection();
+        // toExtendShrinkMainSection();
     } else {
         for (let i = 0; i < 3; i++) {
             if (errorNotificationArr[i][2] != '') {

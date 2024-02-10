@@ -726,6 +726,10 @@ video {
   padding-top: 9px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-poppins-bold {
   font-family: poppinsBold, sans-serif;
 }
@@ -736,6 +740,10 @@ video {
 
 .font-poppins-italic {
   font-family: poppinsItalic, sans-serif;
+}
+
+.font-poppins-bold-italic {
+  font-family: poppinsBoldItalic, sans-serif;
 }
 
 .text-\[12px\] {
@@ -810,6 +818,11 @@ video {
 
 .focus-within\:outline-\[0px\]:focus-within {
   outline-width: 0px;
+}
+
+.hover\:text-purple:hover {
+  --tw-text-opacity: 1;
+  color: hsl(259 100% 65% / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {

@@ -271,6 +271,8 @@ function toCheckDaysNumber() {
 
 
 submitBtn.addEventListener('click', () => {
+    lastDayTheMonth = getLastDayOfMonth();
+
     // toClearVars();
     toDisplayWhileInputsEmpty();
     toCheckErrNotfArr();
@@ -280,7 +282,7 @@ submitBtn.addEventListener('click', () => {
     submitBtn.classList.add('bg-offblack');
     submitBtn.classList.remove('bg-purple');
 
-    if (dayVar.value == 29 && monthVar.value == 2 && yearVar.value > 1900 && yearVar.value % 4 != 0) {
+    if (dayVar.value == 29 && monthVar.value == 2 && yearVar.value > 1900 && yearVar.value % 4 != 0 || dayVar.value > lastDayTheMonth || monthVar.value > 12 || monthVar.value < 1 || yearVar.value > currentYear) {
         toClearVars();
         toAddTracking();
         setTimeout(() => {

@@ -28,14 +28,17 @@ let mainSection = document.getElementById('interactive-section'),
     errorNotificationArr = [[daysLabel, dayVar, spanDaysErr], [monthsLabel, monthVar, spanMonthsErr], [yearsLabel, yearVar, spanYearsErr]],
     lettersBanRegex = '[0-9]',
     horizontalRule = document.getElementById('horizontal_rule'),
-    resultSection = document.getElementById('result_sect');
+    resultSection = document.getElementById('result_sect'),
+    footer = document.getElementById('footer');
     
 
 
 if (window.matchMedia('(max-width: 450px)').matches) {
     desktopArrow.classList.remove('hidden');
+    footer.classList.add('hidden');
 } else {
     mobileArrow.classList.remove('hidden');
+    
 };
 
 function toAddTracking() {
@@ -269,8 +272,7 @@ function toCheckDaysNumber() {
   
 }
 
-
-submitBtn.addEventListener('click', () => {
+function toFire() {
     lastDayTheMonth = getLastDayOfMonth();
 
     // toClearVars();
@@ -307,6 +309,53 @@ submitBtn.addEventListener('click', () => {
             }
         }
     }
+    
+}
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        toFire();
+    }
+});
+
+submitBtn.addEventListener('click', () => {
+    toFire();
+    // lastDayTheMonth = getLastDayOfMonth();
+
+    // // toClearVars();
+    // toDisplayWhileInputsEmpty();
+    // toCheckErrNotfArr();
+    // toCheckMonthsNumber();
+    // toCheckYearsNumber();
+    // toCheckDaysNumber();
+    // submitBtn.classList.add('bg-offblack');
+    // submitBtn.classList.remove('bg-purple');
+
+    // if (dayVar.value == 29 && monthVar.value == 2 && yearVar.value > 1900 && yearVar.value % 4 != 0 || dayVar.value > lastDayTheMonth || monthVar.value > 12 || monthVar.value < 1 || yearVar.value > currentYear) {
+    //     toClearVars();
+    //     toAddTracking();
+    //     setTimeout(() => {
+    //         submitBtn.classList.add('bg-purple');
+    //         submitBtn.classList.remove('bg-offblack');
+    //     }, 3000)
+    // } else {
+    //     for (let i = 0; i < 3; i++) {
+            
+    //         if (errorNotificationArr[i][2] != '' && yearVar.value * 1 < currentYear + 1) {
+    //             toGetDates();
+    //             setTimeout(() => {
+    //                 submitBtn.classList.add('bg-purple');
+    //                 submitBtn.classList.remove('bg-offblack');
+    //             }, 3000)
+    //         } else {
+    //             toClearVars();
+    //             setTimeout(() => {
+    //                 submitBtn.classList.add('bg-purple');
+    //                 submitBtn.classList.remove('bg-offblack');
+    //             }, 3000)  
+    //         }
+    //     }
+    // }
     
     // for (let i = 0; i < 3; i++) {
     //     if (errorNotificationArr[i][2] != '') {

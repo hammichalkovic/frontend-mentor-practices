@@ -644,6 +644,10 @@ video {
   width: 100%;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -734,16 +738,16 @@ video {
   font-family: poppinsBold, sans-serif;
 }
 
+.font-poppins-bold-italic {
+  font-family: poppinsBoldItalic, sans-serif;
+}
+
 .font-poppins-extra-bold-italic {
   font-family: poppinsExtraBoldItalic, sans-serif;
 }
 
 .font-poppins-italic {
   font-family: poppinsItalic, sans-serif;
-}
-
-.font-poppins-bold-italic {
-  font-family: poppinsBoldItalic, sans-serif;
 }
 
 .text-\[12px\] {

@@ -14,7 +14,7 @@
     font-family: 'poppinsBoldItalic';
     src: url('./Poppins-BoldItalic.ttf') format('truetype');
     font-weight: 700;
-    font-style: italic;
+/*     font-style: italic; */
 }
 
 @font-face {
@@ -27,13 +27,13 @@
     font-family: 'poppinsExtraBoldItalic';
     src: url('./Poppins-ExtraBoldItalic.ttf') format('truetype');
     font-weight: 900;
-    font-style: italic;
+/*     font-style: italic; */
 }
 
 @font-face {
     font-family: 'poppinsItalic';
     src: url('./Poppins-Italic.ttf') format('truetype');
-    font-style: italic;
+/*     font-style: italic; */
     font-weight: 400;
 }
 

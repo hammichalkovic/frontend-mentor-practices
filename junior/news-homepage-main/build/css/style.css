@@ -551,3 +551,16 @@ video {
 .hidden {
   display: none;
 }
+
+.h-\[70px\] {
+  height: 70px;
+}
+
+.w-\[40px\] {
+  width: 40px;
+}
+
+.bg-very-dark-blue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
+}

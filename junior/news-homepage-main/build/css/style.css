@@ -560,7 +560,6 @@ video {
   width: 40px;
 }
 
-.bg-very-dark-blue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
+.font-inter-extra-bold {
+  font-family: interExtraBold, sans-serif;
 }

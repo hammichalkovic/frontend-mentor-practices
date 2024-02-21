@@ -444,6 +444,24 @@ video {
   display: none;
 }
 
+body {
+  display: flex;
+  width: 375;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header,
+    section {
+  width: 343px;
+  align-self: center;
+}
+
+p {
+  font-family: interRegular, sans-serif;
+  font-size: 15px;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -544,6 +562,22 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-\[6px\] {
+  margin-left: 6px;
+}
+
+.ml-\[4px\] {
+  margin-left: 4px;
+}
+
 .flex {
   display: flex;
 }
@@ -552,14 +586,124 @@ video {
   display: none;
 }
 
+.h-\[1872px\] {
+  height: 1872px;
+}
+
 .h-\[70px\] {
   height: 70px;
+}
+
+.h-\[17px\] {
+  height: 17px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-\[25px\] {
+  height: 25px;
+}
+
+.h-\[20px\] {
+  height: 20px;
+}
+
+.w-\[375px\] {
+  width: 375px;
 }
 
 .w-\[40px\] {
   width: 40px;
 }
 
+.w-\[65px\] {
+  width: 65px;
+}
+
+.w-\[60px\] {
+  width: 60px;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-\[35px\] {
+  width: 35px;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-soft-red {
+  --tw-border-opacity: 1;
+  border-color: hsl(5 85% 63% / var(--tw-border-opacity));
+}
+
+.border-soft-orange {
+  --tw-border-opacity: 1;
+  border-color: hsl(35 77% 62% / var(--tw-border-opacity));
+}
+
+.bg-very-dark-blue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.font-inter-bold {
+  font-family: interBold, sans-serif;
+}
+
 .font-inter-extra-bold {
   font-family: interExtraBold, sans-serif;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-soft-orange {
+  --tw-text-opacity: 1;
+  color: hsl(35 77% 62% / var(--tw-text-opacity));
+}
+
+.text-offwhite {
+  --tw-text-opacity: 1;
+  color: hsl(36 100% 99% / var(--tw-text-opacity));
+}
+
+.text-grayish-blue {
+  --tw-text-opacity: 1;
+  color: hsl(233 8% 79% / var(--tw-text-opacity));
 }

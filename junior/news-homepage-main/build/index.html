@@ -11,14 +11,14 @@
   
 </head>
 <body class="bg-offwhite">
-    <header class="flex justify-between my-[24px]">
+    <header class="flex justify-between my-[24px] sm:border sm:border-soft-red sm:w-[77%] ">
       <div id="main_logo" class=" w-[44px] h-[40px] flex ml-[4px]">
         <img src="../assets/images/logo.svg" alt="W main icon logo" class="w-[44px] h-[28px] self-center">
       </div>
       <div id="sidebar_interaction" class=" w-[40px] h-[17px] self-center">
         <img class="" src="../assets/images/icon-menu.svg" alt="Interaction closed sidebar picture mobile version">
       </div>
-      <ul id="header_link_list" class="hidden flex">
+      <ul id="header_link_list" class="hidden flex text-dark-grayish-blue sm:self-center">
         <li>Home</li>
         <li>New</li>
         <li>Popular</li>
@@ -26,10 +26,11 @@
         <li>Categories</li>
       </ul>  
     </header>
-  <main class=" h-[1872px] flex flex-col">
+  <main class=" h-[1872px] flex flex-col sm:border sm:border-soft-red sm:self-center sm:w-[77%]  sm:grid sm:grid-cols-3 sm:grid-rows-2 sm:place-content-between">
     <section class="mb-[30px]" id="bright_future_section">
       <div id="bright_future_img">
-        <img src="../assets/images/image-web-3-mobile.jpg" alt="Bright future article mobile version picture" width="343" height="300">
+        <img id="bf_img_mobile" class="" src="../assets/images/image-web-3-mobile.jpg" alt="Bright future article mobile version picture" width="343" height="300">
+        <img id="bf_img_desktop" class="hidden" src="../assets/images/image-web-3-desktop.jpg" alt="Bright future article desktop version picture">
       </div>
       <div id="bright_future_lead">
         <h1 class="font-inter-extra-bold text-[40px] text-very-dark-blue leading-10 my-[25px]">The Bright Future of Web 3.0?</h1>
@@ -41,7 +42,7 @@
     </section>
 
 
-    <section class=" width-border bg-very-dark-blue h-[489px] px-[21px] pt-[18px]" id="new_section" >
+    <section class=" width-border bg-very-dark-blue h-[489px] px-[21px] pt-[18px] " id="new_section" >
       <h2 class=" text-[31px] font-inter-bold text-soft-orange ">New</h2>
       <div id="new1" class="py-[23px]">
         <h3 class="font-inter-extra-bold  text-offwhite">Hydrogen VS Electric Cars</h3>

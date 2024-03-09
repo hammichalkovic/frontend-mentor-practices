@@ -939,6 +939,21 @@ p {
     margin-bottom: 30px;
   }
 
+  .sm\:my-\[25px\] {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .sm\:my-\[5px\] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .sm\:my-\[6px\] {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
   .sm\:mb-\[56px\] {
     margin-bottom: 56px;
   }
@@ -1067,6 +1082,22 @@ p {
     margin-left: 13px;
   }
 
+  .sm\:mt-\[75px\] {
+    margin-top: 75px;
+  }
+
+  .sm\:mt-\[95px\] {
+    margin-top: 95px;
+  }
+
+  .sm\:mt-\[115px\] {
+    margin-top: 115px;
+  }
+
+  .sm\:mt-\[118px\] {
+    margin-top: 118px;
+  }
+
   .sm\:grid {
     display: grid;
   }
@@ -1177,6 +1208,10 @@ p {
 
   .sm\:w-\[91\%\] {
     width: 91%;
+  }
+
+  .sm\:min-w-\[336px\] {
+    min-width: 336px;
   }
 
   .sm\:grid-cols-2 {

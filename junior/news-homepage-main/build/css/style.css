@@ -460,6 +460,12 @@ h3 {
   font-size: 20px;
 }
 
+@media (min-width: 640px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
 p {
   font-family: interRegular, sans-serif;
   font-size: 15px;
@@ -886,8 +892,8 @@ p {
     margin-left: 13px;
   }
 
-  .sm\:ml-\[20px\] {
-    margin-left: 20px;
+  .sm\:ml-\[5\%\] {
+    margin-left: 5%;
   }
 
   .sm\:mt-\[10px\] {
@@ -902,32 +908,36 @@ p {
     margin-top: 6.1%;
   }
 
-  .sm\:ml-\[0px\] {
-    margin-left: 0px;
+  .sm\:mb-\[50px\] {
+    margin-bottom: 50px;
   }
 
-  .sm\:ml-\[1\%\] {
-    margin-left: 1%;
+  .sm\:mt-\[0px\] {
+    margin-top: 0px;
   }
 
-  .sm\:ml-\[0\.1\%\] {
-    margin-left: 0.1%;
+  .sm\:-mt-\[10px\] {
+    margin-top: -10px;
   }
 
-  .sm\:ml-\[1\.1\%\] {
-    margin-left: 1.1%;
+  .sm\:-mt-\[13px\] {
+    margin-top: -13px;
   }
 
-  .sm\:ml-\[2\%\] {
-    margin-left: 2%;
+  .sm\:-mt-\[3px\] {
+    margin-top: -3px;
   }
 
-  .sm\:ml-\[4\%\] {
-    margin-left: 4%;
+  .sm\:mb-\[5px\] {
+    margin-bottom: 5px;
   }
 
-  .sm\:ml-\[5\%\] {
-    margin-left: 5%;
+  .sm\:mt-\[5px\] {
+    margin-top: 5px;
+  }
+
+  .sm\:-mt-\[5px\] {
+    margin-top: -5px;
   }
 
   .sm\:grid {
@@ -942,12 +952,16 @@ p {
     height: 1000px;
   }
 
-  .sm\:h-\[102\.5\%\] {
-    height: 102.5%;
-  }
-
   .sm\:h-\[40px\] {
     height: 40px;
+  }
+
+  .sm\:h-\[489px\] {
+    height: 489px;
+  }
+
+  .sm\:h-\[485px\] {
+    height: 485px;
   }
 
   .sm\:w-\[440px\] {
@@ -974,16 +988,12 @@ p {
     width: 98.5%;
   }
 
-  .sm\:min-w-\[336px\] {
-    min-width: 336px;
-  }
-
-  .sm\:min-w-\[1200px\] {
-    min-width: 1200px;
-  }
-
   .sm\:min-w-\[1000px\] {
     min-width: 1000px;
+  }
+
+  .sm\:min-w-\[336px\] {
+    min-width: 336px;
   }
 
   .sm\:grid-cols-2 {
@@ -1028,8 +1038,52 @@ p {
     padding-right: 25px;
   }
 
-  .sm\:text-\[40px\] {
-    font-size: 40px;
+  .sm\:py-\[18ox\] {
+    padding-top: 18ox;
+    padding-bottom: 18ox;
+  }
+
+  .sm\:py-\[18px\] {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .sm\:py-\[25px\] {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .sm\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .sm\:pt-\[20px\] {
+    padding-top: 20px;
+  }
+
+  .sm\:pt-\[26px\] {
+    padding-top: 26px;
+  }
+
+  .sm\:pt-\[29px\] {
+    padding-top: 29px;
+  }
+
+  .sm\:pt-\[28px\] {
+    padding-top: 28px;
+  }
+
+  .sm\:pt-\[30px\] {
+    padding-top: 30px;
+  }
+
+  .sm\:pb-\[25px\] {
+    padding-bottom: 25px;
+  }
+
+  .sm\:text-\[38px\] {
+    font-size: 38px;
   }
 
   .sm\:text-\[56px\] {

@@ -1,7 +1,8 @@
 let headerLinks = document.getElementById('header_link_list'),
     interactionButton = document.getElementById('sidebar_interaction'),
     brightFutureImgDesktop = document.getElementById('bf_img_desktop'),
-    brightFutureImgMobile = document.getElementById('bf_img_mobile');
+    brightFutureImgMobile = document.getElementById('bf_img_mobile'),
+    footer = document.getElementById('footer');
 
 
 if (!window.matchMedia('(max-width: 450px)').matches) {
@@ -9,5 +10,7 @@ if (!window.matchMedia('(max-width: 450px)').matches) {
     headerLinks.classList.remove('hidden');
     brightFutureImgMobile.classList.add('hidden');
     brightFutureImgDesktop.classList.remove('hidden');
+    footer.classList.remove('hidden');
+
 
 } 

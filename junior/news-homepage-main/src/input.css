@@ -13,12 +13,16 @@
     }
 
     h3 {
-        @apply text-[20px] sm:text-[20px]
+        @apply text-[20px] sm:text-[20px] hover:text-soft-orange hover:cursor-pointer
     }
 
     p {
         @apply font-inter-regular text-[15px] leading-[26px]
     }
 
+    li {
+        @apply hover:text-soft-red hover:cursor-pointer
+    }
+
     
-}
+}   

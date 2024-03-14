@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply w-[375] flex flex-col
+    }
+
+    header,
+    section {
+        @apply w-[343px] self-center
+    }
+
+    h3 {
+        @apply text-[20px] sm:text-[20px]
+    }
+
+    p {
+        @apply font-inter-regular text-[15px] leading-[26px]
+    }
+
+    
+}

@@ -10,7 +10,9 @@ if (!window.matchMedia('(max-width: 450px)').matches) {
     headerLinks.classList.remove('hidden');
     brightFutureImgMobile.classList.add('hidden');
     brightFutureImgDesktop.classList.remove('hidden');
-    footer.classList.remove('hidden');
-
-
+    ;
 } 
+
+if(!window.matchMedia('(max-height: 1000px)').matches) {
+    footer.classList.remove('hidden')
+}

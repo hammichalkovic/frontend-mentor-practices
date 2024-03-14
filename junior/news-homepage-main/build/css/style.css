@@ -1140,4 +1140,9 @@ li:hover {
   .sm\:leading-\[56px\] {
     line-height: 56px;
   }
+
+  .sm\:hover\:bg-very-dark-blue:hover {
+    --tw-bg-opacity: 1;
+    background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
+  }
 }   

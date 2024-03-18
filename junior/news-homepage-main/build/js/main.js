@@ -25,5 +25,5 @@ linkButton.addEventListener('click', () => {
     setTimeout(() => {
         linkButton.classList.add('bg-soft-red');
         linkButton.classList.remove('bg-very-dark-blue');
-    }, 300)
+    }, 100)
 }) 

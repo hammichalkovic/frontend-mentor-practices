@@ -3,7 +3,10 @@ let headerLinks = document.getElementById('header_link_list'),
     interactionButton = document.getElementById('sidebar_interaction'),
     brightFutureImgDesktop = document.getElementById('bf_img_desktop'),
     brightFutureImgMobile = document.getElementById('bf_img_mobile'),
-    footer = document.getElementById('footer');
+    footer = document.getElementById('footer'),
+    openButton = document.getElementById('sidebar_interaction'),
+    closeButton = document.getElementById('sidebar_close'),
+    sidebar = document.getElementById('sidebar');
 
 
 if (!window.matchMedia('(max-width: 450px)').matches) {
@@ -27,3 +30,13 @@ linkButton.addEventListener('click', () => {
         linkButton.classList.remove('bg-very-dark-blue');
     }, 100)
 }) 
+
+openButton.addEventListener('click', () => {
+    sidebar.classList.remove('w-0');
+    sidebar.classList.add('w-[68.3%]');
+})
+
+closeButton.addEventListener('click', () => {
+    sidebar.classList.remove('w-[68.3%]');
+    sidebar.classList.add('w-0');
+})

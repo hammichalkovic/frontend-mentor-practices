@@ -868,14 +868,14 @@ li:hover {
   cursor: pointer;
 }
 
-.hover\:bg-very-dark-blue:hover {
-  --tw-bg-opacity: 1;
-  background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
-}
-
 .hover\:text-soft-red:hover {
   --tw-text-opacity: 1;
   color: hsl(5 85% 63% / var(--tw-text-opacity));
+}
+
+.hover\:text-soft-orange:hover {
+  --tw-text-opacity: 1;
+  color: hsl(35 77% 62% / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -1139,10 +1139,5 @@ li:hover {
 
   .sm\:leading-\[56px\] {
     line-height: 56px;
-  }
-
-  .sm\:hover\:bg-very-dark-blue:hover {
-    --tw-bg-opacity: 1;
-    background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
   }
 }   

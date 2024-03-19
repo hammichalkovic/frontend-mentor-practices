@@ -6,7 +6,8 @@ let headerLinks = document.getElementById('header_link_list'),
     footer = document.getElementById('footer'),
     openButton = document.getElementById('sidebar_interaction'),
     closeButton = document.getElementById('sidebar_close'),
-    sidebar = document.getElementById('sidebar');
+    sidebar = document.getElementById('sidebar'),
+    sidebarNav = document.getElementById('sidebar_navigation');
 
 
 if (!window.matchMedia('(max-width: 450px)').matches) {
@@ -34,9 +35,18 @@ linkButton.addEventListener('click', () => {
 openButton.addEventListener('click', () => {
     sidebar.classList.remove('w-0');
     sidebar.classList.add('w-[68.3%]');
+    sidebarNav.classList.remove('hidden');
 })
 
 closeButton.addEventListener('click', () => {
     sidebar.classList.remove('w-[68.3%]');
     sidebar.classList.add('w-0');
+    sidebarNav.classList.add('hidden');
+})
+
+sidebarNav.forEach(item => {
+    item.addEventListener('click', () => {
+        sidebar.classList.remove('w-[68.3%]');
+        sidebar.classList.add('w-0');
+    })
 })

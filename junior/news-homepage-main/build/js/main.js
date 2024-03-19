@@ -7,7 +7,8 @@ let headerLinks = document.getElementById('header_link_list'),
     openButton = document.getElementById('sidebar_interaction'),
     closeButton = document.getElementById('sidebar_close'),
     sidebar = document.getElementById('sidebar'),
-    sidebarNav = document.getElementById('sidebar_navigation');
+    sidebarNav = document.getElementById('sidebar_navigation'),
+    sidebarItems = document.querySelectorAll('.sidebar_item');
 
 
 if (!window.matchMedia('(max-width: 450px)').matches) {
@@ -44,9 +45,10 @@ closeButton.addEventListener('click', () => {
     sidebarNav.classList.add('hidden');
 })
 
-sidebarNav.forEach(item => {
+sidebarItems.forEach(item => {
     item.addEventListener('click', () => {
         sidebar.classList.remove('w-[68.3%]');
         sidebar.classList.add('w-0');
+        sidebarNav.classList.add('hidden');
     })
 })

@@ -10,8 +10,9 @@
   <script src="./js/main.js" defer></script>
   
 </head>
-<body class=" bg-offwhite sm:w-[100vw] sm:h-[1024px] sm:p-0 sm:m-0 sm:flex sm:flex-col">
-    <aside id="sidebar" class="east-in-out duration-300 sm:hidden bg-offwhite absolute h-[1872px] w-0 w-p z-10 right-0 flex flex-col">
+<body class="z-0 bg-offwhite sm:w-[100vw] sm:h-[1024px] sm:p-0 sm:m-0 sm:flex sm:flex-col">
+  <div id="body_bg_color_filter" class="absolute bg-transparent transition ease-in-out duration-300 z-10 sm:hidden opacity-40 h-0 w-0 bg-very-dark-blue"></div>
+    <aside id="sidebar" class="east-in-out duration-300 sm:hidden bg-offwhite absolute h-[1872px] w-0 w-p right-0 flex flex-col z-20">
       <div id="sidebar_close" class="self-end mt-[27px] mr-[25px]"><img src="../assets/images/icon-menu-close.svg" alt="Interaction open sidebar picture mobile version"></div>
       <ul class="hidden text-[17px] h-[218px] flex flex-col justify-between text-very-dark-blue ml-[22px] mt-[80px] east-in-out duration-300" id="sidebar_navigation">
         <li class="sidebar_item">Home</li>

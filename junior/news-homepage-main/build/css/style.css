@@ -616,6 +616,14 @@ li:hover {
   z-index: 10;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
 .-my-\[10px\] {
   margin-top: -10px;
   margin-bottom: -10px;
@@ -720,6 +728,14 @@ li:hover {
   height: 48px;
 }
 
+.h-\[1872\] {
+  height: 1872;
+}
+
+.h-0 {
+  height: 0px;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -803,6 +819,10 @@ li:hover {
 .bg-very-dark-blue {
   --tw-bg-opacity: 1;
   background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .px-\[21px\] {
@@ -919,6 +939,18 @@ li:hover {
 .text-very-dark-blue {
   --tw-text-opacity: 1;
   color: hsl(240 100% 5% / var(--tw-text-opacity));
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .transition {

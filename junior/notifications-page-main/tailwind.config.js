@@ -13,6 +13,9 @@ module.exports = {
         'grayish-blue': 'hsl(219, 14%, 63%)',
         'dark-grayish-blue': 'hsl(219, 12%, 42%)',
         'very-dark-blue': 'hsl(224, 21%, 14%)'
+      },
+      fontFamily: {
+        'plus-jakarta-sans': ['Plus Jakarta Sans', 'sans-serif']
       }
     },
   },

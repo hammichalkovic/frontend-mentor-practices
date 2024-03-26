@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -8,38 +7,79 @@
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/main.js" defer></script>
 </head>
-<body>
-
-  Notifications 3
-
-  Mark all as read
-
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
-
-  Angela Gray followed you
-  5m ago
-
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
-
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
-
-  Kimberly Smith commented on your picture
-  1 week ago
-
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
-
-  Anna Kim left the group Chess Club
-  2 weeks ago
+<main>
+<header>
+  <h1 class="notif-title">Notifications 3</h1>
+  <a href="" class="all-read">Mark all as read</a>
+</header>
+main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
+  
+<div class="user user1">
+  <div class="main-info">
+    <span class="username" id="user1">Mark Webber</span> <span class="action">reacted to your recent post</span> <span class="subject post">My first tournament today!</span><div class="unread-mark"></div>
   </div>
-</body>
-</html>
+  <div class="time">1m ago</div>
+</div>
+
+<div class="user user2">
+  <div class="main-info">
+    <span class="username" id="user2">Angela Gray</span><span class="action">followed you</span><div class="unread-mark"></div>
+  </div>
+  <div class="time">5m ago</div>
+</div>
+ 
+
+<div class="user user3">
+  <div class="main-info">
+    <span class="username" id="user3">Jacob Thompson</span><span class="action">has joined your group</span><span class="subject group">Chess Club</span>
+  </p>
+  <div class="time">1 day ago</div>
+</div>
+  
+
+<div class="user user4">
+  <div class="main-info">
+    <span class="username" id="user4">Rizky Hasanuddin</span><span class="action">sent you a private message</span>
+  </div>
+  <div class="time">5 days ago</div>
+  <div class="message">
+    <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+      I'm already having lots of fun and improving my game.</p>
+  </div>
+</div>
+ 
+<div class="user user5">
+  <div class="main-info">
+    <div class="main-info-text">
+      <span class="username" id="user5">Kimberly Smith</span><span class="action">commented on your picture</span>
+    </div>
+    <div class="main-info-img">
+      <img src="" alt="">
+    </div>
+  </div>
+  <div class="time">1 week ago</div>
+</div>
+
+<div class="user user6">
+  <div class="main-info">
+    <span class="username" id="user6">Nathan Peterson</span><span class="action">reacted to your recent post</span><span class="subject post">5 end-game strategies to increase your win rate</span>
+  </div>
+  <div class="time">2 weeks ago</div>
+</div>
+  
+
+<div class="user user7">
+  <div class="main-info">
+    <span class="username" id="user7">Anna Kim</span><span class="action">left the group</span><span class="subject group">Chess Club</span>
+  </div>
+  <div class="time">2 weeks ago</div>
+</div>
+  
+
+  
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div>

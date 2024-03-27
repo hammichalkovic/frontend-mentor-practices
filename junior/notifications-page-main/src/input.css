@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+
+    .main-info {
+        @apply flex
+    }
+
+    .userpic {
+        @apply h-[40px] w-[40px]
+    }
+
     .username {
-        @apply font-bold
+        @apply font-bold text-very-dark-blue
     }
 
     .group {

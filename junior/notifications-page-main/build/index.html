@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="./css/fonts/fontstyle.css">
   <script src="./js/main.js" defer></script>
 </head>
-<body class="font-plus-jakarta-sans text-[14px] flex flex-col items-center">
+<body class="font-plus-jakarta-sans text-[14px] flex flex-col items-center bg-custom-white">
   
 
   <main class="w-[345px]">
     <header class="flex justify-between border border-custom-red align-center items-center h-[73px] ">
       <div class="notif-info font-bold flex w-[167px] justify-between">
-        <h1 class="notif-title text-[20px]">Notifications</h1>
+        <h1 class="notif-title text-[20px] text-very-dark-blue">Notifications</h1>
         <div class="notif-num h-[25px] w-[32px] rounded-[5px]  bg-custom-blue text-custom-white flex flex-col justify-center text-center text-[16px] mt-[2px]">3</div>
       </div>
       <div class="all-read">
@@ -25,65 +25,92 @@
   
 
   
-    <div class="user user1">
-      <div class="main-info">
-        <span class="username" id="user1">Mark Webber</span> <span class="action">reacted to your recent post</span> <span class="subject post">My first tournament today!</span><div class="unread-mark"></div>
+    <div class="user user1 bg-vlg-blue">
+      <div class="main-info ">
+        <img class="userpic" src="../assets/images/avatar-mark-webber.webp" alt="Mark Webber user picture">
+        <div>
+          <span class="username" id="user1">Mark Webber</span> <span class="action">reacted to your recent post</span> <span class="subject post">My first tournament today!</span><div class="unread-mark"></div>
+          <div class="time">1m ago</div>
+        </div>
+        
       </div>
-      <div class="time">1m ago</div>
+      
     </div>
 
-    <div class="user user2">
+    <div class="user user2 bg-vlg-blue">
       <div class="main-info">
-        <span class="username" id="user2">Angela Gray</span><span class="action">followed you</span><div class="unread-mark"></div>
+        <img class="userpic" src="../assets/images/avatar-angela-gray.webp" alt="Angela Gray user picture">
+        <div>
+          <span class="username" id="user2">Angela Gray</span><span class="action">followed you</span><div class="unread-mark"></div>
+          <div class="time">5m ago</div>
+        </div>
       </div>
-      <div class="time">5m ago</div>
+      
     </div>
 
 
-    <div class="user user3">
+    <div class="user user3 bg-vlg-blue">
       <div class="main-info">
-        <span class="username" id="user3">Jacob Thompson</span><span class="action">has joined your group</span><span class="subject group">Chess Club</span>
-      </p>
-      <div class="time">1 day ago</div>
+        <img class="userpic" src="../assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson user picture">
+        <div>
+          <span class="username" id="user3">Jacob Thompson</span><span class="action">has joined your group</span><span class="subject group">Chess Club</span>
+          <div class="time">1 day ago</div>
+        </div>
+      </div>
     </div>
 
 
     <div class="user user4">
       <div class="main-info">
-        <span class="username" id="user4">Rizky Hasanuddin</span><span class="action">sent you a private message</span>
-      </div>
-      <div class="time">5 days ago</div>
-      <div class="message">
-        <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+        <img class="userpic" src="../assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin user picture">
+        <div>
+          <span class="username" id="user4">Rizky Hasanuddin</span><span class="action">sent you a private message</span>
+          <div class="time">5 days ago</div>
+          <div class="message">
+            <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
           I'm already having lots of fun and improving my game.</p>
+          </div>
+        </div>
       </div>
+      
     </div>
 
     <div class="user user5">
       <div class="main-info">
+        <img class="userpic" src="../assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith user picture">
         <div class="main-info-text">
           <span class="username" id="user5">Kimberly Smith</span><span class="action">commented on your picture</span>
+          <div class="time">1 week ago</div>
         </div>
         <div class="main-info-img">
-          <img src="" alt="">
+          <img src="../assets/images/image-chess.webp" alt="Commented chess picture">
         </div>
       </div>
-      <div class="time">1 week ago</div>
+      
     </div>
 
     <div class="user user6">
       <div class="main-info">
-        <span class="username" id="user6">Nathan Peterson</span><span class="action">reacted to your recent post</span><span class="subject post">5 end-game strategies to increase your win rate</span>
+        <img class="userpic" src="../assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson user picture">
+        <div>
+          <span class="username" id="user6">Nathan Peterson</span><span class="action">reacted to your recent post</span><span class="subject post">5 end-game strategies to increase your win rate</span>
+          <div class="time">2 weeks ago</div>
+        </div>
+        
       </div>
-      <div class="time">2 weeks ago</div>
+      
     </div>
 
 
     <div class="user user7">
       <div class="main-info">
-        <span class="username" id="user7">Anna Kim</span><span class="action">left the group</span><span class="subject group">Chess Club</span>
+        <img class="userpic" src="../assets/images/avatar-anna-kim.webp" alt="Anna Kim user picture">
+        <div>
+          <span class="username" id="user7">Anna Kim</span><span class="action">left the group</span><span class="subject group">Chess Club</span>
+          <div class="time">2 weeks ago</div>
+        </div>
       </div>
-      <div class="time">2 weeks ago</div>
+      
     </div>
   </main>
   

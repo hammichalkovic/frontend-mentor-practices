@@ -444,8 +444,19 @@ video {
   display: none;
 }
 
+.main-info {
+  display: flex;
+}
+
+.userpic {
+  height: 40px;
+  width: 40px;
+}
+
 .username {
   font-weight: 700;
+  --tw-text-opacity: 1;
+  color: hsl(224 21% 14% / var(--tw-text-opacity));
 }
 
 .group {
@@ -559,10 +570,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.mt-\[5px\] {
-  margin-top: 5px;
-}
-
 .mt-\[2px\] {
   margin-top: 2px;
 }
@@ -575,104 +582,20 @@ video {
   display: none;
 }
 
-.h-\[30px\] {
-  height: 30px;
-}
-
-.h-\[20px\] {
-  height: 20px;
-}
-
 .h-\[25px\] {
   height: 25px;
-}
-
-.h-\[22px\] {
-  height: 22px;
-}
-
-.h-\[24px\] {
-  height: 24px;
-}
-
-.h-\[23px\] {
-  height: 23px;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-\[70px\] {
-  height: 70px;
-}
-
-.h-\[75px\] {
-  height: 75px;
-}
-
-.h-\[72px\] {
-  height: 72px;
-}
-
-.h-\[74px\] {
-  height: 74px;
 }
 
 .h-\[73px\] {
   height: 73px;
 }
 
-.w-\[40px\] {
-  width: 40px;
-}
-
-.w-\[30px\] {
-  width: 30px;
-}
-
-.w-\[33px\] {
-  width: 33px;
-}
-
-.w-\[32px\] {
-  width: 32px;
-}
-
-.w-\[150px\] {
-  width: 150px;
-}
-
-.w-\[140px\] {
-  width: 140px;
-}
-
-.w-\[190px\] {
-  width: 190px;
-}
-
-.w-\[170px\] {
-  width: 170px;
-}
-
-.w-\[165px\] {
-  width: 165px;
-}
-
 .w-\[167px\] {
   width: 167px;
 }
 
-.w-\[360px\] {
-  width: 360px;
-}
-
-.w-\[350px\] {
-  width: 350px;
-}
-
-.w-\[340px\] {
-  width: 340px;
+.w-\[32px\] {
+  width: 32px;
 }
 
 .w-\[345px\] {
@@ -713,24 +636,22 @@ video {
   background-color: hsl(219 85% 26% / var(--tw-bg-opacity));
 }
 
-.pb-\[2px\] {
-  padding-bottom: 2px;
+.bg-custom-white {
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
+}
+
+.bg-vlg-blue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(210 60% 98% / var(--tw-bg-opacity));
 }
 
 .text-center {
   text-align: center;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .font-plus-jakarta-sans {
   font-family: Plus Jakarta Sans, sans-serif;
-}
-
-.text-\[15px\] {
-  font-size: 15px;
 }
 
 .text-\[14px\] {
@@ -759,6 +680,7 @@ video {
   color: hsl(219 12% 42% / var(--tw-text-opacity));
 }
 
-.text-\[16ox\] {
-  color: 16ox;
+.text-very-dark-blue {
+  --tw-text-opacity: 1;
+  color: hsl(224 21% 14% / var(--tw-text-opacity));
 }

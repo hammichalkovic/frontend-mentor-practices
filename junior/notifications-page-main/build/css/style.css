@@ -470,6 +470,18 @@ video {
   color: hsl(219 12% 42% / var(--tw-text-opacity));
 }
 
+.unread-mark::after {
+  margin-left: 7px;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(1 90% 64% / var(--tw-bg-opacity));
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;

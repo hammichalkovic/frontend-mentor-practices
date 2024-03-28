@@ -23,4 +23,8 @@
     .action {
         @apply text-dark-grayish-blue
     }
+
+    .unread-mark {
+        @apply after:content-[''] after:inline-block after:h-[8px] after:w-[8px] after:bg-custom-red after:rounded-full after:ml-[7px]
+    }
 }

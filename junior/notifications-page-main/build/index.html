@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <title>Frontend Mentor | Notifications page</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/fonts/fontstyle.css">
   <script src="./js/main.js" defer></script>
@@ -29,7 +29,9 @@
       <div class="main-info ">
         <img class="userpic" src="../assets/images/avatar-mark-webber.webp" alt="Mark Webber user picture">
         <div>
-          <span class="username" id="user1">Mark Webber</span> <span class="action">reacted to your recent post</span> <span class="subject post">My first tournament today!</span><div class="unread-mark"></div>
+          <div id="message-sect flex" >
+            <span class="username " id="user1">Mark Webber</span><span class="action">reacted to your recent post</span> <span class="subject post unread-mark ">My first tournament today!</span>
+          </div>
           <div class="time">1m ago</div>
         </div>
         
@@ -41,7 +43,7 @@
       <div class="main-info">
         <img class="userpic" src="../assets/images/avatar-angela-gray.webp" alt="Angela Gray user picture">
         <div>
-          <span class="username" id="user2">Angela Gray</span><span class="action">followed you</span><div class="unread-mark"></div>
+          <span class="username" id="user2">Angela Gray</span><span class="action unread-mark">followed you</span>
           <div class="time">5m ago</div>
         </div>
       </div>
@@ -53,7 +55,7 @@
       <div class="main-info">
         <img class="userpic" src="../assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson user picture">
         <div>
-          <span class="username" id="user3">Jacob Thompson</span><span class="action">has joined your group</span><span class="subject group">Chess Club</span>
+          <span class="username" id="user3">Jacob Thompson</span><span class="action">has joined your group</span><span class="subject group unread-mark">Chess Club</span>
           <div class="time">1 day ago</div>
         </div>
       </div>

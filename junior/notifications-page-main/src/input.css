@@ -4,6 +4,10 @@
 
 @layer base {
 
+    span {
+        @apply mr-[6px]
+    }
+
     .main-info {
         @apply flex
     }
@@ -22,6 +26,10 @@
 
     .action {
         @apply text-dark-grayish-blue
+    }
+
+    .post {
+        @apply font-bold text-dark-grayish-blue
     }
 
     .unread-mark {

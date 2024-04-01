@@ -444,6 +444,10 @@ video {
   display: none;
 }
 
+span {
+  margin-right: 6px;
+}
+
 .main-info {
   display: flex;
 }
@@ -466,6 +470,12 @@ video {
 }
 
 .action {
+  --tw-text-opacity: 1;
+  color: hsl(219 12% 42% / var(--tw-text-opacity));
+}
+
+.post {
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: hsl(219 12% 42% / var(--tw-text-opacity));
 }

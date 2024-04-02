@@ -3,17 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-
+ 
     span {
         @apply mr-[6px]
     }
 
+    .user {
+        @apply box-border rounded-[8px]
+    }
+
     .main-info {
-        @apply flex
+        @apply flex  leading-[18px] py-4 pl-4 w-[325px]
     }
 
     .userpic {
-        @apply h-[40px] w-[40px]
+        @apply h-[40px] w-[40px] box-content pr-[14px]
     }
 
     .username {
@@ -21,18 +25,24 @@
     }
 
     .group {
-        @apply font-bold text-custom-blue
+        @apply font-bold text-custom-blue ml-[1px]
     }
 
     .action {
-        @apply text-dark-grayish-blue
+        @apply text-dark-grayish-blue font-medium
     }
 
+    
+
     .post {
-        @apply font-bold text-dark-grayish-blue
+        @apply font-bold text-dark-grayish-blue -ml-[2px]
     }
 
     .unread-mark {
         @apply after:content-[''] after:inline-block after:h-[8px] after:w-[8px] after:bg-custom-red after:rounded-full after:ml-[7px]
+    }
+
+    .time {
+        @apply pt-[3px] text-grayish-blue
     }
 }

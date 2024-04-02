@@ -448,13 +448,25 @@ span {
   margin-right: 6px;
 }
 
+.user {
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
 .main-info {
   display: flex;
+  width: 325px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  line-height: 18px;
 }
 
 .userpic {
+  box-sizing: content-box;
   height: 40px;
   width: 40px;
+  padding-right: 14px;
 }
 
 .username {
@@ -464,17 +476,20 @@ span {
 }
 
 .group {
+  margin-left: 1px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: hsl(219 85% 26% / var(--tw-text-opacity));
 }
 
 .action {
+  font-weight: 500;
   --tw-text-opacity: 1;
   color: hsl(219 12% 42% / var(--tw-text-opacity));
 }
 
 .post {
+  margin-left: -2px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: hsl(219 12% 42% / var(--tw-text-opacity));
@@ -490,6 +505,12 @@ span {
   background-color: hsl(1 90% 64% / var(--tw-bg-opacity));
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.time {
+  padding-top: 3px;
+  --tw-text-opacity: 1;
+  color: hsl(219 14% 63% / var(--tw-text-opacity));
 }
 
 *, ::before, ::after {
@@ -612,6 +633,10 @@ span {
   height: 73px;
 }
 
+.h-\[750px\] {
+  height: 750px;
+}
+
 .w-\[167px\] {
   width: 167px;
 }
@@ -642,15 +667,6 @@ span {
 
 .rounded-\[5px\] {
   border-radius: 5px;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.border-custom-red {
-  --tw-border-opacity: 1;
-  border-color: hsl(1 90% 64% / var(--tw-border-opacity));
 }
 
 .bg-custom-blue {

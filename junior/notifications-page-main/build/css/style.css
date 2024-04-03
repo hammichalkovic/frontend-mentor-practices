@@ -462,11 +462,25 @@ span {
   line-height: 18px;
 }
 
+@media (min-width: 640px) {
+  .main-info {
+    width: 600px;
+  }
+}
+
 .userpic {
   box-sizing: content-box;
   height: 40px;
   width: 40px;
   padding-right: 14px;
+}
+
+@media (min-width: 640px) {
+  .userpic {
+    height: 45px;
+    width: 45px;
+    padding-right: 20px;
+  }
 }
 
 .username {
@@ -786,22 +800,6 @@ span {
     display: flex;
   }
 
-  .sm\:hidden {
-    display: none;
-  }
-
-  .sm\:h-\[100vh\] {
-    height: 100vh;
-  }
-
-  .sm\:h-\[850px\] {
-    height: 850px;
-  }
-
-  .sm\:h-\[830px\] {
-    height: 830px;
-  }
-
   .sm\:h-\[840px\] {
     height: 840px;
   }
@@ -810,20 +808,12 @@ span {
     min-height: 100vh;
   }
 
-  .sm\:w-\[1000px\] {
-    width: 1000px;
+  .sm\:w-\[666px\] {
+    width: 666px;
   }
 
-  .sm\:w-\[650px\] {
-    width: 650px;
-  }
-
-  .sm\:w-\[700px\] {
-    width: 700px;
-  }
-
-  .sm\:w-\[720px\] {
-    width: 720px;
+  .sm\:w-\[670px\] {
+    width: 670px;
   }
 
   .sm\:w-\[730px\] {
@@ -838,10 +828,6 @@ span {
     justify-content: center;
   }
 
-  .sm\:rounded-\[30px\] {
-    border-radius: 30px;
-  }
-
   .sm\:rounded-\[15px\] {
     border-radius: 15px;
   }
@@ -849,5 +835,9 @@ span {
   .sm\:bg-vlg-blue {
     --tw-bg-opacity: 1;
     background-color: hsl(210 60% 98% / var(--tw-bg-opacity));
+  }
+
+  .sm\:text-\[16px\] {
+    font-size: 16px;
   }
 }

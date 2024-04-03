@@ -13,11 +13,11 @@
     }
 
     .main-info {
-        @apply flex  leading-[18px] py-4 pl-4 w-[325px]
+        @apply flex  leading-[18px] py-4 pl-4 w-[325px] sm:w-[600px]
     }
 
     .userpic {
-        @apply h-[40px] w-[40px] box-content pr-[14px]
+        @apply h-[40px] w-[40px] box-content pr-[14px] sm:pr-[20px] sm:h-[45px] sm:w-[45px]
     }
 
     .username {

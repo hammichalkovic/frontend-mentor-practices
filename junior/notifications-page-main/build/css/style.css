@@ -464,7 +464,8 @@ span {
 
 @media (min-width: 640px) {
   .main-info {
-    width: 600px;
+    width: 640px;
+    line-height: 23px;
   }
 }
 
@@ -796,6 +797,30 @@ span {
 }
 
 @media (min-width: 640px) {
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .sm\:mt-\[20px\] {
+    margin-top: 20px;
+  }
+
+  .sm\:mt-\[5px\] {
+    margin-top: 5px;
+  }
+
+  .sm\:mt-\[10px\] {
+    margin-top: 10px;
+  }
+
+  .sm\:mt-\[8px\] {
+    margin-top: 8px;
+  }
+
+  .sm\:mt-\[7px\] {
+    margin-top: 7px;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -804,8 +829,36 @@ span {
     height: 840px;
   }
 
+  .sm\:h-\[97px\] {
+    height: 97px;
+  }
+
+  .sm\:h-\[90px\] {
+    height: 90px;
+  }
+
+  .sm\:h-\[110px\] {
+    height: 110px;
+  }
+
+  .sm\:h-\[105px\] {
+    height: 105px;
+  }
+
+  .sm\:h-\[103px\] {
+    height: 103px;
+  }
+
   .sm\:min-h-\[100vh\] {
     min-height: 100vh;
+  }
+
+  .sm\:w-\[530px\] {
+    width: 530px;
+  }
+
+  .sm\:w-\[565px\] {
+    width: 565px;
   }
 
   .sm\:w-\[666px\] {
@@ -820,6 +873,30 @@ span {
     width: 730px;
   }
 
+  .sm\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .sm\:w-\[250px\] {
+    width: 250px;
+  }
+
+  .sm\:w-\[200px\] {
+    width: 200px;
+  }
+
+  .sm\:w-\[190px\] {
+    width: 190px;
+  }
+
+  .sm\:w-\[198px\] {
+    width: 198px;
+  }
+
+  .sm\:w-\[196px\] {
+    width: 196px;
+  }
+
   .sm\:items-center {
     align-items: center;
   }
@@ -832,6 +909,15 @@ span {
     border-radius: 15px;
   }
 
+  .sm\:border {
+    border-width: 1px;
+  }
+
+  .sm\:border-custom-red {
+    --tw-border-opacity: 1;
+    border-color: hsl(1 90% 64% / var(--tw-border-opacity));
+  }
+
   .sm\:bg-vlg-blue {
     --tw-bg-opacity: 1;
     background-color: hsl(210 60% 98% / var(--tw-bg-opacity));
@@ -839,5 +925,25 @@ span {
 
   .sm\:text-\[16px\] {
     font-size: 16px;
+  }
+
+  .sm\:text-\[30px\] {
+    font-size: 30px;
+  }
+
+  .sm\:text-\[25px\] {
+    font-size: 25px;
+  }
+
+  .sm\:text-\[24px\] {
+    font-size: 24px;
+  }
+
+  .sm\:font-bold {
+    font-weight: 700;
+  }
+
+  .sm\:font-extrabold {
+    font-weight: 800;
   }
 }

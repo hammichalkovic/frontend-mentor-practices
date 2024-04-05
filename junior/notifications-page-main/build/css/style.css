@@ -910,6 +910,22 @@ span {
     background-color: hsl(210 60% 98% / var(--tw-bg-opacity));
   }
 
+  .sm\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .sm\:pb-1 {
+    padding-bottom: 0.25rem;
+  }
+
+  .sm\:pb-\[1px\] {
+    padding-bottom: 1px;
+  }
+
+  .sm\:pr-\[1px\] {
+    padding-right: 1px;
+  }
+
   .sm\:text-\[16px\] {
     font-size: 16px;
   }

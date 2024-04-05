@@ -13,7 +13,7 @@
     }
 
     .main-info {
-        @apply flex  leading-[18px] sm:leading-[22px] py-4 sm:pt-[18px] sm:pb-[18px] pl-4 w-[325px] sm:w-[640px] 
+        @apply flex  leading-[18px] sm:leading-[22px] py-4 sm:pt-[18px] sm:pb-[18px] pl-4 w-[325px] sm:w-[645px] 
     }
 
     .userpic {
@@ -21,11 +21,11 @@
     }
 
     .username {
-        @apply font-bold text-very-dark-blue 
+        @apply font-extrabold text-very-dark-blue 
     }
 
     .group {
-        @apply font-bold text-custom-blue ml-[1px]
+        @apply font-extrabold text-custom-blue ml-[1px]
     }
 
     .action {
@@ -35,7 +35,7 @@
     
 
     .post {
-        @apply font-bold text-dark-grayish-blue -ml-[2px]
+        @apply font-extrabold text-dark-grayish-blue -ml-[2px]
     }
 
     .unread-mark {

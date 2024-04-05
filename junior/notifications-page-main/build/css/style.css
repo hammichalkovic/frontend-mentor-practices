@@ -464,7 +464,7 @@ span {
 
 @media (min-width: 640px) {
   .main-info {
-    width: 640px;
+    width: 645px;
     padding-top: 18px;
     padding-bottom: 18px;
     line-height: 22px;
@@ -487,16 +487,16 @@ span {
 }
 
 .username {
-  font-weight: 700;
+  font-weight: 800;
   --tw-text-opacity: 1;
   color: hsl(224 21% 14% / var(--tw-text-opacity));
 }
 
 .group {
   margin-left: 1px;
-  font-weight: 700;
+  font-weight: 800;
   --tw-text-opacity: 1;
-  color: hsl(219 85% 26% / var(--tw-text-opacity));
+  color: hsl(210 85% 27% / var(--tw-text-opacity));
 }
 
 .action {
@@ -507,7 +507,7 @@ span {
 
 .post {
   margin-left: -2px;
-  font-weight: 700;
+  font-weight: 800;
   --tw-text-opacity: 1;
   color: hsl(219 12% 42% / var(--tw-text-opacity));
 }
@@ -652,6 +652,26 @@ span {
   margin-top: 2px;
 }
 
+.-mr-\[5px\] {
+  margin-right: -5px;
+}
+
+.-mr-\[1px\] {
+  margin-right: -1px;
+}
+
+.-mr-\[10px\] {
+  margin-right: -10px;
+}
+
+.-mr-\[30px\] {
+  margin-right: -30px;
+}
+
+.mr-\[30px\] {
+  margin-right: 30px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -739,7 +759,7 @@ span {
 
 .bg-custom-blue {
   --tw-bg-opacity: 1;
-  background-color: hsl(219 85% 26% / var(--tw-bg-opacity));
+  background-color: hsl(210 85% 27% / var(--tw-bg-opacity));
 }
 
 .bg-custom-white {
@@ -809,8 +829,8 @@ span {
     margin-right: -6px;
   }
 
-  .sm\:-mt-\[2px\] {
-    margin-top: -2px;
+  .sm\:-mt-\[5px\] {
+    margin-top: -5px;
   }
 
   .sm\:ml-auto {
@@ -821,16 +841,8 @@ span {
     margin-top: 7px;
   }
 
-  .sm\:-mt-\[1px\] {
-    margin-top: -1px;
-  }
-
-  .sm\:-mt-\[0px\] {
-    margin-top: -0px;
-  }
-
-  .sm\:-mt-\[5px\] {
-    margin-top: -5px;
+  .sm\:-mr-\[2px\] {
+    margin-right: -2px;
   }
 
   .sm\:flex {
@@ -845,8 +857,8 @@ span {
     height: 45px;
   }
 
-  .sm\:h-\[800px\] {
-    height: 800px;
+  .sm\:h-\[810px\] {
+    height: 810px;
   }
 
   .sm\:h-\[843px\] {
@@ -855,10 +867,6 @@ span {
 
   .sm\:h-\[97px\] {
     height: 97px;
-  }
-
-  .sm\:h-\[810px\] {
-    height: 810px;
   }
 
   .sm\:min-h-\[100vh\] {
@@ -908,14 +916,6 @@ span {
   .sm\:bg-vlg-blue {
     --tw-bg-opacity: 1;
     background-color: hsl(210 60% 98% / var(--tw-bg-opacity));
-  }
-
-  .sm\:pt-0 {
-    padding-top: 0px;
-  }
-
-  .sm\:pb-1 {
-    padding-bottom: 0.25rem;
   }
 
   .sm\:pb-\[1px\] {

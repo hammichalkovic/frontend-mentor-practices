@@ -490,13 +490,35 @@ span {
   font-weight: 800;
   --tw-text-opacity: 1;
   color: hsl(224 21% 14% / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+@media (min-width: 640px) {
+  .username:hover {
+    cursor: pointer;
+    --tw-text-opacity: 1;
+    color: hsl(213 83% 30% / var(--tw-text-opacity));
+  }
 }
 
 .group {
   margin-left: 1px;
   font-weight: 800;
   --tw-text-opacity: 1;
-  color: hsl(210 85% 27% / var(--tw-text-opacity));
+  color: hsl(219 12% 42% / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 640px) {
+  .group:hover {
+    cursor: pointer;
+    --tw-text-opacity: 1;
+    color: hsl(213 83% 30% / var(--tw-text-opacity));
+  }
 }
 
 .action {
@@ -510,6 +532,17 @@ span {
   font-weight: 800;
   --tw-text-opacity: 1;
   color: hsl(219 12% 42% / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 640px) {
+  .post:hover {
+    cursor: pointer;
+    --tw-text-opacity: 1;
+    color: hsl(213 83% 30% / var(--tw-text-opacity));
+  }
 }
 
 .unread-mark::after {
@@ -652,26 +685,6 @@ span {
   margin-top: 2px;
 }
 
-.-mr-\[5px\] {
-  margin-right: -5px;
-}
-
-.-mr-\[1px\] {
-  margin-right: -1px;
-}
-
-.-mr-\[10px\] {
-  margin-right: -10px;
-}
-
-.-mr-\[30px\] {
-  margin-right: -30px;
-}
-
-.mr-\[30px\] {
-  margin-right: 30px;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -759,7 +772,7 @@ span {
 
 .bg-custom-blue {
   --tw-bg-opacity: 1;
-  background-color: hsl(210 85% 27% / var(--tw-bg-opacity));
+  background-color: hsl(213 83% 30% / var(--tw-bg-opacity));
 }
 
 .bg-custom-white {
@@ -824,9 +837,34 @@ span {
   color: hsl(224 21% 14% / var(--tw-text-opacity));
 }
 
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.hover\:text-custom-blue:hover {
+  --tw-text-opacity: 1;
+  color: hsl(213 83% 30% / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
-  .sm\:-mr-\[6px\] {
-    margin-right: -6px;
+  .sm\:-mr-\[2px\] {
+    margin-right: -2px;
   }
 
   .sm\:-mt-\[5px\] {
@@ -839,10 +877,6 @@ span {
 
   .sm\:mt-\[7px\] {
     margin-top: 7px;
-  }
-
-  .sm\:-mr-\[2px\] {
-    margin-right: -2px;
   }
 
   .sm\:flex {
@@ -901,6 +935,10 @@ span {
     width: 730px;
   }
 
+  .sm\:cursor-pointer {
+    cursor: pointer;
+  }
+
   .sm\:items-center {
     align-items: center;
   }
@@ -922,6 +960,10 @@ span {
     padding-bottom: 1px;
   }
 
+  .sm\:pl-\[20px\] {
+    padding-left: 20px;
+  }
+
   .sm\:pr-\[1px\] {
     padding-right: 1px;
   }
@@ -936,5 +978,10 @@ span {
 
   .sm\:font-extrabold {
     font-weight: 800;
+  }
+
+  .sm\:hover\:bg-lg-blue-1:hover {
+    --tw-bg-opacity: 1;
+    background-color: hsl(211 68% 94% / var(--tw-bg-opacity));
   }
 }

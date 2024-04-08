@@ -45,4 +45,8 @@
     .time {
         @apply pt-[3px] sm:pt-[2px] text-grayish-blue
     }
+
+    .attribution a {
+        @apply font-extrabold sm:hover:cursor-pointer sm:hover:text-custom-blue
+    }
 }

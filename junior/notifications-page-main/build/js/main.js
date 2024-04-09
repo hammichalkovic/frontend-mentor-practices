@@ -1,9 +1,12 @@
+
+
 let footer = document.getElementById('footer'),
     main = document.getElementById('mainmain'),
     usernames = document.querySelectorAll('.username'),
     groups = document.querySelectorAll('.group'),
     posts = document.querySelectorAll('.post'),
-    readAll = document.getElementById('read-all');
+    readAll = document.getElementById('read-all'),
+    message = document.querySelector('.message');
 
 
 
@@ -19,7 +22,14 @@ if (!window.matchMedia('(min-width: 640px)').matches) {
     function toChangeColor(item, textColorDefault, textColorNew) {
         item.classList.remove(textColorDefault);
         item.classList.add(textColorNew);      
-    }
+    };
+
+    function toSetBGColor(item, colorClass) {
+        item.classList.add(colorClass);
+        setTimeout(() => {
+            item.classList.remove(colorClass);
+        }, 1000);
+    };
 
     usernames.forEach(username => {
         username.addEventListener('click', () => {
@@ -49,6 +59,25 @@ if (!window.matchMedia('(min-width: 640px)').matches) {
             }, 600)
 
         })
+    });
+
+    readAll.addEventListener('click', () => {
+        toChangeColor(readAll, 'text-dark-grayish-blue', 'text-custom-blue');
+        setTimeout(() => {
+            toChangeColor(readAll, 'text-custom-blue', 'text-dark-grayish-blue');
+        }, 600)
+    });
+
+    readAll.addEventListener('click', () => {
+        toChangeColor(readAll, 'text-dark-grayish-blue', 'text-custom-blue');
+        setTimeout(() => {
+            toChangeColor(readAll, 'text-custom-blue', 'text-dark-grayish-blue');
+        }, 600)
+    });
+
+    
+    message.addEventListener('click', () => {
+        toSetBGColor(message, 'bg-lg-blue-1');
     });
 }
 

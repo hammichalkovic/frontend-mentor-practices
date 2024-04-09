@@ -805,6 +805,11 @@ span {
   background-color: hsl(210 60% 98% / var(--tw-bg-opacity));
 }
 
+.bg-lg-blue-1 {
+  --tw-bg-opacity: 1;
+  background-color: hsl(211 68% 94% / var(--tw-bg-opacity));
+}
+
 .py-\[15px\] {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1004,5 +1009,10 @@ span {
   .sm\:hover\:bg-lg-blue-1:hover {
     --tw-bg-opacity: 1;
     background-color: hsl(211 68% 94% / var(--tw-bg-opacity));
+  }
+
+  .sm\:hover\:text-custom-blue:hover {
+    --tw-text-opacity: 1;
+    color: hsl(213 83% 30% / var(--tw-text-opacity));
   }
 }

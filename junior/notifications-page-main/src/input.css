@@ -9,7 +9,7 @@
     }
 
     .user {
-        @apply box-border rounded-[8px]
+        @apply box-border rounded-[8px] transition-colors ease-in-out duration-300
     }
 
     .main-info {
@@ -39,7 +39,7 @@
     }
 
     .unread-mark {
-        @apply after:content-[''] after:inline-block after:h-[8px] after:w-[8px] after:bg-custom-red after:rounded-full after:ml-[7px]
+        @apply after:content-[''] after:inline-block after:h-[8px] after:w-[8px] after:bg-custom-red after:rounded-full after:ml-[7px] after:transition after:ease-in-out after:duration-1000
     }
 
     .time {

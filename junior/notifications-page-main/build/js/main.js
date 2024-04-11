@@ -6,8 +6,12 @@ let footer = document.getElementById('footer'),
     groups = document.querySelectorAll('.group'),
     posts = document.querySelectorAll('.post'),
     readAll = document.getElementById('read-all'),
-    message = document.querySelector('.message');
-
+    message = document.querySelector('.message'),
+    user1 = document.querySelector('.user1'),
+    user2 = document.querySelector('.user2'),
+    user3 = document.querySelector('.user3'),
+    usersArr = [user1, user2, user3],
+    unreadMarkers = document.querySelectorAll('.unread-mark');
 
 
 if (!window.matchMedia('(max-height: 950px)').matches && !window.matchMedia('(max-width: 450px)').matches) {
@@ -81,3 +85,15 @@ if (!window.matchMedia('(min-width: 640px)').matches) {
     });
 }
 
+usersArr.forEach(user => {
+    user.addEventListener('mouseover', () => {
+        user.classList.remove('bg-vlg-blue','unread-mark');
+        
+    });
+});
+
+unreadMarkers.forEach(marker => {
+    marker.parentElement.parentElement.addEventListener('mouseover', () => {
+        marker.classList.remove('unread-mark');
+    })
+})

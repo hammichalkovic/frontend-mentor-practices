@@ -1,6 +1,7 @@
 
 
-let footer = document.getElementById('footer'),
+let body = document.getElementById('body'),
+    footer = document.getElementById('footer'),
     main = document.getElementById('mainmain'),
     usernames = document.querySelectorAll('.username'),
     groups = document.querySelectorAll('.group'),
@@ -100,7 +101,7 @@ if (!window.matchMedia('(min-width: 640px)').matches) {
 
 usersArr.forEach(user => {
     user.addEventListener('mouseover', () => {
-        user.classList.remove('bg-vlg-blue','unread-mark');
+        user.classList.remove('bg-vlg-blue');
         
     });
 });
@@ -110,3 +111,12 @@ unreadMarkers.forEach(marker => {
         marker.classList.remove('unread-mark');
     })
 })
+
+readAll.addEventListener('click', () => {
+  usersArr.forEach(user => {
+    user.classList.remove('bg-vlg-blue');
+  });
+  unreadMarkers.forEach(marker => {
+    marker.classList.remove('unread-mark');
+  })
+});

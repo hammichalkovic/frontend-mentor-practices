@@ -83,6 +83,19 @@ if (!window.matchMedia('(min-width: 640px)').matches) {
     message.addEventListener('click', () => {
         toSetBGColor(message, 'bg-lg-blue-1');
     });
+
+    usersArr.forEach(user => {
+        user.addEventListener('click', () => {
+            user.classList.remove('bg-vlg-blue','unread-mark');
+            
+        });
+    });
+    
+    unreadMarkers.forEach(marker => {
+        marker.parentElement.parentElement.addEventListener('click', () => {
+            marker.classList.remove('unread-mark');
+        })
+    })
 }
 
 usersArr.forEach(user => {

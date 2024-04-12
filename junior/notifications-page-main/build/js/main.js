@@ -24,8 +24,10 @@ if (!window.matchMedia('(max-height: 950px)').matches && !window.matchMedia('(ma
     main.classList.remove('sm:mt-auto');
 }
 
+
+
 function toDecrementNotNumber() {
-    notificationNumber = notificationNumber.value - 1;
+    notificationNumberValue.innerHTML = notificationNumberValue.innerHTML - 1;
 }
 
 function toMakeNotNumberZero() {
@@ -104,27 +106,41 @@ if (!window.matchMedia('(min-width: 640px)').matches) {
         });
     });
     
+
+// Start working here the next time
+
     unreadMarkers.forEach(marker => {
         marker.parentElement.parentElement.addEventListener('click', () => {
             marker.classList.remove('unread-mark');
+            unreadMarkers.pop();
         })
     })
 }
 
 // Main part
 
-usersArr.forEach(user => {
-    user.addEventListener('mouseover', () => {
-        user.classList.remove('bg-vlg-blue');
-        
-    });
-});
-
 unreadMarkers.forEach(marker => {
     marker.parentElement.parentElement.addEventListener('mouseover', () => {
         marker.classList.remove('unread-mark');
     })
 })
+
+usersArr.forEach(user => {
+    user.addEventListener('mouseover', () => { 
+        user.classList.remove('bg-vlg-blue');
+
+        notificationNumberValue.classList.add('animate-change-scale');
+        setTimeout(toDecrementNotNumber, 150);
+        setTimeout(() => {
+          notificationNumberValue.classList.remove('animate-change-scale');
+        }, 300)
+
+       
+    });
+
+    
+});
+
 
 readAll.addEventListener('click', () => {
   usersArr.forEach(user => {
@@ -135,5 +151,8 @@ readAll.addEventListener('click', () => {
   })
   notificationNumberValue.classList.add('animate-change-scale');
   setTimeout(toMakeNotNumberZero, 150);
+  setTimeout(() => {
+    notificationNumberValue.classList.remove('animate-change-scale');
+  }, 300)
 
 });

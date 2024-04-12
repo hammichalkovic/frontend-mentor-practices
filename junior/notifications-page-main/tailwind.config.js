@@ -16,9 +16,18 @@ module.exports = {
       },
       fontFamily: {
         'plus-jakarta-sans': ['Plus Jakarta Sans', 'sans-serif']
-      }
+      },
+      keyframes: {
+        'change-scale': {
+        '0%': {transform: 'scaleY(100%)'},
+        '50%': {transform: 'scaleY(0%)'},
+        '100%': {transform: 'scaleY(100%)'},
+      },
     },
+    animation: {
+      'change-scale': 'change-scale 0.3s ease-in-out'
+    }
   },
   plugins: [],
+},
 }
-

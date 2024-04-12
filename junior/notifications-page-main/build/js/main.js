@@ -13,7 +13,8 @@ let body = document.getElementById('body'),
     user3 = document.querySelector('.user3'),
     usersArr = [user1, user2, user3],
     unreadMarkers = document.querySelectorAll('.unread-mark'),
-    notificationNumber = document.querySelector('.notif-num');
+    notificationNumber = document.querySelector('.notif-num'),
+    notificationNumberValue = document.getElementById('notif-num-value');
 
 
 if (!window.matchMedia('(max-height: 950px)').matches && !window.matchMedia('(max-width: 450px)').matches) {
@@ -28,7 +29,7 @@ function toDecrementNotNumber() {
 }
 
 function toMakeNotNumberZero() {
-    notificationNumber.innerHTML *= 0;
+    notificationNumberValue.innerHTML *= 0;
 }
 
 // Mobie condition
@@ -132,5 +133,7 @@ readAll.addEventListener('click', () => {
   unreadMarkers.forEach(marker => {
     marker.classList.remove('unread-mark');
   })
-  toMakeNotNumberZero();
+  notificationNumberValue.classList.add('animate-change-scale');
+  setTimeout(toMakeNotNumberZero, 150);
+
 });

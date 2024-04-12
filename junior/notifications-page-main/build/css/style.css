@@ -765,6 +765,24 @@ span {
   width: 56px;
 }
 
+@keyframes change-scale {
+  0% {
+    transform: scaleY(100%);
+  }
+
+  50% {
+    transform: scaleY(0%);
+  }
+
+  100% {
+    transform: scaleY(100%);
+  }
+}
+
+.animate-change-scale {
+  animation: change-scale 0.3s ease-in-out;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -885,12 +903,12 @@ span {
   transition-duration: 300ms;
 }
 
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:cursor-pointer:hover {

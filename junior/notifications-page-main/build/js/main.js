@@ -12,7 +12,8 @@ let body = document.getElementById('body'),
     user2 = document.querySelector('.user2'),
     user3 = document.querySelector('.user3'),
     usersArr = [user1, user2, user3],
-    unreadMarkers = document.querySelectorAll('.unread-mark');
+    unreadMarkers = document.querySelectorAll('.unread-mark'),
+    notificationNumber = document.querySelector('.notif-num');
 
 
 if (!window.matchMedia('(max-height: 950px)').matches && !window.matchMedia('(max-width: 450px)').matches) {
@@ -21,6 +22,16 @@ if (!window.matchMedia('(max-height: 950px)').matches && !window.matchMedia('(ma
 } else {
     main.classList.remove('sm:mt-auto');
 }
+
+function toDecrementNotNumber() {
+    notificationNumber = notificationNumber.value - 1;
+}
+
+function toMakeNotNumberZero() {
+    notificationNumber.innerHTML *= 0;
+}
+
+// Mobie condition
 
 if (!window.matchMedia('(min-width: 640px)').matches) {
 
@@ -99,6 +110,8 @@ if (!window.matchMedia('(min-width: 640px)').matches) {
     })
 }
 
+// Main part
+
 usersArr.forEach(user => {
     user.addEventListener('mouseover', () => {
         user.classList.remove('bg-vlg-blue');
@@ -119,4 +132,5 @@ readAll.addEventListener('click', () => {
   unreadMarkers.forEach(marker => {
     marker.classList.remove('unread-mark');
   })
+  toMakeNotNumberZero();
 });

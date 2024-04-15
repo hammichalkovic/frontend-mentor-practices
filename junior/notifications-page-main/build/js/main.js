@@ -131,13 +131,12 @@ usersArr.forEach(user => {
         if (!user.classList.contains('bg-vlg-blue')) {
 
         } else {
-            user.classList.remove('bg-vlg-blue');
-
-            notificationNumberValue.classList.add('animate-change-scale');
-            setTimeout(toDecrementNotNumber, 150);
-            setTimeout(() => {
-              notificationNumberValue.classList.remove('animate-change-scale');
-            }, 300)  
+           user.classList.remove('bg-vlg-blue');        
+           notificationNumberValue.classList.add('animate-change-scale');
+           setTimeout(toDecrementNotNumber, 150);
+           setTimeout(() => {
+             notificationNumberValue.classList.remove('animate-change-scale');
+           }, 300)  
         }
 
 
@@ -151,16 +150,22 @@ usersArr.forEach(user => {
 
 
 readAll.addEventListener('click', () => {
+  
   usersArr.forEach(user => {
     user.classList.remove('bg-vlg-blue');
   });
+
   unreadMarkers.forEach(marker => {
     marker.classList.remove('unread-mark');
-  })
-  notificationNumberValue.classList.add('animate-change-scale');
-  setTimeout(toMakeNotNumberZero, 150);
-  setTimeout(() => {
-    notificationNumberValue.classList.remove('animate-change-scale');
-  }, 300)
+  });
 
+  if (notificationNumberValue.innerHTML == '0') {
+
+  } else {
+    notificationNumberValue.classList.add('animate-change-scale');
+    setTimeout(toMakeNotNumberZero, 150);
+    setTimeout(() => {
+      notificationNumberValue.classList.remove('animate-change-scale');
+    }, 300)
+  }
 });

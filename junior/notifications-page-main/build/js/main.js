@@ -127,13 +127,21 @@ unreadMarkers.forEach(marker => {
 
 usersArr.forEach(user => {
     user.addEventListener('mouseover', () => { 
-        user.classList.remove('bg-vlg-blue');
 
-        notificationNumberValue.classList.add('animate-change-scale');
-        setTimeout(toDecrementNotNumber, 150);
-        setTimeout(() => {
-          notificationNumberValue.classList.remove('animate-change-scale');
-        }, 300)
+        if (!user.classList.contains('bg-vlg-blue')) {
+
+        } else {
+            user.classList.remove('bg-vlg-blue');
+
+            notificationNumberValue.classList.add('animate-change-scale');
+            setTimeout(toDecrementNotNumber, 150);
+            setTimeout(() => {
+              notificationNumberValue.classList.remove('animate-change-scale');
+            }, 300)  
+        }
+
+
+       
 
        
     });

@@ -3,45 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link href="./css/style.css" rel="stylesheet">
+  <script src="./js/main.js" defer></script>
+ 
 </head>
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <section id="form_to_fill">
+    <div id="card_data_places">
+      <div id="back_side">
+        <div id="cvc_place">000</div>
+      </div>
 
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
+      <div id="front-side">
+        <div class="number_place">0000 0000 0000 0000</div>
+        <div class="cardholder_name_place">Jane Appleseed</div>
+        <div class="exp_date_place">00/00</div>
+      </div>
+      
+    </div>
+    <form for="submit" id="form">
+      <fieldset>
+        Cardholder Name
+        e.g. Jane Appleseed
+        Card Number
+        e.g. 1234 5678 9123 0000
+        Exp. Date (MM/YY)
+        MM
+        YY
+        CVC
+        e.g. 123
+      </fieldset>
+      <button id="submit">Confirm</button>
+    </form>
+  </section>
 
   <!-- Completed state start -->
 
-  Thank you!
-  We've added your card details
-  Continue
+  <section id="success_confirmation">
+    Thank you!
+    We've added your card details
+    Continue
+  </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

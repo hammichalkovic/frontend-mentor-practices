@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    label {
+        @apply uppercase
+    }
+
     .col_divs {
         @apply flex flex-col
     }

@@ -6,17 +6,19 @@
   <title>Frontend Mentor | Interactive card details form</title>
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
   <link href="./css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <script src="./js/main.js" defer></script>
  
 </head>
-<body>
+<body class="font-grotesk font-medium ">
 
   <section id="form_to_fill">
     <div id="card_data_places">
       <div id="back_side">
         <div id="cvc_place">000</div>
       </div>
-<abbr title="Hypertext Mark-Up Land">HTML</abbr>
       <div id="front-side">
         <div class="number_place">0000 0000 0000 0000</div>
         <div class="cardholder_name_place">Jane Appleseed</div>
@@ -27,7 +29,7 @@
     <form for="submit" id="form">
       <fieldset>
         <div class="col_divs" id="cardholder_info">
-          <label for="cardholder">Cardholder Name</label>
+          <label class="" for="cardholder">Cardholder Name</label>
           <input type="text" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed" required></input>
         </div>
         <div id="number_info" class="col_divs">

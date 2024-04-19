@@ -446,6 +446,10 @@ video {
   display: none;
 }
 
+label {
+  text-transform: uppercase;
+}
+
 .col_divs {
   display: flex;
   flex-direction: column;
@@ -559,14 +563,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.box-border {
-  box-sizing: border-box;
-}
-
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -575,10 +571,18 @@ video {
   display: none;
 }
 
+.w-\[150px\] {
+  width: 150px;
+}
+
 .w-\[350px\] {
   width: 350px;
 }
 
-.w-\[150px\] {
-  width: 150px;
+.font-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-medium {
+  font-weight: 500;
 }

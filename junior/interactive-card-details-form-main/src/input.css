@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .col_divs {
+        @apply flex flex-col
+    }
+}

@@ -16,7 +16,7 @@
       <div id="back_side">
         <div id="cvc_place">000</div>
       </div>
-
+<abbr title="Hypertext Mark-Up Land">HTML</abbr>
       <div id="front-side">
         <div class="number_place">0000 0000 0000 0000</div>
         <div class="cardholder_name_place">Jane Appleseed</div>
@@ -26,27 +26,44 @@
     </div>
     <form for="submit" id="form">
       <fieldset>
-        Cardholder Name
-        e.g. Jane Appleseed
-        Card Number
-        e.g. 1234 5678 9123 0000
-        Exp. Date (MM/YY)
-        MM
-        YY
-        CVC
-        e.g. 123
+        <div class="col_divs" id="cardholder_info">
+          <label for="cardholder">Cardholder Name</label>
+          <input type="text" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed" required></input>
+        </div>
+        <div id="number_info" class="col_divs">
+          <label for="number">Card Number</label>
+          <input type="text" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000" required></input>
+        </div>
+        <div class="flex w-[350px]" id="expdate_and_cvc">
+          <div class="w-[150px]" id="exp_date_info">
+            <label for="expdate">Exp. Date (MM/YY)</label>
+            <div class="flex " id="exp_month_year">
+              <input  type="number" name="month" id="month" placeholder="MM" required></input>
+              <input  type="number" name="year" id="year" placeholder="YY" required></input>
+            </div>
+          </div>
+          <div class="col_divs" id="cvc_info">
+            <label for="cvc">CVC</label>
+            <input type="number" name="cvc" id="cvc" placeholder="e.g. 123" required></input>
+          </div>
+        </div>
       </fieldset>
       <button id="submit">Confirm</button>
     </form>
+
+    <!-- Completed state start -->
+
+    <section class="hidden" id="success_confirmation">
+      <img src="../images/icon-complete.svg" alt="Success notification_">
+      <h1 id="success_title">Thank you!</h1>
+      <p id="success_info">We've added your card details</p>
+      <button id="continue_btn">Continue</button>
+    </section>
   </section>
 
-  <!-- Completed state start -->
+  
 
-  <section id="success_confirmation">
-    Thank you!
-    We've added your card details
-    Continue
-  </section>
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

@@ -446,6 +446,11 @@ video {
   display: none;
 }
 
+.col_divs {
+  display: flex;
+  flex-direction: column;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -552,4 +557,28 @@ video {
   --tw-contain-layout:  ;
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
+}
+
+.box-border {
+  box-sizing: border-box;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.w-\[350px\] {
+  width: 350px;
+}
+
+.w-\[150px\] {
+  width: 150px;
 }

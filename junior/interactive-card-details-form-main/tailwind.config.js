@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'grotesk': ['"Space Grotesk"', 'sans-serif']
       },
+      colors: {
+        'gray-for-card': 'hsl(215, 11%, 65%)'
+      }
     },
   },
   plugins: [],

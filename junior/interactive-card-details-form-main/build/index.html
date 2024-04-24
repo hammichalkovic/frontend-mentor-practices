@@ -16,16 +16,19 @@
 
   <section id="form_to_fill">
     <div id="card_data_places" class=" bg-[url('/images/bg-main-mobile.png')] bg-cover h-[34vh] max-w-[100%] z-10 flex flex-col text-gray-400">
-      <div id="back_side" class="box-content bg-[url('/images/bg-card-back.png')] z-20 bg-contain bg-no-repeat h-[168.97px] w-[286.13px]  self-center mt-[10vh] ml-[55px] flex flex-col justify-center items-center">
+      <div id="back_side" class="box-content bg-[url('/images/bg-card-back.png')] z-20 bg-contain bg-no-repeat h-[168.97px] w-[286.13px]  self-center mt-[4.4vh] ml-[55px] flex flex-col justify-center items-center">
         
-        <div id="card-scratch-field" class="w-[232px] h-[30px] bg-gray-for-card  rounded-[3px] ml-[0.5vw] mb-[4.8vh] ">
-          <div id="cvc_place" class="">000</div>
+        <div id="card-scratch-field" class="w-[232px] h-[30px] bg-gray-for-card  rounded-[5px] mb-[10px] ml-[2px] flex ">
+          <div id="cvc_place" class="self-center ml-auto text-[9.5px] tracking-[0.12em] font-grotesk mr-[12px]">000</div>
         </div>
       </div>
-      <div id="front-side" class="absolute bottom-0 box-content">
+      <div id="front-side" class="absolute self-center bottom-[58.2vh] box-border bg-[url('/images/bg-card-front.png')] h-[168.97px] w-[285px] bg-contain bg-no-repeat z-30 mr-[56px] p-4">
+        <img src="/images/card-logo.svg" class=" w-[55px] h-[31.63px]" alt="The logo of the bank">
         <div class="number_place">0000 0000 0000 0000</div>
-        <div class="cardholder_name_place">Jane Appleseed</div>
-        <div class="exp_date_place">00/00</div>
+        <div class="flex" id="name_date_place">
+          <div class="cardholder_name_place uppercase">Jane Appleseed</div>
+          <div class="exp_date_place">00/00</div>
+        </div>
       </div>
       
     </div>

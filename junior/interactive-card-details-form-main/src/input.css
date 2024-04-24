@@ -11,3 +11,9 @@
         @apply flex flex-col
     }
 }
+
+@layer components {
+    #card_data_places {
+        @apply text-custom-white 
+    }
+}

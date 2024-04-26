@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        @apply tracking-[0.07em]
+    }
+
     label {
         @apply uppercase
     }

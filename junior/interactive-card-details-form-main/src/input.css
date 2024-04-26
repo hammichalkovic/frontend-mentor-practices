@@ -11,6 +11,18 @@
         @apply uppercase
     }
 
+    input {
+        @apply border border-light-grayish-violet-brd text-[17px]
+    }
+
+    form {
+        @apply text-very-dark-violet text-[12.2px] tracking-[0.12em] mt-[100px]
+    }
+
+    input::placeholder {
+        @apply text-light-grayish-violet
+    }
+
     .col_divs {
         @apply flex flex-col
     }

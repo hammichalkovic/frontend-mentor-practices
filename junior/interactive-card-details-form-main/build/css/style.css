@@ -451,7 +451,17 @@ body {
 }
 
 label {
+  margin-bottom: 6px;
+  margin-top: 20px;
   text-transform: uppercase;
+}
+
+input {
+  height: 45px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsl(270 3% 87% / var(--tw-border-opacity));
+  font-size: 17px;
 }
 
 form {
@@ -462,21 +472,16 @@ form {
   color: hsl(278 68% 11% / var(--tw-text-opacity));
 }
 
-input {
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: hsl(270 10% 77% / var(--tw-border-opacity));
-  font-size: 17px;
-}
-
 input::-moz-placeholder {
+  letter-spacing: 0.04em;
   --tw-text-opacity: 1;
-  color: hsl(270 10% 77% / var(--tw-text-opacity));
+  color: hsl(270 3% 80% / var(--tw-text-opacity));
 }
 
 input::placeholder {
+  letter-spacing: 0.04em;
   --tw-text-opacity: 1;
-  color: hsl(270 10% 77% / var(--tw-text-opacity));
+  color: hsl(270 3% 80% / var(--tw-text-opacity));
 }
 
 .col_divs {
@@ -617,8 +622,16 @@ input::placeholder {
   z-index: 30;
 }
 
+.-mt-\[20px\] {
+  margin-top: -20px;
+}
+
 .mb-\[10px\] {
   margin-bottom: 10px;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
 }
 
 .ml-\[2px\] {
@@ -649,6 +662,10 @@ input::placeholder {
   margin-top: 4.4vh;
 }
 
+.mt-\[6px\] {
+  margin-top: 6px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -663,6 +680,10 @@ input::placeholder {
 
 .hidden {
   display: none;
+}
+
+.h-\[160px\] {
+  height: 160px;
 }
 
 .h-\[168\.97px\] {
@@ -681,8 +702,16 @@ input::placeholder {
   height: 34vh;
 }
 
-.w-\[150px\] {
-  width: 150px;
+.h-\[400px\] {
+  height: 400px;
+}
+
+.h-\[300px\] {
+  height: 300px;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-\[232px\] {
@@ -701,8 +730,28 @@ input::placeholder {
   width: 350px;
 }
 
+.w-\[40px\] {
+  width: 40px;
+}
+
 .w-\[55px\] {
   width: 55px;
+}
+
+.w-\[70px\] {
+  width: 70px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-\[100\%\] {
@@ -725,8 +774,18 @@ input::placeholder {
   justify-content: space-between;
 }
 
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .self-center {
   align-self: center;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
 }
 
 .rounded-\[5px\] {
@@ -764,6 +823,11 @@ input::placeholder {
 
 .p-\[19\.5px\] {
   padding: 19.5px;
+}
+
+.px-\[40px\] {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .pb-\[33px\] {

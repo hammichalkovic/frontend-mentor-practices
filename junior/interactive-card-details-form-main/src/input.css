@@ -8,11 +8,11 @@
     }
 
     label {
-        @apply uppercase
+        @apply uppercase mb-[6px] mt-[20px]
     }
 
     input {
-        @apply border border-light-grayish-violet-brd text-[17px]
+        @apply border border-light-grayish-violet-brd text-[17px] h-[45px]
     }
 
     form {
@@ -20,7 +20,7 @@
     }
 
     input::placeholder {
-        @apply text-light-grayish-violet
+        @apply text-light-grayish-violet tracking-[0.04em]
     }
 
     .col_divs {

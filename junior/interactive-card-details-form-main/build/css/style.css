@@ -741,6 +741,42 @@ input::placeholder {
   height: 400px;
 }
 
+.h-\[45px\] {
+  height: 45px;
+}
+
+.h-\[350px\] {
+  height: 350px;
+}
+
+.h-\[320px\] {
+  height: 320px;
+}
+
+.h-\[310px\] {
+  height: 310px;
+}
+
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[295px\] {
+  height: 295px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[53px\] {
+  height: 53px;
+}
+
+.h-\[52px\] {
+  height: 52px;
+}
+
 .w-\[164px\] {
   width: 164px;
 }
@@ -771,6 +807,10 @@ input::placeholder {
 
 .w-\[72px\] {
   width: 72px;
+}
+
+.w-\[100vw\] {
+  width: 100vw;
 }
 
 .max-w-\[100\%\] {
@@ -805,9 +845,27 @@ input::placeholder {
   border-radius: 5px;
 }
 
+.rounded-\[8px\] {
+  border-radius: 8px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-very-dark-violet {
+  --tw-border-opacity: 1;
+  border-color: hsl(278 68% 11% / var(--tw-border-opacity));
+}
+
 .bg-gray-for-card {
   --tw-bg-opacity: 1;
   background-color: hsl(215 11% 75% / var(--tw-bg-opacity));
+}
+
+.bg-very-dark-violet {
+  --tw-bg-opacity: 1;
+  background-color: hsl(278 68% 11% / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/images\/bg-card-back\.png\'\)\] {
@@ -858,6 +916,18 @@ input::placeholder {
   font-size: 9.5px;
 }
 
+.text-\[18px\] {
+  font-size: 18px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.text-\[17px\] {
+  font-size: 17px;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -874,7 +944,20 @@ input::placeholder {
   letter-spacing: 0.1em;
 }
 
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.tracking-normal {
+  letter-spacing: 0em;
+}
+
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-custom-white {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 100% / var(--tw-text-opacity));
 }

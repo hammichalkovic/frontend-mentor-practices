@@ -12,7 +12,7 @@
     }
 
     input {
-        @apply border border-light-grayish-violet-brd text-[17px] h-[45px]
+        @apply border border-light-grayish-violet-brd text-[17px] h-[45px] rounded-[8px] pl-[15px]
     }
 
     form {

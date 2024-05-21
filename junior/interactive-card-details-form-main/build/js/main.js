@@ -8,5 +8,23 @@ let cardholderNameInput = document.getElementById('cardholder'),
     cardNumberDisp = document.getElementsByClassName('number_place'),
     expMonthDisp = document.getElementById('exp_month_place'),
     expYearDisp = document.getElementById('exp_year_place'),
-    cvcDisp = document.getElementById('cvc_place');
+    cvcDisp = document.getElementById('cvc_place'),
+    inputsArr = [cardholderNameInput, cardNumberInput, expMonthInput, expYearInput, cvcInput];
 
+    function errFocusOut(item) {
+            item.classList.add('border-light-grayish-violet-brd');
+            item.classList.remove('border-err-red');
+    }
+
+    function okFocusOut(item) {
+        item.classList.add('border-light-grayish-violet-brd');
+        item.classList.remove('border-err-red');
+    }
+
+    cardholderNameInput.addEventListener('focusout', () => {
+        if (cardholderNameInput.value == '') {
+            cardholderNameInput.classList.add('border-err-red');
+            cardholderNameInput.classList.remove('border-light-grayish-violet-brd');
+        
+        }
+    })

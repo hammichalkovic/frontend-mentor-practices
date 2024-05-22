@@ -1,7 +1,9 @@
 input:focus-within {
     background:
-        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) padding-box,
-        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
-    /* border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%))  ;
-    border-image-radius: 8px; */
+        linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%)) padding-box
+        ,
+        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box
+        ;
+        border-radius: 8px;
+        border: 1px solid transparent;
 }

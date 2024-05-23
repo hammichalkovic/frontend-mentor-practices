@@ -605,6 +605,11 @@ input::placeholder {
   color: hsl(0 0% 100% / var(--tw-text-opacity));
 }
 
+.notifications_errs {
+  position: relative;
+  white-space: nowrap;
+}
+
 .absolute {
   position: absolute;
 }

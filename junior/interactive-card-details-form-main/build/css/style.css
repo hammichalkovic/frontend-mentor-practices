@@ -831,6 +831,11 @@ input::placeholder {
   border-width: 1px;
 }
 
+.border-err-red {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 66% / var(--tw-border-opacity));
+}
+
 .border-light-grayish-violet-brd {
   --tw-border-opacity: 1;
   border-color: hsl(270 3% 87% / var(--tw-border-opacity));
@@ -839,11 +844,6 @@ input::placeholder {
 .border-red-700 {
   --tw-border-opacity: 1;
   border-color: rgb(185 28 28 / var(--tw-border-opacity));
-}
-
-.border-err-red {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 100% 66% / var(--tw-border-opacity));
 }
 
 .bg-very-dark-violet {

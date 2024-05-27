@@ -19,34 +19,46 @@ let cardholderNameInput = document.getElementById('cardholder'),
     function errFocusOut(item) {
         item.classList.remove('border-light-grayish-violet-brd');
         item.classList.add('border-err-red');
-        console.log('Focus Out!');
+        console.log('Err Focus Out!');
     }
 
     function okFocusOut(item) {
         item.classList.remove('border-err-red');
         item.classList.add('border-light-grayish-violet-brd');
+        console.log('OK Focus Out!');
         
     }
 
-    for (let i = 0; i < inputsArr.length; i++) {
+    // for (let i = 0; i < inputsArr.length; i++) {
 
-        inputsArr[i].addEventListener('focusout', () => {
-            if (!inputsArr[i].value == '') {
-                okFocusOut(inputsArr[i]);
-            } else {
-                errFocusOut(inputsArr[i]);
-            }
-        })            
+    //     inputsArr[i].addEventListener('focusout', () => {
+    //         if (!inputsArr[i].value == '') {
+    //             okFocusOut(inputsArr[i]);
+    //         } else {
+    //             errFocusOut(inputsArr[i]);
+    //         }
+    //     })            
 
-    }
+    // }
 
     cardNumberInput.addEventListener('focusout', () => {
-        if (!isNaN(cardNumberInput.value)) {
-            okFocusOut(cardNumberInput);
-        } else if (cardNumberInput.value == ''){
+        if ( cardNumberInput.value == '' ) {
             errFocusOut(cardNumberInput);
-        } else {
+            console.log("Can't be blank");
+        } else if ( isNaN(cardNumberInput.value) === true ) {
             errFocusOut(cardNumberInput);
+            console.log("Wrong format, numbers only");
+        } else if (!isNaN(cardNumberInput.value) && cardNumberInput.value != '') {
+            if (cardNumberInput.value.length > 16) {
+                errFocusOut(cardNumberInput);
+                console.log('Number has more than 16 digits');
+            } else if (cardNumberInput.value.length < 16) {
+                errFocusOut(cardNumberInput);
+                console.log('Number has less than 16 digits');
+            } else if (cardNumberInput.value.length == 16) {
+                okFocusOut(cardNumberInput);
+                console.log('Card number is right!')
+            }
         }
     })
 

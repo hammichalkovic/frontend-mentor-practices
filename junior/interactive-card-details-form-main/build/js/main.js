@@ -41,6 +41,13 @@ let cardholderNameInput = document.getElementById('cardholder'),
 
     // }
 
+    cardNumberInput.addEventListener('input', () => {
+
+        if (cardNumberInput.value.length > 4) {
+            cardNumberInput = cardNumberInput + ' ';
+        }
+    })
+
     cardNumberInput.addEventListener('focusout', () => {
         if ( cardNumberInput.value == '' ) {
             errFocusOut(cardNumberInput);

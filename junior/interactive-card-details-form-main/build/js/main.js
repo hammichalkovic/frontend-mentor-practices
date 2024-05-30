@@ -41,18 +41,40 @@ let cardholderNameInput = document.getElementById('cardholder'),
 
     // }
 
+
+
+
+
     cardNumberInput.addEventListener('input', () => {
 
-        if (cardNumberInput.value.length > 4) {
-            cardNumberInput = cardNumberInput + ' ';
+        if ( cardNumberInput.value.length == 4 ||
+             cardNumberInput.value.length == 9 ||
+             cardNumberInput.value.length == 14 ) {
+                cardNumberInput.value = cardNumberInput.value + ' ';
+            }
+
+        
+    })
+
+    cardNumberInput.addEventListener('keydown', (e) => {
+        if(e.key === 'Backspace' && cardNumberInput.value.length == 15 ||
+           e.key === 'Backspace' && cardNumberInput.value.length == 10 ||
+           e.key === 'Backspace' && cardNumberInput.value.length == 5
+        ) {
+            cardNumberInput.value = cardNumberInput.value.slice(0, -1);
         }
     })
+
+
+
+
+
 
     cardNumberInput.addEventListener('focusout', () => {
         if ( cardNumberInput.value == '' ) {
             errFocusOut(cardNumberInput);
             console.log("Can't be blank");
-        } else if ( isNaN(cardNumberInput.value) === true ) {
+        } else if ( isNaN(cardNumberInput.value) === true || cardNumberInput.value.matches(' ')) {
             errFocusOut(cardNumberInput);
             console.log("Wrong format, numbers only");
         } else if (!isNaN(cardNumberInput.value) && cardNumberInput.value != '') {

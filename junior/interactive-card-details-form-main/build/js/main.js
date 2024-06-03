@@ -13,6 +13,8 @@ let cardholderNameInput = document.getElementById('cardholder'),
     numberErrNotif = document.getElementById('number_err'),
     expErrNotif = document.getElementById('exp_err'),
     cvcErrNotif = document.getElementById('cvc_err'),
+    whitespacePattern = ' ',
+    cardNumberString = '',
     inputsArr = [cardholderNameInput, cardNumberInput, expMonthInput, expYearInput, cvcInput],
     errNotifNumberFormatArr = [numberErrNotif, expErrNotif, cvcErrNotif];
 
@@ -47,6 +49,13 @@ let cardholderNameInput = document.getElementById('cardholder'),
 
     cardNumberInput.addEventListener('input', () => {
 
+        cardNumberString = cardNumberInput.value;
+        cardNumberString = cardNumberString.split(' ');
+        cardNumberString = cardNumberString.join('');
+        console.log(cardNumberString);
+
+
+
         if ( cardNumberInput.value.length == 4 ||
              cardNumberInput.value.length == 9 ||
              cardNumberInput.value.length == 14 ) {
@@ -57,7 +66,11 @@ let cardholderNameInput = document.getElementById('cardholder'),
     })
 
     cardNumberInput.addEventListener('keydown', (e) => {
-        if(e.key === 'Backspace' && cardNumberInput.value.length == 15 ||
+        if (e.key == 'Space') {
+            return false;
+
+
+        } else if (e.key === 'Backspace' && cardNumberInput.value.length == 15 ||
            e.key === 'Backspace' && cardNumberInput.value.length == 10 ||
            e.key === 'Backspace' && cardNumberInput.value.length == 5
         ) {
@@ -74,17 +87,17 @@ let cardholderNameInput = document.getElementById('cardholder'),
         if ( cardNumberInput.value == '' ) {
             errFocusOut(cardNumberInput);
             console.log("Can't be blank");
-        } else if ( isNaN(cardNumberInput.value) === true || cardNumberInput.value.matches(' ')) {
+        } else if ( isNaN(cardNumberString) === true || cardNumberString.match(' ')) {
             errFocusOut(cardNumberInput);
             console.log("Wrong format, numbers only");
-        } else if (!isNaN(cardNumberInput.value) && cardNumberInput.value != '') {
-            if (cardNumberInput.value.length > 16) {
+        } else if (!isNaN(cardNumberString)) {
+            if (cardNumberString.length > 16) {
                 errFocusOut(cardNumberInput);
                 console.log('Number has more than 16 digits');
-            } else if (cardNumberInput.value.length < 16) {
+            } else if (cardNumberString.length < 16) {
                 errFocusOut(cardNumberInput);
                 console.log('Number has less than 16 digits');
-            } else if (cardNumberInput.value.length == 16) {
+            } else if (cardNumberString.length == 16) {
                 okFocusOut(cardNumberInput);
                 console.log('Card number is right!')
             }

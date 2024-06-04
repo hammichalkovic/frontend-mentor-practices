@@ -15,6 +15,7 @@ let cardholderNameInput = document.getElementById('cardholder'),
     cvcErrNotif = document.getElementById('cvc_err'),
     whitespacePattern = ' ',
     cardNumberString = '',
+    cardholderArr = '',
     inputsArr = [cardholderNameInput, cardNumberInput, expMonthInput, expYearInput, cvcInput],
     errNotifNumberFormatArr = [numberErrNotif, expErrNotif, cvcErrNotif];
 
@@ -31,44 +32,35 @@ let cardholderNameInput = document.getElementById('cardholder'),
         
     }
 
-    // for (let i = 0; i < inputsArr.length; i++) {
-
-    //     inputsArr[i].addEventListener('focusout', () => {
-    //         if (!inputsArr[i].value == '') {
-    //             okFocusOut(inputsArr[i]);
-    //         } else {
-    //             errFocusOut(inputsArr[i]);
-    //         }
-    //     })            
-
-    // }
-
-
-
-
-
     cardNumberInput.addEventListener('input', () => {
 
         cardNumberString = cardNumberInput.value;
         cardNumberString = cardNumberString.split(' ');
         cardNumberString = cardNumberString.join('');
-        console.log(cardNumberString);
-
-
+        // console.log(cardNumberString);
 
         if ( cardNumberInput.value.length == 4 ||
              cardNumberInput.value.length == 9 ||
              cardNumberInput.value.length == 14 ) {
                 cardNumberInput.value = cardNumberInput.value + ' ';
             }
+    })
 
-        
+    cardholderNameInput.addEventListener('input', () => {
+        cardholderArr = cardholderNameInput.value;
+        cardholderArr = cardholderArr.split(' ');
+        console.log(cardholderArr);
+    });
+
+    cardholderNameInput.addEventListener('keydown', (e) => {
+        if (e.key  === ' ' && cardholderNameInput.value == '') {
+            e.preventDefault();
+        }
     })
 
     cardNumberInput.addEventListener('keydown', (e) => {
         if (e.key  === ' ' ) {
             e.preventDefault();
-
 
         } else if (e.key === 'Backspace' && cardNumberInput.value.length == 15 ||
            e.key === 'Backspace' && cardNumberInput.value.length == 10 ||
@@ -81,7 +73,26 @@ let cardholderNameInput = document.getElementById('cardholder'),
 
 
 
-
+    cardholderNameInput.addEventListener('focusout', () => {
+        if (cardholderNameInput.value == '' ) {
+            errFocusOut(cardholderNameInput);
+            console.log("Can't be blank");
+        } else if ( !isNaN(cardholderNameInput.value) ||
+                    parseInt(cardholderArr[0]) == NaN) {
+            errFocusOut(cardholderNameInput);
+            console.log("Wrong format, letters only");
+        } else if (!cardholderNameInput.value.match(' ') ||
+                    cardholderNameInput.value.match(' ') && cardholderArr[1] == '') {
+            errFocusOut(cardholderNameInput);
+            console.log('Last name is required');
+        } else if (cardholderArr[1] != '' && cardholderNameInput.value.length > 26) {
+            errFocusOut(cardholderNameInput);
+            console.log('The maximum length of this field is 26 characters');
+        } else if (cardholderArr[1] != '' && cardholderNameInput.value.length <= 26 ) {
+                okFocusOut(cardholderNameInput);
+                console.log('Cardholder name is right!')
+        }
+    })
 
     cardNumberInput.addEventListener('focusout', () => {
         if ( cardNumberInput.value == '' ) {
@@ -104,18 +115,6 @@ let cardholderNameInput = document.getElementById('cardholder'),
         }
     })
 
-    // for (let j = 1; j < inputsArr.length; j++) {
-    //     inputsArr[j].addEventListener('focusout', () => {
-    //         let blackBox = 0;
-
-    //         if (!Number.isNaN(inputsArr[j].value) && inputsArr[j].value != '') {
-    //             errFocusOut(inputsArr[j]);
-    //             errNotifNumberFormatArr[j].innerHTML += 'Wrong format, numbers only';
-    //         } else {
-    //             okFocusOut(inputsArr[j]);
-
-    //         }
-    //     })
-    // }
+ 
 
   

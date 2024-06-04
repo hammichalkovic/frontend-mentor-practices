@@ -66,8 +66,8 @@ let cardholderNameInput = document.getElementById('cardholder'),
     })
 
     cardNumberInput.addEventListener('keydown', (e) => {
-        if (e.key == 'Space') {
-            return false;
+        if (e.key  === ' ' ) {
+            e.preventDefault();
 
 
         } else if (e.key === 'Backspace' && cardNumberInput.value.length == 15 ||

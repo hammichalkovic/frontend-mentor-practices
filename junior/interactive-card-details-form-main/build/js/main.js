@@ -77,8 +77,7 @@ let cardholderNameInput = document.getElementById('cardholder'),
         if (cardholderNameInput.value == '' ) {
             errFocusOut(cardholderNameInput);
             console.log("Can't be blank");
-        } else if ( !isNaN(cardholderNameInput.value) ||
-                    parseInt(cardholderArr[0]) == NaN) {
+        } else if (cardholderNameInput.value.match('[0-9]')) {
             errFocusOut(cardholderNameInput);
             console.log("Wrong format, letters only");
         } else if (!cardholderNameInput.value.match(' ') ||

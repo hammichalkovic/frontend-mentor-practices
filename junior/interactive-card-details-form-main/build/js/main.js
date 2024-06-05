@@ -94,6 +94,9 @@ let cardholderNameInput = document.getElementById('cardholder'),
     })
 
     cardNumberInput.addEventListener('focusout', () => {
+        cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8, 12) + ' ' + cardNumberString.slice(12);
+
+
         if ( cardNumberInput.value == '' ) {
             errFocusOut(cardNumberInput);
             console.log("Can't be blank");

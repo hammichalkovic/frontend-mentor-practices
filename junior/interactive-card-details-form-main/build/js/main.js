@@ -94,16 +94,27 @@ let cardholderNameInput = document.getElementById('cardholder'),
     })
 
     cardNumberInput.addEventListener('focusout', () => {
-        cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8, 12) + ' ' + cardNumberString.slice(12);
+        if (cardNumberString != '') {
+            if (0 < cardNumberString.length < 5) {
+                cardNumberInput.value = cardNumberString;
+            } else if (4 < cardNumberString.length < 9) {
+                cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4);
+            } else if ( 8 < cardNumberString.length < 13) {
+                cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8);
+            } else if (cardNumberString.length > 12) {
+                cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8, 12) + ' ' + cardNumberString.slice(12);
+            }
+        };
+            
 
 
-        if ( cardNumberInput.value == '' ) {
+        if ( cardNumberString == '') {
             errFocusOut(cardNumberInput);
             console.log("Can't be blank");
         } else if ( isNaN(cardNumberString) === true || cardNumberString.match(' ')) {
             errFocusOut(cardNumberInput);
             console.log("Wrong format, numbers only");
-        } else if (!isNaN(cardNumberString)) {
+        } else if (!isNaN(cardNumberString) && cardNumberString.value != '') {
             if (cardNumberString.length > 16) {
                 errFocusOut(cardNumberInput);
                 console.log('Number has more than 16 digits');
@@ -118,5 +129,10 @@ let cardholderNameInput = document.getElementById('cardholder'),
     })
 
  
-
+    expMonthInput.addEventListener('focusout', () => {
+        if ( expMonthInput.value == '' ) {
+            errFocusOut(expMonthInput);
+            console.log("Can't be blank");
+        }
+    })
   

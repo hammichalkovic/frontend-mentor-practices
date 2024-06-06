@@ -37,13 +37,13 @@ let cardholderNameInput = document.getElementById('cardholder'),
         cardNumberString = cardNumberInput.value;
         cardNumberString = cardNumberString.split(' ');
         cardNumberString = cardNumberString.join('');
-        // console.log(cardNumberString);
+        console.log(cardNumberString);
 
-        if ( cardNumberInput.value.length == 4 ||
-             cardNumberInput.value.length == 9 ||
-             cardNumberInput.value.length == 14 ) {
-                cardNumberInput.value = cardNumberInput.value + ' ';
-            }
+        // if ( cardNumberInput.value.length == 4 ||
+        //      cardNumberInput.value.length == 9 ||
+        //      cardNumberInput.value.length == 14 ) {
+        //         cardNumberInput.value = cardNumberInput.value + ' ';
+        //     }
     })
 
     cardholderNameInput.addEventListener('input', () => {
@@ -62,13 +62,14 @@ let cardholderNameInput = document.getElementById('cardholder'),
         if (e.key  === ' ' ) {
             e.preventDefault();
 
-        } else if (e.key === 'Backspace' && cardNumberInput.value.length == 15 ||
-           e.key === 'Backspace' && cardNumberInput.value.length == 10 ||
-           e.key === 'Backspace' && cardNumberInput.value.length == 5
-        ) {
-            cardNumberInput.value = cardNumberInput.value.slice(0, -1);
-        }
-    })
+        // } else if (e.key === 'Backspace' && cardNumberInput.value.length == 15 ||
+        //    e.key === 'Backspace' && cardNumberInput.value.length == 10 ||
+        //    e.key === 'Backspace' && cardNumberInput.value.length == 5
+        // ) {
+        //     cardNumberInput.value = cardNumberInput.value.slice(0, -1);
+        // }
+    }
+});
 
 
 
@@ -91,22 +92,24 @@ let cardholderNameInput = document.getElementById('cardholder'),
                 okFocusOut(cardholderNameInput);
                 console.log('Cardholder name is right!')
         }
-    })
+    });
+         
 
     cardNumberInput.addEventListener('focusout', () => {
-        if (cardNumberString != '') {
-            if (0 < cardNumberString.length < 5) {
-                cardNumberInput.value = cardNumberString;
-            } else if (4 < cardNumberString.length < 9) {
-                cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4);
-            } else if ( 8 < cardNumberString.length < 13) {
-                cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8);
-            } else if (cardNumberString.length > 12) {
-                cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8, 12) + ' ' + cardNumberString.slice(12);
-            }
-        };
-            
 
+        // if (cardNumberString.length < 5) {
+        //     cardNumberInput.value = cardNumberString;
+        // } else if (4 < cardNumberString.length &&
+        //                cardNumberString.length < 9) {
+        //     cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4);
+        // } else if ( 8 < cardNumberString.length &&
+        //                 cardNumberString.length < 13
+        // ) {
+        //     cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8);
+        // } else if (cardNumberString.length > 12) {
+        //     cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8, 12) + ' ' + cardNumberString.slice(12);
+        // };
+        
 
         if ( cardNumberString == '') {
             errFocusOut(cardNumberInput);
@@ -126,7 +129,7 @@ let cardholderNameInput = document.getElementById('cardholder'),
                 console.log('Card number is right!')
             }
         }
-    })
+    });
 
  
     expMonthInput.addEventListener('focusout', () => {

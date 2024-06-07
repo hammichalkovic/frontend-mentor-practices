@@ -39,11 +39,11 @@ let cardholderNameInput = document.getElementById('cardholder'),
         cardNumberString = cardNumberString.join('');
         console.log(cardNumberString);
 
-        // if ( cardNumberInput.value.length == 4 ||
-        //      cardNumberInput.value.length == 9 ||
-        //      cardNumberInput.value.length == 14 ) {
-        //         cardNumberInput.value = cardNumberInput.value + ' ';
-        //     }
+        if ( cardNumberInput.value.length == 4 ||
+             cardNumberInput.value.length == 9 ||
+             cardNumberInput.value.length == 14 ) {
+                cardNumberInput.value = cardNumberInput.value + ' ';
+            }
     })
 
     cardholderNameInput.addEventListener('input', () => {
@@ -62,17 +62,38 @@ let cardholderNameInput = document.getElementById('cardholder'),
         if (e.key  === ' ' ) {
             e.preventDefault();
 
-        // } else if (e.key === 'Backspace' && cardNumberInput.value.length == 15 ||
-        //    e.key === 'Backspace' && cardNumberInput.value.length == 10 ||
-        //    e.key === 'Backspace' && cardNumberInput.value.length == 5
-        // ) {
-        //     cardNumberInput.value = cardNumberInput.value.slice(0, -1);
-        // }
-    }
-});
+        } else if (e.key === 'Backspace' && cardNumberInput.value.length == 15 ||
+                   e.key === 'Backspace' && cardNumberInput.value.length == 10 ||
+                   e.key === 'Backspace' && cardNumberInput.value.length == 5
+        ) {
+            cardNumberInput.value = cardNumberInput.value.slice(0, -1);
+        }
+    
+    });
 
+    expMonthInput.addEventListener('keydown', (e) => {
+        if (e.key === ' ') {
+            e.preventDefault();
+        }
+    });
 
+    expYearInput.addEventListener('keydown', (e) => {
+        if (e.key === ' ') {
+            e.preventDefault();
+        }
+    });
 
+    expYearInput.addEventListener('keydown', (e) => {
+        if (e.key === ' ') {
+            e.preventDefault();
+        }
+    });
+
+    cvcInput.addEventListener('keydown', (e) => {
+        if (e.key === ' ') {
+            e.preventDefault();
+        }
+    });
 
     cardholderNameInput.addEventListener('focusout', () => {
         if (cardholderNameInput.value == '' ) {
@@ -97,18 +118,18 @@ let cardholderNameInput = document.getElementById('cardholder'),
 
     cardNumberInput.addEventListener('focusout', () => {
 
-        // if (cardNumberString.length < 5) {
-        //     cardNumberInput.value = cardNumberString;
-        // } else if (4 < cardNumberString.length &&
-        //                cardNumberString.length < 9) {
-        //     cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4);
-        // } else if ( 8 < cardNumberString.length &&
-        //                 cardNumberString.length < 13
-        // ) {
-        //     cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8);
-        // } else if (cardNumberString.length > 12) {
-        //     cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8, 12) + ' ' + cardNumberString.slice(12);
-        // };
+        if (cardNumberString.length < 5) {
+            cardNumberInput.value = cardNumberString;
+        } else if (4 < cardNumberString.length &&
+                       cardNumberString.length < 9) {
+            cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4);
+        } else if ( 8 < cardNumberString.length &&
+                        cardNumberString.length < 13
+        ) {
+            cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8);
+        } else if (cardNumberString.length > 12) {
+            cardNumberInput.value = cardNumberString.slice(0, 4) + ' ' + cardNumberString.slice(4, 8) + ' ' + cardNumberString.slice(8, 12) + ' ' + cardNumberString.slice(12);
+        };
         
 
         if ( cardNumberString == '') {
@@ -136,6 +157,30 @@ let cardholderNameInput = document.getElementById('cardholder'),
         if ( expMonthInput.value == '' ) {
             errFocusOut(expMonthInput);
             console.log("Can't be blank");
+        } else if (!expMonthInput.value.match('[0-9]')) {
+            errFocusOut(expMonthInput);
+            console.log("Wrong format, numbers only");
+        } else if (expMonthInput.value < 1 || expMonthInput.value > 12) {
+            errFocusOut(expMonthInput);
+            console.log("Month should be 1 to 12");
+        } else {
+            okFocusOut(expMonthInput);
+            console.log("Exp month is right!");
+        }
+    });    
+  
+    expYearInput.addEventListener('focusout', () => {
+        if (expYearInput.value == '') {
+            errFocusOut(expYearInput);
+            console.log("Can't be blank");
+        } else if (!expYearInput.value.match('[0-9]')) {
+            errFocusOut(expYearInput);
+            console.log('Wrong format, numbers only');
+        } else if (expYearInput.value < 0 || expYearInput.value > 99 || expYearInput.value.length > 2) {
+            errFocusOut(expYearInput);
+            console.log('Year should be 00 to 99');
+        } else {
+            okFocusOut(expYearInput);
+            console.log("Exp year is right!");
         }
     })
-  

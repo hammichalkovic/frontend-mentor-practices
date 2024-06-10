@@ -16,6 +16,9 @@ let cardholderNameInput = document.getElementById('cardholder'),
     whitespacePattern = ' ',
     cardNumberString = '',
     cardholderArr = '',
+    currentDate = new Date(),
+    currentMonth = currentDate.getMonth() + 1,
+    currentYear = currentDate.getFullYear(),
     inputsArr = [cardholderNameInput, cardNumberInput, expMonthInput, expYearInput, cvcInput],
     errNotifNumberFormatArr = [numberErrNotif, expErrNotif, cvcErrNotif];
 
@@ -154,6 +157,8 @@ let cardholderNameInput = document.getElementById('cardholder'),
 
  
     expMonthInput.addEventListener('focusout', () => {
+        let currentYearFrmd = currentYear.toString().slice(2);
+
         if ( expMonthInput.value == '' ) {
             errFocusOut(expMonthInput);
             console.log("Can't be blank");
@@ -163,13 +168,27 @@ let cardholderNameInput = document.getElementById('cardholder'),
         } else if (expMonthInput.value < 1 || expMonthInput.value > 12) {
             errFocusOut(expMonthInput);
             console.log("Month should be 1 to 12");
+        } else if (0 < expMonthInput.value < 13 && expYearInput.value == '') {
+            okFocusOut(expMonthInput);
+            console.log("Exp month is right!");
+        } else if (currentYearFrmd == expYearInput.value && expMonthInput.value < currentMonth ||
+            currentYearFrmd > expYearInput.value ) {
+            errFocusOut(expYearInput);
+            errFocusOut(expMonthInput);
+            console.log('Expired card');
         } else {
+            okFocusOut(expYearInput);
             okFocusOut(expMonthInput);
             console.log("Exp month is right!");
         }
     });    
   
     expYearInput.addEventListener('focusout', () => {
+        let currentYearFrmd = currentYear.toString().slice(2);
+
+        console.log(currentYearFrmd);
+        console.log(currentMonth);
+
         if (expYearInput.value == '') {
             errFocusOut(expYearInput);
             console.log("Can't be blank");
@@ -179,8 +198,15 @@ let cardholderNameInput = document.getElementById('cardholder'),
         } else if (expYearInput.value < 0 || expYearInput.value > 99 || expYearInput.value.length > 2) {
             errFocusOut(expYearInput);
             console.log('Year should be 00 to 99');
+        } else if (currentYearFrmd == expYearInput.value && expMonthInput.value < currentMonth ||
+            currentYearFrmd > expYearInput.value ) {
+            errFocusOut(expYearInput);
+            errFocusOut(expMonthInput);
+            console.log('Expired card');
         } else {
             okFocusOut(expYearInput);
+            okFocusOut(expMonthInput);
             console.log("Exp year is right!");
         }
+       
     })

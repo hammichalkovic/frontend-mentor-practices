@@ -99,6 +99,9 @@ let cardholderNameInput = document.getElementById('cardholder'),
     });
 
     cardholderNameInput.addEventListener('focusout', () => {
+
+        
+
         if (cardholderNameInput.value == '' ) {
             errFocusOut(cardholderNameInput);
             console.log("Can't be blank");
@@ -116,6 +119,9 @@ let cardholderNameInput = document.getElementById('cardholder'),
                 okFocusOut(cardholderNameInput);
                 console.log('Cardholder name is right!')
         }
+
+        cardholderNameDisp[0].innerHTML = cardholderNameInput.value.substring(0, 26);
+        
     });
          
 
@@ -153,6 +159,8 @@ let cardholderNameInput = document.getElementById('cardholder'),
                 console.log('Card number is right!')
             }
         }
+
+        cardNumberDisp[0].innerHTML = cardNumberInput.value.substring(0, 21);
     });
 
  

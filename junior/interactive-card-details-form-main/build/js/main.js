@@ -189,6 +189,8 @@ let cardholderNameInput = document.getElementById('cardholder'),
             okFocusOut(expMonthInput);
             console.log("Exp month is right!");
         }
+
+        expMonthDisp.value = expMonthInput.value;
     });    
   
     expYearInput.addEventListener('focusout', () => {

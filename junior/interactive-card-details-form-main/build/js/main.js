@@ -210,3 +210,19 @@ let cardholderNameInput = document.getElementById('cardholder'),
         }
        
     })
+
+    cvcInput.addEventListener('focusout', () => {
+        if (cvcInput.value == '') {
+            errFocusOut(cvcInput);
+            console.log("Can't be blank");
+        } else if (!cvcInput.value.match('[0-9]')) {
+            errFocusOut(cvcInput);
+            console.log('Wrong format, numbers only');
+        } else if (cvcInput.value.length < 3 || cvcInput.value.length > 4) {
+            errFocusOut(cvcInput);
+            console.log('CVC must be 3 or 4 digits');
+        } else {
+            okFocusOut(cvcInput);
+            console.log('CVC is right!');
+        }
+    })

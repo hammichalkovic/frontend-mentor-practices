@@ -183,6 +183,9 @@ let cardholderNameInput = document.getElementById('cardholder'),
         } else if (!expMonthInput.value.match('[0-9]')) {
             errFocusOut(expMonthInput);
             console.log("Wrong format, numbers only");
+        } else if (expMonthInput.value.length != 2) {
+            errFocusOut(expMonthInput);
+            console.log('Exp month must be 2 digits');
         } else if (expMonthInput.value < 1 || expMonthInput.value > 12) {
             errFocusOut(expMonthInput);
             console.log("Month should be 1 to 12");
@@ -222,7 +225,10 @@ let cardholderNameInput = document.getElementById('cardholder'),
         } else if (!expYearInput.value.match('[0-9]')) {
             errFocusOut(expYearInput);
             console.log('Wrong format, numbers only');
-        } else if (expYearInput.value < 0 || expYearInput.value > 99 || expYearInput.value.length > 2) {
+        } else if (expYearInput.value.length != 2) {
+            errFocusOut(expYearInput);
+            console.log('Exp year must be 2 digits');
+        } else if (expYearInput.value < 0 || expYearInput.value > 99) {
             errFocusOut(expYearInput);
             console.log('Year should be 00 to 99');
         } else if (currentYearFrmd == expYearInput.value && expMonthInput.value < currentMonth ||

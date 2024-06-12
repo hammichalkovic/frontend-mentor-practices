@@ -120,7 +120,12 @@ let cardholderNameInput = document.getElementById('cardholder'),
                 console.log('Cardholder name is right!')
         }
 
-        cardholderNameDisp[0].innerHTML = cardholderNameInput.value.substring(0, 26);
+        if (cardholderNameInput.value == '') {
+
+        } else {
+            cardholderNameDisp[0].innerHTML = cardholderNameInput.value.substring(0, 26);
+        }
+        
         
     });
          
@@ -160,7 +165,12 @@ let cardholderNameInput = document.getElementById('cardholder'),
             }
         }
 
-        cardNumberDisp[0].innerHTML = cardNumberInput.value.substring(0, 21);
+        if (cardNumberInput.value == '') {
+            
+        } else {
+            cardNumberDisp[0].innerHTML = cardNumberInput.value.substring(0, 21);
+        }
+        
     });
 
  
@@ -190,7 +200,14 @@ let cardholderNameInput = document.getElementById('cardholder'),
             console.log("Exp month is right!");
         }
 
-        expMonthDisp.value = expMonthInput.value;
+
+        // if (expMonthInput.value == '') {
+            
+        // } else {
+        //     expMonthDisp.value = expMonthInput.value;
+        // }
+
+        
     });    
   
     expYearInput.addEventListener('focusout', () => {

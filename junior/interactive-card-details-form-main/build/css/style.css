@@ -815,12 +815,6 @@ input::placeholder {
   align-self: center;
 }
 
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .text-clip {
   text-overflow: clip;
 }

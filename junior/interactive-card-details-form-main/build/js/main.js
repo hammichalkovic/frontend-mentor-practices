@@ -204,11 +204,11 @@ let cardholderNameInput = document.getElementById('cardholder'),
         }
 
 
-        // if (expMonthInput.value == '') {
+        if (expMonthInput.value == '') {
             
-        // } else {
-        //     expMonthDisp.value = expMonthInput.value;
-        // }
+        } else {
+            expMonthDisp.innerHTML = expMonthInput.value;
+        }
 
         
     });    
@@ -241,6 +241,12 @@ let cardholderNameInput = document.getElementById('cardholder'),
             okFocusOut(expMonthInput);
             console.log("Exp year is right!");
         }
+
+        if (expYearInput.value == '') {
+            
+        } else {
+            expYearDisp.innerHTML = expYearInput.value;
+        }
        
     })
 
@@ -257,5 +263,11 @@ let cardholderNameInput = document.getElementById('cardholder'),
         } else {
             okFocusOut(cvcInput);
             console.log('CVC is right!');
+        }
+
+        if (cvcInput.value == '') {
+            
+        } else {
+            cvcDisp.innerHTML = cvcInput.value;
         }
     })

@@ -1,4 +1,5 @@
-let cardholderNameInput = document.getElementById('cardholder'),
+let form = document.getElementById('form'),
+    cardholderNameInput = document.getElementById('cardholder'),
     cardNumberInput = document.getElementById('number'),
     expMonthInput = document.getElementById('month'),
     expYearInput = document.getElementById('year'),
@@ -25,12 +26,15 @@ let cardholderNameInput = document.getElementById('cardholder'),
     function errFocusOut(item) {
         item.classList.remove('border-light-grayish-violet-brd');
         item.classList.add('border-err-red');
+        item.setAttribute('aria-invalid', 'true');
         console.log('Err Focus Out!');
+        
     }
 
     function okFocusOut(item) {
         item.classList.remove('border-err-red');
         item.classList.add('border-light-grayish-violet-brd');
+        item.setAttribute('aria-invalid', 'false');
         console.log('OK Focus Out!');
         
     }
@@ -269,5 +273,18 @@ let cardholderNameInput = document.getElementById('cardholder'),
             
         } else {
             cvcDisp.innerHTML = cvcInput.value;
+        }
+    })
+
+
+    confirmBtn.addEventListener('click', () => {
+        
+
+        for (i = 0; i < inputsArr; i++) {
+            if (inputsArr[i].getAttribute('aria-invalid') == 'true' || inputsArr[i].getAtttribute('aria-invalild' == 'true')) {
+                confirmBtn.preventDefault();
+            } else if (inputsArr[i].getAttribute('aria-invalid') == 'false') {
+                form.classList.add('hidden');
+            }
         }
     })

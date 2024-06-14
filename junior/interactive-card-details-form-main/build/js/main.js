@@ -278,13 +278,11 @@ let form = document.getElementById('form'),
 
 
     confirmBtn.addEventListener('click', () => {
-        
+        // form.click();
+        inputsArr.forEach(item => {
+            item.innerHTML = 'Click!';
+        })
+        console.log('button clicked!')
 
-        for (i = 0; i < inputsArr; i++) {
-            if (inputsArr[i].getAttribute('aria-invalid') == 'true' || inputsArr[i].getAtttribute('aria-invalild' == 'true')) {
-                confirmBtn.preventDefault();
-            } else if (inputsArr[i].getAttribute('aria-invalid') == 'false') {
-                form.classList.add('hidden');
-            }
-        }
+        
     })

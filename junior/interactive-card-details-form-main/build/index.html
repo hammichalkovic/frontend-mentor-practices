@@ -38,21 +38,21 @@
       <fieldset class="h-[295px] w-[327px] mx-auto sm:w-[382px] sm:h-[319px] ">
         <div class="col_divs" id="cardholder_info">
           <label class="" for="cardholder">Cardholder Name</label>
-          <input type="text" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed"  class="border sm:focus-within:outline-grad  border-light-grayish-violet-brd "></input>
+          <input type="text" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed" aria-invalid="true"  class="border sm:focus-within:outline-grad  border-light-grayish-violet-brd "></input>
           <span class="notifications_errs" id="cardholder_err"></span>
         </div>
         <div id="number_info" class="col_divs mb-[20px] sm:mt-[5px]">
           <label for="number">Card Number</label>
-          <input type="text" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000"  class="border border-light-grayish-violet-brd"></input>
+          <input type="text" name="number" id="number" aria-invalid="true" placeholder="e.g. 1234 5678 9123 0000"  class="border border-light-grayish-violet-brd"></input>
           <span class="notifications_errs" id="number_err"></span>
         </div>
         <div class="flex w-[327px] sm:w-[382px] " id="expdate_and_cvc">
           <div class="h-[160px] w-[200px] sm:mt-[6px]" id="exp_date_info ">
             <label for="year" class=" text-nowrap">Exp. Date (MM/YY)</label>
             <div class="flex mt-[6px]" id="exp_month_year">
-              <input class="w-[72px] sm:w-[80px] mr-[8px] sm:mr-[10px] border border-light-grayish-violet-brd " maxlength="2"  name="month" id="month" placeholder="MM" ></input>
-              <input class="w-[72px] sm:w-[80px] border border-light-grayish-violet-brd " maxlength="2" name="year" id="year" placeholder="YY" ></input>
-              <span class="notifications_errs" id="exp_err"></span>
+              <input class="w-[72px] sm:w-[80px] mr-[8px] sm:mr-[10px] border border-light-grayish-violet-brd " maxlength="2"  name="month" id="month" placeholder="MM" aria-invalid="true"></input>
+              <input class="w-[72px] sm:w-[80px] border border-light-grayish-violet-brd " maxlength="2" name="year" id="year" placeholder="YY" aria-invalid="true"></input>
+              <span class="notifications_errs" id="exp_err" aria-invalid="true"></span>
             </div>
           </div>
           <div class="col_divs -mt-[20px]" id="cvc_info">
@@ -62,7 +62,7 @@
           </div>
         </div>
       </fieldset>
-      <button id="submit" class=" h-[53px] w-[327px] sm:w-[382px] text-[18px] tracking-normal rounded-[8px] mx-auto text-custom-white bg-very-dark-violet">Confirm</button>
+      <button id="submit" type="button" class=" h-[53px] w-[327px] sm:w-[382px] text-[18px] tracking-normal rounded-[8px] mx-auto text-custom-white bg-very-dark-violet">Confirm</button>
     </form>
 
     <!-- Completed state start -->

@@ -277,12 +277,17 @@ let form = document.getElementById('form'),
     })
 
 
-    confirmBtn.addEventListener('click', () => {
-        // form.click();
-        inputsArr.forEach(item => {
-            item.innerHTML = 'Click!';
+    confirmBtn.addEventListener('click', (e) => {
+        if (inputsArr.includes(item => item.getAttribute('aria-invalid') == 'true')) { 
+                e.preventDefault();
+        } else if (inputsArr.forEach(item => item.getAttribute('aria-invalid') == 'false')) 
+            // if (!item.getAttribute('aria-invalid') == 'true')
+                 {
+                form.classList.add('hidden');
+            }
+            // item.setAttribute('aria-invalid', 'false');
         })
+
         console.log('button clicked!')
 
         
-    })

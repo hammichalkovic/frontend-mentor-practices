@@ -278,16 +278,19 @@ let form = document.getElementById('form'),
 
 
     confirmBtn.addEventListener('click', (e) => {
-        if (inputsArr.includes(item => item.getAttribute('aria-invalid') == 'true')) { 
-                e.preventDefault();
-        } else if (inputsArr.forEach(item => item.getAttribute('aria-invalid') == 'false')) 
-            // if (!item.getAttribute('aria-invalid') == 'true')
-                 {
-                form.classList.add('hidden');
-            }
-            // item.setAttribute('aria-invalid', 'false');
-        })
+        
+        let inputsAriaInvalidValsArr = [cardholderNameInput.attributes[0].value, cardNumberInput.attributes[0].value, expMonthInput.attributes[0].value, expYearInput.attributes[0].value, cvcInput.attributes[0].value];
+            
+        let ariaInvalidCheckArr = inputsAriaInvalidValsArr.filter(item => item == 'false')
 
-        console.log('button clicked!')
+
+        if (ariaInvalidCheckArr.length == 5) {
+            form.classList.add('hidden');
+        } else {
+            e.preventDefault();
+        }
+    });
+
+
 
         

@@ -850,6 +850,11 @@ input::placeholder {
   border-color: rgb(185 28 28 / var(--tw-border-opacity));
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .bg-very-dark-violet {
   --tw-bg-opacity: 1;
   background-color: hsl(278 68% 11% / var(--tw-bg-opacity));
@@ -923,6 +928,46 @@ input::placeholder {
   font-size: 9.5px;
 }
 
+.text-\[2rem\] {
+  font-size: 2rem;
+}
+
+.text-\[6rem\] {
+  font-size: 6rem;
+}
+
+.text-\[3rem\] {
+  font-size: 3rem;
+}
+
+.text-\[1\.5rem\] {
+  font-size: 1.5rem;
+}
+
+.text-\[1\.7rem\] {
+  font-size: 1.7rem;
+}
+
+.text-\[1\.8rem\] {
+  font-size: 1.8rem;
+}
+
+.text-\[1\.8em\] {
+  font-size: 1.8em;
+}
+
+.text-\[1\.75em\] {
+  font-size: 1.75em;
+}
+
+.text-\[1\.72em\] {
+  font-size: 1.72em;
+}
+
+.text-\[1\.73em\] {
+  font-size: 1.73em;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -955,6 +1000,11 @@ input::placeholder {
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-very-dark-violet {
+  --tw-text-opacity: 1;
+  color: hsl(278 68% 11% / var(--tw-text-opacity));
 }
 
 .filter {

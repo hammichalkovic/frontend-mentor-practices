@@ -34,7 +34,7 @@
       </div>
       
     </div>
-    <form for="submit" id="form"  class=" mt-[10vh] w-[100vw] flex flex-col sm:absolute sm:left-[19.9vw] sm:top-[18.6vh]">
+    <form for="submit" id="form"  class="hidden mt-[10vh] w-[100vw] flex flex-col sm:absolute sm:left-[19.9vw] sm:top-[18.6vh]">
       <fieldset class="h-[295px] w-[327px] mx-auto sm:w-[382px] sm:h-[319px] ">
         <div class="col_divs" id="cardholder_info">
           <label class="" for="cardholder">Cardholder Name</label>
@@ -67,11 +67,11 @@
 
     <!-- Completed state start -->
 
-    <section class="hidden" id="success_confirmation">
-      <img src="../images/icon-complete.svg" alt="Success notification_">
-      <h1 id="success_title">Thank you!</h1>
+    <section class=" flex flex-col items-center border border-black" id="success_confirmation">
+      <img src="../images/icon-complete.svg" alt="Success notification_" width="80" height="80">
+      <h1 id="success_title" class="uppercase text-[1.73em] text-very-dark-violet">Thank you!</h1>
       <p id="success_info">We've added your card details</p>
-      <button id="continue_btn">Continue</button>
+      <button id="continue_btn" class=" h-[53px] w-[327px] sm:w-[382px] text-[18px] tracking-normal rounded-[8px] mx-auto text-custom-white bg-very-dark-violet">Continue</button>
     </section>
   </section>
 

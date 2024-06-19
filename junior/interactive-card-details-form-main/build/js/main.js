@@ -14,6 +14,7 @@ let form = document.getElementById('form'),
     numberErrNotif = document.getElementById('number_err'),
     expErrNotif = document.getElementById('exp_err'),
     cvcErrNotif = document.getElementById('cvc_err'),
+    successCnfrm = document.getElementById('success_confirmation'),
     whitespacePattern = ' ',
     cardNumberString = '',
     cardholderArr = '',
@@ -290,6 +291,7 @@ let form = document.getElementById('form'),
 
         if (ariaInvalidCheckArr.length == 5) {
             form.classList.add('hidden');
+            successCnfrm.classList.remove('hidden');
         } else {
             e.preventDefault();
         }

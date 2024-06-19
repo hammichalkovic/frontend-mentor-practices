@@ -240,6 +240,10 @@ let form = document.getElementById('form'),
             errFocusOut(expYearInput);
             errFocusOut(expMonthInput);
             console.log('Expired card');
+        } else if (currentYearFrmd == expYearInput.value && expMonthInput.value >= currentMonth && expMonthInput.value.length != 2 || currentYearFrmd <= expYearInput.value && expMonthInput.value.length != 2) {
+            okFocusOut(expYearInput);
+            errFocusOut(expMonthInput);
+            console.log('Exp year must be 2 digits');
         } else {
             okFocusOut(expYearInput);
             okFocusOut(expMonthInput);

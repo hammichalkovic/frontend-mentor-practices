@@ -16,10 +16,10 @@ module.exports = {
         'light-grayish-violet': 'hsl(270, 3%, 80%)',
         'light-grayish-violet-brd': 'hsl(270, 3%, 87%)',
         'dark-grayish-violet': 'hsl(278, 68%, 11%)',
-        'very-dark-violet': 'hsl(278, 68%, 11%)'
-      }
+        'very-dark-violet': 'hsl(278, 68%, 11%)',
+        'dgv-color': 'hsl(279, 6%, 55%)',
     },
   },
   plugins: [],
 }
-
+};

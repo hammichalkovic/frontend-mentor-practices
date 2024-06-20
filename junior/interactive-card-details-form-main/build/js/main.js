@@ -15,6 +15,7 @@ let form = document.getElementById('form'),
     expErrNotif = document.getElementById('exp_err'),
     cvcErrNotif = document.getElementById('cvc_err'),
     successCnfrm = document.getElementById('success_confirmation'),
+    continueBtn = document.getElementById('continue_btn'),
     whitespacePattern = ' ',
     cardNumberString = '',
     cardholderArr = '',
@@ -296,6 +297,10 @@ let form = document.getElementById('form'),
             e.preventDefault();
         }
     });
+
+    continueBtn.addEventListener('click', () => {
+        location.reload();
+    })
 
 
 

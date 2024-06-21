@@ -663,6 +663,10 @@ input::placeholder {
   margin-bottom: 35px;
 }
 
+.mb-\[40px\] {
+  margin-bottom: 40px;
+}
+
 .ml-\[3px\] {
   margin-left: 3px;
 }
@@ -699,6 +703,10 @@ input::placeholder {
   margin-top: 12px;
 }
 
+.mt-\[27px\] {
+  margin-top: 27px;
+}
+
 .mt-\[33px\] {
   margin-top: 33px;
 }
@@ -707,72 +715,16 @@ input::placeholder {
   margin-top: 4.4vh;
 }
 
-.mt-\[6px\] {
-  margin-top: 6px;
-}
-
-.mt-\[30px\] {
-  margin-top: 30px;
-}
-
-.mt-\[70px\] {
-  margin-top: 70px;
-}
-
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
-.mt-\[90px\] {
-  margin-top: 90px;
-}
-
-.mt-\[3px\] {
-  margin-top: 3px;
-}
-
 .mt-\[5px\] {
   margin-top: 5px;
 }
 
-.mt-\[4px\] {
-  margin-top: 4px;
+.mt-\[6px\] {
+  margin-top: 6px;
 }
 
-.mb-\[30px\] {
-  margin-bottom: 30px;
-}
-
-.mb-\[45px\] {
-  margin-bottom: 45px;
-}
-
-.mt-\[15px\] {
-  margin-top: 15px;
-}
-
-.mt-\[24px\] {
-  margin-top: 24px;
-}
-
-.mt-\[35px\] {
-  margin-top: 35px;
-}
-
-.mt-\[25px\] {
-  margin-top: 25px;
-}
-
-.mt-\[27px\] {
-  margin-top: 27px;
-}
-
-.mt-\[26px\] {
-  margin-top: 26px;
-}
-
-.mb-\[40px\] {
-  margin-bottom: 40px;
+.mt-\[90px\] {
+  margin-top: 90px;
 }
 
 .box-border {
@@ -791,12 +743,12 @@ input::placeholder {
   height: 160px;
 }
 
-.h-\[295px\] {
-  height: 295px;
+.h-\[292px\] {
+  height: 292px;
 }
 
-.h-\[300px\] {
-  height: 300px;
+.h-\[295px\] {
+  height: 295px;
 }
 
 .h-\[30px\] {
@@ -817,22 +769,6 @@ input::placeholder {
 
 .h-\[60px\] {
   height: 60px;
-}
-
-.h-\[280px\] {
-  height: 280px;
-}
-
-.h-\[290px\] {
-  height: 290px;
-}
-
-.h-\[292px\] {
-  height: 292px;
-}
-
-.h-\[293px\] {
-  height: 293px;
 }
 
 .w-\[100vw\] {
@@ -917,11 +853,6 @@ input::placeholder {
 
 .border {
   border-width: 1px;
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .border-err-red {
@@ -1049,24 +980,19 @@ input::placeholder {
   color: hsl(0 0% 100% / var(--tw-text-opacity));
 }
 
+.text-dgv-color {
+  --tw-text-opacity: 1;
+  color: hsl(279 6% 55% / var(--tw-text-opacity));
+}
+
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-light-grayish-violet-brd {
-  --tw-text-opacity: 1;
-  color: hsl(270 3% 87% / var(--tw-text-opacity));
-}
-
 .text-very-dark-violet {
   --tw-text-opacity: 1;
   color: hsl(278 68% 11% / var(--tw-text-opacity));
-}
-
-.text-dgv-color {
-  --tw-text-opacity: 1;
-  color: hsl(279 6% 55% / var(--tw-text-opacity));
 }
 
 .filter {
@@ -1150,6 +1076,30 @@ input::placeholder {
     margin-top: 6px;
   }
 
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .sm\:mr-\[20vw\] {
+    margin-right: 20vw;
+  }
+
+  .sm\:mr-\[15vw\] {
+    margin-right: 15vw;
+  }
+
+  .sm\:mr-\[16vw\] {
+    margin-right: 16vw;
+  }
+
+  .sm\:mr-\[15\.8vw\] {
+    margin-right: 15.8vw;
+  }
+
+  .sm\:mr-\[15\.7vw\] {
+    margin-right: 15.7vw;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -1210,6 +1160,10 @@ input::placeholder {
     flex-direction: column-reverse;
   }
 
+  .sm\:self-center {
+    align-self: center;
+  }
+
   .sm\:bg-\[url\(\'\/images\/bg-main-desktop\.png\'\)\] {
     background-image: url('/images/bg-main-desktop.png');
   }
@@ -1238,6 +1192,30 @@ input::placeholder {
     font-size: 28px;
   }
 
+  .sm\:text-\[1em\] {
+    font-size: 1em;
+  }
+
+  .sm\:text-\[1\.05em\] {
+    font-size: 1.05em;
+  }
+
+  .sm\:text-\[1\.1em\] {
+    font-size: 1.1em;
+  }
+
+  .sm\:text-\[1\.2em\] {
+    font-size: 1.2em;
+  }
+
+  .sm\:text-\[1\.12em\] {
+    font-size: 1.12em;
+  }
+
+  .sm\:text-\[1\.11em\] {
+    font-size: 1.11em;
+  }
+
   .sm\:tracking-\[0\.11em\] {
     letter-spacing: 0.11em;
   }
@@ -1248,6 +1226,54 @@ input::placeholder {
 
   .sm\:tracking-\[0\.14em\] {
     letter-spacing: 0.14em;
+  }
+
+  .sm\:tracking-\[0\.1em\] {
+    letter-spacing: 0.1em;
+  }
+
+  .sm\:tracking-\[0\.05em\] {
+    letter-spacing: 0.05em;
+  }
+
+  .sm\:tracking-\[0\.03em\] {
+    letter-spacing: 0.03em;
+  }
+
+  .sm\:tracking-\[0\.025em\] {
+    letter-spacing: 0.025em;
+  }
+
+  .sm\:tracking-\[0\.020em\] {
+    letter-spacing: 0.020em;
+  }
+
+  .sm\:tracking-\[0\.018em\] {
+    letter-spacing: 0.018em;
+  }
+
+  .sm\:tracking-\[0\.016em\] {
+    letter-spacing: 0.016em;
+  }
+
+  .sm\:tracking-\[0\.015em\] {
+    letter-spacing: 0.015em;
+  }
+
+  .sm\:tracking-\[0\.013em\] {
+    letter-spacing: 0.013em;
+  }
+
+  .sm\:tracking-\[0\.012em\] {
+    letter-spacing: 0.012em;
+  }
+
+  .sm\:tracking-\[0\.01em\] {
+    letter-spacing: 0.01em;
+  }
+
+  .sm\:tracking-\[0\.009em\] {
+    letter-spacing: 0.009em;
   }
 }
 

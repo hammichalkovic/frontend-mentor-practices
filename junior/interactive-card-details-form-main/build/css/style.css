@@ -999,6 +999,62 @@ input::placeholder {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.before\:relative::before {
+  content: var(--tw-content);
+  position: relative;
+}
+
+.before\:block::before {
+  content: var(--tw-content);
+  display: block;
+}
+
+.before\:h-3::before {
+  content: var(--tw-content);
+  height: 0.75rem;
+}
+
+.before\:w-10::before {
+  content: var(--tw-content);
+  width: 2.5rem;
+}
+
+.before\:border::before {
+  content: var(--tw-content);
+  border-width: 1px;
+}
+
+.before\:content-\[\'Error\!\'\]::before {
+  --tw-content: 'Error!';
+  content: var(--tw-content);
+}
+
+.after\:relative::after {
+  content: var(--tw-content);
+  position: relative;
+}
+
+.after\:top-0::after {
+  content: var(--tw-content);
+  top: 0px;
+}
+
+.after\:hidden::after {
+  content: var(--tw-content);
+  display: none;
+}
+
+.after\:text-err-red::after {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: hsl(0 100% 66% / var(--tw-text-opacity));
+}
+
+.after\:content-\[\'Error\!\'\]::after {
+  --tw-content: 'Error!';
+  content: var(--tw-content);
+}
+
 @media (min-width: 640px) {
   .sm\:absolute {
     position: absolute;

@@ -999,44 +999,9 @@ input::placeholder {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.before\:relative::before {
-  content: var(--tw-content);
-  position: relative;
-}
-
-.before\:block::before {
-  content: var(--tw-content);
-  display: block;
-}
-
-.before\:h-3::before {
-  content: var(--tw-content);
-  height: 0.75rem;
-}
-
-.before\:w-10::before {
-  content: var(--tw-content);
-  width: 2.5rem;
-}
-
-.before\:border::before {
-  content: var(--tw-content);
-  border-width: 1px;
-}
-
-.before\:content-\[\'Error\!\'\]::before {
-  --tw-content: 'Error!';
-  content: var(--tw-content);
-}
-
 .after\:relative::after {
   content: var(--tw-content);
   position: relative;
-}
-
-.after\:top-0::after {
-  content: var(--tw-content);
-  top: 0px;
 }
 
 .after\:hidden::after {
@@ -1052,6 +1017,41 @@ input::placeholder {
 
 .after\:content-\[\'Error\!\'\]::after {
   --tw-content: 'Error!';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\$\{text\}\]::after {
+  --tw-content: ${text};
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'var\(--cardholder-err\)\'\]::after {
+  --tw-content: 'var(--cardholder-err)';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'var\(--cardholder-err-text\)\'\]::after {
+  --tw-content: 'var(--cardholder-err-text)';
+  content: var(--tw-content);
+}
+
+.after\:content-\[var\(--cardholder-err-text\)\]::after {
+  --tw-content: var(--cardholder-err-text);
+  content: var(--tw-content);
+}
+
+.after\:content-\[var\(--cardnumber-err-text\)\]::after {
+  --tw-content: var(--cardnumber-err-text);
+  content: var(--tw-content);
+}
+
+.after\:content-\[var\(--expdate-err-text\)\]::after {
+  --tw-content: var(--expdate-err-text);
+  content: var(--tw-content);
+}
+
+.after\:content-\[var\(--cvc-err-text\)\]::after {
+  --tw-content: var(--cvc-err-text);
   content: var(--tw-content);
 }
 
@@ -1112,12 +1112,20 @@ input::placeholder {
     margin-right: 10px;
   }
 
+  .sm\:mr-\[15\.7vw\] {
+    margin-right: 15.7vw;
+  }
+
   .sm\:mr-\[30px\] {
     margin-right: 30px;
   }
 
   .sm\:mr-\[81px\] {
     margin-right: 81px;
+  }
+
+  .sm\:mt-0 {
+    margin-top: 0px;
   }
 
   .sm\:mt-\[42px\] {
@@ -1130,30 +1138,6 @@ input::placeholder {
 
   .sm\:mt-\[6px\] {
     margin-top: 6px;
-  }
-
-  .sm\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .sm\:mr-\[20vw\] {
-    margin-right: 20vw;
-  }
-
-  .sm\:mr-\[15vw\] {
-    margin-right: 15vw;
-  }
-
-  .sm\:mr-\[16vw\] {
-    margin-right: 16vw;
-  }
-
-  .sm\:mr-\[15\.8vw\] {
-    margin-right: 15.8vw;
-  }
-
-  .sm\:mr-\[15\.7vw\] {
-    margin-right: 15.7vw;
   }
 
   .sm\:flex {
@@ -1236,6 +1220,10 @@ input::placeholder {
     padding-top: 28px;
   }
 
+  .sm\:text-\[1\.11em\] {
+    font-size: 1.11em;
+  }
+
   .sm\:text-\[14\.6px\] {
     font-size: 14.6px;
   }
@@ -1248,28 +1236,8 @@ input::placeholder {
     font-size: 28px;
   }
 
-  .sm\:text-\[1em\] {
-    font-size: 1em;
-  }
-
-  .sm\:text-\[1\.05em\] {
-    font-size: 1.05em;
-  }
-
-  .sm\:text-\[1\.1em\] {
-    font-size: 1.1em;
-  }
-
-  .sm\:text-\[1\.2em\] {
-    font-size: 1.2em;
-  }
-
-  .sm\:text-\[1\.12em\] {
-    font-size: 1.12em;
-  }
-
-  .sm\:text-\[1\.11em\] {
-    font-size: 1.11em;
+  .sm\:tracking-\[0\.009em\] {
+    letter-spacing: 0.009em;
   }
 
   .sm\:tracking-\[0\.11em\] {
@@ -1282,54 +1250,6 @@ input::placeholder {
 
   .sm\:tracking-\[0\.14em\] {
     letter-spacing: 0.14em;
-  }
-
-  .sm\:tracking-\[0\.1em\] {
-    letter-spacing: 0.1em;
-  }
-
-  .sm\:tracking-\[0\.05em\] {
-    letter-spacing: 0.05em;
-  }
-
-  .sm\:tracking-\[0\.03em\] {
-    letter-spacing: 0.03em;
-  }
-
-  .sm\:tracking-\[0\.025em\] {
-    letter-spacing: 0.025em;
-  }
-
-  .sm\:tracking-\[0\.020em\] {
-    letter-spacing: 0.020em;
-  }
-
-  .sm\:tracking-\[0\.018em\] {
-    letter-spacing: 0.018em;
-  }
-
-  .sm\:tracking-\[0\.016em\] {
-    letter-spacing: 0.016em;
-  }
-
-  .sm\:tracking-\[0\.015em\] {
-    letter-spacing: 0.015em;
-  }
-
-  .sm\:tracking-\[0\.013em\] {
-    letter-spacing: 0.013em;
-  }
-
-  .sm\:tracking-\[0\.012em\] {
-    letter-spacing: 0.012em;
-  }
-
-  .sm\:tracking-\[0\.01em\] {
-    letter-spacing: 0.01em;
-  }
-
-  .sm\:tracking-\[0\.009em\] {
-    letter-spacing: 0.009em;
   }
 }
 

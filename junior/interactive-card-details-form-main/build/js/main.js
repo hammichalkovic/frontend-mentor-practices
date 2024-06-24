@@ -16,6 +16,10 @@ let form = document.getElementById('form'),
     cvcErrNotif = document.getElementById('cvc_err'),
     successCnfrm = document.getElementById('success_confirmation'),
     continueBtn = document.getElementById('continue_btn'),
+    cardholderInfo = document.getElementById('cardholder_info'),
+    numberInfo = document.getElementById('number_info'),
+    expDateInfo = document.getElementById('exp_date_info'),
+    cvcInfo = document.getElementById('cvc_info'),
     whitespacePattern = ' ',
     cardNumberString = '',
     cardholderArr = '',
@@ -30,7 +34,12 @@ let form = document.getElementById('form'),
         item.classList.add('border-err-red');
         item.setAttribute('aria-invalid', 'true');
         console.log('Err Focus Out!');
-        
+    }
+
+    function toTypeErrorText(item, pseudop, val) {
+        item.style.setProperty(pseudop, val);
+        item.classList.remove('after:hidden');
+
     }
 
     function okFocusOut(item) {
@@ -110,16 +119,20 @@ let form = document.getElementById('form'),
 
         if (cardholderNameInput.value == '' ) {
             errFocusOut(cardholderNameInput);
+            toTypeErrorText(cardholderInfo, '--cardholder-err-text', '"Can\'t be blank"');
             console.log("Can't be blank");
         } else if (cardholderNameInput.value.match('[0-9]')) {
             errFocusOut(cardholderNameInput);
+            toTypeErrorText(cardholderInfo, '--cardholder-err-text', '"Wrong format, letters only"');
             console.log("Wrong format, letters only");
         } else if (!cardholderNameInput.value.match(' ') ||
                     cardholderNameInput.value.match(' ') && cardholderArr[1] == '') {
             errFocusOut(cardholderNameInput);
+            toTypeErrorText(cardholderInfo, '--cardholder-err-text', '"Last name is required"');
             console.log('Last name is required');
         } else if (cardholderArr[1] != '' && cardholderNameInput.value.length > 26) {
             errFocusOut(cardholderNameInput);
+            toTypeErrorText(cardholderInfo, '--cardholder-err-text', '"The maximum length of this field is 26 characters"');
             console.log('The maximum length of this field is 26 characters');
         } else if (cardholderArr[1] != '' && cardholderNameInput.value.length <= 26 ) {
                 okFocusOut(cardholderNameInput);

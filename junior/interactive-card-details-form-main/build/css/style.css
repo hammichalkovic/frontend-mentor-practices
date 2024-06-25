@@ -1015,26 +1015,6 @@ input::placeholder {
   color: hsl(0 100% 66% / var(--tw-text-opacity));
 }
 
-.after\:content-\[\'Error\!\'\]::after {
-  --tw-content: 'Error!';
-  content: var(--tw-content);
-}
-
-.after\:content-\[\$\{text\}\]::after {
-  --tw-content: ${text};
-  content: var(--tw-content);
-}
-
-.after\:content-\[\'var\(--cardholder-err\)\'\]::after {
-  --tw-content: 'var(--cardholder-err)';
-  content: var(--tw-content);
-}
-
-.after\:content-\[\'var\(--cardholder-err-text\)\'\]::after {
-  --tw-content: 'var(--cardholder-err-text)';
-  content: var(--tw-content);
-}
-
 .after\:content-\[var\(--cardholder-err-text\)\]::after {
   --tw-content: var(--cardholder-err-text);
   content: var(--tw-content);
@@ -1045,13 +1025,13 @@ input::placeholder {
   content: var(--tw-content);
 }
 
-.after\:content-\[var\(--expdate-err-text\)\]::after {
-  --tw-content: var(--expdate-err-text);
+.after\:content-\[var\(--cvc-err-text\)\]::after {
+  --tw-content: var(--cvc-err-text);
   content: var(--tw-content);
 }
 
-.after\:content-\[var\(--cvc-err-text\)\]::after {
-  --tw-content: var(--cvc-err-text);
+.after\:content-\[var\(--expdate-err-text\)\]::after {
+  --tw-content: var(--expdate-err-text);
   content: var(--tw-content);
 }
 

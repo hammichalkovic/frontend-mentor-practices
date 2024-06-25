@@ -27,7 +27,8 @@ let form = document.getElementById('form'),
     currentMonth = currentDate.getMonth() + 1,
     currentYear = currentDate.getFullYear(),
     inputsArr = [cardholderNameInput, cardNumberInput, expMonthInput, expYearInput, cvcInput],
-    errNotifNumberFormatArr = [numberErrNotif, expErrNotif, cvcErrNotif];
+    errNotifNumberFormatArr = [numberErrNotif, expErrNotif, cvcErrNotif],
+    infoArr = [cardholderInfo, numberInfo, expDateInfo, cvcInfo];
 
     function errFocusOut(item) {
         item.classList.remove('border-light-grayish-violet-brd');
@@ -49,6 +50,12 @@ let form = document.getElementById('form'),
         console.log('OK Focus Out!');
         
     }
+
+    infoArr.forEach(item => {
+        item.addEventListener('focusin', () => {
+            item.classList.add('after:hidden');
+        })
+    })
 
     cardNumberInput.addEventListener('input', () => {
 
@@ -167,16 +174,20 @@ let form = document.getElementById('form'),
 
         if ( cardNumberString == '') {
             errFocusOut(cardNumberInput);
+            toTypeErrorText(numberInfo, '--cardnumber-err-text','"Can\'t be blank"');
             console.log("Can't be blank");
         } else if ( isNaN(cardNumberString) === true || cardNumberString.match(' ')) {
             errFocusOut(cardNumberInput);
+            toTypeErrorText(numberInfo, '--cardnumber-err-text','"Wrong format, numbers only"');
             console.log("Wrong format, numbers only");
         } else if (!isNaN(cardNumberString) && cardNumberString.value != '') {
             if (cardNumberString.length > 16) {
                 errFocusOut(cardNumberInput);
+                toTypeErrorText(numberInfo, '--cardnumber-err-text','"Number has more than 16 digits"');
                 console.log('Number has more than 16 digits');
             } else if (cardNumberString.length < 16) {
                 errFocusOut(cardNumberInput);
+                toTypeErrorText(numberInfo, '--cardnumber-err-text','"Number has less than 16 digits"');
                 console.log('Number has less than 16 digits');
             } else if (cardNumberString.length == 16) {
                 okFocusOut(cardNumberInput);
@@ -198,15 +209,19 @@ let form = document.getElementById('form'),
 
         if ( expMonthInput.value == '' ) {
             errFocusOut(expMonthInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Can\'t be blank"');
             console.log("Can't be blank");
         } else if (!expMonthInput.value.match('[0-9]')) {
             errFocusOut(expMonthInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Wrong format, numbers only"');
             console.log("Wrong format, numbers only");
         } else if (expMonthInput.value.length != 2) {
             errFocusOut(expMonthInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Exp month must be 2 digits"');
             console.log('Exp month must be 2 digits');
         } else if (expMonthInput.value < 1 || expMonthInput.value > 12) {
             errFocusOut(expMonthInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Month should be 1 to 12"');
             console.log("Month should be 1 to 12");
         } else if (0 < expMonthInput.value < 13 && expYearInput.value == '') {
             okFocusOut(expMonthInput);
@@ -215,6 +230,7 @@ let form = document.getElementById('form'),
             currentYearFrmd > expYearInput.value ) {
             errFocusOut(expYearInput);
             errFocusOut(expMonthInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Expired card"');
             console.log('Expired card');
         } else {
             okFocusOut(expYearInput);

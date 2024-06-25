@@ -492,6 +492,11 @@ input::placeholder {
   flex-direction: column;
 }
 
+::after {
+  font-size: 0.95em;
+  letter-spacing: 0.0021em;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;

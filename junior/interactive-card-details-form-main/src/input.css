@@ -15,8 +15,6 @@
         @apply  text-[17px] h-[45px] rounded-[8px] pl-[15px] text-very-dark-violet outline-none
     }
 
-    
-
     form {
         @apply text-very-dark-violet text-[12.2px] tracking-[0.12em] mt-[100px]
     }
@@ -27,6 +25,10 @@
 
     .col_divs {
         @apply flex flex-col
+    }
+
+    ::after {
+        @apply text-[0.95em] tracking-[0.0021em]
     }
 }
 

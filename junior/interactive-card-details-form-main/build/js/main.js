@@ -256,24 +256,30 @@ let form = document.getElementById('form'),
 
         if (expYearInput.value == '') {
             errFocusOut(expYearInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Can\'t be blank"');
             console.log("Can't be blank");
         } else if (!expYearInput.value.match('[0-9]')) {
             errFocusOut(expYearInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Wrong format, numbers only"');
             console.log('Wrong format, numbers only');
         } else if (expYearInput.value.length != 2) {
             errFocusOut(expYearInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Exp year must be 2 digits"');
             console.log('Exp year must be 2 digits');
         } else if (expYearInput.value < 0 || expYearInput.value > 99) {
             errFocusOut(expYearInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Year should be 00 to 99"');
             console.log('Year should be 00 to 99');
         } else if (currentYearFrmd == expYearInput.value && expMonthInput.value < currentMonth ||
             currentYearFrmd > expYearInput.value ) {
             errFocusOut(expYearInput);
             errFocusOut(expMonthInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Expired card"');
             console.log('Expired card');
         } else if (currentYearFrmd == expYearInput.value && expMonthInput.value >= currentMonth && expMonthInput.value.length != 2 || currentYearFrmd <= expYearInput.value && expMonthInput.value.length != 2) {
             okFocusOut(expYearInput);
             errFocusOut(expMonthInput);
+            toTypeErrorText(expDateInfo, '--expdate-err-text', '"Exp year must be 2 digits"');
             console.log('Exp year must be 2 digits');
         } else {
             okFocusOut(expYearInput);
@@ -292,12 +298,15 @@ let form = document.getElementById('form'),
     cvcInput.addEventListener('focusout', () => {
         if (cvcInput.value == '') {
             errFocusOut(cvcInput);
+            toTypeErrorText(cvcInfo, '--cvc-err-text', '"Can\'t be blank"');
             console.log("Can't be blank");
         } else if (!cvcInput.value.match('[0-9]')) {
             errFocusOut(cvcInput);
+            toTypeErrorText(cvcInfo, '--cvc-err-text', '"Wrong format, numbers only"');
             console.log('Wrong format, numbers only');
         } else if (cvcInput.value.length < 3 || cvcInput.value.length > 4) {
             errFocusOut(cvcInput);
+            toTypeErrorText(cvcInfo, '--cvc-err-text', '"CVC must be 3 or 4 digits"');
             console.log('CVC must be 3 or 4 digits');
         } else {
             okFocusOut(cvcInput);

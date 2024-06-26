@@ -28,7 +28,7 @@
     }
 
     ::after {
-        @apply text-[0.95em] tracking-[0.0021em]
+        @apply text-[0.95em] tracking-[0.0021em] pt-[8px]
     }
 }
 

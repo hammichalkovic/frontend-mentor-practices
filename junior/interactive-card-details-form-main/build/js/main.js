@@ -30,6 +30,8 @@ let form = document.getElementById('form'),
     errNotifNumberFormatArr = [numberErrNotif, expErrNotif, cvcErrNotif],
     infoArr = [cardholderInfo, numberInfo, expDateInfo, cvcInfo];
 
+   
+
     function errFocusOut(item) {
         item.classList.remove('border-light-grayish-violet-brd');
         item.classList.add('border-err-red');
@@ -54,6 +56,14 @@ let form = document.getElementById('form'),
     infoArr.forEach(item => {
         item.addEventListener('focusin', () => {
             item.classList.add('after:hidden');
+        })
+    })
+
+    inputsArr.forEach(item => {
+        item.addEventListener('focusout', () => {
+            console.log(infoArr.length);
+            let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
+            console.log(checkArr.length);
         })
     })
 

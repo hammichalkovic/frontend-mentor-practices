@@ -493,6 +493,7 @@ input::placeholder {
 }
 
 ::after {
+  padding-top: 8px;
   font-size: 0.95em;
   letter-spacing: 0.0021em;
 }
@@ -1123,6 +1124,14 @@ input::placeholder {
 
   .sm\:mt-\[6px\] {
     margin-top: 6px;
+  }
+
+  .sm\:mt-\[7px\] {
+    margin-top: 7px;
+  }
+
+  .sm\:mt-\[10px\] {
+    margin-top: 10px;
   }
 
   .sm\:flex {

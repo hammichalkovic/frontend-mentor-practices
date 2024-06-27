@@ -1,4 +1,5 @@
 let form = document.getElementById('form'),
+    fieldset = document.getElementById('fieldset'),
     cardholderNameInput = document.getElementById('cardholder'),
     cardNumberInput = document.getElementById('number'),
     expMonthInput = document.getElementById('month'),
@@ -53,19 +54,15 @@ let form = document.getElementById('form'),
         
     }
 
+   
+
     infoArr.forEach(item => {
         item.addEventListener('focusin', () => {
             item.classList.add('after:hidden');
         })
     })
 
-    inputsArr.forEach(item => {
-        item.addEventListener('focusout', () => {
-            console.log(infoArr.length);
-            let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
-            console.log(checkArr.length);
-        })
-    })
+  
 
     cardNumberInput.addEventListener('input', () => {
 
@@ -351,5 +348,24 @@ let form = document.getElementById('form'),
     })
 
 
+    inputsArr.forEach(item => {
+        item.addEventListener('focusout', () => {
+            console.log(infoArr.length);
+            let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
+            console.log(checkArr.length);
 
+            if (checkArr.length == 3) {
+                fieldset.classList.remove('sm:h-[319px]');
+                fieldset.classList.add('sm:h-[333px]');
+            } else if (checkArr.length == 2) {
+                fieldset.classList.remove('sm:h-[333px]');
+                fieldset.classList.add('sm:h-[347px]');
+            } else if (checkArr.length == 1) {
+                fieldset.classList.remove('sm:h-[347px]');
+                fieldset.classList.add('sm:h-[384px]');
+            }
+        })
+
+        
+    })
         

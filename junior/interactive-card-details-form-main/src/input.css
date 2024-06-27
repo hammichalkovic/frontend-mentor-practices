@@ -8,7 +8,7 @@
     }
 
     label {
-        @apply uppercase mb-[6px] mt-[20px]
+        @apply uppercase mb-[6px] mt-[20px] sm:mb-[7px]
     }
 
     input {

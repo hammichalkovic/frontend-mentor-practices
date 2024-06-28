@@ -354,14 +354,17 @@ let form = document.getElementById('form'),
             let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
             console.log(checkArr.length);
 
-            if (checkArr.length == 3) {
-                fieldset.classList.remove('sm:h-[319px]');
+            if (checkArr.length == 4) {
+                fieldset.classList.remove('sm:h-[333px]', 'sm:h-[347px]', 'sm:h-[384px]');
+                fieldset.classList.add('sm:h-[319px]');
+            }  else if (checkArr.length == 3) {
+                fieldset.classList.remove('sm:h-[319px]', 'sm:h-[347px]', 'sm:h-[384px]');
                 fieldset.classList.add('sm:h-[333px]');
             } else if (checkArr.length == 2) {
-                fieldset.classList.remove('sm:h-[333px]');
+                fieldset.classList.remove('sm:h-[319px]', 'sm:h-[333px]', 'sm:h-[384px]');
                 fieldset.classList.add('sm:h-[347px]');
-            } else if (checkArr.length == 1) {
-                fieldset.classList.remove('sm:h-[347px]');
+            } else if (checkArr.length <= 1) {
+                fieldset.classList.remove('sm:h-[319px]', 'sm:h-[333px]', 'sm:h-[347px]');
                 fieldset.classList.add('sm:h-[384px]');
             }
         })
@@ -369,3 +372,4 @@ let form = document.getElementById('form'),
         
     })
         
+    // sm:top-[18.6vh]

@@ -37,6 +37,13 @@
         @apply text-custom-white 
     }
 
+    #cardholder_info,
+    #number_info,
+    #exp_date_info,
+    #cvc_info {
+        @apply ease-in-out duration-200
+    }
+
     .notifications_errs {
         @apply whitespace-nowrap relative
     }

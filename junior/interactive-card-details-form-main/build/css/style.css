@@ -502,6 +502,8 @@ input::placeholder {
   padding-top: 8px;
   font-size: 0.95em;
   letter-spacing: 0.0021em;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *, ::before, ::after {
@@ -1186,6 +1188,10 @@ input::placeholder {
 
   .sm\:h-\[47px\] {
     height: 47px;
+  }
+
+  .sm\:h-\[var\(--fieldset-height\)\] {
+    height: var(--fieldset-height);
   }
 
   .sm\:min-h-\[100vh\] {

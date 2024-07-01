@@ -46,6 +46,10 @@ let form = document.getElementById('form'),
 
     }
 
+    function toChangeFieldsetHeight(val) {
+        fieldset.style.setProperty('--fieldset-height', val);
+    }
+
     function okFocusOut(item) {
         item.classList.remove('border-err-red');
         item.classList.add('border-light-grayish-violet-brd');
@@ -348,6 +352,7 @@ let form = document.getElementById('form'),
     })
 
 
+
     inputsArr.forEach(item => {
         item.addEventListener('focusout', () => {
             console.log(infoArr.length);
@@ -355,21 +360,39 @@ let form = document.getElementById('form'),
             console.log(checkArr.length);
 
             if (checkArr.length == 4) {
-                fieldset.classList.remove('sm:h-[333px]', 'sm:h-[347px]', 'sm:h-[384px]');
-                fieldset.classList.add('sm:h-[319px]');
+                toChangeFieldsetHeight('319px');
             }  else if (checkArr.length == 3) {
-                fieldset.classList.remove('sm:h-[319px]', 'sm:h-[347px]', 'sm:h-[384px]');
-                fieldset.classList.add('sm:h-[333px]');
+                toChangeFieldsetHeight('333px');
             } else if (checkArr.length == 2) {
-                fieldset.classList.remove('sm:h-[319px]', 'sm:h-[333px]', 'sm:h-[384px]');
-                fieldset.classList.add('sm:h-[347px]');
+                toChangeFieldsetHeight('347px');
             } else if (checkArr.length <= 1) {
-                fieldset.classList.remove('sm:h-[319px]', 'sm:h-[333px]', 'sm:h-[347px]');
-                fieldset.classList.add('sm:h-[384px]');
+                toChangeFieldsetHeight('384px');
             }
         })
 
         
     })
+    
+     
+    inputsArr.forEach(item => {
+        item.addEventListener('focusin', () => {
+            console.log(infoArr.length);
+            let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
+            console.log(checkArr.length);
+
+            if (checkArr.length == 4) {
+                toChangeFieldsetHeight('319px');
+            }  else if (checkArr.length == 3) {
+                toChangeFieldsetHeight('319px');
+            } else if (checkArr.length == 2) {
+                toChangeFieldsetHeight('333px');
+            } else if (checkArr.length <= 1) {
+                toChangeFieldsetHeight('347px');
+            }
+        })
+    
         
+    })
+    
+
     // sm:top-[18.6vh]

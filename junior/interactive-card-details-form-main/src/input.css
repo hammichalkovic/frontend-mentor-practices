@@ -28,7 +28,7 @@
     }
 
     ::after {
-        @apply text-[0.95em] tracking-[0.0021em] pt-[8px]
+        @apply text-[0.95em] tracking-[0.0021em] pt-[8px] ease-in-out duration-200
     }
 }
 

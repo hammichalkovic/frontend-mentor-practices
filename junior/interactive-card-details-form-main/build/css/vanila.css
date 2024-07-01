@@ -13,4 +13,5 @@ input:focus-within {
     --cardnumber-err-text: 'cardnumber error!';
     --expdate-err-text: 'expdate error!';
     --cvc-err-text: 'cvc error!';
+    --fieldset-height: 319px;
 }

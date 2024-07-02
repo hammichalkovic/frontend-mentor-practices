@@ -28,10 +28,28 @@ let form = document.getElementById('form'),
     currentMonth = currentDate.getMonth() + 1,
     currentYear = currentDate.getFullYear(),
     inputsArr = [cardholderNameInput, cardNumberInput, expMonthInput, expYearInput, cvcInput],
+    focusInCountingArr = [cardholderNameInput, cardNumberInput, [expMonthInput, expYearInput], cvcInput],
     errNotifNumberFormatArr = [numberErrNotif, expErrNotif, cvcErrNotif],
-    infoArr = [cardholderInfo, numberInfo, expDateInfo, cvcInfo];
+    infoArr = [cardholderInfo, numberInfo, expDateInfo, cvcInfo],
+    cardholderClcksNmbr = 0,
+    numberClcksNmbr = 0,
+    expClcksNmbr = 0,
+    cvcClcksNmbr = 0
+    clicksArr = [cardholderClcksNmbr, numberClcksNmbr, expClcksNmbr, cvcClcksNmbr];
 
-   
+    window.addEventListener('click', (e) => {
+        
+    })
+    
+
+    focusInCountingArr[0].addEventListener('focusin', () => clicksArr[1]++);
+    focusInCountingArr[1].addEventListener('focusin', () => clicksArr[1]++);
+    focusInCountingArr[2][0].addEventListener('focusin', () => clicksArr[3]++);
+    focusInCountingArr[2][1].addEventListener('focusin', () => clicksArr[3]++);
+    focusInCountingArr[3].addEventListener('focusin', () => clicksArr[4]++);
+
+
+
 
     function errFocusOut(item) {
         item.classList.remove('border-light-grayish-violet-brd');
@@ -373,18 +391,29 @@ let form = document.getElementById('form'),
         
     })
     
-     
     inputsArr.forEach(item => {
-        item.addEventListener('focusin', () => {
-            console.log(infoArr.length);
+
+        // inputsArr = [cardholderNameInput, cardNumberInput, expMonthInput, expYearInput, cvcInput],
+
+        item.addEventListener('focusin', (e) => {
+
+            let localCheckArr = [clicksArr[0], clicksArr[1], clicksArr[2], clicksArr[2], clicksArr[3]];
+
+            
             let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
             console.log(checkArr.length);
 
-            if (checkArr.length == 4) {
+            
+
+            if (checkArr.length == 4 ) {
                 toChangeFieldsetHeight('319px');
-            }  else if (checkArr.length == 3) {
+            } else if (checkArr.length == 3 && localCheckArr.some(el => el > 1) == 1 ) {
+                toChangeFieldsetHeight('333px');
+            } else if (checkArr.length == 3 && localCheckArr.some(el => el > 1 == 0)) {
                 toChangeFieldsetHeight('319px');
-            } else if (checkArr.length == 2) {
+            } else if (checkArr.length == 2 ) {
+
+            } else if (checkArr.length == 2 ) {
                 toChangeFieldsetHeight('333px');
             } else if (checkArr.length <= 1) {
                 toChangeFieldsetHeight('347px');

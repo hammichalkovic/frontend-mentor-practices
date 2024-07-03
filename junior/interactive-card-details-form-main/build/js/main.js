@@ -31,22 +31,53 @@ let form = document.getElementById('form'),
     focusInCountingArr = [cardholderNameInput, cardNumberInput, [expMonthInput, expYearInput], cvcInput],
     errNotifNumberFormatArr = [numberErrNotif, expErrNotif, cvcErrNotif],
     infoArr = [cardholderInfo, numberInfo, expDateInfo, cvcInfo],
-    cardholderClcksNmbr = 0,
-    numberClcksNmbr = 0,
-    expClcksNmbr = 0,
-    cvcClcksNmbr = 0
-    clicksArr = [cardholderClcksNmbr, numberClcksNmbr, expClcksNmbr, cvcClcksNmbr];
+    cardholderClcksNmbr = '',
+    numberClcksNmbr = '',
+    expClcksNmbr = '',
+    cvcClcksNmbr = '';
 
     window.addEventListener('click', (e) => {
         
     })
     
+    function toCalcClicks() {
+        
+        let clicksArr = [cardholderClcksNmbr, numberClcksNmbr, expClcksNmbr, cvcClcksNmbr];
 
-    focusInCountingArr[0].addEventListener('focusin', () => clicksArr[1]++);
-    focusInCountingArr[1].addEventListener('focusin', () => clicksArr[1]++);
-    focusInCountingArr[2][0].addEventListener('focusin', () => clicksArr[3]++);
-    focusInCountingArr[2][1].addEventListener('focusin', () => clicksArr[3]++);
-    focusInCountingArr[3].addEventListener('focusin', () => clicksArr[4]++);
+        cardholderNameInput.addEventListener('focusin', () => {
+            cardholderClcksNmbr = 'clicked';
+            numberClcksNmbr = '';
+            expClcksNmbr = '';
+            cvcClcksNmbr = '';
+        });
+        cardNumberInput.addEventListener('focusin', () => {
+            numberClcksNmbr = 'clicked';
+            cardholderClcksNmbr = '';
+            expClcksNmbr = '';
+            cvcClcksNmbr = '';
+        });
+        expMonthInput.addEventListener('focusin', () => {
+            expClcksNmbr = 'clicked';
+            numberClcksNmbr = '';
+            cardholderClcksNmbr = '';
+            cvcClcksNmbr = '';
+        });
+        expYearInput.addEventListener('focusin', () => {
+            expClcksNmbr = 'clicked';
+            numberClcksNmbr = '';
+            cardholderClcksNmbr = '';
+            cvcClcksNmbr = '';
+        });
+        cvcInput.addEventListener('focusin', () => {
+            cvcClcksNmbr = 'clicked';
+            expClcksNmbr = '';
+            numberClcksNmbr = '';
+            cardholderClcksNmbr = '';
+        });
+
+        console.log(clicksArr);
+    }
+    
 
 
 
@@ -393,12 +424,16 @@ let form = document.getElementById('form'),
     
     inputsArr.forEach(item => {
 
-        // inputsArr = [cardholderNameInput, cardNumberInput, expMonthInput, expYearInput, cvcInput],
+        
 
-        item.addEventListener('focusin', (e) => {
+        item.addEventListener(
+            // 'focusin'
+            'click'
+            , (e) => {
 
-            let localCheckArr = [clicksArr[0], clicksArr[1], clicksArr[2], clicksArr[2], clicksArr[3]];
-
+            toCalcClicks();
+            
+         
             
             let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
             console.log(checkArr.length);
@@ -407,9 +442,9 @@ let form = document.getElementById('form'),
 
             if (checkArr.length == 4 ) {
                 toChangeFieldsetHeight('319px');
-            } else if (checkArr.length == 3 && localCheckArr.some(el => el > 1) == 1 ) {
+            } else if (checkArr.length == 3 && checkArr.some(el => el > 1) == 1 ) {
                 toChangeFieldsetHeight('333px');
-            } else if (checkArr.length == 3 && localCheckArr.some(el => el > 1 == 0)) {
+            } else if (checkArr.length == 3 && checkArr.some(el => el < 1) == 0) {
                 toChangeFieldsetHeight('319px');
             } else if (checkArr.length == 2 ) {
 

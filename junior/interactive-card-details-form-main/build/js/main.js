@@ -34,7 +34,8 @@ let form = document.getElementById('form'),
     cardholderClcksNmbr = '',
     numberClcksNmbr = '',
     expClcksNmbr = '',
-    cvcClcksNmbr = '';
+    cvcClcksNmbr = '',
+    clicksArr = [cardholderClcksNmbr, numberClcksNmbr, expClcksNmbr, cvcClcksNmbr];
 
     window.addEventListener('click', (e) => {
         
@@ -42,40 +43,26 @@ let form = document.getElementById('form'),
     
     function toCalcClicks() {
         
-        let clicksArr = [cardholderClcksNmbr, numberClcksNmbr, expClcksNmbr, cvcClcksNmbr];
+        
 
         cardholderNameInput.addEventListener('focusin', () => {
-            cardholderClcksNmbr = 'clicked';
-            numberClcksNmbr = '';
-            expClcksNmbr = '';
-            cvcClcksNmbr = '';
+            // cardholderClcksNmbr
+             clicksArr = ['clicked', '', '', ''];
         });
         cardNumberInput.addEventListener('focusin', () => {
-            numberClcksNmbr = 'clicked';
-            cardholderClcksNmbr = '';
-            expClcksNmbr = '';
-            cvcClcksNmbr = '';
+            clicksArr = ['', 'clicked', '', ''];
         });
         expMonthInput.addEventListener('focusin', () => {
-            expClcksNmbr = 'clicked';
-            numberClcksNmbr = '';
-            cardholderClcksNmbr = '';
-            cvcClcksNmbr = '';
+            clicksArr = ['', '', 'clicked', ''];
         });
         expYearInput.addEventListener('focusin', () => {
-            expClcksNmbr = 'clicked';
-            numberClcksNmbr = '';
-            cardholderClcksNmbr = '';
-            cvcClcksNmbr = '';
+            clicksArr = ['', '', 'clicked', ''];
         });
         cvcInput.addEventListener('focusin', () => {
-            cvcClcksNmbr = 'clicked';
-            expClcksNmbr = '';
-            numberClcksNmbr = '';
-            cardholderClcksNmbr = '';
+            clicksArr = ['', '', '', 'clicked'];
         });
 
-        console.log(clicksArr);
+        return cardholderClcksNmbr
     }
     
 
@@ -437,21 +424,17 @@ let form = document.getElementById('form'),
             
             let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
             console.log(checkArr.length);
-
+            console.log(clicksArr);
             
 
             if (checkArr.length == 4 ) {
                 toChangeFieldsetHeight('319px');
-            } else if (checkArr.length == 3 && checkArr.some(el => el > 1) == 1 ) {
+            } else if (checkArr.length == 3 && clicksArr.some(el => el == 'clicked') == 1 ) {
                 toChangeFieldsetHeight('333px');
-            } else if (checkArr.length == 3 && checkArr.some(el => el < 1) == 0) {
-                toChangeFieldsetHeight('319px');
-            } else if (checkArr.length == 2 ) {
-
-            } else if (checkArr.length == 2 ) {
-                toChangeFieldsetHeight('333px');
-            } else if (checkArr.length <= 1) {
+            } else if (checkArr.length == 2 && clicksArr.some(el => el == 'clicked') == 1) {
                 toChangeFieldsetHeight('347px');
+            } else if (checkArr.length <= 1 || checkArr.length == 0 && clicksArr.some(el => el == 'clicked') == 1) {
+                toChangeFieldsetHeight('384px');
             }
         })
     

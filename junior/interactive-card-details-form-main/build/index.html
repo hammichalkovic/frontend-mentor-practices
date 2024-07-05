@@ -37,7 +37,7 @@
     <form for="submit" id="form"  class="  mt-[10vh] sm:mt-0 w-[100vw] flex flex-col sm:absolute sm:left-[19.9vw] sm:self-center
     
      ">
-      <fieldset id="fieldset" class="ease-in-out duration-200 h-[295px] w-[327px] mx-auto sm:w-[382px] sm:h-[var(--fieldset-height)] border">
+      <fieldset id="fieldset" class="ease-in-out duration-200 h-[295px] w-[327px] mx-auto sm:w-[382px] sm:h-[var(--fieldset-height)]">
         <div class="col_divs after:content-[var(--cardholder-err-text)] after:relative after:text-err-red after:hidden" id="cardholder_info">
           <label class="" for="cardholder">Cardholder Name</label>
           <input aria-invalid="true" type="text" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed"   class="relative border sm:focus-within:outline-grad  border-light-grayish-violet-brd "></input>
@@ -49,17 +49,17 @@
           <span class="notifications_errs" id="number_err"></span>
         </div>
         <div class="flex w-[327px] sm:w-[382px] " id="expdate_and_cvc">
-          <div class="h-[160px] w-[200px] sm:mt-[6px] after:content-[var(--expdate-err-text)] after:relative after:text-err-red after:hidden" id="exp_date_info">
+          <div class="h-[160px] w-[200px] sm:mt-[3px] after:content-[var(--expdate-err-text)] after:relative after:text-err-red after:hidden  sm:after:pt-4" id="exp_date_info">
             <label for="year" class=" text-nowrap">Exp. Date (MM/YY)</label>
-            <div class="flex mt-[6px]" id="exp_month_year">
+            <div class="flex mt-[6px] sm:mt-[7px]" id="exp_month_year">
               <input aria-invalid="true" class="w-[72px] sm:w-[80px] mr-[8px] sm:mr-[10px] border border-light-grayish-violet-brd " maxlength="2"  name="month" id="month" placeholder="MM" ></input>
               <input aria-invalid="true" class="w-[72px] sm:w-[80px] border border-light-grayish-violet-brd " maxlength="2" name="year" id="year" placeholder="YY" ></input>
               <span class="notifications_errs" id="exp_err" ></span>
             </div>
           </div>
-          <div class="col_divs -mt-[20px] after:content-[var(--cvc-err-text)] after:relative after:text-err-red after:hidden " id="cvc_info">
-            <label for="cvc">CVC</label>
-            <input aria-invalid="true" class="w-[164px] sm:w-[193px] sm:mt-[6px] border border-light-grayish-violet-brd "  name="cvc" id="cvc" placeholder="e.g. 123" ></input>
+          <div class="col_divs -mt-[16px] after:content-[var(--cvc-err-text)] after:relative after:text-err-red after:hidden " id="cvc_info">
+            <label class="sm:mb-[1px]" for="cvc">CVC</label>
+            <input aria-invalid="true" class="w-[164px] sm:w-[193px] sm:mt-[5px] border border-light-grayish-violet-brd "  name="cvc" id="cvc" placeholder="e.g. 123" ></input>
             <span class="notifications_errs" id="cvc_err"></span>
           </div>
         </div>

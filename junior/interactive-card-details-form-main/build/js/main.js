@@ -395,13 +395,13 @@ let form = document.getElementById('form'),
             let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
             console.log(checkArr.length);
 
-            if (checkArr.length == 4) {
+            if (checkArr.length == 4 && clicksArr.some(el => el == 'clicked') == 1 ) {
                 toChangeFieldsetHeight('319px');
-            }  else if (checkArr.length == 3) {
+            }  else if (checkArr.length == 3 && clicksArr.some(el => el == 'clicked') == 1 ) {
                 toChangeFieldsetHeight('333px');
-            } else if (checkArr.length == 2) {
+            } else if (checkArr.length == 2 && clicksArr.some(el => el == 'clicked') == 1 ) {
                 toChangeFieldsetHeight('347px');
-            } else if (checkArr.length <= 1) {
+            } else if (checkArr.length <= 1 && clicksArr.some(el => el == 'clicked') == 1 ) {
                 toChangeFieldsetHeight('384px');
             }
         })
@@ -414,8 +414,8 @@ let form = document.getElementById('form'),
         
 
         item.addEventListener(
-            // 'focusin'
-            'click'
+            'focusin'
+            // 'click'
             , (e) => {
 
             toCalcClicks();

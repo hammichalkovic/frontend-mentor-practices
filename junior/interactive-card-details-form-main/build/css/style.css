@@ -1102,6 +1102,10 @@ input::placeholder {
     position: absolute;
   }
 
+  .sm\:relative {
+    position: relative;
+  }
+
   .sm\:bottom-\[1px\] {
     bottom: 1px;
   }
@@ -1358,9 +1362,34 @@ input::placeholder {
     margin-top: auto;
   }
 
+  .sm\:after\:p-4::after {
+    content: var(--tw-content);
+    padding: 1rem;
+  }
+
   .sm\:after\:pt-4::after {
     content: var(--tw-content);
     padding-top: 1rem;
+  }
+
+  .sm\:after\:pl-4::after {
+    content: var(--tw-content);
+    padding-left: 1rem;
+  }
+
+  .sm\:after\:leading-9::after {
+    content: var(--tw-content);
+    line-height: 2.25rem;
+  }
+
+  .sm\:after\:leading-8::after {
+    content: var(--tw-content);
+    line-height: 2rem;
+  }
+
+  .sm\:after\:leading-7::after {
+    content: var(--tw-content);
+    line-height: 1.75rem;
   }
 }
 

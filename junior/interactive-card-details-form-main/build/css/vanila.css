@@ -14,4 +14,5 @@ input:focus-within {
     --expdate-err-text: 'expdate error!';
     --cvc-err-text: 'cvc error!';
     --fieldset-height: 319px;
+    --bottom-margin-top: calc(var(--fieldset-height) / 30 )
 }

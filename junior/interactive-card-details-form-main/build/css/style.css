@@ -781,6 +781,78 @@ input::placeholder {
   margin-top: -18px;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
+.-mt-4 {
+  margin-top: -1rem;
+}
+
+.-mt-\[3px\] {
+  margin-top: -3px;
+}
+
+.-mt-\[5px\] {
+  margin-top: -5px;
+}
+
+.-mt-\[4px\] {
+  margin-top: -4px;
+}
+
+.mb-\[3px\] {
+  margin-bottom: 3px;
+}
+
+.mb-\[9px\] {
+  margin-bottom: 9px;
+}
+
+.-mt-\[1px\] {
+  margin-top: -1px;
+}
+
+.-mt-\[12px\] {
+  margin-top: -12px;
+}
+
+.-mt-\[6px\] {
+  margin-top: -6px;
+}
+
+.mb-\[7px\] {
+  margin-bottom: 7px;
+}
+
+.mb-\[8px\] {
+  margin-bottom: 8px;
+}
+
+.-mt-\[22px\] {
+  margin-top: -22px;
+}
+
+.-mt-\[19px\] {
+  margin-top: -19px;
+}
+
+.mt-\[50px\] {
+  margin-top: 50px;
+}
+
+.mt-\[\'10vh\'\] {
+  margin-top: '10vh';
+}
+
+.mt-\[\'1vh\'\] {
+  margin-top: '1vh';
+}
+
+.mt-\[var\(--bottom-margin-top\)\] {
+  margin-top: var(--bottom-margin-top);
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -823,6 +895,26 @@ input::placeholder {
 
 .h-\[60px\] {
   height: 60px;
+}
+
+.h-\[80px\] {
+  height: 80px;
+}
+
+.h-\[309px\] {
+  height: 309px;
+}
+
+.h-\[var\(--fieldset-height\)\] {
+  height: var(--fieldset-height);
+}
+
+.h-\[295\] {
+  height: 295;
+}
+
+.h-\[var\(--bottom-margin-top\)\] {
+  height: var(--bottom-margin-top);
 }
 
 .w-\[100vw\] {
@@ -977,6 +1069,10 @@ input::placeholder {
   padding-top: 18px;
 }
 
+.pt-\[1px\] {
+  padding-top: 1px;
+}
+
 .font-grotesk {
   font-family: "Space Grotesk", sans-serif;
 }
@@ -1069,6 +1165,16 @@ input::placeholder {
 .after\:hidden::after {
   content: var(--tw-content);
   display: none;
+}
+
+.after\:leading-8::after {
+  content: var(--tw-content);
+  line-height: 2rem;
+}
+
+.after\:leading-\[30px\]::after {
+  content: var(--tw-content);
+  line-height: 30px;
 }
 
 .after\:text-err-red::after {
@@ -1230,6 +1336,14 @@ input::placeholder {
     margin-top: 7px;
   }
 
+  .sm\:-mt-\[16px\] {
+    margin-top: -16px;
+  }
+
+  .sm\:mt-auto {
+    margin-top: auto;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -1252,6 +1366,10 @@ input::placeholder {
 
   .sm\:h-\[var\(--fieldset-height\)\] {
     height: var(--fieldset-height);
+  }
+
+  .sm\:h-\[\'var\(--fieldset-height\)\'\] {
+    height: 'var(--fieldset-height)';
   }
 
   .sm\:min-h-\[100vh\] {
@@ -1284,6 +1402,10 @@ input::placeholder {
 
   .sm\:min-w-\[100vw\] {
     min-width: 100vw;
+  }
+
+  .sm\:cursor-pointer {
+    cursor: pointer;
   }
 
   .sm\:flex-col-reverse {
@@ -1390,6 +1512,11 @@ input::placeholder {
   .sm\:after\:leading-7::after {
     content: var(--tw-content);
     line-height: 1.75rem;
+  }
+
+  .sm\:after\:leading-\[30px\]::after {
+    content: var(--tw-content);
+    line-height: 30px;
   }
 }
 

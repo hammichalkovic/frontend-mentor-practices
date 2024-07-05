@@ -35,9 +35,9 @@
       
     </div>
     <form for="submit" id="form"  class="  mt-[10vh] sm:mt-0 w-[100vw] flex flex-col sm:absolute sm:left-[19.9vw] sm:self-center
-    
+     border border-red-700 sm:h-['var(--fieldset-height)']
      ">
-      <fieldset id="fieldset" class="ease-in-out duration-200 h-[295px] w-[327px] mx-auto sm:w-[382px] sm:h-[var(--fieldset-height)]">
+      <fieldset id="fieldset" class="ease-in-out duration-200 h-[295px]  w-[327px] mx-auto sm:w-[382px] sm:h-[var(--fieldset-height)] border">
         <div class="col_divs after:content-[var(--cardholder-err-text)] after:relative after:text-err-red after:hidden" id="cardholder_info">
           <label class="" for="cardholder">Cardholder Name</label>
           <input aria-invalid="true" type="text" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed"   class="relative border sm:focus-within:outline-grad  border-light-grayish-violet-brd "></input>
@@ -49,7 +49,7 @@
           <span class="notifications_errs" id="number_err"></span>
         </div>
         <div class="flex w-[327px] sm:relative sm:w-[382px] " id="expdate_and_cvc">
-          <div class="h-[160px] w-[200px] sm:mt-[3px] after:content-[var(--expdate-err-text)] after:relative after:text-err-red after:hidden sm:after:leading-8 " id="exp_date_info">
+          <div class="h-[80px] w-[200px] sm:mt-[3px] after:content-[var(--expdate-err-text)] after:relative after:text-err-red after:hidden after:leading-[30px] sm:after:leading-[30px] " id="exp_date_info">
             <label for="year" class=" text-nowrap">Exp. Date (MM/YY)</label>
             <div class="flex mt-[6px] sm:mt-[7px]" id="exp_month_year">
               <input aria-invalid="true" class="w-[72px] sm:w-[80px] mr-[8px] sm:mr-[10px] border border-light-grayish-violet-brd " maxlength="2"  name="month" id="month" placeholder="MM" ></input>
@@ -57,14 +57,14 @@
               <span class="notifications_errs" id="exp_err" ></span>
             </div>
           </div>
-          <div class="col_divs -mt-[16px] after:content-[var(--cvc-err-text)] after:relative after:text-err-red after:hidden " id="cvc_info">
-            <label class="sm:mb-[1px]" for="cvc">CVC</label>
-            <input aria-invalid="true" class="w-[164px] sm:w-[193px] sm:mt-[5px] border border-light-grayish-violet-brd "  name="cvc" id="cvc" placeholder="e.g. 123" ></input>
+          <div class="col_divs -mt-[19px] sm:-mt-[16px] after:content-[var(--cvc-err-text)] after:relative after:text-err-red after:hidden " id="cvc_info">
+            <label class=" mb-[8px] sm:mb-[1px]" for="cvc">CVC</label>
+            <input aria-invalid="true" class="w-[164px] sm:w-[193px] -mt-[3px] sm:mt-[5px] border border-light-grayish-violet-brd "  name="cvc" id="cvc" placeholder="e.g. 123" ></input>
             <span class="notifications_errs" id="cvc_err"></span>
           </div>
         </div>
       </fieldset>
-      <button id="submit" type="button" class=" h-[53px] w-[327px] sm:w-[382px] text-[18px] tracking-normal rounded-[8px] mx-auto mt-auto text-custom-white bg-very-dark-violet ">Confirm</button>
+      <button id="submit" type="button" class="box-border  h-[53px] w-[327px] sm:w-[382px] text-[18px] tracking-normal rounded-[8px] mx-auto sm:mt-auto mt-[var(--bottom-margin-top)] text-custom-white bg-very-dark-violet sm:cursor-pointer">Confirm</button>
     </form>
 
     <!-- Completed state start -->

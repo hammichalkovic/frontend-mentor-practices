@@ -62,7 +62,23 @@ let form = document.getElementById('form'),
             clicksArr = ['', '', '', 'clicked'];
         });
 
-        return cardholderClcksNmbr
+        cardholderNameInput.addEventListener('focusout', () => {
+            // cardholderClcksNmbr
+             clicksArr = ['clicked', '', '', ''];
+        });
+        cardNumberInput.addEventListener('focusout', () => {
+            clicksArr = ['', 'clicked', '', ''];
+        });
+        expMonthInput.addEventListener('focusout', () => {
+            clicksArr = ['', '', 'clicked', ''];
+        });
+        expYearInput.addEventListener('focusout', () => {
+            clicksArr = ['', '', 'clicked', ''];
+        });
+        cvcInput.addEventListener('focusout', () => {
+            clicksArr = ['', '', '', 'clicked'];
+        });
+
     }
     
 
@@ -83,6 +99,10 @@ let form = document.getElementById('form'),
 
     function toChangeFieldsetHeight(val) {
         fieldset.style.setProperty('--fieldset-height', val);
+    }
+
+    function toChangeBTO(val) {
+        confirmBtn.style.setProperty('--button-top-offset', val);
     }
 
     function okFocusOut(item) {
@@ -359,15 +379,29 @@ let form = document.getElementById('form'),
     inputsArr.forEach(item => {
         item.addEventListener('focusout', () => {
             let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
+            console.log(checkArr.length);
+            console.log(clicksArr);
 
-            if (checkArr.length == 4 && clicksArr.some(el => el == 'clicked') == 1 ) {
+
+            if (checkArr.length == 4) {
                 toChangeFieldsetHeight('319px');
-            }  else if (checkArr.length == 3 && clicksArr.some(el => el == 'clicked') == 1 ) {
+                toChangeBTO('0px');
+            } else if (checkArr.length == 3 && clicksArr.some(el => el == 'clicked') == 0) {
+                toChangeBTO('20px');
+                toChangeFieldsetHeight('319px');
+            }  else if (checkArr.length == 3 && clicksArr.some(el => el == 'clicked') == 1 || checkArr.length == 3 && clicksArr.some(el => el == 'clicked') == 0 ) {
+                toChangeBTO('40px');
                 toChangeFieldsetHeight('333px');
+
             } else if (checkArr.length == 2 && clicksArr.some(el => el == 'clicked') == 1 ) {
+                toChangeBTO('60px');
                 toChangeFieldsetHeight('347px');
+                
             } else if (checkArr.length <= 1 && clicksArr.some(el => el == 'clicked') == 1 ) {
+                toChangeBTO('80px');
                 toChangeFieldsetHeight('384px');
+            
+
             }
         })
 
@@ -383,14 +417,20 @@ let form = document.getElementById('form'),
             toCalcClicks();
             
             let checkArr = infoArr.filter(item => item.classList.contains('after:hidden'));
+            console.log(checkArr.length);
+            console.log(clicksArr);
 
-            if (checkArr.length == 4 ) {
+            if (checkArr.length == 4 || checkArr.length == 3 &&  clicksArr.some(el => el == 'clicked') == 0) {
+                toChangeBTO('0px');
                 toChangeFieldsetHeight('319px');
             } else if (checkArr.length == 3 && clicksArr.some(el => el == 'clicked') == 1 ) {
+                toChangeBTO('40px');
                 toChangeFieldsetHeight('333px');
             } else if (checkArr.length == 2 && clicksArr.some(el => el == 'clicked') == 1) {
+                toChangeBTO('60px');
                 toChangeFieldsetHeight('347px');
             } else if (checkArr.length <= 1 || checkArr.length == 0 && clicksArr.some(el => el == 'clicked') == 1) {
+                toChangeBTO('80px');
                 toChangeFieldsetHeight('384px');
             }
         })

@@ -9,10 +9,11 @@ input:focus-within {
 }
 
 :root {
+    --button-top-offset: 0px;
     --cardholder-err-text: 'cardholder error!';
     --cardnumber-err-text: 'cardnumber error!';
     --expdate-err-text: 'expdate error!';
     --cvc-err-text: 'cvc error!';
     --fieldset-height: 319px;
-    --bottom-margin-top: calc(var(--fieldset-height) / 30 )
+    --bottom-margin-top: calc(20px * var(--error-notif-opens-counter));
 }

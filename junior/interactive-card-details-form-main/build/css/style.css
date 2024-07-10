@@ -913,24 +913,12 @@ input::placeholder {
   background-color: hsl(278 68% 11% / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/images\/bg-card-back\.png\'\)\] {
-  background-image: url('/images/bg-card-back.png');
-}
-
-.bg-\[url\(\'\/images\/bg-card-front\.png\'\)\] {
-  background-image: url('/images/bg-card-front.png');
-}
-
-.bg-\[url\(\'\/images\/bg-main-mobile\.png\'\)\] {
-  background-image: url('/images/bg-main-mobile.png');
-}
-
-.bg-\[url\(\'\/images\/card-back-line\.png\'\)\] {
-  background-image: url('/images/card-back-line.png');
-}
-
 .bg-\[url\(\'\.\.\/images\/bg-card-back\.png\'\)\] {
   background-image: url('../images/bg-card-back.png');
+}
+
+.bg-\[url\(\'\.\.\/images\/bg-card-front\.png\'\)\] {
+  background-image: url('../images/bg-card-front.png');
 }
 
 .bg-\[url\(\'\.\.\/images\/bg-main-mobile\.png\'\)\] {
@@ -939,6 +927,34 @@ input::placeholder {
 
 .bg-\[url\(\'\.\.\/images\/card-back-line\.png\'\)\] {
   background-image: url('../images/card-back-line.png');
+}
+
+.bg-\[url\(\'build\/images\/bg-main-mobile\.png\'\)\] {
+  background-image: url('build/images/bg-main-mobile.png');
+}
+
+.bg-\[url\(\'\/images\/bg-main-mobile\.png\'\)\] {
+  background-image: url('/images/bg-main-mobile.png');
+}
+
+.bg-\[url\(\'\/build\/images\/bg-main-mobile\.png\'\)\] {
+  background-image: url('/build/images/bg-main-mobile.png');
+}
+
+.bg-\[url\(\'\.\/images\/bg-main-mobile\.png\'\)\] {
+  background-image: url('./images/bg-main-mobile.png');
+}
+
+.bg-\[url\(\'\/build\/images\/bg-card-back\.png\'\)\] {
+  background-image: url('/build/images/bg-card-back.png');
+}
+
+.bg-\[url\(\'\/build\/images\/bg-card-front\.png\'\)\] {
+  background-image: url('/build/images/bg-card-front.png');
+}
+
+.bg-\[url\(\'\/build\/images\/card-back-line\.png\'\)\] {
+  background-image: url('/build/images/card-back-line.png');
 }
 
 .bg-contain {
@@ -1275,12 +1291,12 @@ input::placeholder {
     align-self: center;
   }
 
-  .sm\:bg-\[url\(\'\/images\/bg-main-desktop\.png\'\)\] {
-    background-image: url('/images/bg-main-desktop.png');
-  }
-
   .sm\:bg-\[url\(\'\.\.\/images\/bg-main-desktop\.png\'\)\] {
     background-image: url('../images/bg-main-desktop.png');
+  }
+
+  .sm\:bg-\[url\(\'\/build\/images\/bg-main-desktop\.png\'\)\] {
+    background-image: url('/build/images/bg-main-desktop.png');
   }
 
   .sm\:pb-\[23px\] {

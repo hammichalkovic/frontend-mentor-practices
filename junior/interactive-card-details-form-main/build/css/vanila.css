@@ -17,3 +17,21 @@ input:focus-within {
     --fieldset-height: 319px;
     --bottom-margin-top: calc(20px * var(--error-notif-opens-counter));
 }
+
+#card_data_places {
+    background-image: url('../images/bg-main-mobile.png');
+}
+
+#back_side {
+    background-image: url('../images/bg-card-back.png');
+}
+
+#front-side {
+    background-image: url('../images/bg-card-front.png');
+}
+
+@media screen and (min-width: 480px) {
+    #card_data_places {
+        background-image: url('../images/bg-main-desktop.png');
+    }  
+}

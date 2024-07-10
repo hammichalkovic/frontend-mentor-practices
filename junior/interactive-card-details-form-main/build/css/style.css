@@ -757,14 +757,6 @@ input::placeholder {
   margin-top: 90px;
 }
 
-.mt-\[var\(--bottom-margin-top\)\] {
-  margin-top: var(--bottom-margin-top);
-}
-
-.mt-\[var\(--bottom-top-offset\)\] {
-  margin-top: var(--bottom-top-offset);
-}
-
 .mt-\[var\(--button-top-offset\)\] {
   margin-top: var(--button-top-offset);
 }
@@ -815,10 +807,6 @@ input::placeholder {
 
 .h-\[80px\] {
   height: 80px;
-}
-
-.h-\[var\(--fieldset-height\)\] {
-  height: var(--fieldset-height);
 }
 
 .w-\[100vw\] {
@@ -1321,11 +1309,6 @@ input::placeholder {
 
   .sm\:tracking-\[0\.14em\] {
     letter-spacing: 0.14em;
-  }
-
-  .sm\:after\:leading-\[30px\]::after {
-    content: var(--tw-content);
-    line-height: 30px;
   }
 
   .sm\:after\:leading-\[32px\]::after {

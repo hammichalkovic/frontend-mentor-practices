@@ -3,18 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
     background-color: hsl(30, 38%, 92%);
 }
 
 main {
-    margin: 35vh auto auto auto;
     width: 576px;
     height: 432px;
     display: flex;
     flex-direction: row-reverse;
     border-radius: 15px;
     background-color: hsl(0, 0%, 100%);
+    position: relative;
 }
 
 img.desktop {
@@ -56,6 +60,13 @@ button {
     margin: 14% 0 0 1%;
 }
 
+footer a:hover,
+footer a:active {
+    
+    cursor: pointer;
+    color: hsl(158, 36%, 37%);
+}
+
 button:hover,
 button:active {
     background-color: hsl(159, 50%, 14%);
@@ -70,7 +81,10 @@ svg {
 footer {
     width: 100%;
     text-align: center;
-    margin-top: 40vh;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 span {
@@ -78,7 +92,10 @@ span {
 }
 
 footer a {
+    font-family: 'Fraunces', serif;
     text-decoration: none;
+    color: hsl(159, 50%, 14%);
+
 }
 
 section.info {

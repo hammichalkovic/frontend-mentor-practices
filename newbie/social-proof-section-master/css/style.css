@@ -64,9 +64,11 @@ h2 {
 
 .bottom {
     min-height: 260px;
-    height: 45%;
+    height: 30vh;
+    width: 76.2vw;
     display: flex;
     justify-content: space-between;
+    /* border: 1px solid salmon; */
 }
 
 .bio1,
@@ -122,7 +124,7 @@ div.card1,
 div.card2,
 div.card3 {
     box-sizing: border-box;
-    height: 90%;
+    height: 28.8vh;
     width: 24vw;
     min-width: 270px;
     background-color: hsl(300, 43%, 22%);
@@ -191,7 +193,7 @@ div.stars1,
 div.stars2,
 div.stars3 {
     height: 1rem;
-    width: 8vw;
+    width: 115px;
     /* border: 1px dotted black; */
     display: flex;
     justify-content: space-between;
@@ -240,7 +242,7 @@ div.stars3 {
 .stars2,
 .stars3,
 .stars__p {
-    padding-left: 2.2vw;
+    padding-left: 7.5%;
 }
 
 .stars div.mark1 {

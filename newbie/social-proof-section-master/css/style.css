@@ -4,9 +4,12 @@
     font-family: 'League Spartan', sans-serif;
 }
 
+html {
+    font-size: 17px;
+}
+
 body {
     min-height: 100vh;
-    font-size: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,11 +52,13 @@ h2 {
 }
 
 .stars {
-    width: 38vw;
-    height: 25vh;
+    width: 37vw;
+    height: 24vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* border: 1px solid salmon; */
+    box-sizing: border-box;
     
 }
 
@@ -118,7 +123,7 @@ div.card2,
 div.card3 {
     box-sizing: border-box;
     height: 90%;
-    width: 360px;
+    width: 24vw;
     min-width: 270px;
     background-color: hsl(300, 43%, 22%);
     border-radius: 7px;
@@ -185,16 +190,16 @@ div.card3 {
 div.stars1,
 div.stars2,
 div.stars3 {
-    height: 15px;
-    width: 85px;
+    height: 1rem;
+    width: 8vw;
     /* border: 1px dotted black; */
     display: flex;
     justify-content: space-between;
 }
 
 .star {
-    height: 13px;
-    width: 13px;
+    height: 1rem;
+    width: 1rem;
     background-image: url('../images/icon-star.svg');
     background-size: 100%;
     background-repeat: no-repeat;
@@ -222,13 +227,20 @@ div.stars3 {
 .stars div.mark3 {
     background-color: hsl(300, 24%, 96%);
     height: 7vh;
-    width: 29.65vw;
+    width: 30.4vw;
     /* border: 1px solid red; */
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     border-radius: 8px;
-    padding-right: 20px;
+    
+}
+
+.stars1,
+.stars2,
+.stars3,
+.stars__p {
+    padding-left: 2.2vw;
 }
 
 .stars div.mark1 {

@@ -22,18 +22,22 @@ body {
 }
 
 main {
-    height: 80vh;
-    width: 80vw;
-    align-self: center;
+    height: 71.7vh;
+    width: 76.2vw;
+
+    align-self: center; 
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     color: hsl(300, 43%, 22%);
-    font-size: 48px;
+    font-size: 3.3rem;
     margin: 0;
-    width: 65%;
-    letter-spacing: -0.03em;
-    line-height: 40px;
+    width: 25vw;
+    letter-spacing: -0.05em;
+    line-height: 2.78rem;
+    /* border: 1px solid black; */
 }
 
 h2 {
@@ -41,19 +45,30 @@ h2 {
 }
 
 .top {
-    height: 40%;
     display: flex;
+    justify-content: space-between; 
     min-height: 240px;
 }
 
 .lead {
-    width: 50%;
-    height: 90%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30.5vh;
+}
+
+#lead_par {
+    font-size: 1.12rem;
+    line-height: 1.45rem;
+    width: 33vw;
+    /* border: 1px solid salmon; */
+    margin-bottom: 0;
 }
 
 .stars {
     width: 37vw;
-    height: 24vh;
+    height: 24.8vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -69,6 +84,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     /* border: 1px solid salmon; */
+    margin-top: auto;
 }
 
 .bio1,
@@ -100,21 +116,21 @@ div.attribution {
 }
 
 p.feedback1 {
-    width: 270px;
+    width: 21vw;
 }
 
 p.feedback2 {
-    width: 250px;
+    width: 20vw;
 }
 
 p.feedback3 {
-    width: 260px;
+    width: 20vw;
 }
 
 p.feedback1,
 p.feedback2,
 p.feedback3 {
-    line-height: 20px;
+    line-height: 1.27rem;
     font-weight: 500;
     margin-top: 60px;
 
@@ -131,7 +147,7 @@ div.card3 {
     border-radius: 7px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
 }
 
@@ -145,6 +161,7 @@ div.card3 {
 
 .cardhead1 {
     width: 270px;
+    border: 1px solid salmon;
 }
 
 .cardhead2 {

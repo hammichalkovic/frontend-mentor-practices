@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 17px;
+    font-size: 2.1vh;
 }
 
 body {
@@ -91,13 +91,14 @@ h2 {
 .bio2,
 .bio3 {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     box-sizing: border-box;
-    height: 30px;
+    height: 4.4vh;
     margin: 2px 0 0 20px;
-    width: 100px;
+    width: 10vw;
+    /* border: 1px solid salmon; */
 }
 
 div.attribution {
@@ -116,7 +117,7 @@ div.attribution {
 }
 
 p.feedback1 {
-    width: 21vw;
+    width: 20vw;
 }
 
 p.feedback2 {
@@ -147,7 +148,7 @@ div.card3 {
     border-radius: 7px;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -160,16 +161,16 @@ div.card3 {
 }
 
 .cardhead1 {
-    width: 270px;
-    border: 1px solid salmon;
+    width: 20vw;
+    /* border: 1px solid salmon; */
 }
 
 .cardhead2 {
-    width: 250px;
+    width: 20vw;
 } 
 
 .cardhead3 {
-    width: 260px;
+    width: 20vw;
 }
 
 .cardhead1,
@@ -178,6 +179,7 @@ div.card3 {
     height: 40px;
     display: flex;
     margin: 0 0 5% 0; 
+    
     /* border: 1px solid white; */
 }
 
@@ -196,13 +198,20 @@ div.card3 {
 .bio3 p {
     color: hsla(333, 80%, 67%, 70%);
     font-weight: 500;
+    
+}
+
+.bio1 h2,
+.bio2 h2,
+.bio3 h2 {
+    font-size: 1.02em;
 }
 
 .cardhead1 img,
 .cardhead2 img, 
 .cardhead3 img {
-    width: 35px;
-    height: 35px;
+    width: 2.9vw;
+    height: 5.1vh;
     border-radius: 25px;
 }
 

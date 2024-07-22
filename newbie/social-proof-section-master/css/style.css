@@ -67,7 +67,7 @@ h2 {
 }
 
 .stars {
-    width: 37vw;
+    width: 35vw;
     height: 24.8vh;
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@ h2 {
     align-items: start;
     box-sizing: border-box;
     height: 4.4vh;
-    margin: 2px 0 0 20px;
+    margin: 2px 0 0 1.5vw;
     width: 10vw;
     /* border: 1px solid salmon; */
 }
@@ -133,7 +133,6 @@ p.feedback2,
 p.feedback3 {
     line-height: 1.27rem;
     font-weight: 500;
-    margin-top: 60px;
 
 }
 
@@ -176,9 +175,9 @@ div.card3 {
 .cardhead1,
 .cardhead2,
 .cardhead3 {
-    height: 40px;
+    height: 5vh;
     display: flex;
-    margin: 0 0 5% 0; 
+    margin: 0.6vh 0 3vh 0; 
     
     /* border: 1px solid white; */
 }
@@ -210,9 +209,10 @@ div.card3 {
 .cardhead1 img,
 .cardhead2 img, 
 .cardhead3 img {
-    width: 2.9vw;
-    height: 5.1vh;
+    width: 5vh;
+    height: 100%;
     border-radius: 25px;
+    /* border: 1px solid white; */
 }
 
 div.stars1,
@@ -247,7 +247,7 @@ div.stars3 {
     margin-top: 20px;
     font-weight: 500;
     line-height: 19px;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 .stars div.mark1,
@@ -348,7 +348,7 @@ div.stars3 {
 
     .lead p {
         text-align: center;
-        width: 320px;
+        width: 50vw;
         font-size: 17px;
         font-weight: 500;
         line-height: 22px;

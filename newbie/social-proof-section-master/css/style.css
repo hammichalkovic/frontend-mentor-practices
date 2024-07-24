@@ -390,6 +390,10 @@ div.stars3 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        /* border: 1px solid black; */
+        margin-top: 50px;
+        height: 791px;
     }
 
     div.lead {
@@ -435,38 +439,49 @@ div.stars3 {
     div.card2,
     div.card3 {
         box-sizing: border-box;
-        width: 320px;
-        min-height: 235px;
+        width: 323px;
+        min-height: 248px;
+        height: 248px;
         margin-bottom: 15px;
     }
 
     div.cardhead1,
     div.cardhead2,
     div.cardhead3 {
-        margin: 0 0 17px 10px;
+        margin: 10px 0 17px 10px;
+        /* border: 1px solid salmon; */
+        width: 269px;
+        align-self: flex-start;
+        margin-left: 30px;
     }
 
-    div.cardhead1 {
-        margin-left: 25px;
-    }
-
-    p.feedback1{
-        width: 240px;
-
-    }
-
-
-    p.feedback2 {
-        width: 240px;
-    }
-
+    p.feedback1,
+    p.feedback2,
     p.feedback3 {
-        width: 250px;
+        width: 269px;
     }
 
     /* div.feedback1 {
 
     } */
     
+    p.feedbacks {
+        font-size: 1.06rem;
+        line-height: 1.38rem;
+        margin-top: 5px;
+    }
+
+    div.bios {
+        margin: 2px 0 0 24px;
+        height: 90%;
+        width: 200px;
+        /* border: 1px dotted white; */
+        justify-content: space-between;
+        font-size: 1.05rem;
+    }
     
+    .imgs {
+        max-height: 40px;
+        max-width: 40px;
+    }
 }

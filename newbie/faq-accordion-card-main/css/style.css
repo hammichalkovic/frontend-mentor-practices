@@ -2,6 +2,7 @@
 
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -16,12 +17,13 @@ body {
 
 main {
     /* border: 1px solid salmon; */
-    width: 100%;
-    height: 93vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 0;
+    /* margin-left: 3vw; */
 }
 
 h1 {
@@ -113,20 +115,20 @@ hr {
 }
 
 footer {
-    margin: auto;
-    padding: 0;
-    margin-bottom: 20px;
-    height: 15px;
+    position: absolute;
+    bottom: 1vh;
 }
 
 .faq {
     /* border: 1px solid black; */
-    width: 850px;
-    height: 450px;
+    width: 64.1vw;
+    height: 66.6vh;
     border-radius: 20px;
     background-color: white;
     display: flex;
     z-index: 0;
+    margin-left: 3vw;
+    margin-bottom: 0.4vh;
 }
 
 .faqimage {
@@ -138,21 +140,19 @@ footer {
     z-index: 0;
 }
 
+.girlmobile {
+    position: absolute;
+    right: 10000px;
+}
+
 .girl {
     /* border: 1px dotted salmon; */
     height: 100%;
     width: 100%;
     background: no-repeat url('../images/illustration-woman-online-desktop.svg');
-    background-size: 96%;
+    background-size: 100%;
     background-position: -5vw;
-}
-
-.box {
     position: relative;
-    top: 28vh;
-    right: 5.9vw;
-
-
 }
 
 .faqacordion {
@@ -170,9 +170,13 @@ footer {
     text-decoration:underline
 }
 
-.girlmobile {
-    position: absolute;
-    right: 10000px;
+
+
+#box {
+    position: relative; 
+    top: 28vh;
+    right: 6.5vw;
+
 }
 
 @media screen and (max-width: 420px) {

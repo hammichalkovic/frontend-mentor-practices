@@ -123,6 +123,7 @@ footer {
     /* border: 1px solid black; */
     width: 64.1vw;
     height: 66.6vh;
+    min-height: 493px;
     border-radius: 20px;
     background-color: white;
     display: flex;
@@ -146,12 +147,16 @@ footer {
 }
 
 .girl {
+
+    /* --GIRL-VAR: min(-5.5vw, -100px); */
+
     /* border: 1px dotted salmon; */
     height: 66.5vh;
     width: 32vw;
     background: no-repeat url('../images/illustration-woman-online-desktop.svg');
     background-size: 102%;
     background-position: -5.5vw;
+    /* background-position: var(--GIRL-VAR); */
     position: relative;
 }
 

@@ -124,6 +124,7 @@ footer {
     width: 64.1vw;
     height: 66.6vh;
     min-height: 493px;
+    max-height: 547px;
     border-radius: 20px;
     background-color: white;
     display: flex;
@@ -139,6 +140,8 @@ footer {
     background-size: 211% 193%;
     background-position: 113.8% 65%;
     z-index: 0;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .girlmobile {
@@ -151,13 +154,19 @@ footer {
     /* --GIRL-VAR: min(-5.5vw, -100px); */
 
     /* border: 1px dotted salmon; */
-    height: 66.5vh;
+    /* height: 66.5vh; */
+    box-sizing: border-box;
+    height: 51vh;
+    min-height: 461px;
     width: 32vw;
+    padding: 10vh 0;
     background: no-repeat url('../images/illustration-woman-online-desktop.svg');
     background-size: 102%;
     background-position: -5.5vw;
     /* background-position: var(--GIRL-VAR); */
-    position: relative;
+    position: sticky;
+    top: 20vh;
+    
 }
 
 .faqacordion {

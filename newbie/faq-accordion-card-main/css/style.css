@@ -121,16 +121,19 @@ footer {
 
 .faq {
     /* border: 1px solid black; */
-    width: 64.1vw;
-    height: 66.6vh;
+    width: 923px;
+    height: 512px;
     min-height: 493px;
     max-height: 547px;
+    min-width: 867px;
+    max-width: 952px;
     border-radius: 20px;
     background-color: white;
     display: flex;
     z-index: 0;
     margin-left: 3vw;
     margin-bottom: 0.4vh;
+    box-sizing: border-box;
 }
 
 .faqimage {
@@ -156,13 +159,14 @@ footer {
     /* border: 1px dotted salmon; */
     /* height: 66.5vh; */
     box-sizing: border-box;
-    height: 51vh;
+    height: 461px;
     min-height: 461px;
-    width: 32vw;
+    min-width: 478px;
+    width: 478px;
     padding: 10vh 0;
     background: no-repeat url('../images/illustration-woman-online-desktop.svg');
     background-size: 102%;
-    background-position: -5.5vw;
+    background-position: -87px;
     /* background-position: var(--GIRL-VAR); */
     position: sticky;
     top: 20vh;
@@ -187,8 +191,15 @@ footer {
 
 
 #box {
-    position: absolute;
-    top: 20vh;    
+    /* position: absolute;
+    top: 24vh;
+    left: -6.45vw; */
+    position: relative;
+    /* left: -20%; */
+    left: -93px;
+    top: 35%;
+    z-index: 2;
+
 }
 
 @media screen and (max-width: 420px) {

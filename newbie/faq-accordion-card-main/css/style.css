@@ -206,6 +206,10 @@ footer {
 
 }
 
+.clckd {
+    font-weight: normal;
+}
+
 @media screen and (max-width: 420px) {
     body {
         min-height: 750px;

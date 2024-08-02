@@ -9,26 +9,80 @@ let questionTitles = document.querySelectorAll('button'),
     button4 = document.getElementById('button4'),
     button5 = document.getElementById('button5'),
     button6 = document.getElementById('button6'),
-    checksArr = [button1, button2, button3, button4, button5, button6];
+    checksArr = [button1, button2, button3, button4, button5, button6],
+    check1 = document.getElementById('check1'),
+    check2 = document.getElementById('check2'),
+    check3 = document.getElementById('check3'),
+    check4 = document.getElementById('check4'),
+    check5 = document.getElementById('check5'),
+    check6 = document.getElementById('check6'),
+    checkboxesArr = [check1, check2, check3, check4, check5, check6];
 
 
 
-    qAndAList.forEach(question => {
 
-        let radio = question.firstElementChild.firstElementChild.firstElementChild.lastChild;    
 
-        
 
-        question.addEventListener('click', (e) => {
-            e.stopPropagation();
-            console.log(radio);
-            radio.click();
+    questionTitles.forEach(question => {
 
-            if (radio.checked == 1) {
-                question.classList.toggle('weighted');
+       
+
+        let paragraph = question.nextElementSibling,
+            picture = question.lastElementChild;
+
+
+        question.addEventListener('click', () => {
+
+            question.firstElementChild.lastElementChild.previousElementSibling.click();
+            question.firstElementChild.lastElementChild.click();
+
+           
+            
+
+            for (let i = 0; i < questionTitles.length; i++) {
+                if (!questionTitles[i].firstElementChild.lastElementChild.previousElementSibling.checked) {
+                    questionTitles[i].classList.remove('weighted');
+                    checkboxesArr[i].checked = false;
+                } else if (questionTitles[i].firstElementChild.lastElementChild.previousElementSibling.checked) {
+                    if (questionTitles[i].firstElementChild.lastElementChild.previousElementSibling.checked) {
+                            questionTitles[i].classList.add('weighted');
+                            questionTitles[i].nextElementSibling.classList.add('collapse');
+                            questionTitles[i].lastElementChild.classList.add('pic_transform');
+                    } 
+
+
+
+
+
+                    
+                    
+
+                }
+            }
+            
+        });
+
+        question.addEventListener('click', () => {
+            if (question.firstElementChild.lastElementChild.checked == false) {
+                question.classList.remove('weighted');
                 
-                // if (question.)
-            } });
+            }
+        })
+
+
+            // question.addEventListener('click', () => {
+            //     if (question)
+            // })
+
+
+
+
+
+        // question.addEventListener('click', (e) => {
+        //     if (question.firstElementChild.lastElementChild.checked && question.click()) {
+        //         button6.click();
+        //     }
+        // })
     });
 
 // questionTitles.forEach((question) => { 
@@ -81,6 +135,11 @@ function toCloseAll() {
     });
 
     button6.checked = 'true';
+     
+//     questionTitles.forEach(question => {
+//         question.classList.remove('weighted');
+//         // question.firstElementChild.lastElementChild.checked = false;
+// });    
 };
 
 accordion.addEventListener('focusout', toCloseAll);

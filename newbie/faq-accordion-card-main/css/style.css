@@ -210,6 +210,10 @@ footer {
     font-weight: normal;
 }
 
+.nodisplay {
+    display: none;
+}
+
 @media screen and (max-width: 420px) {
     body {
         min-height: 750px;

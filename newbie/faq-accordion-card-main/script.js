@@ -23,9 +23,9 @@ let questionTitles = document.querySelectorAll('button'),
 
 
 
-    questionTitles.forEach(question => {
 
-       
+    questionTitles.forEach(question => {
+        
 
         let paragraph = question.nextElementSibling,
             picture = question.lastElementChild;
@@ -33,8 +33,11 @@ let questionTitles = document.querySelectorAll('button'),
 
         question.addEventListener('click', () => {
 
+            
+
             question.firstElementChild.lastElementChild.previousElementSibling.click();
             question.firstElementChild.lastElementChild.click();
+            // question.lastElementChild.click();
 
            
             
@@ -46,8 +49,8 @@ let questionTitles = document.querySelectorAll('button'),
                 } else if (questionTitles[i].firstElementChild.lastElementChild.previousElementSibling.checked) {
                     if (questionTitles[i].firstElementChild.lastElementChild.previousElementSibling.checked) {
                             questionTitles[i].classList.add('weighted');
-                            questionTitles[i].nextElementSibling.classList.add('collapse');
-                            questionTitles[i].lastElementChild.classList.add('pic_transform');
+                            // questionTitles[i].nextElementSibling.classList.add('collapse');
+                            // questionTitles[i].lastElementChild.classList.add('pic_transform');
                     } 
 
 
@@ -135,11 +138,29 @@ function toCloseAll() {
     });
 
     button6.checked = 'true';
+    check6.
+    // checkboxesArr.forEach(item => item.checked = null)
+    
+    
+
      
-//     questionTitles.forEach(question => {
-//         question.classList.remove('weighted');
-//         // question.firstElementChild.lastElementChild.checked = false;
-// });    
+    questionTitles.forEach(question => {
+        question.classList.remove('weighted');
+        // question.firstElementChild.lastElementChild.checked = undefined;
+        
+    });    
 };
 
 accordion.addEventListener('focusout', toCloseAll);
+
+// questionTitles.forEach(item => {
+//     item.addEventListener('focusout', () => {
+        
+//         if (item.firstChild.lastChild.checked == true) {
+//             item.firstChild.lastChild.checked = null;
+//         }
+
+//         check6.checked = true;
+//         arr
+//     });
+// })

@@ -20,14 +20,19 @@ let qtit1 = document.querySelector('.qtit1'),
     check5 = 0,
     check6 = 0,
     questionTitles = document.querySelectorAll('button'),
-    main = document.querySelector('.faq');
+    main = document.querySelector('.faq'),
+    binaryCheckers = document.querySelectorAll('.binary_checkers'),
+    faqImage = document.querySelector('.faqimage');
 
 
 
 
+    qAndAList.forEach(item => {
+        item.addEventListener('click', () => {
+        item.firstElementChild.firstElementChild.click();
+        })
 
-
-
+    });
 
     questionTitles.forEach(question => {
         
@@ -41,10 +46,10 @@ let qtit1 = document.querySelector('.qtit1'),
 
             currentRadioButton.click();
             
-            if (currentBinary.textContent == 0) {
+            if (currentBinary.textContent == '') {
                 currentBinary.textContent = 1;
             } else if (currentBinary.textContent == 1) {
-                currentBinary.textContent = 0;
+                currentBinary.textContent = '';
             }
            
           
@@ -54,21 +59,23 @@ let qtit1 = document.querySelector('.qtit1'),
                 if (currentRadioButton.checked == true && currentBinary.textContent == 1) {
                     questionTitles.forEach(item => {
                         item.classList.remove('weighted')
-                        item.firstElementChild.lastElementChild.textContent = 0;
+                        item.firstElementChild.lastElementChild.textContent = '';
                     });
                     
                     question.classList.add('weighted');
-                    currentBinary.textContent = 1
+                    currentBinary.textContent += 1;
                 
                     // questionTitles[i].nextElementSibling.classList.add('collapse');
                     // questionTitles[i].lastElementChild.classList.add('pic_transform');
                 } else {
                     question.classList.remove('weighted');
-                    currentBinary.textContent = 0;
+                    currentBinary.textContent = '';
                     
                     // console.log(checksArr[i][1]);
                 }  
             }
+
+           
             
         });
 
@@ -106,38 +113,42 @@ let qtit1 = document.querySelector('.qtit1'),
 
 
 
+
+
+// main.addEventListener('click', () => {
+//     questionTitles[0].click()
+
+// })
+
+
 function toCloseAll() {
-    paragraphsList.forEach((paragraph) => {
-        paragraph.classList.add('collapse');
-    });
+    // paragraphsList.forEach((paragraph) => {
+    //     paragraph.classList.add('collapse');
+    // });
 
-    arrows.forEach((arrow) => {
-        arrow.classList.remove('pic_transform');
-    });
+    // arrows.forEach((arrow) => {
+    //     arrow.classList.remove('pic_transform');
+    // });
 
-    button6.checked = 'true';
-    // checkboxesArr.forEach(item => item.checked = null)
+    // button6.checked = 'true';
+    // // checkboxesArr.forEach(item => item.checked = null)
+    // // questionTitles[0].click()
     
-    
+    // questionTitles.forEach(item => {
+    //     item.classList.remove('weighted');
+    //     // item.firstElementChild.lastElementChild.textContent = '';
+    //     // questionTitles[0]
 
-     
+        
+       
+    // });
+
+     document.refresh();
     
 };
 
 
 
-accordion.addEventListener('blur', toCloseAll);
-main.stopPropagation();
-main.addEventListener('click', toCloseAll)
-
-// questionTitles.forEach(item => {
-//     item.addEventListener('focusout', () => {
-        
-//         if (item.firstChild.lastChild.checked == true) {
-//             item.firstChild.lastChild.checked = null;
-//         }
-
-//         check6.checked = true;
-//         arr
-//     });
-// })
+faqImage.addEventListener('click', () => {
+    window.reload()
+});

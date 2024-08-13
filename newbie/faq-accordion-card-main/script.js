@@ -12,7 +12,6 @@ let qtit1 = document.querySelector('.qtit1'),
     button3 = document.getElementById('button3'),
     button4 = document.getElementById('button4'),
     button5 = document.getElementById('button5'),
-    button6 = document.getElementById('button6'),
     check1 = 0,
     check2 = 0,
     check3 = 0,
@@ -22,7 +21,8 @@ let qtit1 = document.querySelector('.qtit1'),
     questionTitles = document.querySelectorAll('button'),
     main = document.querySelector('.faq'),
     binaryCheckers = document.querySelectorAll('.binary_checkers'),
-    faqImage = document.querySelector('.faqimage');
+    faqImage = document.querySelector('.faqimage'),
+    unfocusClickArea = document.getElementById('unfocus_click_area');
 
 
 
@@ -60,15 +60,21 @@ let qtit1 = document.querySelector('.qtit1'),
                     questionTitles.forEach(item => {
                         item.classList.remove('weighted')
                         item.firstElementChild.lastElementChild.textContent = '';
+                        item.nextElementSibling.classList.add('collapse');
+                        item.lastElementChild.classList.remove('pic_transform');
                     });
                     
                     question.classList.add('weighted');
+                    question.nextElementSibling.classList.remove('collapse');
+                    question.lastElementChild.classList.add('pic_transform');
                     currentBinary.textContent += 1;
                 
                     // questionTitles[i].nextElementSibling.classList.add('collapse');
                     // questionTitles[i].lastElementChild.classList.add('pic_transform');
                 } else {
                     question.classList.remove('weighted');
+                    question.nextElementSibling.classList.add('collapse');
+                    question.lastElementChild.classList.remove('pic_transform');
                     currentBinary.textContent = '';
                     
                     // console.log(checksArr[i][1]);
@@ -149,6 +155,12 @@ function toCloseAll() {
 
 
 
-faqImage.addEventListener('click', () => {
-    window.reload()
+unfocusClickArea.addEventListener('click', () => {
+    window.location.reload()
 });
+
+// main.addEventListener('click', () => {
+//     window.location.reload()
+// });
+
+

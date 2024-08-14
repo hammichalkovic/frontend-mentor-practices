@@ -128,9 +128,9 @@ footer {
     /* border: 1px solid black; */
     width: 923px;
     height: 512px;
-    min-height: 493px;
+    /* min-height: 493px; */
     max-height: 547px;
-    min-width: 867px;
+    /* min-width: 867px; */
     max-width: 952px;
     border-radius: 20px;
     background-color: white;
@@ -246,20 +246,32 @@ input[type="radio"] {
 @media screen and (max-width: 420px) {
     body {
         min-height: 750px;
+        width: 100vw;
+        height: 100%;
+        /* background: 100% ; */
+        padding: 0;
+        margin: 0;
+        background: 103% linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+
     }
     
+    main {
+        justify-content: center;
+    }
+
     .faq {
-        margin-top: 100px;
+        /* margin-top: 65px; */
+        margin-top: 8.4vh;
         width: 325px;
-        height: 510px;
+        height: 535px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
     .sum {
-        width: 275px;
-        margin-left: 20px;
+        width: 278px;
+        margin-left: 17px;
     }
 
     p {
@@ -269,7 +281,7 @@ input[type="radio"] {
 
     hr {
         border: 1px solid hsl(240, 5%, 91%, 50%);
-        width: 275px;
+        width: 278px;
         margin: 0 0 0 25px;
     }
 
@@ -278,13 +290,39 @@ input[type="radio"] {
     }
 
     .faqacordion {
-        margin-top: -110px;
-        margin-bottom: 0;
+        margin: 17vh 0 0 0;
+        
         /* border: 3px solid salmon; */
         height: 400px;
+        width: 325px;
+    }
+
+   
+
+    button.sum {
+        font-size: 0.8rem;
+        word-spacing: 0.03rem;
+        letter-spacing: 0.002rem;
+    }
+
+    button.weighted {
+        font-weight: 700;
+        /* font-size: 0.78rem; */
+        /* font-weight: normal; */
+        word-spacing: 0.01rem;
+        letter-spacing: -0.03rem;
+    }
+
+    .faqacordion p {
+        font-size: 0.747rem;
+        word-spacing: 0.003rem;
+        letter-spacing: 0.003rem;
+        line-height: 1.2rem;
     }
 
     .mobilebg {
+        position: absolute;
+        top: 0vh;
         width: 100%;
         /* border: 2px solid blue; */
         background: no-repeat url('../images/bg-pattern-mobile.svg');
@@ -308,6 +346,10 @@ input[type="radio"] {
 
     .pic {
         margin-right: -17px;
+    }
+
+    .attribution {
+           
     }
 
 }

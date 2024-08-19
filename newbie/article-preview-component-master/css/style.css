@@ -241,10 +241,7 @@ p.name {
 
 }
 
-.hide {
-    transition: 0.1s linear;
-    height: 0px;
-}
+
 
 .nodisplay {
     display: none;
@@ -334,7 +331,7 @@ p.name {
         box-sizing: border-box;
         position: relative;
         top: -60px;
-        right: 35px;
+        right: 135px;
         height: 80px;
         width: 329px;
         /* border: 1px solid black; */

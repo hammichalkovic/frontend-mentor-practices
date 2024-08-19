@@ -1,12 +1,36 @@
 let button = document.querySelector('.share'),
     buttonicon = button.querySelector('img'),
     shareoptions = document.querySelector('.shareoptions'),
-    buttonOffMobile = document.querySelector('.share_mobile_active');
+    buttonOffMobile = document.querySelector('.share_mobile_active'),
+    shareTitle = document.getElementById('share_title'),
+    shareOptionsArrow = document.querySelector('.share_mobile_active::before');
 
 button.addEventListener('click', (e) => {
     button.classList.toggle('buttonactive');
     toChangeArrowColor();
-    shareoptions.classList.toggle('nodisplay');
+    // shareoptions.classList.toggle('nodisplay');
+    // shareoptions.classList.toggle('animate');
+
+    if (shareoptions.classList.contains('nodisplay') == false) {
+        shareoptions.classList.remove('animate');
+        shareoptions.classList.add('animation_two');
+        setTimeout(() => {
+            shareoptions.classList.add('nodisplay');
+        }, 80);
+
+    } else if (shareoptions.classList.contains('nodisplay') == true) {
+        shareoptions.classList.remove('animation_two');
+        shareoptions.classList.add('animate');
+        // shareoptions.classList.toggle('nodisplay');
+        setTimeout(() => {
+            shareoptions.classList.remove('nodisplay');
+        }, 80);
+    }
+    // shareTitle.style.cssText = 'display: inline';
+    // shareOptionsArrow.classList.toggle('nodisplay');
+
+    // setTimeout(shareoptions.classList.toggle('nodisplay')
+    // , 100);
 
 });
 

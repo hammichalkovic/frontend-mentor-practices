@@ -38,7 +38,7 @@ p.name {
     /* border: 1px solid black; */
     display: flex;
     border-radius: 12px;
-    box-shadow: 10px 30px 30px hsla(212, 23%, 69%, 15%);
+    box-shadow: 10px 30px 30px hsla(212, 23%, 69%, 20%);
 }
 
 .pic {
@@ -129,7 +129,9 @@ p.name {
     box-sizing: border-box;
     position: relative;
     top: -125px;
-    right: -209px;
+    /* right: -209px; */
+    left: 57.3%;
+    
     height: 57px;
     width: 255px;
     /* border: 1px solid black; */
@@ -146,7 +148,7 @@ p.name {
     /* padding: 0 70px 0 30px; */
     /* display: none; */
     box-shadow: 0px 15px 10px hsla(212, 23%, 69%, 20%);
-    transition: 0.3s linear;
+    /* transition: 0.1s ease-in-out; */
 }
 
 
@@ -177,10 +179,7 @@ p.name {
     color: hsl(0, 0%, 100%);
 }
 
-.nodisplay {
-    display: none;
-    transition: 3s linear;
-}
+
 
 .attribution {
     position: absolute;
@@ -207,6 +206,14 @@ p.name {
     animation-fill-mode: both;
 }
 
+.animation_two {
+    animation-name: shrink;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: none;
+}
 
 #share_title {
     display: flex;
@@ -216,7 +223,7 @@ p.name {
     height: 30px;
 }
 
-#icondiv {
+.icondiv {
     display: flex;
     /* border: 1px solid white;  */
     align-items: center;
@@ -227,6 +234,22 @@ p.name {
     
 }
 
+#share_title {
+    transition: 0.3s linear;
+    transition-delay: 0.1s;
+
+
+}
+
+.hide {
+    transition: 0.1s linear;
+    height: 0px;
+}
+
+.nodisplay {
+    display: none;
+}
+
 @keyframes scale {
     0% {
         transform: scaleY(0%);
@@ -234,6 +257,16 @@ p.name {
 
     100% {
         transform: scaleY(100%);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scaleY(100%);
+    }
+
+    100% {
+        transform: scaleY(0%);
     }
 }
 

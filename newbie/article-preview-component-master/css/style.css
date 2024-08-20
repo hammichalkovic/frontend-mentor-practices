@@ -330,15 +330,41 @@ p.name {
     .shareoptions {
         box-sizing: border-box;
         position: relative;
-        top: -60px;
-        right: 135px;
+        top: -58px;
+        /* right: 135px; */
+        left: -35px;
+        /* margin-left: 0; */
         height: 80px;
         width: 329px;
         /* border: 1px solid black; */
         border-radius: 0 0 12px 12px;
-        padding: 0 25px;
+        padding: 0;
         /* display: none; */
         
+    }
+
+    #share_title,
+    .icondiv {
+        
+    }
+
+    .icondiv {
+        display: flex;
+        justify-content: space-between;
+        width: 180px;
+        padding: 0;
+        box-sizing: border-box;
+        /* margin: 0 30px 0 30px; */
+        /* border: 1px dotted white; */
+    }
+
+    /* .icondiv > * {
+        border: 1px solid white;
+    } */
+
+    #share_title {
+        width: 70px;
+        margin: 0 -36px 0 5px;
     }
 
     .shareoptions::before,
@@ -351,6 +377,7 @@ p.name {
     .plink {
         padding-left: 0;
         padding-right: 0;
+        margin: 0;
         /* border: 1px solid red; */
         
     }
@@ -360,11 +387,12 @@ p.name {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
         min-width: 30px;
         min-height: 30px;
         background-color: hsl(214, 17%, 51%);
         padding: 0 0 1px 1px;
-        margin-left: 25px;
+        margin: 0 5px 2px 40px;
         z-index: 1;
     }
 

@@ -35,7 +35,14 @@ button.addEventListener('click', (e) => {
 });
 
 buttonOffMobile.addEventListener('click', (e) => {
-    shareoptions.classList.toggle('nodisplay');
+    // shareoptions.classList.toggle('nodisplay');
+    // shareoptions.classList.remove('nodisplay');
+    shareoptions.classList.remove('animate');
+        shareoptions.classList.add('animation_two');
+        setTimeout(() => {
+            shareoptions.classList.add('nodisplay');
+        }, 80);
+
     if(buttonOffMobile.classList.contains('nodisplay')) {
         buttonicon.src = './images/icon-share.svg';
     }

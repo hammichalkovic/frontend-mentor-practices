@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 
 body {
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
 }
 
-.girl {
-    margin-left: auto;
-    padding-right: 0;
-}
+
 
 main {
-    display: flex;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr / 57.7% 42.3%;
+    grid-template-areas: 'main image';
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -32,9 +35,19 @@ span {
     color: hsl(0, 36%, 70%);
 }
 
+.girl {
+    padding: 0;
+    /* min-width: 500px;
+    min-height: 600px; */
+    grid-area: image;
+    background: no-repeat top right /110% url('../images/hero-desktop.jpg');
+
+}
+
 .main {
-    width: 815px;
-    height: 800px;
+    grid-area: main;
+    /* min-width: 830px; */
+    /* min-height: 800px; */
     background: url('../images/bg-pattern-desktop.svg'), linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     background-size: 100%;
     display: flex;
@@ -202,6 +215,18 @@ footer {
 
 .attribution a:hover {
     color: hsl(0, 93%, 68%);
+}
+
+@media (min-height: 820px) and (min-width: 420px) {
+    .girl {
+        background-size: 120%;
+    }
+}
+
+@media (min-height: 900px) and (min-width: 420px) {
+    .girl {
+        background-size: 130%;
+    }
 }
 
 @media screen and (max-width: 420px) {

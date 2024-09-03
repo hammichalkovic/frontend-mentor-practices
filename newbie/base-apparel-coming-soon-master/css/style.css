@@ -28,7 +28,8 @@ h1 {
     letter-spacing: 15px;
     font-weight: 600;
     line-height: 70px;
-    margin: 0;
+    margin: 0 0 -3vh 0;
+    
 }
 
 span {
@@ -60,16 +61,17 @@ span {
     /* border: 1px solid red; */
     width: 11vw;
     padding-left: 0.5vw;
+    margin-bottom: 11.3vh;
 }
 
 .info {
-    border: 1px solid black;
-    width: 430px;
+    /* border: 1px solid black; */
+    width: 30.6vw;
     height: 71.3vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    position: relative;
 }
 
 
@@ -81,6 +83,8 @@ span {
 
 .emailbox {
     display: flex;
+    /* width: 100%;
+    border: 1px solid red; */
 }
 
 .nodisplay {
@@ -149,13 +153,14 @@ span {
 }
 
 input {
+    border: 1px dotted black;
     height: 50px;
-    width: 395px;
+    width: 30.6vw;
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     z-index: 0;
-    /* padding: 0 205px 0 30px; */
+    padding: 0 30px;
     border-radius: 25px;
     border: 1px solid hsla(0, 36%, 70%, 50%);
     background-color: transparent;
@@ -163,9 +168,10 @@ input {
 }
 
 button {
-    position: relative;
-    top: 0;
-    right: 90px;
+    position: absolute;
+    bottom: 0.2vh;
+    right: 0;
+    /* right: 90px; */
     box-sizing: border-box;
     width: 102px;
     padding: 0 50px;

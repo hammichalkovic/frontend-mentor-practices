@@ -42,7 +42,9 @@ span {
     /* min-width: 500px;
     min-height: 600px; */
     grid-area: image;
-    background: no-repeat top right /110% url('../images/hero-desktop.jpg');
+    background: no-repeat
+     /* top right  */
+    top /110% url('../images/hero-desktop.jpg');
 
 }
 
@@ -72,7 +74,7 @@ span {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 4vh;
+    margin-bottom: 12.2vh;
 }
 
 
@@ -178,10 +180,10 @@ button {
     right: -0.1vw;
     /* right: 90px; */
     box-sizing: border-box;
-    width: 102px;
+    width: 6.2vw;
     padding: 0 50px;
     min-height: 7vh;
-    border-radius: 28px;
+    border-radius: 5vw;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     z-index: 2;
     border: none;

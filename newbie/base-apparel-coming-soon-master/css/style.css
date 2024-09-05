@@ -259,7 +259,12 @@ footer {
 @media screen and (max-width: 420px) {
 
 body {
-    min-width: 100%;
+    min-width: 100vw;
+    min-height: 800px;
+}
+
+main {
+    display: block;
 }
 
 .main { 
@@ -273,15 +278,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
+    margin: -3.5vh 0 35vh 0;
+    position: static;
 
 
 }
 
 .logo {
-    max-height: 50px;
-    max-width: 100px;
-    margin: -30px 180px 30px -30px;
+    /* border: 1px solid black; */
+    height: 7.5vh;
+    width: 27vw;
+    position: relative;
+    top: 7.3vh;
+    right: 28.4vw;
 }
 
 .header, 
@@ -294,11 +303,11 @@ body {
     font-size: 40px;
     line-height: 42px;
     letter-spacing: 10px;
-    margin: 55px 0 40px 0;
+    margin: 8vh 0 1.9vh 0;
 }
 
 .lead {
-    line-height: 23px;
+    line-height: 1.39rem;
     font-size: 14px;
 }
 
@@ -317,24 +326,42 @@ body {
     display: none;
 }
 
+
+
 .emailbox,
 input {
     box-sizing: border-box;
-    max-width: 340px;
-    padding: 2px 95px 0 23px;
+    width: 100%;
+    /* padding: 0.5vh 0 0 23px; */
     margin: 0;
     align-self: center;
     font-size: 14px;
-    height: 45px;
+    ;
+    height: 6vh;
+}
+
+input {
+    margin: 0 1vw 0 -0.4vw;
+    padding-top: 0.2vh; 
+}
+
+.emailbox {
+    /* border: 1px solid black; */
+    width: 83vw;
+    position: relative;
+    top: 4vh;
 }
 
 button {
     min-width: 62px;
     padding: 0;
-    margin-left: 38px;
-    min-height: 46px;
-    margin-top: -2px;
     
+    
+}
+
+input,
+button.submit {
+    border-radius: 3vh;
 }
 
 }

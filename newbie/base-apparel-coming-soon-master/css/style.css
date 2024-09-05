@@ -168,7 +168,7 @@ input {
     font-weight: 400;
     z-index: 0;
     padding: 0 30px;
-    border-radius: 25px;
+    border-radius: 5vw;
     border: 1px solid hsla(0, 36%, 70%, 50%);
     background-color: transparent;
     outline: none;

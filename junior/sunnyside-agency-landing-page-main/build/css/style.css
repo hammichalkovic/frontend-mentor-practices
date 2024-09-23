@@ -558,8 +558,20 @@ video {
   height: 100vh;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
 .w-\[100vw\] {
   width: 100vw;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .grow {
@@ -577,4 +589,40 @@ video {
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.bg-\[\.\.\/images\/logo\.svg\] {
+  background-color: ../images/logo.svg;
+}
+
+.bg-\[\'\.\.\/images\/logo\.svg\'\] {
+  background-color: '../images/logo.svg';
+}
+
+.bg-\[url\(\.\.\/images\/logo\.svg\)\] {
+  background-image: url(../images/logo.svg);
+}
+
+.bg-\[url\(\'\.\.\/images\/logo\.svg\'\)\] {
+  background-image: url('../images/logo.svg');
+}
+
+.bg-\[url\(\.\.\/images\/mobile\/images-header\2c \.jpg\)\] {
+  background-image: url(../images/mobile/images-header,.jpg);
+}
+
+.bg-\[url\(\.\.\/images\/mobile\/images-header\.jpg\)\] {
+  background-image: url(../images/mobile/images-header.jpg);
+}
+
+.bg-\[url\(\'\.\.\/images\/mobile\/images-header\.jpg\'\)\] {
+  background-image: url('../images/mobile/images-header.jpg');
+}
+
+.bg-\[url\(\'\.\.\/images\/mobile\/image-header\.jpg\'\)\] {
+  background-image: url('../images/mobile/image-header.jpg');
+}
+
+.bg-\[url\(\.\.\/images\/mobile\/image-header\.jpg\)\] {
+  background-image: url(../images/mobile/image-header.jpg);
 }

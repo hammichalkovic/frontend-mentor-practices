@@ -554,24 +554,40 @@ video {
   display: none;
 }
 
-.h-\[100vh\] {
-  height: 100vh;
+.flex {
+  display: flex;
 }
 
-.h-1 {
-  height: 0.25rem;
+.hidden {
+  display: none;
 }
 
-.h-5 {
-  height: 1.25rem;
+.h-6 {
+  height: 1.5rem;
 }
 
-.w-\[100vw\] {
-  width: 100vw;
+.h-8 {
+  height: 2rem;
+}
+
+.h-\[538px\] {
+  height: 538px;
+}
+
+.h-\[85px\] {
+  height: 85px;
 }
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-\[123px\] {
+  width: 123px;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .grow {
@@ -582,47 +598,45 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.border {
-  border-width: 1px;
+.items-center {
+  align-items: center;
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+.justify-between {
+  justify-content: space-between;
 }
 
-.bg-\[\.\.\/images\/logo\.svg\] {
-  background-color: ../images/logo.svg;
+.bg-\[url\(\/images\/icon-hamburger\.svg\)\] {
+  background-image: url(/images/icon-hamburger.svg);
 }
 
-.bg-\[\'\.\.\/images\/logo\.svg\'\] {
-  background-color: '../images/logo.svg';
+.bg-\[url\(\/images\/logo\.svg\)\] {
+  background-image: url(/images/logo.svg);
 }
 
-.bg-\[url\(\.\.\/images\/logo\.svg\)\] {
-  background-image: url(../images/logo.svg);
+.bg-\[url\(\/images\/mobile\/image-header\.jpg\)\] {
+  background-image: url(/images/mobile/image-header.jpg);
 }
 
-.bg-\[url\(\'\.\.\/images\/logo\.svg\'\)\] {
-  background-image: url('../images/logo.svg');
+.bg-contain {
+  background-size: contain;
 }
 
-.bg-\[url\(\.\.\/images\/mobile\/images-header\2c \.jpg\)\] {
-  background-image: url(../images/mobile/images-header,.jpg);
+.bg-center {
+  background-position: center;
 }
 
-.bg-\[url\(\.\.\/images\/mobile\/images-header\.jpg\)\] {
-  background-image: url(../images/mobile/images-header.jpg);
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
-.bg-\[url\(\'\.\.\/images\/mobile\/images-header\.jpg\'\)\] {
-  background-image: url('../images/mobile/images-header.jpg');
+.px-\[6vw\] {
+  padding-left: 6vw;
+  padding-right: 6vw;
 }
 
-.bg-\[url\(\'\.\.\/images\/mobile\/image-header\.jpg\'\)\] {
-  background-image: url('../images/mobile/image-header.jpg');
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
-.bg-\[url\(\.\.\/images\/mobile\/image-header\.jpg\)\] {
-  background-image: url(../images/mobile/image-header.jpg);
-}

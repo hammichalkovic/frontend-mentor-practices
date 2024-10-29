@@ -2,3 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+    body {
+        @apply flex flex-col 
+    }
+
+    
+
+    h1, h2, h3, a {
+        @apply  font-fraunces font-black text-center;
+    }
+
+    h1 {
+        @apply text-white
+    }
+
+    h2 {
+        @apply text-[2rem] w-[80vw];
+    }
+
+    h3 {
+        @apply text-[1.7rem]
+    }
+
+    p {
+        @apply text-center;
+    }
+
+    a {
+        @apply uppercase text-center;
+    }
+
+    ul {
+        @apply flex;
+    }
+
+    #transform, #stand_out__header {
+       @apply flex flex-col justify-center items-center;
+    }
+}

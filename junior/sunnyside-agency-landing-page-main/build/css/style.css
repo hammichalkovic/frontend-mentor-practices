@@ -573,6 +573,7 @@ h1 {
 h2 {
   width: 80vw;
   font-size: 2rem;
+  line-height: 2.37rem;
 }
 
 h3 {
@@ -592,7 +593,7 @@ ul {
   display: flex;
 }
 
-#transform, #stand_out__header {
+#transform, #stand_out {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -655,16 +656,8 @@ ul {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .items-center {
   align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .justify-between {

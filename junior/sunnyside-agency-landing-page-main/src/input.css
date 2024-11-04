@@ -15,11 +15,11 @@
     }
 
     h1 {
-        @apply text-white
+        @apply text-white;
     }
 
     h2 {
-        @apply text-[2rem] w-[80vw];
+        @apply text-[2rem] w-[80vw] leading-[2.37rem];
     }
 
     h3 {
@@ -38,7 +38,7 @@
         @apply flex;
     }
 
-    #transform, #stand_out__header {
+    #transform, #stand_out {
        @apply flex flex-col justify-center items-center;
     }
 }

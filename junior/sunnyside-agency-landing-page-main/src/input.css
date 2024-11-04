@@ -5,7 +5,7 @@
 @layer base {
 
     body {
-        @apply flex flex-col 
+        @apply flex flex-col
     }
 
     
@@ -19,7 +19,7 @@
     }
 
     h2 {
-        @apply text-[2rem] w-[80vw] leading-[2.37rem];
+        @apply text-[2rem] w-[80vw] leading-[2.37rem] text-custom-very-dark-blue;
     }
 
     h3 {
@@ -27,7 +27,7 @@
     }
 
     p {
-        @apply text-center;
+        @apply text-center text-custom-dark-grayish-blue font-medium w-[90vw]
     }
 
     a {

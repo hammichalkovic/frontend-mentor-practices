@@ -41,4 +41,11 @@
     #transform, #stand_out {
        @apply flex flex-col justify-center items-center;
     }
+
+    #head, #head__brand,
+    #hamburger, #egg, #glass, 
+    #graphic_design, #photography {
+        @apply bg-no-repeat
+    }
+
 }

@@ -1,98 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  />
   <script src="./js/main.js" defer></script>
   <title>Frontend Mentor | Sunnyside agency landing page</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body class="text-lg font-barlow h-[5219px]">
-  <div id="head" class="h-[537px] w-screen bg-cover bg-no-repeat bg-bottom bg-[url(/images/mobile/image-header.jpg)]">
-    <div id="logo_and_ham" class=" h-[85px] w-screen  flex items-center justify-between px-[6vw]">
-      <div id="head__brand" class="h-8 w-[123px] bg-no-repeat bg-center bg-contain bg-[url(/images/logo.svg)] "></div>
-      <div id="hamburger" class="bg-no-repeat bg-[url(/images/icon-hamburger.svg)] h-6 w-6 "></div>
+  <div
+    id="head"
+    class="h-[537px] w-screen bg-cover  bg-bottom bg-[url(/images/mobile/image-header.jpg)]"
+  >
+    <div
+      id="logo_and_ham"
+      class="h-[85px] w-screen flex items-center justify-between px-[6vw]"
+    >
+      <div
+        id="head__brand"
+        class="h-8 w-[123px]  bg-center bg-contain bg-[url(/images/logo.svg)]"
+      ></div>
+      <div
+        id="hamburger"
+        class=" bg-[url(/images/icon-hamburger.svg)] h-6 w-6"
+      ></div>
     </div>
-  
+
     <ul id="menu" class="hidden">
       <li>About</li>
       <li>Services</li>
       <li>Projects</li>
       <li>Contact</li>
     </ul>
-    <h1 id="header_main" class=" uppercase  text-[2.5rem] leading-[3rem] tracking-[0.45rem] relative top-[60px]">We are creatives</h1>
+    <h1
+      id="header_main"
+      class="uppercase text-[2.5rem] leading-[3rem] tracking-[0.45rem] relative top-[60px]"
+    >
+      We are creatives
+    </h1>
   </div>
   <div id="top_grid">
-    <div id="egg" class=" w-full h-[311px] bg-cover bg-no-repeat bg-center bg-[url(/images/mobile/image-transform.jpg)]"></div>
-    <div id="transform" class="border border-custom-soft-red h-[439px] h-30">
-      <h2 id="transform__header" class="block  ">Transform your brand</h2>
+    <div
+      id="egg"
+      class="w-full h-[311px] bg-cover  bg-center bg-[url(/images/mobile/image-transform.jpg)]"
+    ></div>
+    <div id="transform" class=" h-[439px] h-30">
+      <h2 id="transform__header" class="block">Transform your brand</h2>
       <p id="transform__par">
-        We are a full-service creative agency specializing in helping brands grow fast.
-        Engage your clients through compelling visuals that do most of the marketing for you.
+        We are a full-service creative agency specializing in helping brands
+        grow fast. Engage your clients through compelling visuals that do most
+        of the marketing for you.
       </p>
       <a href="#" class="text-custom-very-dark-blue">Learn more</a>
     </div>
-    <div id="glass" class="w-full bg-cover bg-no-repeat bg-center bg-[url(/images/mobile/image-stand-out.jpg)] h-[311px]"></div>
-    <div id="stand_out">
-      <h2 id="stand_out__header" class="block">Stand out to the right audience</h2>
-      <p id="stand_out__par">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+    <div
+      id="glass"
+      class="w-full bg-cover  bg-center bg-[url(/images/mobile/image-stand-out.jpg)] h-[311px]"
+    ></div>
+    <div id="stand_out" class=" h-[437px]">
+      <h2 id="stand_out__header" class="block">
+        Stand out to the right audience
+      </h2>
+      <p id="stand_out__par">
+        Using a collaborative formula of designers, researchers, photographers,
+        videographers, and copywriters, we’ll build and extend your brand in
+        digital places.
+      </p>
       <a href="#" class="text-custom-very-dark-blue">Learn more</a>
     </div>
-  
-    <div id="graphic_design">
-      <h3 id="graphic_design__header" class="text-custom-dark-cyan">Graphic Design</h3>
-      <p id="graphic_design_par" class="text-custom-dark-cyan">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+
+    <div id="graphic_design" class="bg-cover  bg-center bg-[url(/images/mobile/image-graphic-design.jpg)] h-[600px]">
+      <h3 id="graphic_design__header" class="text-custom-dark-cyan">
+        Graphic Design
+      </h3>
+      <p id="graphic_design_par" class="text-custom-dark-cyan">
+        Great design makes you memorable. We deliver artwork that underscores
+        your brand message and captures potential clients’ attention.
+      </p>
     </div>
-  
-    <div id="photography">
-      <h3 id="photography__header" class="text-custom-dark-blue">Photography</h3>
-      <p id="photography__par" class="text-custom-dark-blue">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+
+    <div id="photography" class="bg-cover  bg-center bg-[url(/images/mobile/image-photography.jpg)]">
+      <h3 id="photography__header" class="text-custom-dark-blue">
+        Photography
+      </h3>
+      <p id="photography__par" class="text-custom-dark-blue">
+        Increase your credibility by getting the most stunning, high-quality
+        photos that improve your business image.
+      </p>
     </div>
   </div>
-  
+
   <div id="testimonials_grid">
-    <h3 id="testimonials__header" class="uppercase text-custom-grayish-blue">Client testimonials</h3>
-  
+    <h3 id="testimonials__header" class="uppercase text-custom-grayish-blue">
+      Client testimonials
+    </h3>
+
     <div id="testimonial1">
       <div class="pic"></div>
-      <p id="testimonial1__par"> We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+      <p id="testimonial1__par">
+        We put our trust in Sunnyside and they delivered, making sure our needs
+        were met and deadlines were always hit.
+      </p>
       <div id="testimonial1__sign">
         <p id="testimonial1_name">Emily R.</p>
         <p id="testimonial1_major">Marketing Director</p>
       </div>
     </div>
-  
+
     <div id="testimonial2">
       <div class="pic"></div>
-      <p id="testimonial2__par">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+      <p id="testimonial2__par">
+        Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
+        success made it a satisfying and enjoyable experience.
+      </p>
       <div id="testimonial2__sign">
         <p id="testimonial2_name">Thomas S.</p>
         <p id="testimonial2_major">Chief Operating Officer</p>
       </div>
     </div>
-  
+
     <div id="testimonial3">
       <div class="pic"></div>
-      <p id="testimonial3__par">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+      <p id="testimonial3__par">
+        Incredible end result! Our sales increased over 400% when we worked with
+        Sunnyside. Highly recommended!
+      </p>
       <div id="testimonial3__sign">
         <p id="testimonial3_name">Jennie F.</p>
         <p id="testimonial3_major">Business Owner</p>
       </div>
     </div>
   </div>
-  
+
   <div id="eat_grid">
     <div id="milk"></div>
     <div id="orange"></div>
     <div id="icecream"></div>
     <div id="sugar"></div>
   </div>
-  
+
   <footer id="footer">
     <div id="footer__brand"></div>
     <ul>
@@ -101,13 +163,13 @@
       <li>Projects</li>
       <!-- <li>Contact</li> -->
     </ul>
-    <div id="contacts">
-  
-    </div>
+    <div id="contacts"></div>
   </footer>
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
